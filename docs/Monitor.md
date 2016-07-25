@@ -1,0 +1,50 @@
+# Monitor
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Diameter** | **string** | Diameter monitor configuration | [optional] [default to null]
+**Soap** | **string** | SOAP monitor configuration. | [optional] [default to null]
+**Mysql** | **string** | MySQL monitor configuration. | [optional] [default to null]
+**Smtp** | **string** | SMTP monitor configuration. | [optional] [default to null]
+**Tcp** | **string** | TCP monitor configuration. | [optional] [default to null]
+**Rpc** | **string** | RPC monitor configuration. | [optional] [default to null]
+**Radius** | **string** | Radius monitor configuration. | [optional] [default to null]
+**Firepass** | **string** | Firepass monitor configuration | [optional] [default to null]
+**Kind** | **string** | Kind of entity | [optional] [default to null]
+**Ftp** | **string** | FTP monitor configuration. | [optional] [default to null]
+**Mssql** | **string** | MSSQL monitor configuration. | [optional] [default to null]
+**Sip** | **string** | SIP monitor configuration. | [optional] [default to null]
+**Imap** | **string** | IMAP monitor configuration. | [optional] [default to null]
+**Wmi** | **string** | WMI monitor configuration. | [optional] [default to null]
+**Https** | **string** | HTTPS monitor configuration. | [optional] [default to null]
+**Ldap** | **string** | LDAP monitor configuration. | [optional] [default to null]
+**SnmpDcaBase** | **string** | SNMP monitor configuration. | [optional] [default to null]
+**Nntp** | **string** | NNTP monitor configuration. | [optional] [default to null]
+**Smb** | **string** | SMB monitor configuration. | [optional] [default to null]
+**Scripted** | **string** | Scripted monitor configuration. | [optional] [default to null]
+**Wap** | **string** | WAP monitor configuration. | [optional] [default to null]
+**Udp** | **string** | UDP monitor configuration. | [optional] [default to null]
+**VirtualLocation** | **string** | Virtual Location monitor configuration | [optional] [default to null]
+**Http** | **string** | HTTP monitor configuration. | [optional] [default to null]
+**Dns** | **string** | DNS monitor configuration. | [optional] [default to null]
+**Inband** | **string** | Inband monitor configuration. | [optional] [default to null]
+**RadiusAccounting** | **string** | Radius accounting monitor configuration. | [optional] [default to null]
+**Pop3** | **string** | POP3 monitor configuration. | [optional] [default to null]
+**SnmpDca** | **string** | SNMP DCA monitor configuration. | [optional] [default to null]
+**External** | **string** | External monitor configuration. | [optional] [default to null]
+**GatewayIcmp** | **string** | Gateway ICMP monitor configuration. | [optional] [default to null]
+**Icmp** | **string** | ICMP monitor configuration. | [optional] [default to null]
+**TcpEcho** | **string** | TCP Echo monitor configuration. | [optional] [default to null]
+**RealServer** | **string** | Real Server monitor configuration. | [optional] [default to null]
+**None** | **string** | The NULL monitor. | [optional] [default to null]
+**Postgresql** | **string** | Postgresql monitor configuration. | [optional] [default to null]
+**Name** | **string** | Name of entity | [optional] [default to null]
+**Sasp** | **string** | SASP monitor configuration. | [optional] [default to null]
+**TcpHalfOpen** | **string** | TCP Half Open monitor configuration. | [optional] [default to null]
+**ModuleScore** | **string** | Module score monitor configuration. | [optional] [default to null]
+**Oracle** | **string** | Oracle monitor configuration. | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
