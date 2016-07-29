@@ -650,7 +650,6 @@ Method | HTTP request | Description
 [**GetVirtualPoliciesList**](LtmApi.md#GetVirtualPoliciesList) | **Get** /tm/ltm/virtual/policies | 
 [**GetVirtualProfiles**](LtmApi.md#GetVirtualProfiles) | **Get** /tm/ltm/virtual/profiles/{id} | 
 [**GetVirtualProfilesList**](LtmApi.md#GetVirtualProfilesList) | **Get** /tm/ltm/virtual/profiles | 
-[**Login**](LtmApi.md#Login) | **Post** /shared/authn/login | 
 [**PatchAlgLogProfile**](LtmApi.md#PatchAlgLogProfile) | **Patch** /tm/ltm/algLogProfile/{id} | 
 [**PatchAuthCrldpServer**](LtmApi.md#PatchAuthCrldpServer) | **Patch** /tm/ltm/auth/crldpServer/{id} | 
 [**PatchAuthKerberosDelegation**](LtmApi.md#PatchAuthKerberosDelegation) | **Patch** /tm/ltm/auth/kerberosDelegation/{id} | 
@@ -6643,7 +6642,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAlgLogProfile**
-> AlgLogProfile GetAlgLogProfile($id)
+> LtmAlgLogProfile GetAlgLogProfile($id)
 
 
 
@@ -6658,7 +6657,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AlgLogProfile**](algLogProfile.md)
+[**LtmAlgLogProfile**](ltm_algLogProfile.md)
 
 ### Authorization
 
@@ -6672,7 +6671,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAlgLogProfileList**
-> AlgLogProfileList GetAlgLogProfileList()
+> LtmAlgLogProfileList GetAlgLogProfileList()
 
 
 
@@ -6684,7 +6683,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AlgLogProfileList**](algLogProfile_list.md)
+[**LtmAlgLogProfileList**](ltm_algLogProfile_list.md)
 
 ### Authorization
 
@@ -6698,7 +6697,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuth**
-> Auth GetAuth($id)
+> LtmAuth GetAuth($id)
 
 
 
@@ -6713,7 +6712,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Auth**](auth.md)
+[**LtmAuth**](ltm_auth.md)
 
 ### Authorization
 
@@ -6727,7 +6726,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthCrldpServer**
-> AuthCrldpServer GetAuthCrldpServer($id)
+> LtmAuthCrldpServer GetAuthCrldpServer($id)
 
 
 
@@ -6742,7 +6741,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthCrldpServer**](auth_crldpServer.md)
+[**LtmAuthCrldpServer**](ltm_auth_crldpServer.md)
 
 ### Authorization
 
@@ -6756,7 +6755,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthCrldpServerList**
-> AuthCrldpServerList GetAuthCrldpServerList()
+> LtmAuthCrldpServerList GetAuthCrldpServerList()
 
 
 
@@ -6768,7 +6767,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthCrldpServerList**](auth_crldpServer_list.md)
+[**LtmAuthCrldpServerList**](ltm_auth_crldpServer_list.md)
 
 ### Authorization
 
@@ -6782,7 +6781,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthKerberosDelegation**
-> AuthKerberosDelegation GetAuthKerberosDelegation($id)
+> LtmAuthKerberosDelegation GetAuthKerberosDelegation($id)
 
 
 
@@ -6797,7 +6796,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthKerberosDelegation**](auth_kerberosDelegation.md)
+[**LtmAuthKerberosDelegation**](ltm_auth_kerberosDelegation.md)
 
 ### Authorization
 
@@ -6811,7 +6810,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthKerberosDelegationList**
-> AuthKerberosDelegationList GetAuthKerberosDelegationList()
+> LtmAuthKerberosDelegationList GetAuthKerberosDelegationList()
 
 
 
@@ -6823,7 +6822,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthKerberosDelegationList**](auth_kerberosDelegation_list.md)
+[**LtmAuthKerberosDelegationList**](ltm_auth_kerberosDelegation_list.md)
 
 ### Authorization
 
@@ -6837,7 +6836,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthLdap**
-> AuthLdap GetAuthLdap($id)
+> LtmAuthLdap GetAuthLdap($id)
 
 
 
@@ -6852,7 +6851,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthLdap**](auth_ldap.md)
+[**LtmAuthLdap**](ltm_auth_ldap.md)
 
 ### Authorization
 
@@ -6866,7 +6865,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthLdapList**
-> AuthLdapList GetAuthLdapList()
+> LtmAuthLdapList GetAuthLdapList()
 
 
 
@@ -6878,7 +6877,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthLdapList**](auth_ldap_list.md)
+[**LtmAuthLdapList**](ltm_auth_ldap_list.md)
 
 ### Authorization
 
@@ -6892,7 +6891,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthList**
-> AuthList GetAuthList()
+> LtmAuthList GetAuthList()
 
 
 
@@ -6904,7 +6903,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthList**](auth_list.md)
+[**LtmAuthList**](ltm_auth_list.md)
 
 ### Authorization
 
@@ -6918,7 +6917,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthOcspResponder**
-> AuthOcspResponder GetAuthOcspResponder($id)
+> LtmAuthOcspResponder GetAuthOcspResponder($id)
 
 
 
@@ -6933,7 +6932,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthOcspResponder**](auth_ocspResponder.md)
+[**LtmAuthOcspResponder**](ltm_auth_ocspResponder.md)
 
 ### Authorization
 
@@ -6947,7 +6946,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthOcspResponderList**
-> AuthOcspResponderList GetAuthOcspResponderList()
+> LtmAuthOcspResponderList GetAuthOcspResponderList()
 
 
 
@@ -6959,7 +6958,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthOcspResponderList**](auth_ocspResponder_list.md)
+[**LtmAuthOcspResponderList**](ltm_auth_ocspResponder_list.md)
 
 ### Authorization
 
@@ -6973,7 +6972,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthProfile**
-> AuthProfile GetAuthProfile($id)
+> LtmAuthProfile GetAuthProfile($id)
 
 
 
@@ -6988,7 +6987,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthProfile**](auth_profile.md)
+[**LtmAuthProfile**](ltm_auth_profile.md)
 
 ### Authorization
 
@@ -7002,7 +7001,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthProfileList**
-> AuthProfileList GetAuthProfileList()
+> LtmAuthProfileList GetAuthProfileList()
 
 
 
@@ -7014,7 +7013,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthProfileList**](auth_profile_list.md)
+[**LtmAuthProfileList**](ltm_auth_profile_list.md)
 
 ### Authorization
 
@@ -7028,7 +7027,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthRadius**
-> AuthRadius GetAuthRadius($id)
+> LtmAuthRadius GetAuthRadius($id)
 
 
 
@@ -7043,7 +7042,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthRadius**](auth_radius.md)
+[**LtmAuthRadius**](ltm_auth_radius.md)
 
 ### Authorization
 
@@ -7057,7 +7056,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthRadiusList**
-> AuthRadiusList GetAuthRadiusList()
+> LtmAuthRadiusList GetAuthRadiusList()
 
 
 
@@ -7069,7 +7068,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthRadiusList**](auth_radius_list.md)
+[**LtmAuthRadiusList**](ltm_auth_radius_list.md)
 
 ### Authorization
 
@@ -7083,7 +7082,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthRadiusServer**
-> AuthRadiusServer GetAuthRadiusServer($id)
+> LtmAuthRadiusServer GetAuthRadiusServer($id)
 
 
 
@@ -7098,7 +7097,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthRadiusServer**](auth_radiusServer.md)
+[**LtmAuthRadiusServer**](ltm_auth_radiusServer.md)
 
 ### Authorization
 
@@ -7112,7 +7111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthRadiusServerList**
-> AuthRadiusServerList GetAuthRadiusServerList()
+> LtmAuthRadiusServerList GetAuthRadiusServerList()
 
 
 
@@ -7124,7 +7123,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthRadiusServerList**](auth_radiusServer_list.md)
+[**LtmAuthRadiusServerList**](ltm_auth_radiusServer_list.md)
 
 ### Authorization
 
@@ -7138,7 +7137,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthSslCcLdap**
-> AuthSslCcLdap GetAuthSslCcLdap($id)
+> LtmAuthSslCcLdap GetAuthSslCcLdap($id)
 
 
 
@@ -7153,7 +7152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthSslCcLdap**](auth_sslCcLdap.md)
+[**LtmAuthSslCcLdap**](ltm_auth_sslCcLdap.md)
 
 ### Authorization
 
@@ -7167,7 +7166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthSslCcLdapList**
-> AuthSslCcLdapList GetAuthSslCcLdapList()
+> LtmAuthSslCcLdapList GetAuthSslCcLdapList()
 
 
 
@@ -7179,7 +7178,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthSslCcLdapList**](auth_sslCcLdap_list.md)
+[**LtmAuthSslCcLdapList**](ltm_auth_sslCcLdap_list.md)
 
 ### Authorization
 
@@ -7193,7 +7192,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthSslCrldp**
-> AuthSslCrldp GetAuthSslCrldp($id)
+> LtmAuthSslCrldp GetAuthSslCrldp($id)
 
 
 
@@ -7208,7 +7207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthSslCrldp**](auth_sslCrldp.md)
+[**LtmAuthSslCrldp**](ltm_auth_sslCrldp.md)
 
 ### Authorization
 
@@ -7222,7 +7221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthSslCrldpList**
-> AuthSslCrldpList GetAuthSslCrldpList()
+> LtmAuthSslCrldpList GetAuthSslCrldpList()
 
 
 
@@ -7234,7 +7233,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthSslCrldpList**](auth_sslCrldp_list.md)
+[**LtmAuthSslCrldpList**](ltm_auth_sslCrldp_list.md)
 
 ### Authorization
 
@@ -7248,7 +7247,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthSslOcsp**
-> AuthSslOcsp GetAuthSslOcsp($id)
+> LtmAuthSslOcsp GetAuthSslOcsp($id)
 
 
 
@@ -7263,7 +7262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthSslOcsp**](auth_sslOcsp.md)
+[**LtmAuthSslOcsp**](ltm_auth_sslOcsp.md)
 
 ### Authorization
 
@@ -7277,7 +7276,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthSslOcspList**
-> AuthSslOcspList GetAuthSslOcspList()
+> LtmAuthSslOcspList GetAuthSslOcspList()
 
 
 
@@ -7289,7 +7288,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthSslOcspList**](auth_sslOcsp_list.md)
+[**LtmAuthSslOcspList**](ltm_auth_sslOcsp_list.md)
 
 ### Authorization
 
@@ -7303,7 +7302,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthTacacs**
-> AuthTacacs GetAuthTacacs($id)
+> LtmAuthTacacs GetAuthTacacs($id)
 
 
 
@@ -7318,7 +7317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AuthTacacs**](auth_tacacs.md)
+[**LtmAuthTacacs**](ltm_auth_tacacs.md)
 
 ### Authorization
 
@@ -7332,7 +7331,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAuthTacacsList**
-> AuthTacacsList GetAuthTacacsList()
+> LtmAuthTacacsList GetAuthTacacsList()
 
 
 
@@ -7344,7 +7343,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AuthTacacsList**](auth_tacacs_list.md)
+[**LtmAuthTacacsList**](ltm_auth_tacacs_list.md)
 
 ### Authorization
 
@@ -7358,7 +7357,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassification**
-> Classification GetClassification($id)
+> LtmClassification GetClassification($id)
 
 
 
@@ -7373,7 +7372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Classification**](classification.md)
+[**LtmClassification**](ltm_classification.md)
 
 ### Authorization
 
@@ -7387,7 +7386,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationApplication**
-> ClassificationApplication GetClassificationApplication($id)
+> LtmClassificationApplication GetClassificationApplication($id)
 
 
 
@@ -7402,7 +7401,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationApplication**](classification_application.md)
+[**LtmClassificationApplication**](ltm_classification_application.md)
 
 ### Authorization
 
@@ -7416,7 +7415,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationApplicationList**
-> ClassificationApplicationList GetClassificationApplicationList()
+> LtmClassificationApplicationList GetClassificationApplicationList()
 
 
 
@@ -7428,7 +7427,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationApplicationList**](classification_application_list.md)
+[**LtmClassificationApplicationList**](ltm_classification_application_list.md)
 
 ### Authorization
 
@@ -7442,7 +7441,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationCategory**
-> ClassificationCategory GetClassificationCategory($id)
+> LtmClassificationCategory GetClassificationCategory($id)
 
 
 
@@ -7457,7 +7456,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationCategory**](classification_category.md)
+[**LtmClassificationCategory**](ltm_classification_category.md)
 
 ### Authorization
 
@@ -7471,7 +7470,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationCategoryList**
-> ClassificationCategoryList GetClassificationCategoryList()
+> LtmClassificationCategoryList GetClassificationCategoryList()
 
 
 
@@ -7483,7 +7482,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationCategoryList**](classification_category_list.md)
+[**LtmClassificationCategoryList**](ltm_classification_category_list.md)
 
 ### Authorization
 
@@ -7497,7 +7496,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationList**
-> ClassificationList GetClassificationList()
+> LtmClassificationList GetClassificationList()
 
 
 
@@ -7509,7 +7508,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationList**](classification_list.md)
+[**LtmClassificationList**](ltm_classification_list.md)
 
 ### Authorization
 
@@ -7523,7 +7522,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationSignatureDefinition**
-> ClassificationSignatureDefinition GetClassificationSignatureDefinition($id)
+> LtmClassificationSignatureDefinition GetClassificationSignatureDefinition($id)
 
 
 
@@ -7538,7 +7537,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationSignatureDefinition**](classification_signatureDefinition.md)
+[**LtmClassificationSignatureDefinition**](ltm_classification_signatureDefinition.md)
 
 ### Authorization
 
@@ -7552,7 +7551,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationSignatureDefinitionList**
-> ClassificationSignatureDefinitionList GetClassificationSignatureDefinitionList()
+> LtmClassificationSignatureDefinitionList GetClassificationSignatureDefinitionList()
 
 
 
@@ -7564,7 +7563,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationSignatureDefinitionList**](classification_signatureDefinition_list.md)
+[**LtmClassificationSignatureDefinitionList**](ltm_classification_signatureDefinition_list.md)
 
 ### Authorization
 
@@ -7578,7 +7577,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationSignatureUpdateSchedule**
-> ClassificationSignatureUpdateSchedule GetClassificationSignatureUpdateSchedule($id)
+> LtmClassificationSignatureUpdateSchedule GetClassificationSignatureUpdateSchedule($id)
 
 
 
@@ -7593,7 +7592,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationSignatureUpdateSchedule**](classification_signatureUpdateSchedule.md)
+[**LtmClassificationSignatureUpdateSchedule**](ltm_classification_signatureUpdateSchedule.md)
 
 ### Authorization
 
@@ -7607,7 +7606,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationSignatureUpdateScheduleList**
-> ClassificationSignatureUpdateScheduleList GetClassificationSignatureUpdateScheduleList()
+> LtmClassificationSignatureUpdateScheduleList GetClassificationSignatureUpdateScheduleList()
 
 
 
@@ -7619,7 +7618,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationSignatureUpdateScheduleList**](classification_signatureUpdateSchedule_list.md)
+[**LtmClassificationSignatureUpdateScheduleList**](ltm_classification_signatureUpdateSchedule_list.md)
 
 ### Authorization
 
@@ -7633,7 +7632,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationSignatureVersion**
-> ClassificationSignatureVersion GetClassificationSignatureVersion($id)
+> LtmClassificationSignatureVersion GetClassificationSignatureVersion($id)
 
 
 
@@ -7648,7 +7647,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationSignatureVersion**](classification_signatureVersion.md)
+[**LtmClassificationSignatureVersion**](ltm_classification_signatureVersion.md)
 
 ### Authorization
 
@@ -7662,7 +7661,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationSignatureVersionList**
-> ClassificationSignatureVersionList GetClassificationSignatureVersionList()
+> LtmClassificationSignatureVersionList GetClassificationSignatureVersionList()
 
 
 
@@ -7674,7 +7673,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationSignatureVersionList**](classification_signatureVersion_list.md)
+[**LtmClassificationSignatureVersionList**](ltm_classification_signatureVersion_list.md)
 
 ### Authorization
 
@@ -7688,7 +7687,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationSignaturesList**
-> ClassificationSignaturesList GetClassificationSignaturesList()
+> LtmClassificationSignaturesList GetClassificationSignaturesList()
 
 
 
@@ -7700,7 +7699,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationSignaturesList**](classification_signatures_list.md)
+[**LtmClassificationSignaturesList**](ltm_classification_signatures_list.md)
 
 ### Authorization
 
@@ -7714,7 +7713,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationStats**
-> ClassificationStats GetClassificationStats($id)
+> LtmClassificationStats GetClassificationStats($id)
 
 
 
@@ -7729,7 +7728,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationStats**](classification_stats.md)
+[**LtmClassificationStats**](ltm_classification_stats.md)
 
 ### Authorization
 
@@ -7743,7 +7742,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationStatsApplication**
-> ClassificationStatsApplication GetClassificationStatsApplication($id)
+> LtmClassificationStatsApplication GetClassificationStatsApplication($id)
 
 
 
@@ -7758,7 +7757,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationStatsApplication**](classification_stats_application.md)
+[**LtmClassificationStatsApplication**](ltm_classification_stats_application.md)
 
 ### Authorization
 
@@ -7772,7 +7771,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationStatsApplicationList**
-> ClassificationStatsApplicationList GetClassificationStatsApplicationList()
+> LtmClassificationStatsApplicationList GetClassificationStatsApplicationList()
 
 
 
@@ -7784,7 +7783,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationStatsApplicationList**](classification_stats_application_list.md)
+[**LtmClassificationStatsApplicationList**](ltm_classification_stats_application_list.md)
 
 ### Authorization
 
@@ -7798,7 +7797,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationStatsList**
-> ClassificationStatsList GetClassificationStatsList()
+> LtmClassificationStatsList GetClassificationStatsList()
 
 
 
@@ -7810,7 +7809,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationStatsList**](classification_stats_list.md)
+[**LtmClassificationStatsList**](ltm_classification_stats_list.md)
 
 ### Authorization
 
@@ -7824,7 +7823,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationStatsUrlCategory**
-> ClassificationStatsUrlCategory GetClassificationStatsUrlCategory($id)
+> LtmClassificationStatsUrlCategory GetClassificationStatsUrlCategory($id)
 
 
 
@@ -7839,7 +7838,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationStatsUrlCategory**](classification_stats_urlCategory.md)
+[**LtmClassificationStatsUrlCategory**](ltm_classification_stats_urlCategory.md)
 
 ### Authorization
 
@@ -7853,7 +7852,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationStatsUrlCategoryList**
-> ClassificationStatsUrlCategoryList GetClassificationStatsUrlCategoryList()
+> LtmClassificationStatsUrlCategoryList GetClassificationStatsUrlCategoryList()
 
 
 
@@ -7865,7 +7864,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationStatsUrlCategoryList**](classification_stats_urlCategory_list.md)
+[**LtmClassificationStatsUrlCategoryList**](ltm_classification_stats_urlCategory_list.md)
 
 ### Authorization
 
@@ -7879,7 +7878,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationUpdateSignaturesList**
-> ClassificationUpdateSignaturesList GetClassificationUpdateSignaturesList()
+> LtmClassificationUpdateSignaturesList GetClassificationUpdateSignaturesList()
 
 
 
@@ -7891,7 +7890,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationUpdateSignaturesList**](classification_updateSignatures_list.md)
+[**LtmClassificationUpdateSignaturesList**](ltm_classification_updateSignatures_list.md)
 
 ### Authorization
 
@@ -7905,7 +7904,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationUrlCatPolicy**
-> ClassificationUrlCatPolicy GetClassificationUrlCatPolicy($id)
+> LtmClassificationUrlCatPolicy GetClassificationUrlCatPolicy($id)
 
 
 
@@ -7920,7 +7919,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationUrlCatPolicy**](classification_urlCatPolicy.md)
+[**LtmClassificationUrlCatPolicy**](ltm_classification_urlCatPolicy.md)
 
 ### Authorization
 
@@ -7934,7 +7933,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationUrlCatPolicyList**
-> ClassificationUrlCatPolicyList GetClassificationUrlCatPolicyList()
+> LtmClassificationUrlCatPolicyList GetClassificationUrlCatPolicyList()
 
 
 
@@ -7946,7 +7945,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationUrlCatPolicyList**](classification_urlCatPolicy_list.md)
+[**LtmClassificationUrlCatPolicyList**](ltm_classification_urlCatPolicy_list.md)
 
 ### Authorization
 
@@ -7960,7 +7959,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationUrlCategory**
-> ClassificationUrlCategory GetClassificationUrlCategory($id)
+> LtmClassificationUrlCategory GetClassificationUrlCategory($id)
 
 
 
@@ -7975,7 +7974,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationUrlCategory**](classification_urlCategory.md)
+[**LtmClassificationUrlCategory**](ltm_classification_urlCategory.md)
 
 ### Authorization
 
@@ -7989,7 +7988,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationUrlCategoryList**
-> ClassificationUrlCategoryList GetClassificationUrlCategoryList()
+> LtmClassificationUrlCategoryList GetClassificationUrlCategoryList()
 
 
 
@@ -8001,7 +8000,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationUrlCategoryList**](classification_urlCategory_list.md)
+[**LtmClassificationUrlCategoryList**](ltm_classification_urlCategory_list.md)
 
 ### Authorization
 
@@ -8015,7 +8014,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationUrldbFeedList**
-> ClassificationUrldbFeedList GetClassificationUrldbFeedList($id)
+> LtmClassificationUrldbFeedList GetClassificationUrldbFeedList($id)
 
 
 
@@ -8030,7 +8029,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationUrldbFeedList**](classification_urldbFeedList.md)
+[**LtmClassificationUrldbFeedList**](ltm_classification_urldbFeedList.md)
 
 ### Authorization
 
@@ -8044,7 +8043,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationUrldbFeedListList**
-> ClassificationUrldbFeedListList GetClassificationUrldbFeedListList()
+> LtmClassificationUrldbFeedListList GetClassificationUrldbFeedListList()
 
 
 
@@ -8056,7 +8055,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationUrldbFeedListList**](classification_urldbFeedList_list.md)
+[**LtmClassificationUrldbFeedListList**](ltm_classification_urldbFeedList_list.md)
 
 ### Authorization
 
@@ -8070,7 +8069,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationUrldbFile**
-> ClassificationUrldbFile GetClassificationUrldbFile($id)
+> LtmClassificationUrldbFile GetClassificationUrldbFile($id)
 
 
 
@@ -8085,7 +8084,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClassificationUrldbFile**](classification_urldbFile.md)
+[**LtmClassificationUrldbFile**](ltm_classification_urldbFile.md)
 
 ### Authorization
 
@@ -8099,7 +8098,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClassificationUrldbFileList**
-> ClassificationUrldbFileList GetClassificationUrldbFileList()
+> LtmClassificationUrldbFileList GetClassificationUrldbFileList()
 
 
 
@@ -8111,7 +8110,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClassificationUrldbFileList**](classification_urldbFile_list.md)
+[**LtmClassificationUrldbFileList**](ltm_classification_urldbFile_list.md)
 
 ### Authorization
 
@@ -8125,7 +8124,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClientssl**
-> Clientssl GetClientssl($id)
+> LtmClientssl GetClientssl($id)
 
 
 
@@ -8140,7 +8139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Clientssl**](clientssl.md)
+[**LtmClientssl**](ltm_clientssl.md)
 
 ### Authorization
 
@@ -8154,7 +8153,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClientsslList**
-> ClientsslList GetClientsslList()
+> LtmClientsslList GetClientsslList()
 
 
 
@@ -8166,7 +8165,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClientsslList**](clientssl_list.md)
+[**LtmClientsslList**](ltm_clientssl_list.md)
 
 ### Authorization
 
@@ -8180,7 +8179,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClientsslOcspStaplingResponsesList**
-> ClientsslOcspStaplingResponsesList GetClientsslOcspStaplingResponsesList()
+> LtmClientsslOcspStaplingResponsesList GetClientsslOcspStaplingResponsesList()
 
 
 
@@ -8192,7 +8191,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClientsslOcspStaplingResponsesList**](clientssl_ocspStaplingResponses_list.md)
+[**LtmClientsslOcspStaplingResponsesList**](ltm_clientssl_ocspStaplingResponses_list.md)
 
 ### Authorization
 
@@ -8206,7 +8205,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClientsslProxy**
-> ClientsslProxy GetClientsslProxy($id)
+> LtmClientsslProxy GetClientsslProxy($id)
 
 
 
@@ -8221,7 +8220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClientsslProxy**](clientsslProxy.md)
+[**LtmClientsslProxy**](ltm_clientsslProxy.md)
 
 ### Authorization
 
@@ -8235,7 +8234,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClientsslProxyCachedCerts**
-> ClientsslProxyCachedCerts GetClientsslProxyCachedCerts($id)
+> LtmClientsslProxyCachedCerts GetClientsslProxyCachedCerts($id)
 
 
 
@@ -8250,7 +8249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClientsslProxyCachedCerts**](clientsslProxy_cachedCerts.md)
+[**LtmClientsslProxyCachedCerts**](ltm_clientsslProxy_cachedCerts.md)
 
 ### Authorization
 
@@ -8264,7 +8263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClientsslProxyCachedCertsList**
-> ClientsslProxyCachedCertsList GetClientsslProxyCachedCertsList()
+> LtmClientsslProxyCachedCertsList GetClientsslProxyCachedCertsList()
 
 
 
@@ -8276,7 +8275,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClientsslProxyCachedCertsList**](clientsslProxy_cachedCerts_list.md)
+[**LtmClientsslProxyCachedCertsList**](ltm_clientsslProxy_cachedCerts_list.md)
 
 ### Authorization
 
@@ -8290,7 +8289,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetClientsslProxyList**
-> ClientsslProxyList GetClientsslProxyList()
+> LtmClientsslProxyList GetClientsslProxyList()
 
 
 
@@ -8302,7 +8301,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ClientsslProxyList**](clientsslProxy_list.md)
+[**LtmClientsslProxyList**](ltm_clientsslProxy_list.md)
 
 ### Authorization
 
@@ -8316,7 +8315,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDataGroup**
-> DataGroup GetDataGroup($id)
+> LtmDataGroup GetDataGroup($id)
 
 
 
@@ -8331,7 +8330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataGroup**](dataGroup.md)
+[**LtmDataGroup**](ltm_dataGroup.md)
 
 ### Authorization
 
@@ -8345,7 +8344,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDataGroupExternal**
-> DataGroupExternal GetDataGroupExternal($id)
+> LtmDataGroupExternal GetDataGroupExternal($id)
 
 
 
@@ -8360,7 +8359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataGroupExternal**](dataGroup_external.md)
+[**LtmDataGroupExternal**](ltm_dataGroup_external.md)
 
 ### Authorization
 
@@ -8374,7 +8373,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDataGroupExternalList**
-> DataGroupExternalList GetDataGroupExternalList()
+> LtmDataGroupExternalList GetDataGroupExternalList()
 
 
 
@@ -8386,7 +8385,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DataGroupExternalList**](dataGroup_external_list.md)
+[**LtmDataGroupExternalList**](ltm_dataGroup_external_list.md)
 
 ### Authorization
 
@@ -8400,7 +8399,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDataGroupInternal**
-> DataGroupInternal GetDataGroupInternal($id)
+> LtmDataGroupInternal GetDataGroupInternal($id)
 
 
 
@@ -8415,7 +8414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataGroupInternal**](dataGroup_internal.md)
+[**LtmDataGroupInternal**](ltm_dataGroup_internal.md)
 
 ### Authorization
 
@@ -8429,7 +8428,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDataGroupInternalList**
-> DataGroupInternalList GetDataGroupInternalList()
+> LtmDataGroupInternalList GetDataGroupInternalList()
 
 
 
@@ -8441,7 +8440,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DataGroupInternalList**](dataGroup_internal_list.md)
+[**LtmDataGroupInternalList**](ltm_dataGroup_internal_list.md)
 
 ### Authorization
 
@@ -8455,7 +8454,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDataGroupList**
-> DataGroupList GetDataGroupList()
+> LtmDataGroupList GetDataGroupList()
 
 
 
@@ -8467,7 +8466,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DataGroupList**](dataGroup_list.md)
+[**LtmDataGroupList**](ltm_dataGroup_list.md)
 
 ### Authorization
 
@@ -8481,7 +8480,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDefaultNodeMonitor**
-> DefaultNodeMonitor GetDefaultNodeMonitor($id)
+> LtmDefaultNodeMonitor GetDefaultNodeMonitor($id)
 
 
 
@@ -8496,7 +8495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DefaultNodeMonitor**](defaultNodeMonitor.md)
+[**LtmDefaultNodeMonitor**](ltm_defaultNodeMonitor.md)
 
 ### Authorization
 
@@ -8510,7 +8509,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDefaultNodeMonitorList**
-> DefaultNodeMonitorList GetDefaultNodeMonitorList()
+> LtmDefaultNodeMonitorList GetDefaultNodeMonitorList()
 
 
 
@@ -8522,7 +8521,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DefaultNodeMonitorList**](defaultNodeMonitor_list.md)
+[**LtmDefaultNodeMonitorList**](ltm_defaultNodeMonitor_list.md)
 
 ### Authorization
 
@@ -8536,7 +8535,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDns**
-> Dns GetDns($id)
+> LtmDns GetDns($id)
 
 
 
@@ -8551,7 +8550,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Dns**](dns.md)
+[**LtmDns**](ltm_dns.md)
 
 ### Authorization
 
@@ -8565,7 +8564,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsAnalytics**
-> DnsAnalytics GetDnsAnalytics($id)
+> LtmDnsAnalytics GetDnsAnalytics($id)
 
 
 
@@ -8580,7 +8579,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsAnalytics**](dns_analytics.md)
+[**LtmDnsAnalytics**](ltm_dns_analytics.md)
 
 ### Authorization
 
@@ -8594,7 +8593,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsAnalyticsGlobalSettings**
-> DnsAnalyticsGlobalSettings GetDnsAnalyticsGlobalSettings($id)
+> LtmDnsAnalyticsGlobalSettings GetDnsAnalyticsGlobalSettings($id)
 
 
 
@@ -8609,7 +8608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsAnalyticsGlobalSettings**](dns_analytics_globalSettings.md)
+[**LtmDnsAnalyticsGlobalSettings**](ltm_dns_analytics_globalSettings.md)
 
 ### Authorization
 
@@ -8623,7 +8622,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsAnalyticsGlobalSettingsList**
-> DnsAnalyticsGlobalSettingsList GetDnsAnalyticsGlobalSettingsList()
+> LtmDnsAnalyticsGlobalSettingsList GetDnsAnalyticsGlobalSettingsList()
 
 
 
@@ -8635,7 +8634,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsAnalyticsGlobalSettingsList**](dns_analytics_globalSettings_list.md)
+[**LtmDnsAnalyticsGlobalSettingsList**](ltm_dns_analytics_globalSettings_list.md)
 
 ### Authorization
 
@@ -8649,7 +8648,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsAnalyticsList**
-> DnsAnalyticsList GetDnsAnalyticsList()
+> LtmDnsAnalyticsList GetDnsAnalyticsList()
 
 
 
@@ -8661,7 +8660,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsAnalyticsList**](dns_analytics_list.md)
+[**LtmDnsAnalyticsList**](ltm_dns_analytics_list.md)
 
 ### Authorization
 
@@ -8675,7 +8674,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCache**
-> DnsCache GetDnsCache($id)
+> LtmDnsCache GetDnsCache($id)
 
 
 
@@ -8690,7 +8689,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCache**](dns_cache.md)
+[**LtmDnsCache**](ltm_dns_cache.md)
 
 ### Authorization
 
@@ -8704,7 +8703,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheGlobalSettings**
-> DnsCacheGlobalSettings GetDnsCacheGlobalSettings($id)
+> LtmDnsCacheGlobalSettings GetDnsCacheGlobalSettings($id)
 
 
 
@@ -8719,7 +8718,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCacheGlobalSettings**](dns_cache_globalSettings.md)
+[**LtmDnsCacheGlobalSettings**](ltm_dns_cache_globalSettings.md)
 
 ### Authorization
 
@@ -8733,7 +8732,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheGlobalSettingsList**
-> DnsCacheGlobalSettingsList GetDnsCacheGlobalSettingsList()
+> LtmDnsCacheGlobalSettingsList GetDnsCacheGlobalSettingsList()
 
 
 
@@ -8745,7 +8744,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheGlobalSettingsList**](dns_cache_globalSettings_list.md)
+[**LtmDnsCacheGlobalSettingsList**](ltm_dns_cache_globalSettings_list.md)
 
 ### Authorization
 
@@ -8759,7 +8758,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheList**
-> DnsCacheList GetDnsCacheList()
+> LtmDnsCacheList GetDnsCacheList()
 
 
 
@@ -8771,7 +8770,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheList**](dns_cache_list.md)
+[**LtmDnsCacheList**](ltm_dns_cache_list.md)
 
 ### Authorization
 
@@ -8785,7 +8784,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecords**
-> DnsCacheRecords GetDnsCacheRecords($id)
+> LtmDnsCacheRecords GetDnsCacheRecords($id)
 
 
 
@@ -8800,7 +8799,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCacheRecords**](dns_cache_records.md)
+[**LtmDnsCacheRecords**](ltm_dns_cache_records.md)
 
 ### Authorization
 
@@ -8814,7 +8813,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecordsKey**
-> DnsCacheRecordsKey GetDnsCacheRecordsKey($id)
+> LtmDnsCacheRecordsKey GetDnsCacheRecordsKey($id)
 
 
 
@@ -8829,7 +8828,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCacheRecordsKey**](dns_cache_records_key.md)
+[**LtmDnsCacheRecordsKey**](ltm_dns_cache_records_key.md)
 
 ### Authorization
 
@@ -8843,7 +8842,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecordsKeyList**
-> DnsCacheRecordsKeyList GetDnsCacheRecordsKeyList()
+> LtmDnsCacheRecordsKeyList GetDnsCacheRecordsKeyList()
 
 
 
@@ -8855,7 +8854,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheRecordsKeyList**](dns_cache_records_key_list.md)
+[**LtmDnsCacheRecordsKeyList**](ltm_dns_cache_records_key_list.md)
 
 ### Authorization
 
@@ -8869,7 +8868,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecordsList**
-> DnsCacheRecordsList GetDnsCacheRecordsList()
+> LtmDnsCacheRecordsList GetDnsCacheRecordsList()
 
 
 
@@ -8881,7 +8880,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheRecordsList**](dns_cache_records_list.md)
+[**LtmDnsCacheRecordsList**](ltm_dns_cache_records_list.md)
 
 ### Authorization
 
@@ -8895,7 +8894,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecordsMsg**
-> DnsCacheRecordsMsg GetDnsCacheRecordsMsg($id)
+> LtmDnsCacheRecordsMsg GetDnsCacheRecordsMsg($id)
 
 
 
@@ -8910,7 +8909,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCacheRecordsMsg**](dns_cache_records_msg.md)
+[**LtmDnsCacheRecordsMsg**](ltm_dns_cache_records_msg.md)
 
 ### Authorization
 
@@ -8924,7 +8923,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecordsMsgList**
-> DnsCacheRecordsMsgList GetDnsCacheRecordsMsgList()
+> LtmDnsCacheRecordsMsgList GetDnsCacheRecordsMsgList()
 
 
 
@@ -8936,7 +8935,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheRecordsMsgList**](dns_cache_records_msg_list.md)
+[**LtmDnsCacheRecordsMsgList**](ltm_dns_cache_records_msg_list.md)
 
 ### Authorization
 
@@ -8950,7 +8949,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecordsNameserver**
-> DnsCacheRecordsNameserver GetDnsCacheRecordsNameserver($id)
+> LtmDnsCacheRecordsNameserver GetDnsCacheRecordsNameserver($id)
 
 
 
@@ -8965,7 +8964,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCacheRecordsNameserver**](dns_cache_records_nameserver.md)
+[**LtmDnsCacheRecordsNameserver**](ltm_dns_cache_records_nameserver.md)
 
 ### Authorization
 
@@ -8979,7 +8978,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecordsNameserverList**
-> DnsCacheRecordsNameserverList GetDnsCacheRecordsNameserverList()
+> LtmDnsCacheRecordsNameserverList GetDnsCacheRecordsNameserverList()
 
 
 
@@ -8991,7 +8990,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheRecordsNameserverList**](dns_cache_records_nameserver_list.md)
+[**LtmDnsCacheRecordsNameserverList**](ltm_dns_cache_records_nameserver_list.md)
 
 ### Authorization
 
@@ -9005,7 +9004,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecordsRrset**
-> DnsCacheRecordsRrset GetDnsCacheRecordsRrset($id)
+> LtmDnsCacheRecordsRrset GetDnsCacheRecordsRrset($id)
 
 
 
@@ -9020,7 +9019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCacheRecordsRrset**](dns_cache_records_rrset.md)
+[**LtmDnsCacheRecordsRrset**](ltm_dns_cache_records_rrset.md)
 
 ### Authorization
 
@@ -9034,7 +9033,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheRecordsRrsetList**
-> DnsCacheRecordsRrsetList GetDnsCacheRecordsRrsetList()
+> LtmDnsCacheRecordsRrsetList GetDnsCacheRecordsRrsetList()
 
 
 
@@ -9046,7 +9045,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheRecordsRrsetList**](dns_cache_records_rrset_list.md)
+[**LtmDnsCacheRecordsRrsetList**](ltm_dns_cache_records_rrset_list.md)
 
 ### Authorization
 
@@ -9060,7 +9059,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheResolver**
-> DnsCacheResolver GetDnsCacheResolver($id)
+> LtmDnsCacheResolver GetDnsCacheResolver($id)
 
 
 
@@ -9075,7 +9074,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCacheResolver**](dns_cache_resolver.md)
+[**LtmDnsCacheResolver**](ltm_dns_cache_resolver.md)
 
 ### Authorization
 
@@ -9089,7 +9088,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheResolverList**
-> DnsCacheResolverList GetDnsCacheResolverList()
+> LtmDnsCacheResolverList GetDnsCacheResolverList()
 
 
 
@@ -9101,7 +9100,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheResolverList**](dns_cache_resolver_list.md)
+[**LtmDnsCacheResolverList**](ltm_dns_cache_resolver_list.md)
 
 ### Authorization
 
@@ -9115,7 +9114,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheTransparent**
-> DnsCacheTransparent GetDnsCacheTransparent($id)
+> LtmDnsCacheTransparent GetDnsCacheTransparent($id)
 
 
 
@@ -9130,7 +9129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCacheTransparent**](dns_cache_transparent.md)
+[**LtmDnsCacheTransparent**](ltm_dns_cache_transparent.md)
 
 ### Authorization
 
@@ -9144,7 +9143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheTransparentList**
-> DnsCacheTransparentList GetDnsCacheTransparentList()
+> LtmDnsCacheTransparentList GetDnsCacheTransparentList()
 
 
 
@@ -9156,7 +9155,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheTransparentList**](dns_cache_transparent_list.md)
+[**LtmDnsCacheTransparentList**](ltm_dns_cache_transparent_list.md)
 
 ### Authorization
 
@@ -9170,7 +9169,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheValidatingResolver**
-> DnsCacheValidatingResolver GetDnsCacheValidatingResolver($id)
+> LtmDnsCacheValidatingResolver GetDnsCacheValidatingResolver($id)
 
 
 
@@ -9185,7 +9184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsCacheValidatingResolver**](dns_cache_validatingResolver.md)
+[**LtmDnsCacheValidatingResolver**](ltm_dns_cache_validatingResolver.md)
 
 ### Authorization
 
@@ -9199,7 +9198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsCacheValidatingResolverList**
-> DnsCacheValidatingResolverList GetDnsCacheValidatingResolverList()
+> LtmDnsCacheValidatingResolverList GetDnsCacheValidatingResolverList()
 
 
 
@@ -9211,7 +9210,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsCacheValidatingResolverList**](dns_cache_validatingResolver_list.md)
+[**LtmDnsCacheValidatingResolverList**](ltm_dns_cache_validatingResolver_list.md)
 
 ### Authorization
 
@@ -9225,7 +9224,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsDnsExpressDbList**
-> DnsDnsExpressDbList GetDnsDnsExpressDbList()
+> LtmDnsDnsExpressDbList GetDnsDnsExpressDbList()
 
 
 
@@ -9237,7 +9236,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsDnsExpressDbList**](dns_dnsExpressDb_list.md)
+[**LtmDnsDnsExpressDbList**](ltm_dns_dnsExpressDb_list.md)
 
 ### Authorization
 
@@ -9251,7 +9250,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsDnssec**
-> DnsDnssec GetDnsDnssec($id)
+> LtmDnsDnssec GetDnsDnssec($id)
 
 
 
@@ -9266,7 +9265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsDnssec**](dns_dnssec.md)
+[**LtmDnsDnssec**](ltm_dns_dnssec.md)
 
 ### Authorization
 
@@ -9280,7 +9279,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsDnssecKey**
-> DnsDnssecKey GetDnsDnssecKey($id)
+> LtmDnsDnssecKey GetDnsDnssecKey($id)
 
 
 
@@ -9295,7 +9294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsDnssecKey**](dns_dnssec_key.md)
+[**LtmDnsDnssecKey**](ltm_dns_dnssec_key.md)
 
 ### Authorization
 
@@ -9309,7 +9308,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsDnssecKeyList**
-> DnsDnssecKeyList GetDnsDnssecKeyList()
+> LtmDnsDnssecKeyList GetDnsDnssecKeyList()
 
 
 
@@ -9321,7 +9320,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsDnssecKeyList**](dns_dnssec_key_list.md)
+[**LtmDnsDnssecKeyList**](ltm_dns_dnssec_key_list.md)
 
 ### Authorization
 
@@ -9335,7 +9334,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsDnssecKeyTmGeneration**
-> DnsDnssecKeyTmGeneration GetDnsDnssecKeyTmGeneration($id)
+> LtmDnsDnssecKeyTmGeneration GetDnsDnssecKeyTmGeneration($id)
 
 
 
@@ -9350,7 +9349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsDnssecKeyTmGeneration**](dns_dnssec_key_tmGeneration.md)
+[**LtmDnsDnssecKeyTmGeneration**](ltm_dns_dnssec_key_tmGeneration.md)
 
 ### Authorization
 
@@ -9364,7 +9363,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsDnssecKeyTmGenerationList**
-> DnsDnssecKeyTmGenerationList GetDnsDnssecKeyTmGenerationList()
+> LtmDnsDnssecKeyTmGenerationList GetDnsDnssecKeyTmGenerationList()
 
 
 
@@ -9376,7 +9375,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsDnssecKeyTmGenerationList**](dns_dnssec_key_tmGeneration_list.md)
+[**LtmDnsDnssecKeyTmGenerationList**](ltm_dns_dnssec_key_tmGeneration_list.md)
 
 ### Authorization
 
@@ -9390,7 +9389,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsDnssecList**
-> DnsDnssecList GetDnsDnssecList()
+> LtmDnsDnssecList GetDnsDnssecList()
 
 
 
@@ -9402,7 +9401,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsDnssecList**](dns_dnssec_list.md)
+[**LtmDnsDnssecList**](ltm_dns_dnssec_list.md)
 
 ### Authorization
 
@@ -9416,7 +9415,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsDnssecZone**
-> DnsDnssecZone GetDnsDnssecZone($id)
+> LtmDnsDnssecZone GetDnsDnssecZone($id)
 
 
 
@@ -9431,7 +9430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsDnssecZone**](dns_dnssec_zone.md)
+[**LtmDnsDnssecZone**](ltm_dns_dnssec_zone.md)
 
 ### Authorization
 
@@ -9445,7 +9444,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsDnssecZoneList**
-> DnsDnssecZoneList GetDnsDnssecZoneList()
+> LtmDnsDnssecZoneList GetDnsDnssecZoneList()
 
 
 
@@ -9457,7 +9456,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsDnssecZoneList**](dns_dnssec_zone_list.md)
+[**LtmDnsDnssecZoneList**](ltm_dns_dnssec_zone_list.md)
 
 ### Authorization
 
@@ -9471,7 +9470,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsList**
-> DnsList GetDnsList()
+> LtmDnsList GetDnsList()
 
 
 
@@ -9483,7 +9482,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsList**](dns_list.md)
+[**LtmDnsList**](ltm_dns_list.md)
 
 ### Authorization
 
@@ -9497,7 +9496,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsNameserver**
-> DnsNameserver GetDnsNameserver($id)
+> LtmDnsNameserver GetDnsNameserver($id)
 
 
 
@@ -9512,7 +9511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsNameserver**](dns_nameserver.md)
+[**LtmDnsNameserver**](ltm_dns_nameserver.md)
 
 ### Authorization
 
@@ -9526,7 +9525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsNameserverList**
-> DnsNameserverList GetDnsNameserverList()
+> LtmDnsNameserverList GetDnsNameserverList()
 
 
 
@@ -9538,7 +9537,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsNameserverList**](dns_nameserver_list.md)
+[**LtmDnsNameserverList**](ltm_dns_nameserver_list.md)
 
 ### Authorization
 
@@ -9552,7 +9551,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsTsigKey**
-> DnsTsigKey GetDnsTsigKey($id)
+> LtmDnsTsigKey GetDnsTsigKey($id)
 
 
 
@@ -9567,7 +9566,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsTsigKey**](dns_tsigKey.md)
+[**LtmDnsTsigKey**](ltm_dns_tsigKey.md)
 
 ### Authorization
 
@@ -9581,7 +9580,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsTsigKeyList**
-> DnsTsigKeyList GetDnsTsigKeyList()
+> LtmDnsTsigKeyList GetDnsTsigKeyList()
 
 
 
@@ -9593,7 +9592,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsTsigKeyList**](dns_tsigKey_list.md)
+[**LtmDnsTsigKeyList**](ltm_dns_tsigKey_list.md)
 
 ### Authorization
 
@@ -9607,7 +9606,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsZone**
-> DnsZone GetDnsZone($id)
+> LtmDnsZone GetDnsZone($id)
 
 
 
@@ -9622,7 +9621,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DnsZone**](dns_zone.md)
+[**LtmDnsZone**](ltm_dns_zone.md)
 
 ### Authorization
 
@@ -9636,7 +9635,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDnsZoneList**
-> DnsZoneList GetDnsZoneList()
+> LtmDnsZoneList GetDnsZoneList()
 
 
 
@@ -9648,7 +9647,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**DnsZoneList**](dns_zone_list.md)
+[**LtmDnsZoneList**](ltm_dns_zone_list.md)
 
 ### Authorization
 
@@ -9662,7 +9661,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetEvictionPolicy**
-> EvictionPolicy GetEvictionPolicy($id)
+> LtmEvictionPolicy GetEvictionPolicy($id)
 
 
 
@@ -9677,7 +9676,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EvictionPolicy**](evictionPolicy.md)
+[**LtmEvictionPolicy**](ltm_evictionPolicy.md)
 
 ### Authorization
 
@@ -9691,7 +9690,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetEvictionPolicyList**
-> EvictionPolicyList GetEvictionPolicyList()
+> LtmEvictionPolicyList GetEvictionPolicyList()
 
 
 
@@ -9703,7 +9702,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**EvictionPolicyList**](evictionPolicy_list.md)
+[**LtmEvictionPolicyList**](ltm_evictionPolicy_list.md)
 
 ### Authorization
 
@@ -9717,7 +9716,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetGlobalSettings**
-> GlobalSettings GetGlobalSettings($id)
+> LtmGlobalSettings GetGlobalSettings($id)
 
 
 
@@ -9732,7 +9731,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GlobalSettings**](globalSettings.md)
+[**LtmGlobalSettings**](ltm_globalSettings.md)
 
 ### Authorization
 
@@ -9746,7 +9745,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetGlobalSettingsConnection**
-> GlobalSettingsConnection GetGlobalSettingsConnection($id)
+> LtmGlobalSettingsConnection GetGlobalSettingsConnection($id)
 
 
 
@@ -9761,7 +9760,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GlobalSettingsConnection**](globalSettings_connection.md)
+[**LtmGlobalSettingsConnection**](ltm_globalSettings_connection.md)
 
 ### Authorization
 
@@ -9775,7 +9774,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetGlobalSettingsConnectionList**
-> GlobalSettingsConnectionList GetGlobalSettingsConnectionList()
+> LtmGlobalSettingsConnectionList GetGlobalSettingsConnectionList()
 
 
 
@@ -9787,7 +9786,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**GlobalSettingsConnectionList**](globalSettings_connection_list.md)
+[**LtmGlobalSettingsConnectionList**](ltm_globalSettings_connection_list.md)
 
 ### Authorization
 
@@ -9801,7 +9800,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetGlobalSettingsGeneral**
-> GlobalSettingsGeneral GetGlobalSettingsGeneral($id)
+> LtmGlobalSettingsGeneral GetGlobalSettingsGeneral($id)
 
 
 
@@ -9816,7 +9815,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GlobalSettingsGeneral**](globalSettings_general.md)
+[**LtmGlobalSettingsGeneral**](ltm_globalSettings_general.md)
 
 ### Authorization
 
@@ -9830,7 +9829,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetGlobalSettingsGeneralList**
-> GlobalSettingsGeneralList GetGlobalSettingsGeneralList()
+> LtmGlobalSettingsGeneralList GetGlobalSettingsGeneralList()
 
 
 
@@ -9842,7 +9841,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**GlobalSettingsGeneralList**](globalSettings_general_list.md)
+[**LtmGlobalSettingsGeneralList**](ltm_globalSettings_general_list.md)
 
 ### Authorization
 
@@ -9856,7 +9855,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetGlobalSettingsList**
-> GlobalSettingsList GetGlobalSettingsList()
+> LtmGlobalSettingsList GetGlobalSettingsList()
 
 
 
@@ -9868,7 +9867,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**GlobalSettingsList**](globalSettings_list.md)
+[**LtmGlobalSettingsList**](ltm_globalSettings_list.md)
 
 ### Authorization
 
@@ -9882,7 +9881,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetGlobalSettingsTrafficControl**
-> GlobalSettingsTrafficControl GetGlobalSettingsTrafficControl($id)
+> LtmGlobalSettingsTrafficControl GetGlobalSettingsTrafficControl($id)
 
 
 
@@ -9897,7 +9896,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GlobalSettingsTrafficControl**](globalSettings_trafficControl.md)
+[**LtmGlobalSettingsTrafficControl**](ltm_globalSettings_trafficControl.md)
 
 ### Authorization
 
@@ -9911,7 +9910,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetGlobalSettingsTrafficControlList**
-> GlobalSettingsTrafficControlList GetGlobalSettingsTrafficControlList()
+> LtmGlobalSettingsTrafficControlList GetGlobalSettingsTrafficControlList()
 
 
 
@@ -9923,7 +9922,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**GlobalSettingsTrafficControlList**](globalSettings_trafficControl_list.md)
+[**LtmGlobalSettingsTrafficControlList**](ltm_globalSettings_trafficControl_list.md)
 
 ### Authorization
 
@@ -9937,7 +9936,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRule**
-> HtmlRule GetHtmlRule($id)
+> LtmHtmlRule GetHtmlRule($id)
 
 
 
@@ -9952,7 +9951,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HtmlRule**](htmlRule.md)
+[**LtmHtmlRule**](ltm_htmlRule.md)
 
 ### Authorization
 
@@ -9966,7 +9965,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleCommentRaiseEvent**
-> HtmlRuleCommentRaiseEvent GetHtmlRuleCommentRaiseEvent($id)
+> LtmHtmlRuleCommentRaiseEvent GetHtmlRuleCommentRaiseEvent($id)
 
 
 
@@ -9981,7 +9980,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HtmlRuleCommentRaiseEvent**](htmlRule_commentRaiseEvent.md)
+[**LtmHtmlRuleCommentRaiseEvent**](ltm_htmlRule_commentRaiseEvent.md)
 
 ### Authorization
 
@@ -9995,7 +9994,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleCommentRaiseEventList**
-> HtmlRuleCommentRaiseEventList GetHtmlRuleCommentRaiseEventList()
+> LtmHtmlRuleCommentRaiseEventList GetHtmlRuleCommentRaiseEventList()
 
 
 
@@ -10007,7 +10006,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HtmlRuleCommentRaiseEventList**](htmlRule_commentRaiseEvent_list.md)
+[**LtmHtmlRuleCommentRaiseEventList**](ltm_htmlRule_commentRaiseEvent_list.md)
 
 ### Authorization
 
@@ -10021,7 +10020,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleCommentRemove**
-> HtmlRuleCommentRemove GetHtmlRuleCommentRemove($id)
+> LtmHtmlRuleCommentRemove GetHtmlRuleCommentRemove($id)
 
 
 
@@ -10036,7 +10035,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HtmlRuleCommentRemove**](htmlRule_commentRemove.md)
+[**LtmHtmlRuleCommentRemove**](ltm_htmlRule_commentRemove.md)
 
 ### Authorization
 
@@ -10050,7 +10049,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleCommentRemoveList**
-> HtmlRuleCommentRemoveList GetHtmlRuleCommentRemoveList()
+> LtmHtmlRuleCommentRemoveList GetHtmlRuleCommentRemoveList()
 
 
 
@@ -10062,7 +10061,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HtmlRuleCommentRemoveList**](htmlRule_commentRemove_list.md)
+[**LtmHtmlRuleCommentRemoveList**](ltm_htmlRule_commentRemove_list.md)
 
 ### Authorization
 
@@ -10076,7 +10075,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleList**
-> HtmlRuleList GetHtmlRuleList()
+> LtmHtmlRuleList GetHtmlRuleList()
 
 
 
@@ -10088,7 +10087,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HtmlRuleList**](htmlRule_list.md)
+[**LtmHtmlRuleList**](ltm_htmlRule_list.md)
 
 ### Authorization
 
@@ -10102,7 +10101,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagAppendHtml**
-> HtmlRuleTagAppendHtml GetHtmlRuleTagAppendHtml($id)
+> LtmHtmlRuleTagAppendHtml GetHtmlRuleTagAppendHtml($id)
 
 
 
@@ -10117,7 +10116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HtmlRuleTagAppendHtml**](htmlRule_tagAppendHtml.md)
+[**LtmHtmlRuleTagAppendHtml**](ltm_htmlRule_tagAppendHtml.md)
 
 ### Authorization
 
@@ -10131,7 +10130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagAppendHtmlList**
-> HtmlRuleTagAppendHtmlList GetHtmlRuleTagAppendHtmlList()
+> LtmHtmlRuleTagAppendHtmlList GetHtmlRuleTagAppendHtmlList()
 
 
 
@@ -10143,7 +10142,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HtmlRuleTagAppendHtmlList**](htmlRule_tagAppendHtml_list.md)
+[**LtmHtmlRuleTagAppendHtmlList**](ltm_htmlRule_tagAppendHtml_list.md)
 
 ### Authorization
 
@@ -10157,7 +10156,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagPrependHtml**
-> HtmlRuleTagPrependHtml GetHtmlRuleTagPrependHtml($id)
+> LtmHtmlRuleTagPrependHtml GetHtmlRuleTagPrependHtml($id)
 
 
 
@@ -10172,7 +10171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HtmlRuleTagPrependHtml**](htmlRule_tagPrependHtml.md)
+[**LtmHtmlRuleTagPrependHtml**](ltm_htmlRule_tagPrependHtml.md)
 
 ### Authorization
 
@@ -10186,7 +10185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagPrependHtmlList**
-> HtmlRuleTagPrependHtmlList GetHtmlRuleTagPrependHtmlList()
+> LtmHtmlRuleTagPrependHtmlList GetHtmlRuleTagPrependHtmlList()
 
 
 
@@ -10198,7 +10197,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HtmlRuleTagPrependHtmlList**](htmlRule_tagPrependHtml_list.md)
+[**LtmHtmlRuleTagPrependHtmlList**](ltm_htmlRule_tagPrependHtml_list.md)
 
 ### Authorization
 
@@ -10212,7 +10211,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagRaiseEvent**
-> HtmlRuleTagRaiseEvent GetHtmlRuleTagRaiseEvent($id)
+> LtmHtmlRuleTagRaiseEvent GetHtmlRuleTagRaiseEvent($id)
 
 
 
@@ -10227,7 +10226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HtmlRuleTagRaiseEvent**](htmlRule_tagRaiseEvent.md)
+[**LtmHtmlRuleTagRaiseEvent**](ltm_htmlRule_tagRaiseEvent.md)
 
 ### Authorization
 
@@ -10241,7 +10240,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagRaiseEventList**
-> HtmlRuleTagRaiseEventList GetHtmlRuleTagRaiseEventList()
+> LtmHtmlRuleTagRaiseEventList GetHtmlRuleTagRaiseEventList()
 
 
 
@@ -10253,7 +10252,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HtmlRuleTagRaiseEventList**](htmlRule_tagRaiseEvent_list.md)
+[**LtmHtmlRuleTagRaiseEventList**](ltm_htmlRule_tagRaiseEvent_list.md)
 
 ### Authorization
 
@@ -10267,7 +10266,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagRemove**
-> HtmlRuleTagRemove GetHtmlRuleTagRemove($id)
+> LtmHtmlRuleTagRemove GetHtmlRuleTagRemove($id)
 
 
 
@@ -10282,7 +10281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HtmlRuleTagRemove**](htmlRule_tagRemove.md)
+[**LtmHtmlRuleTagRemove**](ltm_htmlRule_tagRemove.md)
 
 ### Authorization
 
@@ -10296,7 +10295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagRemoveAttribute**
-> HtmlRuleTagRemoveAttribute GetHtmlRuleTagRemoveAttribute($id)
+> LtmHtmlRuleTagRemoveAttribute GetHtmlRuleTagRemoveAttribute($id)
 
 
 
@@ -10311,7 +10310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HtmlRuleTagRemoveAttribute**](htmlRule_tagRemoveAttribute.md)
+[**LtmHtmlRuleTagRemoveAttribute**](ltm_htmlRule_tagRemoveAttribute.md)
 
 ### Authorization
 
@@ -10325,7 +10324,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagRemoveAttributeList**
-> HtmlRuleTagRemoveAttributeList GetHtmlRuleTagRemoveAttributeList()
+> LtmHtmlRuleTagRemoveAttributeList GetHtmlRuleTagRemoveAttributeList()
 
 
 
@@ -10337,7 +10336,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HtmlRuleTagRemoveAttributeList**](htmlRule_tagRemoveAttribute_list.md)
+[**LtmHtmlRuleTagRemoveAttributeList**](ltm_htmlRule_tagRemoveAttribute_list.md)
 
 ### Authorization
 
@@ -10351,7 +10350,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetHtmlRuleTagRemoveList**
-> HtmlRuleTagRemoveList GetHtmlRuleTagRemoveList()
+> LtmHtmlRuleTagRemoveList GetHtmlRuleTagRemoveList()
 
 
 
@@ -10363,7 +10362,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HtmlRuleTagRemoveList**](htmlRule_tagRemove_list.md)
+[**LtmHtmlRuleTagRemoveList**](ltm_htmlRule_tagRemove_list.md)
 
 ### Authorization
 
@@ -10377,7 +10376,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetIfile**
-> Ifile GetIfile($id)
+> LtmIfile GetIfile($id)
 
 
 
@@ -10392,7 +10391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Ifile**](ifile.md)
+[**LtmIfile**](ltm_ifile.md)
 
 ### Authorization
 
@@ -10406,7 +10405,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetIfileList**
-> IfileList GetIfileList()
+> LtmIfileList GetIfileList()
 
 
 
@@ -10418,7 +10417,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**IfileList**](ifile_list.md)
+[**LtmIfileList**](ltm_ifile_list.md)
 
 ### Authorization
 
@@ -10432,7 +10431,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetLsnLogProfile**
-> LsnLogProfile GetLsnLogProfile($id)
+> LtmLsnLogProfile GetLsnLogProfile($id)
 
 
 
@@ -10447,7 +10446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LsnLogProfile**](lsnLogProfile.md)
+[**LtmLsnLogProfile**](ltm_lsnLogProfile.md)
 
 ### Authorization
 
@@ -10461,7 +10460,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetLsnLogProfileList**
-> LsnLogProfileList GetLsnLogProfileList()
+> LtmLsnLogProfileList GetLsnLogProfileList()
 
 
 
@@ -10473,7 +10472,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LsnLogProfileList**](lsnLogProfile_list.md)
+[**LtmLsnLogProfileList**](ltm_lsnLogProfile_list.md)
 
 ### Authorization
 
@@ -10487,7 +10486,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetLsnPool**
-> LsnPool GetLsnPool($id)
+> LtmLsnPool GetLsnPool($id)
 
 
 
@@ -10502,7 +10501,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LsnPool**](lsnPool.md)
+[**LtmLsnPool**](ltm_lsnPool.md)
 
 ### Authorization
 
@@ -10516,7 +10515,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetLsnPoolList**
-> LsnPoolList GetLsnPoolList()
+> LtmLsnPoolList GetLsnPoolList()
 
 
 
@@ -10528,7 +10527,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LsnPoolList**](lsnPool_list.md)
+[**LtmLsnPoolList**](ltm_lsnPool_list.md)
 
 ### Authorization
 
@@ -10542,7 +10541,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRouting**
-> MessageRouting GetMessageRouting($id)
+> LtmMessageRouting GetMessageRouting($id)
 
 
 
@@ -10557,7 +10556,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRouting**](messageRouting.md)
+[**LtmMessageRouting**](ltm_messageRouting.md)
 
 ### Authorization
 
@@ -10571,7 +10570,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameter**
-> MessageRoutingDiameter GetMessageRoutingDiameter($id)
+> LtmMessageRoutingDiameter GetMessageRoutingDiameter($id)
 
 
 
@@ -10586,7 +10585,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingDiameter**](messageRouting_diameter.md)
+[**LtmMessageRoutingDiameter**](ltm_messageRouting_diameter.md)
 
 ### Authorization
 
@@ -10600,7 +10599,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterList**
-> MessageRoutingDiameterList GetMessageRoutingDiameterList()
+> LtmMessageRoutingDiameterList GetMessageRoutingDiameterList()
 
 
 
@@ -10612,7 +10611,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingDiameterList**](messageRouting_diameter_list.md)
+[**LtmMessageRoutingDiameterList**](ltm_messageRouting_diameter_list.md)
 
 ### Authorization
 
@@ -10626,7 +10625,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterPeer**
-> MessageRoutingDiameterPeer GetMessageRoutingDiameterPeer($id)
+> LtmMessageRoutingDiameterPeer GetMessageRoutingDiameterPeer($id)
 
 
 
@@ -10641,7 +10640,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingDiameterPeer**](messageRouting_diameter_peer.md)
+[**LtmMessageRoutingDiameterPeer**](ltm_messageRouting_diameter_peer.md)
 
 ### Authorization
 
@@ -10655,7 +10654,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterPeerList**
-> MessageRoutingDiameterPeerList GetMessageRoutingDiameterPeerList()
+> LtmMessageRoutingDiameterPeerList GetMessageRoutingDiameterPeerList()
 
 
 
@@ -10667,7 +10666,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingDiameterPeerList**](messageRouting_diameter_peer_list.md)
+[**LtmMessageRoutingDiameterPeerList**](ltm_messageRouting_diameter_peer_list.md)
 
 ### Authorization
 
@@ -10681,7 +10680,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterProfile**
-> MessageRoutingDiameterProfile GetMessageRoutingDiameterProfile($id)
+> LtmMessageRoutingDiameterProfile GetMessageRoutingDiameterProfile($id)
 
 
 
@@ -10696,7 +10695,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingDiameterProfile**](messageRouting_diameter_profile.md)
+[**LtmMessageRoutingDiameterProfile**](ltm_messageRouting_diameter_profile.md)
 
 ### Authorization
 
@@ -10710,7 +10709,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterProfileList**
-> MessageRoutingDiameterProfileList GetMessageRoutingDiameterProfileList()
+> LtmMessageRoutingDiameterProfileList GetMessageRoutingDiameterProfileList()
 
 
 
@@ -10722,7 +10721,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingDiameterProfileList**](messageRouting_diameter_profile_list.md)
+[**LtmMessageRoutingDiameterProfileList**](ltm_messageRouting_diameter_profile_list.md)
 
 ### Authorization
 
@@ -10736,7 +10735,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterProfileRouter**
-> MessageRoutingDiameterProfileRouter GetMessageRoutingDiameterProfileRouter($id)
+> LtmMessageRoutingDiameterProfileRouter GetMessageRoutingDiameterProfileRouter($id)
 
 
 
@@ -10751,7 +10750,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingDiameterProfileRouter**](messageRouting_diameter_profile_router.md)
+[**LtmMessageRoutingDiameterProfileRouter**](ltm_messageRouting_diameter_profile_router.md)
 
 ### Authorization
 
@@ -10765,7 +10764,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterProfileRouterList**
-> MessageRoutingDiameterProfileRouterList GetMessageRoutingDiameterProfileRouterList()
+> LtmMessageRoutingDiameterProfileRouterList GetMessageRoutingDiameterProfileRouterList()
 
 
 
@@ -10777,7 +10776,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingDiameterProfileRouterList**](messageRouting_diameter_profile_router_list.md)
+[**LtmMessageRoutingDiameterProfileRouterList**](ltm_messageRouting_diameter_profile_router_list.md)
 
 ### Authorization
 
@@ -10791,7 +10790,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterProfileSession**
-> MessageRoutingDiameterProfileSession GetMessageRoutingDiameterProfileSession($id)
+> LtmMessageRoutingDiameterProfileSession GetMessageRoutingDiameterProfileSession($id)
 
 
 
@@ -10806,7 +10805,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingDiameterProfileSession**](messageRouting_diameter_profile_session.md)
+[**LtmMessageRoutingDiameterProfileSession**](ltm_messageRouting_diameter_profile_session.md)
 
 ### Authorization
 
@@ -10820,7 +10819,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterProfileSessionList**
-> MessageRoutingDiameterProfileSessionList GetMessageRoutingDiameterProfileSessionList()
+> LtmMessageRoutingDiameterProfileSessionList GetMessageRoutingDiameterProfileSessionList()
 
 
 
@@ -10832,7 +10831,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingDiameterProfileSessionList**](messageRouting_diameter_profile_session_list.md)
+[**LtmMessageRoutingDiameterProfileSessionList**](ltm_messageRouting_diameter_profile_session_list.md)
 
 ### Authorization
 
@@ -10846,7 +10845,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterRoute**
-> MessageRoutingDiameterRoute GetMessageRoutingDiameterRoute($id)
+> LtmMessageRoutingDiameterRoute GetMessageRoutingDiameterRoute($id)
 
 
 
@@ -10861,7 +10860,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingDiameterRoute**](messageRouting_diameter_route.md)
+[**LtmMessageRoutingDiameterRoute**](ltm_messageRouting_diameter_route.md)
 
 ### Authorization
 
@@ -10875,7 +10874,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterRouteList**
-> MessageRoutingDiameterRouteList GetMessageRoutingDiameterRouteList()
+> LtmMessageRoutingDiameterRouteList GetMessageRoutingDiameterRouteList()
 
 
 
@@ -10887,7 +10886,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingDiameterRouteList**](messageRouting_diameter_route_list.md)
+[**LtmMessageRoutingDiameterRouteList**](ltm_messageRouting_diameter_route_list.md)
 
 ### Authorization
 
@@ -10901,7 +10900,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterTransportConfig**
-> MessageRoutingDiameterTransportConfig GetMessageRoutingDiameterTransportConfig($id)
+> LtmMessageRoutingDiameterTransportConfig GetMessageRoutingDiameterTransportConfig($id)
 
 
 
@@ -10916,7 +10915,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfig**](messageRouting_diameter_transportConfig.md)
+[**LtmMessageRoutingDiameterTransportConfig**](ltm_messageRouting_diameter_transportConfig.md)
 
 ### Authorization
 
@@ -10930,7 +10929,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterTransportConfigList**
-> MessageRoutingDiameterTransportConfigList GetMessageRoutingDiameterTransportConfigList()
+> LtmMessageRoutingDiameterTransportConfigList GetMessageRoutingDiameterTransportConfigList()
 
 
 
@@ -10942,7 +10941,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfigList**](messageRouting_diameter_transportConfig_list.md)
+[**LtmMessageRoutingDiameterTransportConfigList**](ltm_messageRouting_diameter_transportConfig_list.md)
 
 ### Authorization
 
@@ -10956,7 +10955,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterTransportConfigProfiles**
-> MessageRoutingDiameterTransportConfigProfiles GetMessageRoutingDiameterTransportConfigProfiles($id)
+> LtmMessageRoutingDiameterTransportConfigProfiles GetMessageRoutingDiameterTransportConfigProfiles($id)
 
 
 
@@ -10971,7 +10970,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfigProfiles**](messageRouting_diameter_transportConfig_profiles.md)
+[**LtmMessageRoutingDiameterTransportConfigProfiles**](ltm_messageRouting_diameter_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -10985,7 +10984,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingDiameterTransportConfigProfilesList**
-> MessageRoutingDiameterTransportConfigProfilesList GetMessageRoutingDiameterTransportConfigProfilesList()
+> LtmMessageRoutingDiameterTransportConfigProfilesList GetMessageRoutingDiameterTransportConfigProfilesList()
 
 
 
@@ -10997,7 +10996,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfigProfilesList**](messageRouting_diameter_transportConfig_profiles_list.md)
+[**LtmMessageRoutingDiameterTransportConfigProfilesList**](ltm_messageRouting_diameter_transportConfig_profiles_list.md)
 
 ### Authorization
 
@@ -11011,7 +11010,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGeneric**
-> MessageRoutingGeneric GetMessageRoutingGeneric($id)
+> LtmMessageRoutingGeneric GetMessageRoutingGeneric($id)
 
 
 
@@ -11026,7 +11025,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingGeneric**](messageRouting_generic.md)
+[**LtmMessageRoutingGeneric**](ltm_messageRouting_generic.md)
 
 ### Authorization
 
@@ -11040,7 +11039,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericList**
-> MessageRoutingGenericList GetMessageRoutingGenericList()
+> LtmMessageRoutingGenericList GetMessageRoutingGenericList()
 
 
 
@@ -11052,7 +11051,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingGenericList**](messageRouting_generic_list.md)
+[**LtmMessageRoutingGenericList**](ltm_messageRouting_generic_list.md)
 
 ### Authorization
 
@@ -11066,7 +11065,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericPeer**
-> MessageRoutingGenericPeer GetMessageRoutingGenericPeer($id)
+> LtmMessageRoutingGenericPeer GetMessageRoutingGenericPeer($id)
 
 
 
@@ -11081,7 +11080,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingGenericPeer**](messageRouting_generic_peer.md)
+[**LtmMessageRoutingGenericPeer**](ltm_messageRouting_generic_peer.md)
 
 ### Authorization
 
@@ -11095,7 +11094,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericPeerList**
-> MessageRoutingGenericPeerList GetMessageRoutingGenericPeerList()
+> LtmMessageRoutingGenericPeerList GetMessageRoutingGenericPeerList()
 
 
 
@@ -11107,7 +11106,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingGenericPeerList**](messageRouting_generic_peer_list.md)
+[**LtmMessageRoutingGenericPeerList**](ltm_messageRouting_generic_peer_list.md)
 
 ### Authorization
 
@@ -11121,7 +11120,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericProtocol**
-> MessageRoutingGenericProtocol GetMessageRoutingGenericProtocol($id)
+> LtmMessageRoutingGenericProtocol GetMessageRoutingGenericProtocol($id)
 
 
 
@@ -11136,7 +11135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingGenericProtocol**](messageRouting_generic_protocol.md)
+[**LtmMessageRoutingGenericProtocol**](ltm_messageRouting_generic_protocol.md)
 
 ### Authorization
 
@@ -11150,7 +11149,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericProtocolList**
-> MessageRoutingGenericProtocolList GetMessageRoutingGenericProtocolList()
+> LtmMessageRoutingGenericProtocolList GetMessageRoutingGenericProtocolList()
 
 
 
@@ -11162,7 +11161,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingGenericProtocolList**](messageRouting_generic_protocol_list.md)
+[**LtmMessageRoutingGenericProtocolList**](ltm_messageRouting_generic_protocol_list.md)
 
 ### Authorization
 
@@ -11176,7 +11175,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericRoute**
-> MessageRoutingGenericRoute GetMessageRoutingGenericRoute($id)
+> LtmMessageRoutingGenericRoute GetMessageRoutingGenericRoute($id)
 
 
 
@@ -11191,7 +11190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingGenericRoute**](messageRouting_generic_route.md)
+[**LtmMessageRoutingGenericRoute**](ltm_messageRouting_generic_route.md)
 
 ### Authorization
 
@@ -11205,7 +11204,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericRouteList**
-> MessageRoutingGenericRouteList GetMessageRoutingGenericRouteList()
+> LtmMessageRoutingGenericRouteList GetMessageRoutingGenericRouteList()
 
 
 
@@ -11217,7 +11216,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingGenericRouteList**](messageRouting_generic_route_list.md)
+[**LtmMessageRoutingGenericRouteList**](ltm_messageRouting_generic_route_list.md)
 
 ### Authorization
 
@@ -11231,7 +11230,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericRouter**
-> MessageRoutingGenericRouter GetMessageRoutingGenericRouter($id)
+> LtmMessageRoutingGenericRouter GetMessageRoutingGenericRouter($id)
 
 
 
@@ -11246,7 +11245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingGenericRouter**](messageRouting_generic_router.md)
+[**LtmMessageRoutingGenericRouter**](ltm_messageRouting_generic_router.md)
 
 ### Authorization
 
@@ -11260,7 +11259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericRouterList**
-> MessageRoutingGenericRouterList GetMessageRoutingGenericRouterList()
+> LtmMessageRoutingGenericRouterList GetMessageRoutingGenericRouterList()
 
 
 
@@ -11272,7 +11271,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingGenericRouterList**](messageRouting_generic_router_list.md)
+[**LtmMessageRoutingGenericRouterList**](ltm_messageRouting_generic_router_list.md)
 
 ### Authorization
 
@@ -11286,7 +11285,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericTransportConfig**
-> MessageRoutingGenericTransportConfig GetMessageRoutingGenericTransportConfig($id)
+> LtmMessageRoutingGenericTransportConfig GetMessageRoutingGenericTransportConfig($id)
 
 
 
@@ -11301,7 +11300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfig**](messageRouting_generic_transportConfig.md)
+[**LtmMessageRoutingGenericTransportConfig**](ltm_messageRouting_generic_transportConfig.md)
 
 ### Authorization
 
@@ -11315,7 +11314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericTransportConfigList**
-> MessageRoutingGenericTransportConfigList GetMessageRoutingGenericTransportConfigList()
+> LtmMessageRoutingGenericTransportConfigList GetMessageRoutingGenericTransportConfigList()
 
 
 
@@ -11327,7 +11326,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfigList**](messageRouting_generic_transportConfig_list.md)
+[**LtmMessageRoutingGenericTransportConfigList**](ltm_messageRouting_generic_transportConfig_list.md)
 
 ### Authorization
 
@@ -11341,7 +11340,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericTransportConfigProfiles**
-> MessageRoutingGenericTransportConfigProfiles GetMessageRoutingGenericTransportConfigProfiles($id)
+> LtmMessageRoutingGenericTransportConfigProfiles GetMessageRoutingGenericTransportConfigProfiles($id)
 
 
 
@@ -11356,7 +11355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfigProfiles**](messageRouting_generic_transportConfig_profiles.md)
+[**LtmMessageRoutingGenericTransportConfigProfiles**](ltm_messageRouting_generic_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -11370,7 +11369,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingGenericTransportConfigProfilesList**
-> MessageRoutingGenericTransportConfigProfilesList GetMessageRoutingGenericTransportConfigProfilesList()
+> LtmMessageRoutingGenericTransportConfigProfilesList GetMessageRoutingGenericTransportConfigProfilesList()
 
 
 
@@ -11382,7 +11381,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfigProfilesList**](messageRouting_generic_transportConfig_profiles_list.md)
+[**LtmMessageRoutingGenericTransportConfigProfilesList**](ltm_messageRouting_generic_transportConfig_profiles_list.md)
 
 ### Authorization
 
@@ -11396,7 +11395,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingList**
-> MessageRoutingList GetMessageRoutingList()
+> LtmMessageRoutingList GetMessageRoutingList()
 
 
 
@@ -11408,7 +11407,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingList**](messageRouting_list.md)
+[**LtmMessageRoutingList**](ltm_messageRouting_list.md)
 
 ### Authorization
 
@@ -11422,7 +11421,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSip**
-> MessageRoutingSip GetMessageRoutingSip($id)
+> LtmMessageRoutingSip GetMessageRoutingSip($id)
 
 
 
@@ -11437,7 +11436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingSip**](messageRouting_sip.md)
+[**LtmMessageRoutingSip**](ltm_messageRouting_sip.md)
 
 ### Authorization
 
@@ -11451,7 +11450,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipList**
-> MessageRoutingSipList GetMessageRoutingSipList()
+> LtmMessageRoutingSipList GetMessageRoutingSipList()
 
 
 
@@ -11463,7 +11462,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingSipList**](messageRouting_sip_list.md)
+[**LtmMessageRoutingSipList**](ltm_messageRouting_sip_list.md)
 
 ### Authorization
 
@@ -11477,7 +11476,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipPeer**
-> MessageRoutingSipPeer GetMessageRoutingSipPeer($id)
+> LtmMessageRoutingSipPeer GetMessageRoutingSipPeer($id)
 
 
 
@@ -11492,7 +11491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingSipPeer**](messageRouting_sip_peer.md)
+[**LtmMessageRoutingSipPeer**](ltm_messageRouting_sip_peer.md)
 
 ### Authorization
 
@@ -11506,7 +11505,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipPeerList**
-> MessageRoutingSipPeerList GetMessageRoutingSipPeerList()
+> LtmMessageRoutingSipPeerList GetMessageRoutingSipPeerList()
 
 
 
@@ -11518,7 +11517,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingSipPeerList**](messageRouting_sip_peer_list.md)
+[**LtmMessageRoutingSipPeerList**](ltm_messageRouting_sip_peer_list.md)
 
 ### Authorization
 
@@ -11532,7 +11531,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipProfile**
-> MessageRoutingSipProfile GetMessageRoutingSipProfile($id)
+> LtmMessageRoutingSipProfile GetMessageRoutingSipProfile($id)
 
 
 
@@ -11547,7 +11546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingSipProfile**](messageRouting_sip_profile.md)
+[**LtmMessageRoutingSipProfile**](ltm_messageRouting_sip_profile.md)
 
 ### Authorization
 
@@ -11561,7 +11560,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipProfileList**
-> MessageRoutingSipProfileList GetMessageRoutingSipProfileList()
+> LtmMessageRoutingSipProfileList GetMessageRoutingSipProfileList()
 
 
 
@@ -11573,7 +11572,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingSipProfileList**](messageRouting_sip_profile_list.md)
+[**LtmMessageRoutingSipProfileList**](ltm_messageRouting_sip_profile_list.md)
 
 ### Authorization
 
@@ -11587,7 +11586,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipProfileRouter**
-> MessageRoutingSipProfileRouter GetMessageRoutingSipProfileRouter($id)
+> LtmMessageRoutingSipProfileRouter GetMessageRoutingSipProfileRouter($id)
 
 
 
@@ -11602,7 +11601,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingSipProfileRouter**](messageRouting_sip_profile_router.md)
+[**LtmMessageRoutingSipProfileRouter**](ltm_messageRouting_sip_profile_router.md)
 
 ### Authorization
 
@@ -11616,7 +11615,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipProfileRouterList**
-> MessageRoutingSipProfileRouterList GetMessageRoutingSipProfileRouterList()
+> LtmMessageRoutingSipProfileRouterList GetMessageRoutingSipProfileRouterList()
 
 
 
@@ -11628,7 +11627,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingSipProfileRouterList**](messageRouting_sip_profile_router_list.md)
+[**LtmMessageRoutingSipProfileRouterList**](ltm_messageRouting_sip_profile_router_list.md)
 
 ### Authorization
 
@@ -11642,7 +11641,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipProfileSession**
-> MessageRoutingSipProfileSession GetMessageRoutingSipProfileSession($id)
+> LtmMessageRoutingSipProfileSession GetMessageRoutingSipProfileSession($id)
 
 
 
@@ -11657,7 +11656,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingSipProfileSession**](messageRouting_sip_profile_session.md)
+[**LtmMessageRoutingSipProfileSession**](ltm_messageRouting_sip_profile_session.md)
 
 ### Authorization
 
@@ -11671,7 +11670,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipProfileSessionList**
-> MessageRoutingSipProfileSessionList GetMessageRoutingSipProfileSessionList()
+> LtmMessageRoutingSipProfileSessionList GetMessageRoutingSipProfileSessionList()
 
 
 
@@ -11683,7 +11682,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingSipProfileSessionList**](messageRouting_sip_profile_session_list.md)
+[**LtmMessageRoutingSipProfileSessionList**](ltm_messageRouting_sip_profile_session_list.md)
 
 ### Authorization
 
@@ -11697,7 +11696,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipRoute**
-> MessageRoutingSipRoute GetMessageRoutingSipRoute($id)
+> LtmMessageRoutingSipRoute GetMessageRoutingSipRoute($id)
 
 
 
@@ -11712,7 +11711,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingSipRoute**](messageRouting_sip_route.md)
+[**LtmMessageRoutingSipRoute**](ltm_messageRouting_sip_route.md)
 
 ### Authorization
 
@@ -11726,7 +11725,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipRouteList**
-> MessageRoutingSipRouteList GetMessageRoutingSipRouteList()
+> LtmMessageRoutingSipRouteList GetMessageRoutingSipRouteList()
 
 
 
@@ -11738,7 +11737,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingSipRouteList**](messageRouting_sip_route_list.md)
+[**LtmMessageRoutingSipRouteList**](ltm_messageRouting_sip_route_list.md)
 
 ### Authorization
 
@@ -11752,7 +11751,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipTransportConfig**
-> MessageRoutingSipTransportConfig GetMessageRoutingSipTransportConfig($id)
+> LtmMessageRoutingSipTransportConfig GetMessageRoutingSipTransportConfig($id)
 
 
 
@@ -11767,7 +11766,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingSipTransportConfig**](messageRouting_sip_transportConfig.md)
+[**LtmMessageRoutingSipTransportConfig**](ltm_messageRouting_sip_transportConfig.md)
 
 ### Authorization
 
@@ -11781,7 +11780,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipTransportConfigList**
-> MessageRoutingSipTransportConfigList GetMessageRoutingSipTransportConfigList()
+> LtmMessageRoutingSipTransportConfigList GetMessageRoutingSipTransportConfigList()
 
 
 
@@ -11793,7 +11792,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingSipTransportConfigList**](messageRouting_sip_transportConfig_list.md)
+[**LtmMessageRoutingSipTransportConfigList**](ltm_messageRouting_sip_transportConfig_list.md)
 
 ### Authorization
 
@@ -11807,7 +11806,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipTransportConfigProfiles**
-> MessageRoutingSipTransportConfigProfiles GetMessageRoutingSipTransportConfigProfiles($id)
+> LtmMessageRoutingSipTransportConfigProfiles GetMessageRoutingSipTransportConfigProfiles($id)
 
 
 
@@ -11822,7 +11821,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessageRoutingSipTransportConfigProfiles**](messageRouting_sip_transportConfig_profiles.md)
+[**LtmMessageRoutingSipTransportConfigProfiles**](ltm_messageRouting_sip_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -11836,7 +11835,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessageRoutingSipTransportConfigProfilesList**
-> MessageRoutingSipTransportConfigProfilesList GetMessageRoutingSipTransportConfigProfilesList()
+> LtmMessageRoutingSipTransportConfigProfilesList GetMessageRoutingSipTransportConfigProfilesList()
 
 
 
@@ -11848,7 +11847,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MessageRoutingSipTransportConfigProfilesList**](messageRouting_sip_transportConfig_profiles_list.md)
+[**LtmMessageRoutingSipTransportConfigProfilesList**](ltm_messageRouting_sip_transportConfig_profiles_list.md)
 
 ### Authorization
 
@@ -11862,7 +11861,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitor**
-> Monitor GetMonitor($id)
+> LtmMonitor GetMonitor($id)
 
 
 
@@ -11877,7 +11876,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Monitor**](monitor.md)
+[**LtmMonitor**](ltm_monitor.md)
 
 ### Authorization
 
@@ -11891,7 +11890,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorDiameter**
-> MonitorDiameter GetMonitorDiameter($id)
+> LtmMonitorDiameter GetMonitorDiameter($id)
 
 
 
@@ -11906,7 +11905,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorDiameter**](monitor_diameter.md)
+[**LtmMonitorDiameter**](ltm_monitor_diameter.md)
 
 ### Authorization
 
@@ -11920,7 +11919,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorDiameterList**
-> MonitorDiameterList GetMonitorDiameterList()
+> LtmMonitorDiameterList GetMonitorDiameterList()
 
 
 
@@ -11932,7 +11931,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorDiameterList**](monitor_diameter_list.md)
+[**LtmMonitorDiameterList**](ltm_monitor_diameter_list.md)
 
 ### Authorization
 
@@ -11946,7 +11945,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorDns**
-> MonitorDns GetMonitorDns($id)
+> LtmMonitorDns GetMonitorDns($id)
 
 
 
@@ -11961,7 +11960,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorDns**](monitor_dns.md)
+[**LtmMonitorDns**](ltm_monitor_dns.md)
 
 ### Authorization
 
@@ -11975,7 +11974,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorDnsList**
-> MonitorDnsList GetMonitorDnsList()
+> LtmMonitorDnsList GetMonitorDnsList()
 
 
 
@@ -11987,7 +11986,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorDnsList**](monitor_dns_list.md)
+[**LtmMonitorDnsList**](ltm_monitor_dns_list.md)
 
 ### Authorization
 
@@ -12001,7 +12000,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorExternal**
-> MonitorExternal GetMonitorExternal($id)
+> LtmMonitorExternal GetMonitorExternal($id)
 
 
 
@@ -12016,7 +12015,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorExternal**](monitor_external.md)
+[**LtmMonitorExternal**](ltm_monitor_external.md)
 
 ### Authorization
 
@@ -12030,7 +12029,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorExternalList**
-> MonitorExternalList GetMonitorExternalList()
+> LtmMonitorExternalList GetMonitorExternalList()
 
 
 
@@ -12042,7 +12041,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorExternalList**](monitor_external_list.md)
+[**LtmMonitorExternalList**](ltm_monitor_external_list.md)
 
 ### Authorization
 
@@ -12056,7 +12055,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorFirepass**
-> MonitorFirepass GetMonitorFirepass($id)
+> LtmMonitorFirepass GetMonitorFirepass($id)
 
 
 
@@ -12071,7 +12070,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorFirepass**](monitor_firepass.md)
+[**LtmMonitorFirepass**](ltm_monitor_firepass.md)
 
 ### Authorization
 
@@ -12085,7 +12084,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorFirepassList**
-> MonitorFirepassList GetMonitorFirepassList()
+> LtmMonitorFirepassList GetMonitorFirepassList()
 
 
 
@@ -12097,7 +12096,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorFirepassList**](monitor_firepass_list.md)
+[**LtmMonitorFirepassList**](ltm_monitor_firepass_list.md)
 
 ### Authorization
 
@@ -12111,7 +12110,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorFtp**
-> MonitorFtp GetMonitorFtp($id)
+> LtmMonitorFtp GetMonitorFtp($id)
 
 
 
@@ -12126,7 +12125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorFtp**](monitor_ftp.md)
+[**LtmMonitorFtp**](ltm_monitor_ftp.md)
 
 ### Authorization
 
@@ -12140,7 +12139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorFtpList**
-> MonitorFtpList GetMonitorFtpList()
+> LtmMonitorFtpList GetMonitorFtpList()
 
 
 
@@ -12152,7 +12151,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorFtpList**](monitor_ftp_list.md)
+[**LtmMonitorFtpList**](ltm_monitor_ftp_list.md)
 
 ### Authorization
 
@@ -12166,7 +12165,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorGatewayIcmp**
-> MonitorGatewayIcmp GetMonitorGatewayIcmp($id)
+> LtmMonitorGatewayIcmp GetMonitorGatewayIcmp($id)
 
 
 
@@ -12181,7 +12180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorGatewayIcmp**](monitor_gatewayIcmp.md)
+[**LtmMonitorGatewayIcmp**](ltm_monitor_gatewayIcmp.md)
 
 ### Authorization
 
@@ -12195,7 +12194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorGatewayIcmpList**
-> MonitorGatewayIcmpList GetMonitorGatewayIcmpList()
+> LtmMonitorGatewayIcmpList GetMonitorGatewayIcmpList()
 
 
 
@@ -12207,7 +12206,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorGatewayIcmpList**](monitor_gatewayIcmp_list.md)
+[**LtmMonitorGatewayIcmpList**](ltm_monitor_gatewayIcmp_list.md)
 
 ### Authorization
 
@@ -12221,7 +12220,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorHttp**
-> MonitorHttp GetMonitorHttp($id)
+> LtmMonitorHttp GetMonitorHttp($id)
 
 
 
@@ -12236,7 +12235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorHttp**](monitor_http.md)
+[**LtmMonitorHttp**](ltm_monitor_http.md)
 
 ### Authorization
 
@@ -12250,7 +12249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorHttpList**
-> MonitorHttpList GetMonitorHttpList()
+> LtmMonitorHttpList GetMonitorHttpList()
 
 
 
@@ -12262,7 +12261,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorHttpList**](monitor_http_list.md)
+[**LtmMonitorHttpList**](ltm_monitor_http_list.md)
 
 ### Authorization
 
@@ -12276,7 +12275,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorHttps**
-> MonitorHttps GetMonitorHttps($id)
+> LtmMonitorHttps GetMonitorHttps($id)
 
 
 
@@ -12291,7 +12290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorHttps**](monitor_https.md)
+[**LtmMonitorHttps**](ltm_monitor_https.md)
 
 ### Authorization
 
@@ -12305,7 +12304,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorHttpsList**
-> MonitorHttpsList GetMonitorHttpsList()
+> LtmMonitorHttpsList GetMonitorHttpsList()
 
 
 
@@ -12317,7 +12316,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorHttpsList**](monitor_https_list.md)
+[**LtmMonitorHttpsList**](ltm_monitor_https_list.md)
 
 ### Authorization
 
@@ -12331,7 +12330,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorIcmp**
-> MonitorIcmp GetMonitorIcmp($id)
+> LtmMonitorIcmp GetMonitorIcmp($id)
 
 
 
@@ -12346,7 +12345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorIcmp**](monitor_icmp.md)
+[**LtmMonitorIcmp**](ltm_monitor_icmp.md)
 
 ### Authorization
 
@@ -12360,7 +12359,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorIcmpList**
-> MonitorIcmpList GetMonitorIcmpList()
+> LtmMonitorIcmpList GetMonitorIcmpList()
 
 
 
@@ -12372,7 +12371,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorIcmpList**](monitor_icmp_list.md)
+[**LtmMonitorIcmpList**](ltm_monitor_icmp_list.md)
 
 ### Authorization
 
@@ -12386,7 +12385,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorImap**
-> MonitorImap GetMonitorImap($id)
+> LtmMonitorImap GetMonitorImap($id)
 
 
 
@@ -12401,7 +12400,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorImap**](monitor_imap.md)
+[**LtmMonitorImap**](ltm_monitor_imap.md)
 
 ### Authorization
 
@@ -12415,7 +12414,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorImapList**
-> MonitorImapList GetMonitorImapList()
+> LtmMonitorImapList GetMonitorImapList()
 
 
 
@@ -12427,7 +12426,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorImapList**](monitor_imap_list.md)
+[**LtmMonitorImapList**](ltm_monitor_imap_list.md)
 
 ### Authorization
 
@@ -12441,7 +12440,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorInband**
-> MonitorInband GetMonitorInband($id)
+> LtmMonitorInband GetMonitorInband($id)
 
 
 
@@ -12456,7 +12455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorInband**](monitor_inband.md)
+[**LtmMonitorInband**](ltm_monitor_inband.md)
 
 ### Authorization
 
@@ -12470,7 +12469,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorInbandList**
-> MonitorInbandList GetMonitorInbandList()
+> LtmMonitorInbandList GetMonitorInbandList()
 
 
 
@@ -12482,7 +12481,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorInbandList**](monitor_inband_list.md)
+[**LtmMonitorInbandList**](ltm_monitor_inband_list.md)
 
 ### Authorization
 
@@ -12496,7 +12495,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorLdap**
-> MonitorLdap GetMonitorLdap($id)
+> LtmMonitorLdap GetMonitorLdap($id)
 
 
 
@@ -12511,7 +12510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorLdap**](monitor_ldap.md)
+[**LtmMonitorLdap**](ltm_monitor_ldap.md)
 
 ### Authorization
 
@@ -12525,7 +12524,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorLdapList**
-> MonitorLdapList GetMonitorLdapList()
+> LtmMonitorLdapList GetMonitorLdapList()
 
 
 
@@ -12537,7 +12536,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorLdapList**](monitor_ldap_list.md)
+[**LtmMonitorLdapList**](ltm_monitor_ldap_list.md)
 
 ### Authorization
 
@@ -12551,7 +12550,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorList**
-> MonitorList GetMonitorList()
+> LtmMonitorList GetMonitorList()
 
 
 
@@ -12563,7 +12562,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorList**](monitor_list.md)
+[**LtmMonitorList**](ltm_monitor_list.md)
 
 ### Authorization
 
@@ -12577,7 +12576,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorModuleScore**
-> MonitorModuleScore GetMonitorModuleScore($id)
+> LtmMonitorModuleScore GetMonitorModuleScore($id)
 
 
 
@@ -12592,7 +12591,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorModuleScore**](monitor_moduleScore.md)
+[**LtmMonitorModuleScore**](ltm_monitor_moduleScore.md)
 
 ### Authorization
 
@@ -12606,7 +12605,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorModuleScoreList**
-> MonitorModuleScoreList GetMonitorModuleScoreList()
+> LtmMonitorModuleScoreList GetMonitorModuleScoreList()
 
 
 
@@ -12618,7 +12617,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorModuleScoreList**](monitor_moduleScore_list.md)
+[**LtmMonitorModuleScoreList**](ltm_monitor_moduleScore_list.md)
 
 ### Authorization
 
@@ -12632,7 +12631,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorMssql**
-> MonitorMssql GetMonitorMssql($id)
+> LtmMonitorMssql GetMonitorMssql($id)
 
 
 
@@ -12647,7 +12646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorMssql**](monitor_mssql.md)
+[**LtmMonitorMssql**](ltm_monitor_mssql.md)
 
 ### Authorization
 
@@ -12661,7 +12660,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorMssqlList**
-> MonitorMssqlList GetMonitorMssqlList()
+> LtmMonitorMssqlList GetMonitorMssqlList()
 
 
 
@@ -12673,7 +12672,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorMssqlList**](monitor_mssql_list.md)
+[**LtmMonitorMssqlList**](ltm_monitor_mssql_list.md)
 
 ### Authorization
 
@@ -12687,7 +12686,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorMysql**
-> MonitorMysql GetMonitorMysql($id)
+> LtmMonitorMysql GetMonitorMysql($id)
 
 
 
@@ -12702,7 +12701,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorMysql**](monitor_mysql.md)
+[**LtmMonitorMysql**](ltm_monitor_mysql.md)
 
 ### Authorization
 
@@ -12716,7 +12715,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorMysqlList**
-> MonitorMysqlList GetMonitorMysqlList()
+> LtmMonitorMysqlList GetMonitorMysqlList()
 
 
 
@@ -12728,7 +12727,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorMysqlList**](monitor_mysql_list.md)
+[**LtmMonitorMysqlList**](ltm_monitor_mysql_list.md)
 
 ### Authorization
 
@@ -12742,7 +12741,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorNntp**
-> MonitorNntp GetMonitorNntp($id)
+> LtmMonitorNntp GetMonitorNntp($id)
 
 
 
@@ -12757,7 +12756,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorNntp**](monitor_nntp.md)
+[**LtmMonitorNntp**](ltm_monitor_nntp.md)
 
 ### Authorization
 
@@ -12771,7 +12770,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorNntpList**
-> MonitorNntpList GetMonitorNntpList()
+> LtmMonitorNntpList GetMonitorNntpList()
 
 
 
@@ -12783,7 +12782,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorNntpList**](monitor_nntp_list.md)
+[**LtmMonitorNntpList**](ltm_monitor_nntp_list.md)
 
 ### Authorization
 
@@ -12797,7 +12796,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorNone**
-> MonitorNone GetMonitorNone($id)
+> LtmMonitorNone GetMonitorNone($id)
 
 
 
@@ -12812,7 +12811,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorNone**](monitor_none.md)
+[**LtmMonitorNone**](ltm_monitor_none.md)
 
 ### Authorization
 
@@ -12826,7 +12825,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorNoneList**
-> MonitorNoneList GetMonitorNoneList()
+> LtmMonitorNoneList GetMonitorNoneList()
 
 
 
@@ -12838,7 +12837,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorNoneList**](monitor_none_list.md)
+[**LtmMonitorNoneList**](ltm_monitor_none_list.md)
 
 ### Authorization
 
@@ -12852,7 +12851,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorOracle**
-> MonitorOracle GetMonitorOracle($id)
+> LtmMonitorOracle GetMonitorOracle($id)
 
 
 
@@ -12867,7 +12866,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorOracle**](monitor_oracle.md)
+[**LtmMonitorOracle**](ltm_monitor_oracle.md)
 
 ### Authorization
 
@@ -12881,7 +12880,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorOracleList**
-> MonitorOracleList GetMonitorOracleList()
+> LtmMonitorOracleList GetMonitorOracleList()
 
 
 
@@ -12893,7 +12892,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorOracleList**](monitor_oracle_list.md)
+[**LtmMonitorOracleList**](ltm_monitor_oracle_list.md)
 
 ### Authorization
 
@@ -12907,7 +12906,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorPop3**
-> MonitorPop3 GetMonitorPop3($id)
+> LtmMonitorPop3 GetMonitorPop3($id)
 
 
 
@@ -12922,7 +12921,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorPop3**](monitor_pop3.md)
+[**LtmMonitorPop3**](ltm_monitor_pop3.md)
 
 ### Authorization
 
@@ -12936,7 +12935,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorPop3List**
-> MonitorPop3List GetMonitorPop3List()
+> LtmMonitorPop3List GetMonitorPop3List()
 
 
 
@@ -12948,7 +12947,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorPop3List**](monitor_pop3_list.md)
+[**LtmMonitorPop3List**](ltm_monitor_pop3_list.md)
 
 ### Authorization
 
@@ -12962,7 +12961,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorPostgresql**
-> MonitorPostgresql GetMonitorPostgresql($id)
+> LtmMonitorPostgresql GetMonitorPostgresql($id)
 
 
 
@@ -12977,7 +12976,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorPostgresql**](monitor_postgresql.md)
+[**LtmMonitorPostgresql**](ltm_monitor_postgresql.md)
 
 ### Authorization
 
@@ -12991,7 +12990,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorPostgresqlList**
-> MonitorPostgresqlList GetMonitorPostgresqlList()
+> LtmMonitorPostgresqlList GetMonitorPostgresqlList()
 
 
 
@@ -13003,7 +13002,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorPostgresqlList**](monitor_postgresql_list.md)
+[**LtmMonitorPostgresqlList**](ltm_monitor_postgresql_list.md)
 
 ### Authorization
 
@@ -13017,7 +13016,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorRadius**
-> MonitorRadius GetMonitorRadius($id)
+> LtmMonitorRadius GetMonitorRadius($id)
 
 
 
@@ -13032,7 +13031,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorRadius**](monitor_radius.md)
+[**LtmMonitorRadius**](ltm_monitor_radius.md)
 
 ### Authorization
 
@@ -13046,7 +13045,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorRadiusAccounting**
-> MonitorRadiusAccounting GetMonitorRadiusAccounting($id)
+> LtmMonitorRadiusAccounting GetMonitorRadiusAccounting($id)
 
 
 
@@ -13061,7 +13060,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorRadiusAccounting**](monitor_radiusAccounting.md)
+[**LtmMonitorRadiusAccounting**](ltm_monitor_radiusAccounting.md)
 
 ### Authorization
 
@@ -13075,7 +13074,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorRadiusAccountingList**
-> MonitorRadiusAccountingList GetMonitorRadiusAccountingList()
+> LtmMonitorRadiusAccountingList GetMonitorRadiusAccountingList()
 
 
 
@@ -13087,7 +13086,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorRadiusAccountingList**](monitor_radiusAccounting_list.md)
+[**LtmMonitorRadiusAccountingList**](ltm_monitor_radiusAccounting_list.md)
 
 ### Authorization
 
@@ -13101,7 +13100,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorRadiusList**
-> MonitorRadiusList GetMonitorRadiusList()
+> LtmMonitorRadiusList GetMonitorRadiusList()
 
 
 
@@ -13113,7 +13112,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorRadiusList**](monitor_radius_list.md)
+[**LtmMonitorRadiusList**](ltm_monitor_radius_list.md)
 
 ### Authorization
 
@@ -13127,7 +13126,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorRealServer**
-> MonitorRealServer GetMonitorRealServer($id)
+> LtmMonitorRealServer GetMonitorRealServer($id)
 
 
 
@@ -13142,7 +13141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorRealServer**](monitor_realServer.md)
+[**LtmMonitorRealServer**](ltm_monitor_realServer.md)
 
 ### Authorization
 
@@ -13156,7 +13155,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorRealServerList**
-> MonitorRealServerList GetMonitorRealServerList()
+> LtmMonitorRealServerList GetMonitorRealServerList()
 
 
 
@@ -13168,7 +13167,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorRealServerList**](monitor_realServer_list.md)
+[**LtmMonitorRealServerList**](ltm_monitor_realServer_list.md)
 
 ### Authorization
 
@@ -13182,7 +13181,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorRpc**
-> MonitorRpc GetMonitorRpc($id)
+> LtmMonitorRpc GetMonitorRpc($id)
 
 
 
@@ -13197,7 +13196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorRpc**](monitor_rpc.md)
+[**LtmMonitorRpc**](ltm_monitor_rpc.md)
 
 ### Authorization
 
@@ -13211,7 +13210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorRpcList**
-> MonitorRpcList GetMonitorRpcList()
+> LtmMonitorRpcList GetMonitorRpcList()
 
 
 
@@ -13223,7 +13222,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorRpcList**](monitor_rpc_list.md)
+[**LtmMonitorRpcList**](ltm_monitor_rpc_list.md)
 
 ### Authorization
 
@@ -13237,7 +13236,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSasp**
-> MonitorSasp GetMonitorSasp($id)
+> LtmMonitorSasp GetMonitorSasp($id)
 
 
 
@@ -13252,7 +13251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorSasp**](monitor_sasp.md)
+[**LtmMonitorSasp**](ltm_monitor_sasp.md)
 
 ### Authorization
 
@@ -13266,7 +13265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSaspList**
-> MonitorSaspList GetMonitorSaspList()
+> LtmMonitorSaspList GetMonitorSaspList()
 
 
 
@@ -13278,7 +13277,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorSaspList**](monitor_sasp_list.md)
+[**LtmMonitorSaspList**](ltm_monitor_sasp_list.md)
 
 ### Authorization
 
@@ -13292,7 +13291,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorScripted**
-> MonitorScripted GetMonitorScripted($id)
+> LtmMonitorScripted GetMonitorScripted($id)
 
 
 
@@ -13307,7 +13306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorScripted**](monitor_scripted.md)
+[**LtmMonitorScripted**](ltm_monitor_scripted.md)
 
 ### Authorization
 
@@ -13321,7 +13320,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorScriptedList**
-> MonitorScriptedList GetMonitorScriptedList()
+> LtmMonitorScriptedList GetMonitorScriptedList()
 
 
 
@@ -13333,7 +13332,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorScriptedList**](monitor_scripted_list.md)
+[**LtmMonitorScriptedList**](ltm_monitor_scripted_list.md)
 
 ### Authorization
 
@@ -13347,7 +13346,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSip**
-> MonitorSip GetMonitorSip($id)
+> LtmMonitorSip GetMonitorSip($id)
 
 
 
@@ -13362,7 +13361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorSip**](monitor_sip.md)
+[**LtmMonitorSip**](ltm_monitor_sip.md)
 
 ### Authorization
 
@@ -13376,7 +13375,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSipList**
-> MonitorSipList GetMonitorSipList()
+> LtmMonitorSipList GetMonitorSipList()
 
 
 
@@ -13388,7 +13387,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorSipList**](monitor_sip_list.md)
+[**LtmMonitorSipList**](ltm_monitor_sip_list.md)
 
 ### Authorization
 
@@ -13402,7 +13401,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSmb**
-> MonitorSmb GetMonitorSmb($id)
+> LtmMonitorSmb GetMonitorSmb($id)
 
 
 
@@ -13417,7 +13416,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorSmb**](monitor_smb.md)
+[**LtmMonitorSmb**](ltm_monitor_smb.md)
 
 ### Authorization
 
@@ -13431,7 +13430,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSmbList**
-> MonitorSmbList GetMonitorSmbList()
+> LtmMonitorSmbList GetMonitorSmbList()
 
 
 
@@ -13443,7 +13442,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorSmbList**](monitor_smb_list.md)
+[**LtmMonitorSmbList**](ltm_monitor_smb_list.md)
 
 ### Authorization
 
@@ -13457,7 +13456,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSmtp**
-> MonitorSmtp GetMonitorSmtp($id)
+> LtmMonitorSmtp GetMonitorSmtp($id)
 
 
 
@@ -13472,7 +13471,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorSmtp**](monitor_smtp.md)
+[**LtmMonitorSmtp**](ltm_monitor_smtp.md)
 
 ### Authorization
 
@@ -13486,7 +13485,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSmtpList**
-> MonitorSmtpList GetMonitorSmtpList()
+> LtmMonitorSmtpList GetMonitorSmtpList()
 
 
 
@@ -13498,7 +13497,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorSmtpList**](monitor_smtp_list.md)
+[**LtmMonitorSmtpList**](ltm_monitor_smtp_list.md)
 
 ### Authorization
 
@@ -13512,7 +13511,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSnmpDca**
-> MonitorSnmpDca GetMonitorSnmpDca($id)
+> LtmMonitorSnmpDca GetMonitorSnmpDca($id)
 
 
 
@@ -13527,7 +13526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorSnmpDca**](monitor_snmpDca.md)
+[**LtmMonitorSnmpDca**](ltm_monitor_snmpDca.md)
 
 ### Authorization
 
@@ -13541,7 +13540,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSnmpDcaBase**
-> MonitorSnmpDcaBase GetMonitorSnmpDcaBase($id)
+> LtmMonitorSnmpDcaBase GetMonitorSnmpDcaBase($id)
 
 
 
@@ -13556,7 +13555,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorSnmpDcaBase**](monitor_snmpDcaBase.md)
+[**LtmMonitorSnmpDcaBase**](ltm_monitor_snmpDcaBase.md)
 
 ### Authorization
 
@@ -13570,7 +13569,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSnmpDcaBaseList**
-> MonitorSnmpDcaBaseList GetMonitorSnmpDcaBaseList()
+> LtmMonitorSnmpDcaBaseList GetMonitorSnmpDcaBaseList()
 
 
 
@@ -13582,7 +13581,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorSnmpDcaBaseList**](monitor_snmpDcaBase_list.md)
+[**LtmMonitorSnmpDcaBaseList**](ltm_monitor_snmpDcaBase_list.md)
 
 ### Authorization
 
@@ -13596,7 +13595,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSnmpDcaList**
-> MonitorSnmpDcaList GetMonitorSnmpDcaList()
+> LtmMonitorSnmpDcaList GetMonitorSnmpDcaList()
 
 
 
@@ -13608,7 +13607,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorSnmpDcaList**](monitor_snmpDca_list.md)
+[**LtmMonitorSnmpDcaList**](ltm_monitor_snmpDca_list.md)
 
 ### Authorization
 
@@ -13622,7 +13621,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSoap**
-> MonitorSoap GetMonitorSoap($id)
+> LtmMonitorSoap GetMonitorSoap($id)
 
 
 
@@ -13637,7 +13636,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorSoap**](monitor_soap.md)
+[**LtmMonitorSoap**](ltm_monitor_soap.md)
 
 ### Authorization
 
@@ -13651,7 +13650,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorSoapList**
-> MonitorSoapList GetMonitorSoapList()
+> LtmMonitorSoapList GetMonitorSoapList()
 
 
 
@@ -13663,7 +13662,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorSoapList**](monitor_soap_list.md)
+[**LtmMonitorSoapList**](ltm_monitor_soap_list.md)
 
 ### Authorization
 
@@ -13677,7 +13676,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorTcp**
-> MonitorTcp GetMonitorTcp($id)
+> LtmMonitorTcp GetMonitorTcp($id)
 
 
 
@@ -13692,7 +13691,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorTcp**](monitor_tcp.md)
+[**LtmMonitorTcp**](ltm_monitor_tcp.md)
 
 ### Authorization
 
@@ -13706,7 +13705,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorTcpEcho**
-> MonitorTcpEcho GetMonitorTcpEcho($id)
+> LtmMonitorTcpEcho GetMonitorTcpEcho($id)
 
 
 
@@ -13721,7 +13720,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorTcpEcho**](monitor_tcpEcho.md)
+[**LtmMonitorTcpEcho**](ltm_monitor_tcpEcho.md)
 
 ### Authorization
 
@@ -13735,7 +13734,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorTcpEchoList**
-> MonitorTcpEchoList GetMonitorTcpEchoList()
+> LtmMonitorTcpEchoList GetMonitorTcpEchoList()
 
 
 
@@ -13747,7 +13746,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorTcpEchoList**](monitor_tcpEcho_list.md)
+[**LtmMonitorTcpEchoList**](ltm_monitor_tcpEcho_list.md)
 
 ### Authorization
 
@@ -13761,7 +13760,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorTcpHalfOpen**
-> MonitorTcpHalfOpen GetMonitorTcpHalfOpen($id)
+> LtmMonitorTcpHalfOpen GetMonitorTcpHalfOpen($id)
 
 
 
@@ -13776,7 +13775,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorTcpHalfOpen**](monitor_tcpHalfOpen.md)
+[**LtmMonitorTcpHalfOpen**](ltm_monitor_tcpHalfOpen.md)
 
 ### Authorization
 
@@ -13790,7 +13789,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorTcpHalfOpenList**
-> MonitorTcpHalfOpenList GetMonitorTcpHalfOpenList()
+> LtmMonitorTcpHalfOpenList GetMonitorTcpHalfOpenList()
 
 
 
@@ -13802,7 +13801,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorTcpHalfOpenList**](monitor_tcpHalfOpen_list.md)
+[**LtmMonitorTcpHalfOpenList**](ltm_monitor_tcpHalfOpen_list.md)
 
 ### Authorization
 
@@ -13816,7 +13815,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorTcpList**
-> MonitorTcpList GetMonitorTcpList()
+> LtmMonitorTcpList GetMonitorTcpList()
 
 
 
@@ -13828,7 +13827,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorTcpList**](monitor_tcp_list.md)
+[**LtmMonitorTcpList**](ltm_monitor_tcp_list.md)
 
 ### Authorization
 
@@ -13842,7 +13841,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorUdp**
-> MonitorUdp GetMonitorUdp($id)
+> LtmMonitorUdp GetMonitorUdp($id)
 
 
 
@@ -13857,7 +13856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorUdp**](monitor_udp.md)
+[**LtmMonitorUdp**](ltm_monitor_udp.md)
 
 ### Authorization
 
@@ -13871,7 +13870,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorUdpList**
-> MonitorUdpList GetMonitorUdpList()
+> LtmMonitorUdpList GetMonitorUdpList()
 
 
 
@@ -13883,7 +13882,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorUdpList**](monitor_udp_list.md)
+[**LtmMonitorUdpList**](ltm_monitor_udp_list.md)
 
 ### Authorization
 
@@ -13897,7 +13896,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorVirtualLocation**
-> MonitorVirtualLocation GetMonitorVirtualLocation($id)
+> LtmMonitorVirtualLocation GetMonitorVirtualLocation($id)
 
 
 
@@ -13912,7 +13911,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorVirtualLocation**](monitor_virtualLocation.md)
+[**LtmMonitorVirtualLocation**](ltm_monitor_virtualLocation.md)
 
 ### Authorization
 
@@ -13926,7 +13925,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorVirtualLocationList**
-> MonitorVirtualLocationList GetMonitorVirtualLocationList()
+> LtmMonitorVirtualLocationList GetMonitorVirtualLocationList()
 
 
 
@@ -13938,7 +13937,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorVirtualLocationList**](monitor_virtualLocation_list.md)
+[**LtmMonitorVirtualLocationList**](ltm_monitor_virtualLocation_list.md)
 
 ### Authorization
 
@@ -13952,7 +13951,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorWap**
-> MonitorWap GetMonitorWap($id)
+> LtmMonitorWap GetMonitorWap($id)
 
 
 
@@ -13967,7 +13966,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorWap**](monitor_wap.md)
+[**LtmMonitorWap**](ltm_monitor_wap.md)
 
 ### Authorization
 
@@ -13981,7 +13980,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorWapList**
-> MonitorWapList GetMonitorWapList()
+> LtmMonitorWapList GetMonitorWapList()
 
 
 
@@ -13993,7 +13992,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorWapList**](monitor_wap_list.md)
+[**LtmMonitorWapList**](ltm_monitor_wap_list.md)
 
 ### Authorization
 
@@ -14007,7 +14006,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorWmi**
-> MonitorWmi GetMonitorWmi($id)
+> LtmMonitorWmi GetMonitorWmi($id)
 
 
 
@@ -14022,7 +14021,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MonitorWmi**](monitor_wmi.md)
+[**LtmMonitorWmi**](ltm_monitor_wmi.md)
 
 ### Authorization
 
@@ -14036,7 +14035,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMonitorWmiList**
-> MonitorWmiList GetMonitorWmiList()
+> LtmMonitorWmiList GetMonitorWmiList()
 
 
 
@@ -14048,7 +14047,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MonitorWmiList**](monitor_wmi_list.md)
+[**LtmMonitorWmiList**](ltm_monitor_wmi_list.md)
 
 ### Authorization
 
@@ -14062,7 +14061,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetNat**
-> Nat GetNat($id)
+> LtmNat GetNat($id)
 
 
 
@@ -14077,7 +14076,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Nat**](nat.md)
+[**LtmNat**](ltm_nat.md)
 
 ### Authorization
 
@@ -14091,7 +14090,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetNatList**
-> NatList GetNatList()
+> LtmNatList GetNatList()
 
 
 
@@ -14103,7 +14102,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**NatList**](nat_list.md)
+[**LtmNatList**](ltm_nat_list.md)
 
 ### Authorization
 
@@ -14117,7 +14116,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetNode**
-> Node GetNode($id)
+> LtmNode GetNode($id)
 
 
 
@@ -14132,7 +14131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Node**](node.md)
+[**LtmNode**](ltm_node.md)
 
 ### Authorization
 
@@ -14146,7 +14145,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetNodeList**
-> NodeList GetNodeList()
+> LtmNodeList GetNodeList()
 
 
 
@@ -14158,7 +14157,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**NodeList**](node_list.md)
+[**LtmNodeList**](ltm_node_list.md)
 
 ### Authorization
 
@@ -14172,7 +14171,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistence**
-> Persistence GetPersistence($id)
+> LtmPersistence GetPersistence($id)
 
 
 
@@ -14187,7 +14186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Persistence**](persistence.md)
+[**LtmPersistence**](ltm_persistence.md)
 
 ### Authorization
 
@@ -14201,7 +14200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceCookie**
-> PersistenceCookie GetPersistenceCookie($id)
+> LtmPersistenceCookie GetPersistenceCookie($id)
 
 
 
@@ -14216,7 +14215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistenceCookie**](persistence_cookie.md)
+[**LtmPersistenceCookie**](ltm_persistence_cookie.md)
 
 ### Authorization
 
@@ -14230,7 +14229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceCookieList**
-> PersistenceCookieList GetPersistenceCookieList()
+> LtmPersistenceCookieList GetPersistenceCookieList()
 
 
 
@@ -14242,7 +14241,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceCookieList**](persistence_cookie_list.md)
+[**LtmPersistenceCookieList**](ltm_persistence_cookie_list.md)
 
 ### Authorization
 
@@ -14256,7 +14255,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceDestAddr**
-> PersistenceDestAddr GetPersistenceDestAddr($id)
+> LtmPersistenceDestAddr GetPersistenceDestAddr($id)
 
 
 
@@ -14271,7 +14270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistenceDestAddr**](persistence_destAddr.md)
+[**LtmPersistenceDestAddr**](ltm_persistence_destAddr.md)
 
 ### Authorization
 
@@ -14285,7 +14284,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceDestAddrList**
-> PersistenceDestAddrList GetPersistenceDestAddrList()
+> LtmPersistenceDestAddrList GetPersistenceDestAddrList()
 
 
 
@@ -14297,7 +14296,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceDestAddrList**](persistence_destAddr_list.md)
+[**LtmPersistenceDestAddrList**](ltm_persistence_destAddr_list.md)
 
 ### Authorization
 
@@ -14311,7 +14310,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceGlobalSettings**
-> PersistenceGlobalSettings GetPersistenceGlobalSettings($id)
+> LtmPersistenceGlobalSettings GetPersistenceGlobalSettings($id)
 
 
 
@@ -14326,7 +14325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistenceGlobalSettings**](persistence_globalSettings.md)
+[**LtmPersistenceGlobalSettings**](ltm_persistence_globalSettings.md)
 
 ### Authorization
 
@@ -14340,7 +14339,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceGlobalSettingsList**
-> PersistenceGlobalSettingsList GetPersistenceGlobalSettingsList()
+> LtmPersistenceGlobalSettingsList GetPersistenceGlobalSettingsList()
 
 
 
@@ -14352,7 +14351,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceGlobalSettingsList**](persistence_globalSettings_list.md)
+[**LtmPersistenceGlobalSettingsList**](ltm_persistence_globalSettings_list.md)
 
 ### Authorization
 
@@ -14366,7 +14365,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceHash**
-> PersistenceHash GetPersistenceHash($id)
+> LtmPersistenceHash GetPersistenceHash($id)
 
 
 
@@ -14381,7 +14380,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistenceHash**](persistence_hash.md)
+[**LtmPersistenceHash**](ltm_persistence_hash.md)
 
 ### Authorization
 
@@ -14395,7 +14394,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceHashList**
-> PersistenceHashList GetPersistenceHashList()
+> LtmPersistenceHashList GetPersistenceHashList()
 
 
 
@@ -14407,7 +14406,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceHashList**](persistence_hash_list.md)
+[**LtmPersistenceHashList**](ltm_persistence_hash_list.md)
 
 ### Authorization
 
@@ -14421,7 +14420,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceList**
-> PersistenceList GetPersistenceList()
+> LtmPersistenceList GetPersistenceList()
 
 
 
@@ -14433,7 +14432,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceList**](persistence_list.md)
+[**LtmPersistenceList**](ltm_persistence_list.md)
 
 ### Authorization
 
@@ -14447,7 +14446,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceMsrdp**
-> PersistenceMsrdp GetPersistenceMsrdp($id)
+> LtmPersistenceMsrdp GetPersistenceMsrdp($id)
 
 
 
@@ -14462,7 +14461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistenceMsrdp**](persistence_msrdp.md)
+[**LtmPersistenceMsrdp**](ltm_persistence_msrdp.md)
 
 ### Authorization
 
@@ -14476,7 +14475,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceMsrdpList**
-> PersistenceMsrdpList GetPersistenceMsrdpList()
+> LtmPersistenceMsrdpList GetPersistenceMsrdpList()
 
 
 
@@ -14488,7 +14487,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceMsrdpList**](persistence_msrdp_list.md)
+[**LtmPersistenceMsrdpList**](ltm_persistence_msrdp_list.md)
 
 ### Authorization
 
@@ -14502,7 +14501,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistencePersistRecords**
-> PersistencePersistRecords GetPersistencePersistRecords($id)
+> LtmPersistencePersistRecords GetPersistencePersistRecords($id)
 
 
 
@@ -14517,7 +14516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistencePersistRecords**](persistence_persistRecords.md)
+[**LtmPersistencePersistRecords**](ltm_persistence_persistRecords.md)
 
 ### Authorization
 
@@ -14531,7 +14530,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistencePersistRecordsList**
-> PersistencePersistRecordsList GetPersistencePersistRecordsList()
+> LtmPersistencePersistRecordsList GetPersistencePersistRecordsList()
 
 
 
@@ -14543,7 +14542,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistencePersistRecordsList**](persistence_persistRecords_list.md)
+[**LtmPersistencePersistRecordsList**](ltm_persistence_persistRecords_list.md)
 
 ### Authorization
 
@@ -14557,7 +14556,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceSip**
-> PersistenceSip GetPersistenceSip($id)
+> LtmPersistenceSip GetPersistenceSip($id)
 
 
 
@@ -14572,7 +14571,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistenceSip**](persistence_sip.md)
+[**LtmPersistenceSip**](ltm_persistence_sip.md)
 
 ### Authorization
 
@@ -14586,7 +14585,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceSipList**
-> PersistenceSipList GetPersistenceSipList()
+> LtmPersistenceSipList GetPersistenceSipList()
 
 
 
@@ -14598,7 +14597,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceSipList**](persistence_sip_list.md)
+[**LtmPersistenceSipList**](ltm_persistence_sip_list.md)
 
 ### Authorization
 
@@ -14612,7 +14611,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceSourceAddr**
-> PersistenceSourceAddr GetPersistenceSourceAddr($id)
+> LtmPersistenceSourceAddr GetPersistenceSourceAddr($id)
 
 
 
@@ -14627,7 +14626,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistenceSourceAddr**](persistence_sourceAddr.md)
+[**LtmPersistenceSourceAddr**](ltm_persistence_sourceAddr.md)
 
 ### Authorization
 
@@ -14641,7 +14640,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceSourceAddrList**
-> PersistenceSourceAddrList GetPersistenceSourceAddrList()
+> LtmPersistenceSourceAddrList GetPersistenceSourceAddrList()
 
 
 
@@ -14653,7 +14652,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceSourceAddrList**](persistence_sourceAddr_list.md)
+[**LtmPersistenceSourceAddrList**](ltm_persistence_sourceAddr_list.md)
 
 ### Authorization
 
@@ -14667,7 +14666,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceSsl**
-> PersistenceSsl GetPersistenceSsl($id)
+> LtmPersistenceSsl GetPersistenceSsl($id)
 
 
 
@@ -14682,7 +14681,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistenceSsl**](persistence_ssl.md)
+[**LtmPersistenceSsl**](ltm_persistence_ssl.md)
 
 ### Authorization
 
@@ -14696,7 +14695,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceSslList**
-> PersistenceSslList GetPersistenceSslList()
+> LtmPersistenceSslList GetPersistenceSslList()
 
 
 
@@ -14708,7 +14707,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceSslList**](persistence_ssl_list.md)
+[**LtmPersistenceSslList**](ltm_persistence_ssl_list.md)
 
 ### Authorization
 
@@ -14722,7 +14721,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceUniversal**
-> PersistenceUniversal GetPersistenceUniversal($id)
+> LtmPersistenceUniversal GetPersistenceUniversal($id)
 
 
 
@@ -14737,7 +14736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PersistenceUniversal**](persistence_universal.md)
+[**LtmPersistenceUniversal**](ltm_persistence_universal.md)
 
 ### Authorization
 
@@ -14751,7 +14750,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPersistenceUniversalList**
-> PersistenceUniversalList GetPersistenceUniversalList()
+> LtmPersistenceUniversalList GetPersistenceUniversalList()
 
 
 
@@ -14763,7 +14762,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PersistenceUniversalList**](persistence_universal_list.md)
+[**LtmPersistenceUniversalList**](ltm_persistence_universal_list.md)
 
 ### Authorization
 
@@ -14777,7 +14776,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicy**
-> Policy GetPolicy($id)
+> LtmPolicy GetPolicy($id)
 
 
 
@@ -14792,7 +14791,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Policy**](policy.md)
+[**LtmPolicy**](ltm_policy.md)
 
 ### Authorization
 
@@ -14806,7 +14805,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyList**
-> PolicyList GetPolicyList()
+> LtmPolicyList GetPolicyList()
 
 
 
@@ -14818,7 +14817,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PolicyList**](policy_list.md)
+[**LtmPolicyList**](ltm_policy_list.md)
 
 ### Authorization
 
@@ -14832,7 +14831,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyRules**
-> PolicyRules GetPolicyRules($id)
+> LtmPolicyRules GetPolicyRules($id)
 
 
 
@@ -14847,7 +14846,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PolicyRules**](policy_rules.md)
+[**LtmPolicyRules**](ltm_policy_rules.md)
 
 ### Authorization
 
@@ -14861,7 +14860,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyRulesActions**
-> PolicyRulesActions GetPolicyRulesActions($id)
+> LtmPolicyRulesActions GetPolicyRulesActions($id)
 
 
 
@@ -14876,7 +14875,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PolicyRulesActions**](policy_rules_actions.md)
+[**LtmPolicyRulesActions**](ltm_policy_rules_actions.md)
 
 ### Authorization
 
@@ -14890,7 +14889,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyRulesActionsList**
-> PolicyRulesActionsList GetPolicyRulesActionsList()
+> LtmPolicyRulesActionsList GetPolicyRulesActionsList()
 
 
 
@@ -14902,7 +14901,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PolicyRulesActionsList**](policy_rules_actions_list.md)
+[**LtmPolicyRulesActionsList**](ltm_policy_rules_actions_list.md)
 
 ### Authorization
 
@@ -14916,7 +14915,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyRulesConditions**
-> PolicyRulesConditions GetPolicyRulesConditions($id)
+> LtmPolicyRulesConditions GetPolicyRulesConditions($id)
 
 
 
@@ -14931,7 +14930,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PolicyRulesConditions**](policy_rules_conditions.md)
+[**LtmPolicyRulesConditions**](ltm_policy_rules_conditions.md)
 
 ### Authorization
 
@@ -14945,7 +14944,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyRulesConditionsList**
-> PolicyRulesConditionsList GetPolicyRulesConditionsList()
+> LtmPolicyRulesConditionsList GetPolicyRulesConditionsList()
 
 
 
@@ -14957,7 +14956,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PolicyRulesConditionsList**](policy_rules_conditions_list.md)
+[**LtmPolicyRulesConditionsList**](ltm_policy_rules_conditions_list.md)
 
 ### Authorization
 
@@ -14971,7 +14970,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyRulesList**
-> PolicyRulesList GetPolicyRulesList()
+> LtmPolicyRulesList GetPolicyRulesList()
 
 
 
@@ -14983,7 +14982,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PolicyRulesList**](policy_rules_list.md)
+[**LtmPolicyRulesList**](ltm_policy_rules_list.md)
 
 ### Authorization
 
@@ -14997,7 +14996,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyStrategy**
-> PolicyStrategy GetPolicyStrategy($id)
+> LtmPolicyStrategy GetPolicyStrategy($id)
 
 
 
@@ -15012,7 +15011,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PolicyStrategy**](policyStrategy.md)
+[**LtmPolicyStrategy**](ltm_policyStrategy.md)
 
 ### Authorization
 
@@ -15026,7 +15025,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyStrategyList**
-> PolicyStrategyList GetPolicyStrategyList()
+> LtmPolicyStrategyList GetPolicyStrategyList()
 
 
 
@@ -15038,7 +15037,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PolicyStrategyList**](policyStrategy_list.md)
+[**LtmPolicyStrategyList**](ltm_policyStrategy_list.md)
 
 ### Authorization
 
@@ -15052,7 +15051,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyStrategyOperands**
-> PolicyStrategyOperands GetPolicyStrategyOperands($id)
+> LtmPolicyStrategyOperands GetPolicyStrategyOperands($id)
 
 
 
@@ -15067,7 +15066,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PolicyStrategyOperands**](policyStrategy_operands.md)
+[**LtmPolicyStrategyOperands**](ltm_policyStrategy_operands.md)
 
 ### Authorization
 
@@ -15081,7 +15080,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPolicyStrategyOperandsList**
-> PolicyStrategyOperandsList GetPolicyStrategyOperandsList()
+> LtmPolicyStrategyOperandsList GetPolicyStrategyOperandsList()
 
 
 
@@ -15093,7 +15092,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PolicyStrategyOperandsList**](policyStrategy_operands_list.md)
+[**LtmPolicyStrategyOperandsList**](ltm_policyStrategy_operands_list.md)
 
 ### Authorization
 
@@ -15107,7 +15106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPool**
-> Pool GetPool($id)
+> LtmPool GetPool($id)
 
 
 
@@ -15122,7 +15121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Pool**](pool.md)
+[**LtmPool**](ltm_pool.md)
 
 ### Authorization
 
@@ -15136,7 +15135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPoolList**
-> PoolList GetPoolList()
+> LtmPoolList GetPoolList()
 
 
 
@@ -15148,7 +15147,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PoolList**](pool_list.md)
+[**LtmPoolList**](ltm_pool_list.md)
 
 ### Authorization
 
@@ -15162,7 +15161,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPoolMembers**
-> PoolMembers GetPoolMembers($pid, $id)
+> LtmPoolMembers GetPoolMembers($pid, $id)
 
 
 
@@ -15178,7 +15177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PoolMembers**](pool_members.md)
+[**LtmPoolMembers**](ltm_pool_members.md)
 
 ### Authorization
 
@@ -15192,7 +15191,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetPoolMembersList**
-> PoolMembersList GetPoolMembersList($pid)
+> LtmPoolMembersList GetPoolMembersList($pid)
 
 
 
@@ -15207,7 +15206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PoolMembersList**](pool_members_list.md)
+[**LtmPoolMembersList**](ltm_pool_members_list.md)
 
 ### Authorization
 
@@ -15221,7 +15220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfile**
-> Profile GetProfile($id)
+> LtmProfile GetProfile($id)
 
 
 
@@ -15236,7 +15235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Profile**](profile.md)
+[**LtmProfile**](ltm_profile.md)
 
 ### Authorization
 
@@ -15250,7 +15249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileAnalytics**
-> ProfileAnalytics GetProfileAnalytics($id)
+> LtmProfileAnalytics GetProfileAnalytics($id)
 
 
 
@@ -15265,7 +15264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileAnalytics**](profile_analytics.md)
+[**LtmProfileAnalytics**](ltm_profile_analytics.md)
 
 ### Authorization
 
@@ -15279,7 +15278,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileAnalyticsAlerts**
-> ProfileAnalyticsAlerts GetProfileAnalyticsAlerts($id)
+> LtmProfileAnalyticsAlerts GetProfileAnalyticsAlerts($id)
 
 
 
@@ -15294,7 +15293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileAnalyticsAlerts**](profile_analytics_alerts.md)
+[**LtmProfileAnalyticsAlerts**](ltm_profile_analytics_alerts.md)
 
 ### Authorization
 
@@ -15308,7 +15307,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileAnalyticsAlertsList**
-> ProfileAnalyticsAlertsList GetProfileAnalyticsAlertsList()
+> LtmProfileAnalyticsAlertsList GetProfileAnalyticsAlertsList()
 
 
 
@@ -15320,7 +15319,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileAnalyticsAlertsList**](profile_analytics_alerts_list.md)
+[**LtmProfileAnalyticsAlertsList**](ltm_profile_analytics_alerts_list.md)
 
 ### Authorization
 
@@ -15334,7 +15333,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileAnalyticsList**
-> ProfileAnalyticsList GetProfileAnalyticsList()
+> LtmProfileAnalyticsList GetProfileAnalyticsList()
 
 
 
@@ -15346,7 +15345,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileAnalyticsList**](profile_analytics_list.md)
+[**LtmProfileAnalyticsList**](ltm_profile_analytics_list.md)
 
 ### Authorization
 
@@ -15360,7 +15359,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileAnalyticsTrafficCapture**
-> ProfileAnalyticsTrafficCapture GetProfileAnalyticsTrafficCapture($id)
+> LtmProfileAnalyticsTrafficCapture GetProfileAnalyticsTrafficCapture($id)
 
 
 
@@ -15375,7 +15374,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileAnalyticsTrafficCapture**](profile_analytics_trafficCapture.md)
+[**LtmProfileAnalyticsTrafficCapture**](ltm_profile_analytics_trafficCapture.md)
 
 ### Authorization
 
@@ -15389,7 +15388,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileAnalyticsTrafficCaptureList**
-> ProfileAnalyticsTrafficCaptureList GetProfileAnalyticsTrafficCaptureList()
+> LtmProfileAnalyticsTrafficCaptureList GetProfileAnalyticsTrafficCaptureList()
 
 
 
@@ -15401,7 +15400,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileAnalyticsTrafficCaptureList**](profile_analytics_trafficCapture_list.md)
+[**LtmProfileAnalyticsTrafficCaptureList**](ltm_profile_analytics_trafficCapture_list.md)
 
 ### Authorization
 
@@ -15415,7 +15414,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileCertificateAuthority**
-> ProfileCertificateAuthority GetProfileCertificateAuthority($id)
+> LtmProfileCertificateAuthority GetProfileCertificateAuthority($id)
 
 
 
@@ -15430,7 +15429,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileCertificateAuthority**](profile_certificateAuthority.md)
+[**LtmProfileCertificateAuthority**](ltm_profile_certificateAuthority.md)
 
 ### Authorization
 
@@ -15444,7 +15443,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileCertificateAuthorityList**
-> ProfileCertificateAuthorityList GetProfileCertificateAuthorityList()
+> LtmProfileCertificateAuthorityList GetProfileCertificateAuthorityList()
 
 
 
@@ -15456,7 +15455,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileCertificateAuthorityList**](profile_certificateAuthority_list.md)
+[**LtmProfileCertificateAuthorityList**](ltm_profile_certificateAuthority_list.md)
 
 ### Authorization
 
@@ -15470,7 +15469,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileClassification**
-> ProfileClassification GetProfileClassification($id)
+> LtmProfileClassification GetProfileClassification($id)
 
 
 
@@ -15485,7 +15484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileClassification**](profile_classification.md)
+[**LtmProfileClassification**](ltm_profile_classification.md)
 
 ### Authorization
 
@@ -15499,7 +15498,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileClassificationList**
-> ProfileClassificationList GetProfileClassificationList()
+> LtmProfileClassificationList GetProfileClassificationList()
 
 
 
@@ -15511,7 +15510,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileClassificationList**](profile_classification_list.md)
+[**LtmProfileClassificationList**](ltm_profile_classification_list.md)
 
 ### Authorization
 
@@ -15525,7 +15524,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileClientLdap**
-> ProfileClientLdap GetProfileClientLdap($id)
+> LtmProfileClientLdap GetProfileClientLdap($id)
 
 
 
@@ -15540,7 +15539,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileClientLdap**](profile_clientLdap.md)
+[**LtmProfileClientLdap**](ltm_profile_clientLdap.md)
 
 ### Authorization
 
@@ -15554,7 +15553,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileClientLdapList**
-> ProfileClientLdapList GetProfileClientLdapList()
+> LtmProfileClientLdapList GetProfileClientLdapList()
 
 
 
@@ -15566,7 +15565,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileClientLdapList**](profile_clientLdap_list.md)
+[**LtmProfileClientLdapList**](ltm_profile_clientLdap_list.md)
 
 ### Authorization
 
@@ -15580,7 +15579,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileClientSsl**
-> ProfileClientSsl GetProfileClientSsl($id)
+> LtmProfileClientSsl GetProfileClientSsl($id)
 
 
 
@@ -15595,7 +15594,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileClientSsl**](profile_clientSsl.md)
+[**LtmProfileClientSsl**](ltm_profile_clientSsl.md)
 
 ### Authorization
 
@@ -15609,7 +15608,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileClientSslList**
-> ProfileClientSslList GetProfileClientSslList()
+> LtmProfileClientSslList GetProfileClientSslList()
 
 
 
@@ -15621,7 +15620,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileClientSslList**](profile_clientSsl_list.md)
+[**LtmProfileClientSslList**](ltm_profile_clientSsl_list.md)
 
 ### Authorization
 
@@ -15635,7 +15634,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDhcpv4**
-> ProfileDhcpv4 GetProfileDhcpv4($id)
+> LtmProfileDhcpv4 GetProfileDhcpv4($id)
 
 
 
@@ -15650,7 +15649,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileDhcpv4**](profile_dhcpv4.md)
+[**LtmProfileDhcpv4**](ltm_profile_dhcpv4.md)
 
 ### Authorization
 
@@ -15664,7 +15663,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDhcpv4List**
-> ProfileDhcpv4List GetProfileDhcpv4List()
+> LtmProfileDhcpv4List GetProfileDhcpv4List()
 
 
 
@@ -15676,7 +15675,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileDhcpv4List**](profile_dhcpv4_list.md)
+[**LtmProfileDhcpv4List**](ltm_profile_dhcpv4_list.md)
 
 ### Authorization
 
@@ -15690,7 +15689,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDhcpv6**
-> ProfileDhcpv6 GetProfileDhcpv6($id)
+> LtmProfileDhcpv6 GetProfileDhcpv6($id)
 
 
 
@@ -15705,7 +15704,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileDhcpv6**](profile_dhcpv6.md)
+[**LtmProfileDhcpv6**](ltm_profile_dhcpv6.md)
 
 ### Authorization
 
@@ -15719,7 +15718,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDhcpv6List**
-> ProfileDhcpv6List GetProfileDhcpv6List()
+> LtmProfileDhcpv6List GetProfileDhcpv6List()
 
 
 
@@ -15731,7 +15730,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileDhcpv6List**](profile_dhcpv6_list.md)
+[**LtmProfileDhcpv6List**](ltm_profile_dhcpv6_list.md)
 
 ### Authorization
 
@@ -15745,7 +15744,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDiameter**
-> ProfileDiameter GetProfileDiameter($id)
+> LtmProfileDiameter GetProfileDiameter($id)
 
 
 
@@ -15760,7 +15759,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileDiameter**](profile_diameter.md)
+[**LtmProfileDiameter**](ltm_profile_diameter.md)
 
 ### Authorization
 
@@ -15774,7 +15773,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDiameterList**
-> ProfileDiameterList GetProfileDiameterList()
+> LtmProfileDiameterList GetProfileDiameterList()
 
 
 
@@ -15786,7 +15785,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileDiameterList**](profile_diameter_list.md)
+[**LtmProfileDiameterList**](ltm_profile_diameter_list.md)
 
 ### Authorization
 
@@ -15800,7 +15799,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDns**
-> ProfileDns GetProfileDns($id)
+> LtmProfileDns GetProfileDns($id)
 
 
 
@@ -15815,7 +15814,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileDns**](profile_dns.md)
+[**LtmProfileDns**](ltm_profile_dns.md)
 
 ### Authorization
 
@@ -15829,7 +15828,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDnsList**
-> ProfileDnsList GetProfileDnsList()
+> LtmProfileDnsList GetProfileDnsList()
 
 
 
@@ -15841,7 +15840,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileDnsList**](profile_dns_list.md)
+[**LtmProfileDnsList**](ltm_profile_dns_list.md)
 
 ### Authorization
 
@@ -15855,7 +15854,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDnsLogging**
-> ProfileDnsLogging GetProfileDnsLogging($id)
+> LtmProfileDnsLogging GetProfileDnsLogging($id)
 
 
 
@@ -15870,7 +15869,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileDnsLogging**](profile_dnsLogging.md)
+[**LtmProfileDnsLogging**](ltm_profile_dnsLogging.md)
 
 ### Authorization
 
@@ -15884,7 +15883,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileDnsLoggingList**
-> ProfileDnsLoggingList GetProfileDnsLoggingList()
+> LtmProfileDnsLoggingList GetProfileDnsLoggingList()
 
 
 
@@ -15896,7 +15895,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileDnsLoggingList**](profile_dnsLogging_list.md)
+[**LtmProfileDnsLoggingList**](ltm_profile_dnsLogging_list.md)
 
 ### Authorization
 
@@ -15910,7 +15909,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileFasthttp**
-> ProfileFasthttp GetProfileFasthttp($id)
+> LtmProfileFasthttp GetProfileFasthttp($id)
 
 
 
@@ -15925,7 +15924,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileFasthttp**](profile_fasthttp.md)
+[**LtmProfileFasthttp**](ltm_profile_fasthttp.md)
 
 ### Authorization
 
@@ -15939,7 +15938,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileFasthttpList**
-> ProfileFasthttpList GetProfileFasthttpList()
+> LtmProfileFasthttpList GetProfileFasthttpList()
 
 
 
@@ -15951,7 +15950,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileFasthttpList**](profile_fasthttp_list.md)
+[**LtmProfileFasthttpList**](ltm_profile_fasthttp_list.md)
 
 ### Authorization
 
@@ -15965,7 +15964,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileFastl4**
-> ProfileFastl4 GetProfileFastl4($id)
+> LtmProfileFastl4 GetProfileFastl4($id)
 
 
 
@@ -15980,7 +15979,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileFastl4**](profile_fastl4.md)
+[**LtmProfileFastl4**](ltm_profile_fastl4.md)
 
 ### Authorization
 
@@ -15994,7 +15993,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileFastl4List**
-> ProfileFastl4List GetProfileFastl4List()
+> LtmProfileFastl4List GetProfileFastl4List()
 
 
 
@@ -16006,7 +16005,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileFastl4List**](profile_fastl4_list.md)
+[**LtmProfileFastl4List**](ltm_profile_fastl4_list.md)
 
 ### Authorization
 
@@ -16020,7 +16019,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileFix**
-> ProfileFix GetProfileFix($id)
+> LtmProfileFix GetProfileFix($id)
 
 
 
@@ -16035,7 +16034,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileFix**](profile_fix.md)
+[**LtmProfileFix**](ltm_profile_fix.md)
 
 ### Authorization
 
@@ -16049,7 +16048,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileFixList**
-> ProfileFixList GetProfileFixList()
+> LtmProfileFixList GetProfileFixList()
 
 
 
@@ -16061,7 +16060,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileFixList**](profile_fix_list.md)
+[**LtmProfileFixList**](ltm_profile_fix_list.md)
 
 ### Authorization
 
@@ -16075,7 +16074,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileFtp**
-> ProfileFtp GetProfileFtp($id)
+> LtmProfileFtp GetProfileFtp($id)
 
 
 
@@ -16090,7 +16089,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileFtp**](profile_ftp.md)
+[**LtmProfileFtp**](ltm_profile_ftp.md)
 
 ### Authorization
 
@@ -16104,7 +16103,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileFtpList**
-> ProfileFtpList GetProfileFtpList()
+> LtmProfileFtpList GetProfileFtpList()
 
 
 
@@ -16116,7 +16115,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileFtpList**](profile_ftp_list.md)
+[**LtmProfileFtpList**](ltm_profile_ftp_list.md)
 
 ### Authorization
 
@@ -16130,7 +16129,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileGtp**
-> ProfileGtp GetProfileGtp($id)
+> LtmProfileGtp GetProfileGtp($id)
 
 
 
@@ -16145,7 +16144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileGtp**](profile_gtp.md)
+[**LtmProfileGtp**](ltm_profile_gtp.md)
 
 ### Authorization
 
@@ -16159,7 +16158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileGtpList**
-> ProfileGtpList GetProfileGtpList()
+> LtmProfileGtpList GetProfileGtpList()
 
 
 
@@ -16171,7 +16170,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileGtpList**](profile_gtp_list.md)
+[**LtmProfileGtpList**](ltm_profile_gtp_list.md)
 
 ### Authorization
 
@@ -16185,7 +16184,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileHtml**
-> ProfileHtml GetProfileHtml($id)
+> LtmProfileHtml GetProfileHtml($id)
 
 
 
@@ -16200,7 +16199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileHtml**](profile_html.md)
+[**LtmProfileHtml**](ltm_profile_html.md)
 
 ### Authorization
 
@@ -16214,7 +16213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileHtmlList**
-> ProfileHtmlList GetProfileHtmlList()
+> LtmProfileHtmlList GetProfileHtmlList()
 
 
 
@@ -16226,7 +16225,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileHtmlList**](profile_html_list.md)
+[**LtmProfileHtmlList**](ltm_profile_html_list.md)
 
 ### Authorization
 
@@ -16240,7 +16239,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileHttp**
-> ProfileHttp GetProfileHttp($id)
+> LtmProfileHttp GetProfileHttp($id)
 
 
 
@@ -16255,7 +16254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileHttp**](profile_http.md)
+[**LtmProfileHttp**](ltm_profile_http.md)
 
 ### Authorization
 
@@ -16269,7 +16268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileHttp2**
-> ProfileHttp2 GetProfileHttp2($id)
+> LtmProfileHttp2 GetProfileHttp2($id)
 
 
 
@@ -16284,7 +16283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileHttp2**](profile_http2.md)
+[**LtmProfileHttp2**](ltm_profile_http2.md)
 
 ### Authorization
 
@@ -16298,7 +16297,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileHttp2List**
-> ProfileHttp2List GetProfileHttp2List()
+> LtmProfileHttp2List GetProfileHttp2List()
 
 
 
@@ -16310,7 +16309,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileHttp2List**](profile_http2_list.md)
+[**LtmProfileHttp2List**](ltm_profile_http2_list.md)
 
 ### Authorization
 
@@ -16324,7 +16323,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileHttpCompression**
-> ProfileHttpCompression GetProfileHttpCompression($id)
+> LtmProfileHttpCompression GetProfileHttpCompression($id)
 
 
 
@@ -16339,7 +16338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileHttpCompression**](profile_httpCompression.md)
+[**LtmProfileHttpCompression**](ltm_profile_httpCompression.md)
 
 ### Authorization
 
@@ -16353,7 +16352,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileHttpCompressionList**
-> ProfileHttpCompressionList GetProfileHttpCompressionList()
+> LtmProfileHttpCompressionList GetProfileHttpCompressionList()
 
 
 
@@ -16365,7 +16364,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileHttpCompressionList**](profile_httpCompression_list.md)
+[**LtmProfileHttpCompressionList**](ltm_profile_httpCompression_list.md)
 
 ### Authorization
 
@@ -16379,7 +16378,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileHttpList**
-> ProfileHttpList GetProfileHttpList()
+> LtmProfileHttpList GetProfileHttpList()
 
 
 
@@ -16391,7 +16390,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileHttpList**](profile_http_list.md)
+[**LtmProfileHttpList**](ltm_profile_http_list.md)
 
 ### Authorization
 
@@ -16405,7 +16404,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileIcap**
-> ProfileIcap GetProfileIcap($id)
+> LtmProfileIcap GetProfileIcap($id)
 
 
 
@@ -16420,7 +16419,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileIcap**](profile_icap.md)
+[**LtmProfileIcap**](ltm_profile_icap.md)
 
 ### Authorization
 
@@ -16434,7 +16433,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileIcapList**
-> ProfileIcapList GetProfileIcapList()
+> LtmProfileIcapList GetProfileIcapList()
 
 
 
@@ -16446,7 +16445,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileIcapList**](profile_icap_list.md)
+[**LtmProfileIcapList**](ltm_profile_icap_list.md)
 
 ### Authorization
 
@@ -16460,7 +16459,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileIiop**
-> ProfileIiop GetProfileIiop($id)
+> LtmProfileIiop GetProfileIiop($id)
 
 
 
@@ -16475,7 +16474,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileIiop**](profile_iiop.md)
+[**LtmProfileIiop**](ltm_profile_iiop.md)
 
 ### Authorization
 
@@ -16489,7 +16488,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileIiopList**
-> ProfileIiopList GetProfileIiopList()
+> LtmProfileIiopList GetProfileIiopList()
 
 
 
@@ -16501,7 +16500,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileIiopList**](profile_iiop_list.md)
+[**LtmProfileIiopList**](ltm_profile_iiop_list.md)
 
 ### Authorization
 
@@ -16515,7 +16514,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileIpother**
-> ProfileIpother GetProfileIpother($id)
+> LtmProfileIpother GetProfileIpother($id)
 
 
 
@@ -16530,7 +16529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileIpother**](profile_ipother.md)
+[**LtmProfileIpother**](ltm_profile_ipother.md)
 
 ### Authorization
 
@@ -16544,7 +16543,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileIpotherList**
-> ProfileIpotherList GetProfileIpotherList()
+> LtmProfileIpotherList GetProfileIpotherList()
 
 
 
@@ -16556,7 +16555,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileIpotherList**](profile_ipother_list.md)
+[**LtmProfileIpotherList**](ltm_profile_ipother_list.md)
 
 ### Authorization
 
@@ -16570,7 +16569,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileList**
-> ProfileList GetProfileList()
+> LtmProfileList GetProfileList()
 
 
 
@@ -16582,7 +16581,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileList**](profile_list.md)
+[**LtmProfileList**](ltm_profile_list.md)
 
 ### Authorization
 
@@ -16596,7 +16595,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileMblb**
-> ProfileMblb GetProfileMblb($id)
+> LtmProfileMblb GetProfileMblb($id)
 
 
 
@@ -16611,7 +16610,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileMblb**](profile_mblb.md)
+[**LtmProfileMblb**](ltm_profile_mblb.md)
 
 ### Authorization
 
@@ -16625,7 +16624,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileMblbList**
-> ProfileMblbList GetProfileMblbList()
+> LtmProfileMblbList GetProfileMblbList()
 
 
 
@@ -16637,7 +16636,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileMblbList**](profile_mblb_list.md)
+[**LtmProfileMblbList**](ltm_profile_mblb_list.md)
 
 ### Authorization
 
@@ -16651,7 +16650,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileMssql**
-> ProfileMssql GetProfileMssql($id)
+> LtmProfileMssql GetProfileMssql($id)
 
 
 
@@ -16666,7 +16665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileMssql**](profile_mssql.md)
+[**LtmProfileMssql**](ltm_profile_mssql.md)
 
 ### Authorization
 
@@ -16680,7 +16679,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileMssqlList**
-> ProfileMssqlList GetProfileMssqlList()
+> LtmProfileMssqlList GetProfileMssqlList()
 
 
 
@@ -16692,7 +16691,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileMssqlList**](profile_mssql_list.md)
+[**LtmProfileMssqlList**](ltm_profile_mssql_list.md)
 
 ### Authorization
 
@@ -16706,7 +16705,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileNtlm**
-> ProfileNtlm GetProfileNtlm($id)
+> LtmProfileNtlm GetProfileNtlm($id)
 
 
 
@@ -16721,7 +16720,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileNtlm**](profile_ntlm.md)
+[**LtmProfileNtlm**](ltm_profile_ntlm.md)
 
 ### Authorization
 
@@ -16735,7 +16734,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileNtlmList**
-> ProfileNtlmList GetProfileNtlmList()
+> LtmProfileNtlmList GetProfileNtlmList()
 
 
 
@@ -16747,7 +16746,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileNtlmList**](profile_ntlm_list.md)
+[**LtmProfileNtlmList**](ltm_profile_ntlm_list.md)
 
 ### Authorization
 
@@ -16761,7 +16760,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileOcspStaplingParams**
-> ProfileOcspStaplingParams GetProfileOcspStaplingParams($id)
+> LtmProfileOcspStaplingParams GetProfileOcspStaplingParams($id)
 
 
 
@@ -16776,7 +16775,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileOcspStaplingParams**](profile_ocspStaplingParams.md)
+[**LtmProfileOcspStaplingParams**](ltm_profile_ocspStaplingParams.md)
 
 ### Authorization
 
@@ -16790,7 +16789,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileOcspStaplingParamsList**
-> ProfileOcspStaplingParamsList GetProfileOcspStaplingParamsList()
+> LtmProfileOcspStaplingParamsList GetProfileOcspStaplingParamsList()
 
 
 
@@ -16802,7 +16801,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileOcspStaplingParamsList**](profile_ocspStaplingParams_list.md)
+[**LtmProfileOcspStaplingParamsList**](ltm_profile_ocspStaplingParams_list.md)
 
 ### Authorization
 
@@ -16816,7 +16815,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileOneConnect**
-> ProfileOneConnect GetProfileOneConnect($id)
+> LtmProfileOneConnect GetProfileOneConnect($id)
 
 
 
@@ -16831,7 +16830,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileOneConnect**](profile_oneConnect.md)
+[**LtmProfileOneConnect**](ltm_profile_oneConnect.md)
 
 ### Authorization
 
@@ -16845,7 +16844,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileOneConnectList**
-> ProfileOneConnectList GetProfileOneConnectList()
+> LtmProfileOneConnectList GetProfileOneConnectList()
 
 
 
@@ -16857,7 +16856,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileOneConnectList**](profile_oneConnect_list.md)
+[**LtmProfileOneConnectList**](ltm_profile_oneConnect_list.md)
 
 ### Authorization
 
@@ -16871,7 +16870,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfilePcp**
-> ProfilePcp GetProfilePcp($id)
+> LtmProfilePcp GetProfilePcp($id)
 
 
 
@@ -16886,7 +16885,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfilePcp**](profile_pcp.md)
+[**LtmProfilePcp**](ltm_profile_pcp.md)
 
 ### Authorization
 
@@ -16900,7 +16899,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfilePcpList**
-> ProfilePcpList GetProfilePcpList()
+> LtmProfilePcpList GetProfilePcpList()
 
 
 
@@ -16912,7 +16911,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfilePcpList**](profile_pcp_list.md)
+[**LtmProfilePcpList**](ltm_profile_pcp_list.md)
 
 ### Authorization
 
@@ -16926,7 +16925,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfilePptp**
-> ProfilePptp GetProfilePptp($id)
+> LtmProfilePptp GetProfilePptp($id)
 
 
 
@@ -16941,7 +16940,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfilePptp**](profile_pptp.md)
+[**LtmProfilePptp**](ltm_profile_pptp.md)
 
 ### Authorization
 
@@ -16955,7 +16954,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfilePptpList**
-> ProfilePptpList GetProfilePptpList()
+> LtmProfilePptpList GetProfilePptpList()
 
 
 
@@ -16967,7 +16966,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfilePptpList**](profile_pptp_list.md)
+[**LtmProfilePptpList**](ltm_profile_pptp_list.md)
 
 ### Authorization
 
@@ -16981,7 +16980,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileQoe**
-> ProfileQoe GetProfileQoe($id)
+> LtmProfileQoe GetProfileQoe($id)
 
 
 
@@ -16996,7 +16995,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileQoe**](profile_qoe.md)
+[**LtmProfileQoe**](ltm_profile_qoe.md)
 
 ### Authorization
 
@@ -17010,7 +17009,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileQoeList**
-> ProfileQoeList GetProfileQoeList()
+> LtmProfileQoeList GetProfileQoeList()
 
 
 
@@ -17022,7 +17021,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileQoeList**](profile_qoe_list.md)
+[**LtmProfileQoeList**](ltm_profile_qoe_list.md)
 
 ### Authorization
 
@@ -17036,7 +17035,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRadius**
-> ProfileRadius GetProfileRadius($id)
+> LtmProfileRadius GetProfileRadius($id)
 
 
 
@@ -17051,7 +17050,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileRadius**](profile_radius.md)
+[**LtmProfileRadius**](ltm_profile_radius.md)
 
 ### Authorization
 
@@ -17065,7 +17064,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRadiusList**
-> ProfileRadiusList GetProfileRadiusList()
+> LtmProfileRadiusList GetProfileRadiusList()
 
 
 
@@ -17077,7 +17076,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileRadiusList**](profile_radius_list.md)
+[**LtmProfileRadiusList**](ltm_profile_radius_list.md)
 
 ### Authorization
 
@@ -17091,7 +17090,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRamcache**
-> ProfileRamcache GetProfileRamcache($id)
+> LtmProfileRamcache GetProfileRamcache($id)
 
 
 
@@ -17106,7 +17105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileRamcache**](profile_ramcache.md)
+[**LtmProfileRamcache**](ltm_profile_ramcache.md)
 
 ### Authorization
 
@@ -17120,7 +17119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRamcacheList**
-> ProfileRamcacheList GetProfileRamcacheList()
+> LtmProfileRamcacheList GetProfileRamcacheList()
 
 
 
@@ -17132,7 +17131,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileRamcacheList**](profile_ramcache_list.md)
+[**LtmProfileRamcacheList**](ltm_profile_ramcache_list.md)
 
 ### Authorization
 
@@ -17146,7 +17145,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRequestAdapt**
-> ProfileRequestAdapt GetProfileRequestAdapt($id)
+> LtmProfileRequestAdapt GetProfileRequestAdapt($id)
 
 
 
@@ -17161,7 +17160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileRequestAdapt**](profile_requestAdapt.md)
+[**LtmProfileRequestAdapt**](ltm_profile_requestAdapt.md)
 
 ### Authorization
 
@@ -17175,7 +17174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRequestAdaptList**
-> ProfileRequestAdaptList GetProfileRequestAdaptList()
+> LtmProfileRequestAdaptList GetProfileRequestAdaptList()
 
 
 
@@ -17187,7 +17186,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileRequestAdaptList**](profile_requestAdapt_list.md)
+[**LtmProfileRequestAdaptList**](ltm_profile_requestAdapt_list.md)
 
 ### Authorization
 
@@ -17201,7 +17200,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRequestLog**
-> ProfileRequestLog GetProfileRequestLog($id)
+> LtmProfileRequestLog GetProfileRequestLog($id)
 
 
 
@@ -17216,7 +17215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileRequestLog**](profile_requestLog.md)
+[**LtmProfileRequestLog**](ltm_profile_requestLog.md)
 
 ### Authorization
 
@@ -17230,7 +17229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRequestLogList**
-> ProfileRequestLogList GetProfileRequestLogList()
+> LtmProfileRequestLogList GetProfileRequestLogList()
 
 
 
@@ -17242,7 +17241,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileRequestLogList**](profile_requestLog_list.md)
+[**LtmProfileRequestLogList**](ltm_profile_requestLog_list.md)
 
 ### Authorization
 
@@ -17256,7 +17255,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileResponseAdapt**
-> ProfileResponseAdapt GetProfileResponseAdapt($id)
+> LtmProfileResponseAdapt GetProfileResponseAdapt($id)
 
 
 
@@ -17271,7 +17270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileResponseAdapt**](profile_responseAdapt.md)
+[**LtmProfileResponseAdapt**](ltm_profile_responseAdapt.md)
 
 ### Authorization
 
@@ -17285,7 +17284,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileResponseAdaptList**
-> ProfileResponseAdaptList GetProfileResponseAdaptList()
+> LtmProfileResponseAdaptList GetProfileResponseAdaptList()
 
 
 
@@ -17297,7 +17296,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileResponseAdaptList**](profile_responseAdapt_list.md)
+[**LtmProfileResponseAdaptList**](ltm_profile_responseAdapt_list.md)
 
 ### Authorization
 
@@ -17311,7 +17310,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRewrite**
-> ProfileRewrite GetProfileRewrite($id)
+> LtmProfileRewrite GetProfileRewrite($id)
 
 
 
@@ -17326,7 +17325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileRewrite**](profile_rewrite.md)
+[**LtmProfileRewrite**](ltm_profile_rewrite.md)
 
 ### Authorization
 
@@ -17340,7 +17339,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRewriteList**
-> ProfileRewriteList GetProfileRewriteList()
+> LtmProfileRewriteList GetProfileRewriteList()
 
 
 
@@ -17352,7 +17351,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileRewriteList**](profile_rewrite_list.md)
+[**LtmProfileRewriteList**](ltm_profile_rewrite_list.md)
 
 ### Authorization
 
@@ -17366,7 +17365,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRewriteUriRules**
-> ProfileRewriteUriRules GetProfileRewriteUriRules($id)
+> LtmProfileRewriteUriRules GetProfileRewriteUriRules($id)
 
 
 
@@ -17381,7 +17380,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileRewriteUriRules**](profile_rewrite_uriRules.md)
+[**LtmProfileRewriteUriRules**](ltm_profile_rewrite_uriRules.md)
 
 ### Authorization
 
@@ -17395,7 +17394,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRewriteUriRulesList**
-> ProfileRewriteUriRulesList GetProfileRewriteUriRulesList()
+> LtmProfileRewriteUriRulesList GetProfileRewriteUriRulesList()
 
 
 
@@ -17407,7 +17406,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileRewriteUriRulesList**](profile_rewrite_uriRules_list.md)
+[**LtmProfileRewriteUriRulesList**](ltm_profile_rewrite_uriRules_list.md)
 
 ### Authorization
 
@@ -17421,7 +17420,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRtsp**
-> ProfileRtsp GetProfileRtsp($id)
+> LtmProfileRtsp GetProfileRtsp($id)
 
 
 
@@ -17436,7 +17435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileRtsp**](profile_rtsp.md)
+[**LtmProfileRtsp**](ltm_profile_rtsp.md)
 
 ### Authorization
 
@@ -17450,7 +17449,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileRtspList**
-> ProfileRtspList GetProfileRtspList()
+> LtmProfileRtspList GetProfileRtspList()
 
 
 
@@ -17462,7 +17461,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileRtspList**](profile_rtsp_list.md)
+[**LtmProfileRtspList**](ltm_profile_rtsp_list.md)
 
 ### Authorization
 
@@ -17476,7 +17475,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSctp**
-> ProfileSctp GetProfileSctp($id)
+> LtmProfileSctp GetProfileSctp($id)
 
 
 
@@ -17491,7 +17490,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileSctp**](profile_sctp.md)
+[**LtmProfileSctp**](ltm_profile_sctp.md)
 
 ### Authorization
 
@@ -17505,7 +17504,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSctpList**
-> ProfileSctpList GetProfileSctpList()
+> LtmProfileSctpList GetProfileSctpList()
 
 
 
@@ -17517,7 +17516,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileSctpList**](profile_sctp_list.md)
+[**LtmProfileSctpList**](ltm_profile_sctp_list.md)
 
 ### Authorization
 
@@ -17531,7 +17530,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileServerLdap**
-> ProfileServerLdap GetProfileServerLdap($id)
+> LtmProfileServerLdap GetProfileServerLdap($id)
 
 
 
@@ -17546,7 +17545,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileServerLdap**](profile_serverLdap.md)
+[**LtmProfileServerLdap**](ltm_profile_serverLdap.md)
 
 ### Authorization
 
@@ -17560,7 +17559,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileServerLdapList**
-> ProfileServerLdapList GetProfileServerLdapList()
+> LtmProfileServerLdapList GetProfileServerLdapList()
 
 
 
@@ -17572,7 +17571,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileServerLdapList**](profile_serverLdap_list.md)
+[**LtmProfileServerLdapList**](ltm_profile_serverLdap_list.md)
 
 ### Authorization
 
@@ -17586,7 +17585,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileServerSsl**
-> ProfileServerSsl GetProfileServerSsl($id)
+> LtmProfileServerSsl GetProfileServerSsl($id)
 
 
 
@@ -17601,7 +17600,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileServerSsl**](profile_serverSsl.md)
+[**LtmProfileServerSsl**](ltm_profile_serverSsl.md)
 
 ### Authorization
 
@@ -17615,7 +17614,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileServerSslList**
-> ProfileServerSslList GetProfileServerSslList()
+> LtmProfileServerSslList GetProfileServerSslList()
 
 
 
@@ -17627,7 +17626,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileServerSslList**](profile_serverSsl_list.md)
+[**LtmProfileServerSslList**](ltm_profile_serverSsl_list.md)
 
 ### Authorization
 
@@ -17641,7 +17640,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSip**
-> ProfileSip GetProfileSip($id)
+> LtmProfileSip GetProfileSip($id)
 
 
 
@@ -17656,7 +17655,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileSip**](profile_sip.md)
+[**LtmProfileSip**](ltm_profile_sip.md)
 
 ### Authorization
 
@@ -17670,7 +17669,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSipList**
-> ProfileSipList GetProfileSipList()
+> LtmProfileSipList GetProfileSipList()
 
 
 
@@ -17682,7 +17681,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileSipList**](profile_sip_list.md)
+[**LtmProfileSipList**](ltm_profile_sip_list.md)
 
 ### Authorization
 
@@ -17696,7 +17695,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSmtp**
-> ProfileSmtp GetProfileSmtp($id)
+> LtmProfileSmtp GetProfileSmtp($id)
 
 
 
@@ -17711,7 +17710,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileSmtp**](profile_smtp.md)
+[**LtmProfileSmtp**](ltm_profile_smtp.md)
 
 ### Authorization
 
@@ -17725,7 +17724,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSmtpList**
-> ProfileSmtpList GetProfileSmtpList()
+> LtmProfileSmtpList GetProfileSmtpList()
 
 
 
@@ -17737,7 +17736,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileSmtpList**](profile_smtp_list.md)
+[**LtmProfileSmtpList**](ltm_profile_smtp_list.md)
 
 ### Authorization
 
@@ -17751,7 +17750,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSmtps**
-> ProfileSmtps GetProfileSmtps($id)
+> LtmProfileSmtps GetProfileSmtps($id)
 
 
 
@@ -17766,7 +17765,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileSmtps**](profile_smtps.md)
+[**LtmProfileSmtps**](ltm_profile_smtps.md)
 
 ### Authorization
 
@@ -17780,7 +17779,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSmtpsList**
-> ProfileSmtpsList GetProfileSmtpsList()
+> LtmProfileSmtpsList GetProfileSmtpsList()
 
 
 
@@ -17792,7 +17791,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileSmtpsList**](profile_smtps_list.md)
+[**LtmProfileSmtpsList**](ltm_profile_smtps_list.md)
 
 ### Authorization
 
@@ -17806,7 +17805,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSocks**
-> ProfileSocks GetProfileSocks($id)
+> LtmProfileSocks GetProfileSocks($id)
 
 
 
@@ -17821,7 +17820,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileSocks**](profile_socks.md)
+[**LtmProfileSocks**](ltm_profile_socks.md)
 
 ### Authorization
 
@@ -17835,7 +17834,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSocksList**
-> ProfileSocksList GetProfileSocksList()
+> LtmProfileSocksList GetProfileSocksList()
 
 
 
@@ -17847,7 +17846,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileSocksList**](profile_socks_list.md)
+[**LtmProfileSocksList**](ltm_profile_socks_list.md)
 
 ### Authorization
 
@@ -17861,7 +17860,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSpdy**
-> ProfileSpdy GetProfileSpdy($id)
+> LtmProfileSpdy GetProfileSpdy($id)
 
 
 
@@ -17876,7 +17875,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileSpdy**](profile_spdy.md)
+[**LtmProfileSpdy**](ltm_profile_spdy.md)
 
 ### Authorization
 
@@ -17890,7 +17889,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileSpdyList**
-> ProfileSpdyList GetProfileSpdyList()
+> LtmProfileSpdyList GetProfileSpdyList()
 
 
 
@@ -17902,7 +17901,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileSpdyList**](profile_spdy_list.md)
+[**LtmProfileSpdyList**](ltm_profile_spdy_list.md)
 
 ### Authorization
 
@@ -17916,7 +17915,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileStatistics**
-> ProfileStatistics GetProfileStatistics($id)
+> LtmProfileStatistics GetProfileStatistics($id)
 
 
 
@@ -17931,7 +17930,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileStatistics**](profile_statistics.md)
+[**LtmProfileStatistics**](ltm_profile_statistics.md)
 
 ### Authorization
 
@@ -17945,7 +17944,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileStatisticsList**
-> ProfileStatisticsList GetProfileStatisticsList()
+> LtmProfileStatisticsList GetProfileStatisticsList()
 
 
 
@@ -17957,7 +17956,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileStatisticsList**](profile_statistics_list.md)
+[**LtmProfileStatisticsList**](ltm_profile_statistics_list.md)
 
 ### Authorization
 
@@ -17971,7 +17970,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileStream**
-> ProfileStream GetProfileStream($id)
+> LtmProfileStream GetProfileStream($id)
 
 
 
@@ -17986,7 +17985,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileStream**](profile_stream.md)
+[**LtmProfileStream**](ltm_profile_stream.md)
 
 ### Authorization
 
@@ -18000,7 +17999,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileStreamList**
-> ProfileStreamList GetProfileStreamList()
+> LtmProfileStreamList GetProfileStreamList()
 
 
 
@@ -18012,7 +18011,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileStreamList**](profile_stream_list.md)
+[**LtmProfileStreamList**](ltm_profile_stream_list.md)
 
 ### Authorization
 
@@ -18026,7 +18025,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileTcp**
-> ProfileTcp GetProfileTcp($id)
+> LtmProfileTcp GetProfileTcp($id)
 
 
 
@@ -18041,7 +18040,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileTcp**](profile_tcp.md)
+[**LtmProfileTcp**](ltm_profile_tcp.md)
 
 ### Authorization
 
@@ -18055,7 +18054,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileTcpList**
-> ProfileTcpList GetProfileTcpList()
+> LtmProfileTcpList GetProfileTcpList()
 
 
 
@@ -18067,7 +18066,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileTcpList**](profile_tcp_list.md)
+[**LtmProfileTcpList**](ltm_profile_tcp_list.md)
 
 ### Authorization
 
@@ -18081,7 +18080,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileTftp**
-> ProfileTftp GetProfileTftp($id)
+> LtmProfileTftp GetProfileTftp($id)
 
 
 
@@ -18096,7 +18095,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileTftp**](profile_tftp.md)
+[**LtmProfileTftp**](ltm_profile_tftp.md)
 
 ### Authorization
 
@@ -18110,7 +18109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileTftpList**
-> ProfileTftpList GetProfileTftpList()
+> LtmProfileTftpList GetProfileTftpList()
 
 
 
@@ -18122,7 +18121,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileTftpList**](profile_tftp_list.md)
+[**LtmProfileTftpList**](ltm_profile_tftp_list.md)
 
 ### Authorization
 
@@ -18136,7 +18135,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileUdp**
-> ProfileUdp GetProfileUdp($id)
+> LtmProfileUdp GetProfileUdp($id)
 
 
 
@@ -18151,7 +18150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileUdp**](profile_udp.md)
+[**LtmProfileUdp**](ltm_profile_udp.md)
 
 ### Authorization
 
@@ -18165,7 +18164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileUdpList**
-> ProfileUdpList GetProfileUdpList()
+> LtmProfileUdpList GetProfileUdpList()
 
 
 
@@ -18177,7 +18176,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileUdpList**](profile_udp_list.md)
+[**LtmProfileUdpList**](ltm_profile_udp_list.md)
 
 ### Authorization
 
@@ -18191,7 +18190,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileWaCacheList**
-> ProfileWaCacheList GetProfileWaCacheList()
+> LtmProfileWaCacheList GetProfileWaCacheList()
 
 
 
@@ -18203,7 +18202,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileWaCacheList**](profile_waCache_list.md)
+[**LtmProfileWaCacheList**](ltm_profile_waCache_list.md)
 
 ### Authorization
 
@@ -18217,7 +18216,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileWebAcceleration**
-> ProfileWebAcceleration GetProfileWebAcceleration($id)
+> LtmProfileWebAcceleration GetProfileWebAcceleration($id)
 
 
 
@@ -18232,7 +18231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileWebAcceleration**](profile_webAcceleration.md)
+[**LtmProfileWebAcceleration**](ltm_profile_webAcceleration.md)
 
 ### Authorization
 
@@ -18246,7 +18245,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileWebAccelerationList**
-> ProfileWebAccelerationList GetProfileWebAccelerationList()
+> LtmProfileWebAccelerationList GetProfileWebAccelerationList()
 
 
 
@@ -18258,7 +18257,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileWebAccelerationList**](profile_webAcceleration_list.md)
+[**LtmProfileWebAccelerationList**](ltm_profile_webAcceleration_list.md)
 
 ### Authorization
 
@@ -18272,7 +18271,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileWebSecurity**
-> ProfileWebSecurity GetProfileWebSecurity($id)
+> LtmProfileWebSecurity GetProfileWebSecurity($id)
 
 
 
@@ -18287,7 +18286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileWebSecurity**](profile_webSecurity.md)
+[**LtmProfileWebSecurity**](ltm_profile_webSecurity.md)
 
 ### Authorization
 
@@ -18301,7 +18300,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileWebSecurityList**
-> ProfileWebSecurityList GetProfileWebSecurityList()
+> LtmProfileWebSecurityList GetProfileWebSecurityList()
 
 
 
@@ -18313,7 +18312,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileWebSecurityList**](profile_webSecurity_list.md)
+[**LtmProfileWebSecurityList**](ltm_profile_webSecurity_list.md)
 
 ### Authorization
 
@@ -18327,7 +18326,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileXml**
-> ProfileXml GetProfileXml($id)
+> LtmProfileXml GetProfileXml($id)
 
 
 
@@ -18342,7 +18341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProfileXml**](profile_xml.md)
+[**LtmProfileXml**](ltm_profile_xml.md)
 
 ### Authorization
 
@@ -18356,7 +18355,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetProfileXmlList**
-> ProfileXmlList GetProfileXmlList()
+> LtmProfileXmlList GetProfileXmlList()
 
 
 
@@ -18368,7 +18367,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ProfileXmlList**](profile_xml_list.md)
+[**LtmProfileXmlList**](ltm_profile_xml_list.md)
 
 ### Authorization
 
@@ -18382,7 +18381,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetRule**
-> Rule GetRule($id)
+> LtmRule GetRule($id)
 
 
 
@@ -18397,7 +18396,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Rule**](rule.md)
+[**LtmRule**](ltm_rule.md)
 
 ### Authorization
 
@@ -18411,7 +18410,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetRuleList**
-> RuleList GetRuleList()
+> LtmRuleList GetRuleList()
 
 
 
@@ -18423,7 +18422,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RuleList**](rule_list.md)
+[**LtmRuleList**](ltm_rule_list.md)
 
 ### Authorization
 
@@ -18437,7 +18436,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetSnat**
-> Snat GetSnat($id)
+> LtmSnat GetSnat($id)
 
 
 
@@ -18452,7 +18451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Snat**](snat.md)
+[**LtmSnat**](ltm_snat.md)
 
 ### Authorization
 
@@ -18466,7 +18465,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetSnatList**
-> SnatList GetSnatList()
+> LtmSnatList GetSnatList()
 
 
 
@@ -18478,7 +18477,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SnatList**](snat_list.md)
+[**LtmSnatList**](ltm_snat_list.md)
 
 ### Authorization
 
@@ -18492,7 +18491,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetSnatTranslation**
-> SnatTranslation GetSnatTranslation($id)
+> LtmSnatTranslation GetSnatTranslation($id)
 
 
 
@@ -18507,7 +18506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SnatTranslation**](snatTranslation.md)
+[**LtmSnatTranslation**](ltm_snatTranslation.md)
 
 ### Authorization
 
@@ -18521,7 +18520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetSnatTranslationList**
-> SnatTranslationList GetSnatTranslationList()
+> LtmSnatTranslationList GetSnatTranslationList()
 
 
 
@@ -18533,7 +18532,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SnatTranslationList**](snatTranslation_list.md)
+[**LtmSnatTranslationList**](ltm_snatTranslation_list.md)
 
 ### Authorization
 
@@ -18547,7 +18546,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetSnatpool**
-> Snatpool GetSnatpool($id)
+> LtmSnatpool GetSnatpool($id)
 
 
 
@@ -18562,7 +18561,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Snatpool**](snatpool.md)
+[**LtmSnatpool**](ltm_snatpool.md)
 
 ### Authorization
 
@@ -18576,7 +18575,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetSnatpoolList**
-> SnatpoolList GetSnatpoolList()
+> LtmSnatpoolList GetSnatpoolList()
 
 
 
@@ -18588,7 +18587,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SnatpoolList**](snatpool_list.md)
+[**LtmSnatpoolList**](ltm_snatpool_list.md)
 
 ### Authorization
 
@@ -18602,7 +18601,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetTacdb**
-> Tacdb GetTacdb($id)
+> LtmTacdb GetTacdb($id)
 
 
 
@@ -18617,7 +18616,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tacdb**](tacdb.md)
+[**LtmTacdb**](ltm_tacdb.md)
 
 ### Authorization
 
@@ -18631,7 +18630,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetTacdbCustomdb**
-> TacdbCustomdb GetTacdbCustomdb($id)
+> LtmTacdbCustomdb GetTacdbCustomdb($id)
 
 
 
@@ -18646,7 +18645,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TacdbCustomdb**](tacdb_customdb.md)
+[**LtmTacdbCustomdb**](ltm_tacdb_customdb.md)
 
 ### Authorization
 
@@ -18660,7 +18659,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetTacdbCustomdbFile**
-> TacdbCustomdbFile GetTacdbCustomdbFile($id)
+> LtmTacdbCustomdbFile GetTacdbCustomdbFile($id)
 
 
 
@@ -18675,7 +18674,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TacdbCustomdbFile**](tacdb_customdbFile.md)
+[**LtmTacdbCustomdbFile**](ltm_tacdb_customdbFile.md)
 
 ### Authorization
 
@@ -18689,7 +18688,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetTacdbCustomdbFileList**
-> TacdbCustomdbFileList GetTacdbCustomdbFileList()
+> LtmTacdbCustomdbFileList GetTacdbCustomdbFileList()
 
 
 
@@ -18701,7 +18700,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TacdbCustomdbFileList**](tacdb_customdbFile_list.md)
+[**LtmTacdbCustomdbFileList**](ltm_tacdb_customdbFile_list.md)
 
 ### Authorization
 
@@ -18715,7 +18714,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetTacdbCustomdbList**
-> TacdbCustomdbList GetTacdbCustomdbList()
+> LtmTacdbCustomdbList GetTacdbCustomdbList()
 
 
 
@@ -18727,7 +18726,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TacdbCustomdbList**](tacdb_customdb_list.md)
+[**LtmTacdbCustomdbList**](ltm_tacdb_customdb_list.md)
 
 ### Authorization
 
@@ -18741,7 +18740,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetTacdbList**
-> TacdbList GetTacdbList()
+> LtmTacdbList GetTacdbList()
 
 
 
@@ -18753,7 +18752,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TacdbList**](tacdb_list.md)
+[**LtmTacdbList**](ltm_tacdb_list.md)
 
 ### Authorization
 
@@ -18767,7 +18766,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetTrafficClass**
-> TrafficClass GetTrafficClass($id)
+> LtmTrafficClass GetTrafficClass($id)
 
 
 
@@ -18782,7 +18781,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TrafficClass**](trafficClass.md)
+[**LtmTrafficClass**](ltm_trafficClass.md)
 
 ### Authorization
 
@@ -18796,7 +18795,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetTrafficClassList**
-> TrafficClassList GetTrafficClassList()
+> LtmTrafficClassList GetTrafficClassList()
 
 
 
@@ -18808,7 +18807,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TrafficClassList**](trafficClass_list.md)
+[**LtmTrafficClassList**](ltm_trafficClass_list.md)
 
 ### Authorization
 
@@ -18822,7 +18821,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetUrlcatQuery**
-> UrlcatQuery GetUrlcatQuery($id)
+> LtmUrlcatQuery GetUrlcatQuery($id)
 
 
 
@@ -18837,7 +18836,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UrlcatQuery**](urlcatQuery.md)
+[**LtmUrlcatQuery**](ltm_urlcatQuery.md)
 
 ### Authorization
 
@@ -18851,7 +18850,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetUrlcatQueryList**
-> UrlcatQueryList GetUrlcatQueryList()
+> LtmUrlcatQueryList GetUrlcatQueryList()
 
 
 
@@ -18863,7 +18862,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**UrlcatQueryList**](urlcatQuery_list.md)
+[**LtmUrlcatQueryList**](ltm_urlcatQuery_list.md)
 
 ### Authorization
 
@@ -18877,7 +18876,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtual**
-> Virtual GetVirtual($id)
+> LtmVirtual GetVirtual($id)
 
 
 
@@ -18892,7 +18891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Virtual**](virtual.md)
+[**LtmVirtual**](ltm_virtual.md)
 
 ### Authorization
 
@@ -18906,7 +18905,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualAddress**
-> VirtualAddress GetVirtualAddress($id)
+> LtmVirtualAddress GetVirtualAddress($id)
 
 
 
@@ -18921,7 +18920,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualAddress**](virtualAddress.md)
+[**LtmVirtualAddress**](ltm_virtualAddress.md)
 
 ### Authorization
 
@@ -18935,7 +18934,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualAddressList**
-> VirtualAddressList GetVirtualAddressList()
+> LtmVirtualAddressList GetVirtualAddressList()
 
 
 
@@ -18947,7 +18946,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**VirtualAddressList**](virtualAddress_list.md)
+[**LtmVirtualAddressList**](ltm_virtualAddress_list.md)
 
 ### Authorization
 
@@ -18961,7 +18960,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualFwActive**
-> VirtualFwActive GetVirtualFwActive($id)
+> LtmVirtualFwActive GetVirtualFwActive($id)
 
 
 
@@ -18976,7 +18975,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualFwActive**](virtual_fwActive.md)
+[**LtmVirtualFwActive**](ltm_virtual_fwActive.md)
 
 ### Authorization
 
@@ -18990,7 +18989,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualFwActiveList**
-> VirtualFwActiveList GetVirtualFwActiveList()
+> LtmVirtualFwActiveList GetVirtualFwActiveList()
 
 
 
@@ -19002,7 +19001,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**VirtualFwActiveList**](virtual_fwActive_list.md)
+[**LtmVirtualFwActiveList**](ltm_virtual_fwActive_list.md)
 
 ### Authorization
 
@@ -19016,7 +19015,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualFwEnforcedPolicyRules**
-> VirtualFwEnforcedPolicyRules GetVirtualFwEnforcedPolicyRules($id)
+> LtmVirtualFwEnforcedPolicyRules GetVirtualFwEnforcedPolicyRules($id)
 
 
 
@@ -19031,7 +19030,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualFwEnforcedPolicyRules**](virtual_fwEnforcedPolicyRules.md)
+[**LtmVirtualFwEnforcedPolicyRules**](ltm_virtual_fwEnforcedPolicyRules.md)
 
 ### Authorization
 
@@ -19045,7 +19044,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualFwEnforcedPolicyRulesList**
-> VirtualFwEnforcedPolicyRulesList GetVirtualFwEnforcedPolicyRulesList()
+> LtmVirtualFwEnforcedPolicyRulesList GetVirtualFwEnforcedPolicyRulesList()
 
 
 
@@ -19057,7 +19056,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**VirtualFwEnforcedPolicyRulesList**](virtual_fwEnforcedPolicyRules_list.md)
+[**LtmVirtualFwEnforcedPolicyRulesList**](ltm_virtual_fwEnforcedPolicyRules_list.md)
 
 ### Authorization
 
@@ -19071,7 +19070,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualFwStagedPolicyRules**
-> VirtualFwStagedPolicyRules GetVirtualFwStagedPolicyRules($id)
+> LtmVirtualFwStagedPolicyRules GetVirtualFwStagedPolicyRules($id)
 
 
 
@@ -19086,7 +19085,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualFwStagedPolicyRules**](virtual_fwStagedPolicyRules.md)
+[**LtmVirtualFwStagedPolicyRules**](ltm_virtual_fwStagedPolicyRules.md)
 
 ### Authorization
 
@@ -19100,7 +19099,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualFwStagedPolicyRulesList**
-> VirtualFwStagedPolicyRulesList GetVirtualFwStagedPolicyRulesList()
+> LtmVirtualFwStagedPolicyRulesList GetVirtualFwStagedPolicyRulesList()
 
 
 
@@ -19112,7 +19111,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**VirtualFwStagedPolicyRulesList**](virtual_fwStagedPolicyRules_list.md)
+[**LtmVirtualFwStagedPolicyRulesList**](ltm_virtual_fwStagedPolicyRules_list.md)
 
 ### Authorization
 
@@ -19126,7 +19125,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualList**
-> VirtualList GetVirtualList()
+> LtmVirtualList GetVirtualList()
 
 
 
@@ -19138,7 +19137,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**VirtualList**](virtual_list.md)
+[**LtmVirtualList**](ltm_virtual_list.md)
 
 ### Authorization
 
@@ -19152,7 +19151,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualPolicies**
-> VirtualPolicies GetVirtualPolicies($id)
+> LtmVirtualPolicies GetVirtualPolicies($id)
 
 
 
@@ -19167,7 +19166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualPolicies**](virtual_policies.md)
+[**LtmVirtualPolicies**](ltm_virtual_policies.md)
 
 ### Authorization
 
@@ -19181,7 +19180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualPoliciesList**
-> VirtualPoliciesList GetVirtualPoliciesList()
+> LtmVirtualPoliciesList GetVirtualPoliciesList()
 
 
 
@@ -19193,7 +19192,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**VirtualPoliciesList**](virtual_policies_list.md)
+[**LtmVirtualPoliciesList**](ltm_virtual_policies_list.md)
 
 ### Authorization
 
@@ -19207,7 +19206,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualProfiles**
-> VirtualProfiles GetVirtualProfiles($id)
+> LtmVirtualProfiles GetVirtualProfiles($id)
 
 
 
@@ -19222,7 +19221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VirtualProfiles**](virtual_profiles.md)
+[**LtmVirtualProfiles**](ltm_virtual_profiles.md)
 
 ### Authorization
 
@@ -19236,7 +19235,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetVirtualProfilesList**
-> VirtualProfilesList GetVirtualProfilesList()
+> LtmVirtualProfilesList GetVirtualProfilesList()
 
 
 
@@ -19248,7 +19247,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**VirtualProfilesList**](virtual_profiles_list.md)
+[**LtmVirtualProfilesList**](ltm_virtual_profiles_list.md)
 
 ### Authorization
 
@@ -19261,37 +19260,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Login**
-> LoginResp Login($loginBody)
-
-
-
-Login to generate an API token
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **loginBody** | [**LoginBody**](LoginBody.md)| User to authenticate as | 
-
-### Return type
-
-[**LoginResp**](loginResp.md)
-
-### Authorization
-
-[basicAuth](../README.md#basicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **PatchAlgLogProfile**
-> AlgLogProfile PatchAlgLogProfile($id, $object)
+> LtmAlgLogProfile PatchAlgLogProfile($id, $object)
 
 
 
@@ -19303,11 +19273,11 @@ Defines the configuration for logging of ALG flows.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AlgLogProfile**](AlgLogProfile.md)|  | 
+ **object** | [**LtmAlgLogProfile**](LtmAlgLogProfile.md)|  | 
 
 ### Return type
 
-[**AlgLogProfile**](algLogProfile.md)
+[**LtmAlgLogProfile**](ltm_algLogProfile.md)
 
 ### Authorization
 
@@ -19321,7 +19291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthCrldpServer**
-> AuthCrldpServer PatchAuthCrldpServer($id, $object)
+> LtmAuthCrldpServer PatchAuthCrldpServer($id, $object)
 
 
 
@@ -19333,11 +19303,11 @@ Certificate Revocation List Distribution Point (CRDLP) server configuration, for
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthCrldpServer**](AuthCrldpServer.md)|  | 
+ **object** | [**LtmAuthCrldpServer**](LtmAuthCrldpServer.md)|  | 
 
 ### Return type
 
-[**AuthCrldpServer**](auth_crldpServer.md)
+[**LtmAuthCrldpServer**](ltm_auth_crldpServer.md)
 
 ### Authorization
 
@@ -19351,7 +19321,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthKerberosDelegation**
-> AuthKerberosDelegation PatchAuthKerberosDelegation($id, $object)
+> LtmAuthKerberosDelegation PatchAuthKerberosDelegation($id, $object)
 
 
 
@@ -19363,11 +19333,11 @@ Kerberos configuration for remote client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthKerberosDelegation**](AuthKerberosDelegation.md)|  | 
+ **object** | [**LtmAuthKerberosDelegation**](LtmAuthKerberosDelegation.md)|  | 
 
 ### Return type
 
-[**AuthKerberosDelegation**](auth_kerberosDelegation.md)
+[**LtmAuthKerberosDelegation**](ltm_auth_kerberosDelegation.md)
 
 ### Authorization
 
@@ -19381,7 +19351,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthLdap**
-> AuthLdap PatchAuthLdap($id, $object)
+> LtmAuthLdap PatchAuthLdap($id, $object)
 
 
 
@@ -19393,11 +19363,11 @@ LDAP configuration for remote LDAP client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthLdap**](AuthLdap.md)|  | 
+ **object** | [**LtmAuthLdap**](LtmAuthLdap.md)|  | 
 
 ### Return type
 
-[**AuthLdap**](auth_ldap.md)
+[**LtmAuthLdap**](ltm_auth_ldap.md)
 
 ### Authorization
 
@@ -19411,7 +19381,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthOcspResponder**
-> AuthOcspResponder PatchAuthOcspResponder($id, $object)
+> LtmAuthOcspResponder PatchAuthOcspResponder($id, $object)
 
 
 
@@ -19423,11 +19393,11 @@ Online Certificate System Protocol (OCSP) responder configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthOcspResponder**](AuthOcspResponder.md)|  | 
+ **object** | [**LtmAuthOcspResponder**](LtmAuthOcspResponder.md)|  | 
 
 ### Return type
 
-[**AuthOcspResponder**](auth_ocspResponder.md)
+[**LtmAuthOcspResponder**](ltm_auth_ocspResponder.md)
 
 ### Authorization
 
@@ -19441,7 +19411,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthProfile**
-> AuthProfile PatchAuthProfile($id, $object)
+> LtmAuthProfile PatchAuthProfile($id, $object)
 
 
 
@@ -19453,11 +19423,11 @@ Virtual server traffic Authentication profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthProfile**](AuthProfile.md)|  | 
+ **object** | [**LtmAuthProfile**](LtmAuthProfile.md)|  | 
 
 ### Return type
 
-[**AuthProfile**](auth_profile.md)
+[**LtmAuthProfile**](ltm_auth_profile.md)
 
 ### Authorization
 
@@ -19471,7 +19441,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthRadius**
-> AuthRadius PatchAuthRadius($id, $object)
+> LtmAuthRadius PatchAuthRadius($id, $object)
 
 
 
@@ -19483,11 +19453,11 @@ RADIUS configuration for remote RADIUS client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthRadius**](AuthRadius.md)|  | 
+ **object** | [**LtmAuthRadius**](LtmAuthRadius.md)|  | 
 
 ### Return type
 
-[**AuthRadius**](auth_radius.md)
+[**LtmAuthRadius**](ltm_auth_radius.md)
 
 ### Authorization
 
@@ -19501,7 +19471,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthRadiusServer**
-> AuthRadiusServer PatchAuthRadiusServer($id, $object)
+> LtmAuthRadiusServer PatchAuthRadiusServer($id, $object)
 
 
 
@@ -19513,11 +19483,11 @@ RADIUS server configuration for use with RADIUS authentication profiles
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthRadiusServer**](AuthRadiusServer.md)|  | 
+ **object** | [**LtmAuthRadiusServer**](LtmAuthRadiusServer.md)|  | 
 
 ### Return type
 
-[**AuthRadiusServer**](auth_radiusServer.md)
+[**LtmAuthRadiusServer**](ltm_auth_radiusServer.md)
 
 ### Authorization
 
@@ -19531,7 +19501,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthSslCcLdap**
-> AuthSslCcLdap PatchAuthSslCcLdap($id, $object)
+> LtmAuthSslCcLdap PatchAuthSslCcLdap($id, $object)
 
 
 
@@ -19543,11 +19513,11 @@ SSL client certificate configuration, for use with remote SSL-based LDAP authori
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthSslCcLdap**](AuthSslCcLdap.md)|  | 
+ **object** | [**LtmAuthSslCcLdap**](LtmAuthSslCcLdap.md)|  | 
 
 ### Return type
 
-[**AuthSslCcLdap**](auth_sslCcLdap.md)
+[**LtmAuthSslCcLdap**](ltm_auth_sslCcLdap.md)
 
 ### Authorization
 
@@ -19561,7 +19531,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthSslCrldp**
-> AuthSslCrldp PatchAuthSslCrldp($id, $object)
+> LtmAuthSslCrldp PatchAuthSslCrldp($id, $object)
 
 
 
@@ -19573,11 +19543,11 @@ SSL client certificate configuration, for use with remote SSL-based CRLDP author
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthSslCrldp**](AuthSslCrldp.md)|  | 
+ **object** | [**LtmAuthSslCrldp**](LtmAuthSslCrldp.md)|  | 
 
 ### Return type
 
-[**AuthSslCrldp**](auth_sslCrldp.md)
+[**LtmAuthSslCrldp**](ltm_auth_sslCrldp.md)
 
 ### Authorization
 
@@ -19591,7 +19561,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthSslOcsp**
-> AuthSslOcsp PatchAuthSslOcsp($id, $object)
+> LtmAuthSslOcsp PatchAuthSslOcsp($id, $object)
 
 
 
@@ -19603,11 +19573,11 @@ OCSP configuration for implementing remote OCSP-based client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthSslOcsp**](AuthSslOcsp.md)|  | 
+ **object** | [**LtmAuthSslOcsp**](LtmAuthSslOcsp.md)|  | 
 
 ### Return type
 
-[**AuthSslOcsp**](auth_sslOcsp.md)
+[**LtmAuthSslOcsp**](ltm_auth_sslOcsp.md)
 
 ### Authorization
 
@@ -19621,7 +19591,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchAuthTacacs**
-> AuthTacacs PatchAuthTacacs($id, $object)
+> LtmAuthTacacs PatchAuthTacacs($id, $object)
 
 
 
@@ -19633,11 +19603,11 @@ TACACS+ configuration for remote TACACS+ client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthTacacs**](AuthTacacs.md)|  | 
+ **object** | [**LtmAuthTacacs**](LtmAuthTacacs.md)|  | 
 
 ### Return type
 
-[**AuthTacacs**](auth_tacacs.md)
+[**LtmAuthTacacs**](ltm_auth_tacacs.md)
 
 ### Authorization
 
@@ -19651,7 +19621,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchClassificationApplication**
-> ClassificationApplication PatchClassificationApplication($id, $object)
+> LtmClassificationApplication PatchClassificationApplication($id, $object)
 
 
 
@@ -19663,11 +19633,11 @@ Traffic Classification Application
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationApplication**](ClassificationApplication.md)|  | 
+ **object** | [**LtmClassificationApplication**](LtmClassificationApplication.md)|  | 
 
 ### Return type
 
-[**ClassificationApplication**](classification_application.md)
+[**LtmClassificationApplication**](ltm_classification_application.md)
 
 ### Authorization
 
@@ -19681,7 +19651,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchClassificationCategory**
-> ClassificationCategory PatchClassificationCategory($id, $object)
+> LtmClassificationCategory PatchClassificationCategory($id, $object)
 
 
 
@@ -19693,11 +19663,11 @@ Traffic Classification Category
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationCategory**](ClassificationCategory.md)|  | 
+ **object** | [**LtmClassificationCategory**](LtmClassificationCategory.md)|  | 
 
 ### Return type
 
-[**ClassificationCategory**](classification_category.md)
+[**LtmClassificationCategory**](ltm_classification_category.md)
 
 ### Authorization
 
@@ -19711,7 +19681,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchClassificationSignatureUpdateSchedule**
-> ClassificationSignatureUpdateSchedule PatchClassificationSignatureUpdateSchedule($id, $object)
+> LtmClassificationSignatureUpdateSchedule PatchClassificationSignatureUpdateSchedule($id, $object)
 
 
 
@@ -19723,11 +19693,11 @@ Configure scheduling for classification signature updates.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationSignatureUpdateSchedule**](ClassificationSignatureUpdateSchedule.md)|  | 
+ **object** | [**LtmClassificationSignatureUpdateSchedule**](LtmClassificationSignatureUpdateSchedule.md)|  | 
 
 ### Return type
 
-[**ClassificationSignatureUpdateSchedule**](classification_signatureUpdateSchedule.md)
+[**LtmClassificationSignatureUpdateSchedule**](ltm_classification_signatureUpdateSchedule.md)
 
 ### Authorization
 
@@ -19741,7 +19711,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchClassificationSignatureVersion**
-> ClassificationSignatureVersion PatchClassificationSignatureVersion($id, $object)
+> LtmClassificationSignatureVersion PatchClassificationSignatureVersion($id, $object)
 
 
 
@@ -19753,11 +19723,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationSignatureVersion**](ClassificationSignatureVersion.md)|  | 
+ **object** | [**LtmClassificationSignatureVersion**](LtmClassificationSignatureVersion.md)|  | 
 
 ### Return type
 
-[**ClassificationSignatureVersion**](classification_signatureVersion.md)
+[**LtmClassificationSignatureVersion**](ltm_classification_signatureVersion.md)
 
 ### Authorization
 
@@ -19771,7 +19741,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchClassificationUrlCatPolicy**
-> ClassificationUrlCatPolicy PatchClassificationUrlCatPolicy($id, $object)
+> LtmClassificationUrlCatPolicy PatchClassificationUrlCatPolicy($id, $object)
 
 
 
@@ -19783,11 +19753,11 @@ URL Categorization policy
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrlCatPolicy**](ClassificationUrlCatPolicy.md)|  | 
+ **object** | [**LtmClassificationUrlCatPolicy**](LtmClassificationUrlCatPolicy.md)|  | 
 
 ### Return type
 
-[**ClassificationUrlCatPolicy**](classification_urlCatPolicy.md)
+[**LtmClassificationUrlCatPolicy**](ltm_classification_urlCatPolicy.md)
 
 ### Authorization
 
@@ -19801,7 +19771,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchClassificationUrlCategory**
-> ClassificationUrlCategory PatchClassificationUrlCategory($id, $object)
+> LtmClassificationUrlCategory PatchClassificationUrlCategory($id, $object)
 
 
 
@@ -19813,11 +19783,11 @@ URL Classification Category
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrlCategory**](ClassificationUrlCategory.md)|  | 
+ **object** | [**LtmClassificationUrlCategory**](LtmClassificationUrlCategory.md)|  | 
 
 ### Return type
 
-[**ClassificationUrlCategory**](classification_urlCategory.md)
+[**LtmClassificationUrlCategory**](ltm_classification_urlCategory.md)
 
 ### Authorization
 
@@ -19831,7 +19801,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchClassificationUrldbFeedList**
-> ClassificationUrldbFeedList PatchClassificationUrldbFeedList($id, $object)
+> LtmClassificationUrldbFeedList PatchClassificationUrldbFeedList($id, $object)
 
 
 
@@ -19843,11 +19813,11 @@ Reusable URLDB feed lists for URL Categorization.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrldbFeedList**](ClassificationUrldbFeedList.md)|  | 
+ **object** | [**LtmClassificationUrldbFeedList**](LtmClassificationUrldbFeedList.md)|  | 
 
 ### Return type
 
-[**ClassificationUrldbFeedList**](classification_urldbFeedList.md)
+[**LtmClassificationUrldbFeedList**](ltm_classification_urldbFeedList.md)
 
 ### Authorization
 
@@ -19861,7 +19831,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchClassificationUrldbFile**
-> ClassificationUrldbFile PatchClassificationUrldbFile($id, $object)
+> LtmClassificationUrldbFile PatchClassificationUrldbFile($id, $object)
 
 
 
@@ -19873,11 +19843,11 @@ File object for custom url category database.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrldbFile**](ClassificationUrldbFile.md)|  | 
+ **object** | [**LtmClassificationUrldbFile**](LtmClassificationUrldbFile.md)|  | 
 
 ### Return type
 
-[**ClassificationUrldbFile**](classification_urldbFile.md)
+[**LtmClassificationUrldbFile**](ltm_classification_urldbFile.md)
 
 ### Authorization
 
@@ -19891,7 +19861,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDataGroupExternal**
-> DataGroupExternal PatchDataGroupExternal($id, $object)
+> LtmDataGroupExternal PatchDataGroupExternal($id, $object)
 
 
 
@@ -19903,11 +19873,11 @@ External data group configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DataGroupExternal**](DataGroupExternal.md)|  | 
+ **object** | [**LtmDataGroupExternal**](LtmDataGroupExternal.md)|  | 
 
 ### Return type
 
-[**DataGroupExternal**](dataGroup_external.md)
+[**LtmDataGroupExternal**](ltm_dataGroup_external.md)
 
 ### Authorization
 
@@ -19921,7 +19891,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDataGroupInternal**
-> DataGroupInternal PatchDataGroupInternal($id, $object)
+> LtmDataGroupInternal PatchDataGroupInternal($id, $object)
 
 
 
@@ -19933,11 +19903,11 @@ Internal data group configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DataGroupInternal**](DataGroupInternal.md)|  | 
+ **object** | [**LtmDataGroupInternal**](LtmDataGroupInternal.md)|  | 
 
 ### Return type
 
-[**DataGroupInternal**](dataGroup_internal.md)
+[**LtmDataGroupInternal**](ltm_dataGroup_internal.md)
 
 ### Authorization
 
@@ -19951,7 +19921,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDefaultNodeMonitor**
-> DefaultNodeMonitor PatchDefaultNodeMonitor($id, $object)
+> LtmDefaultNodeMonitor PatchDefaultNodeMonitor($id, $object)
 
 
 
@@ -19963,11 +19933,11 @@ Configure the default-monitor rule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DefaultNodeMonitor**](DefaultNodeMonitor.md)|  | 
+ **object** | [**LtmDefaultNodeMonitor**](LtmDefaultNodeMonitor.md)|  | 
 
 ### Return type
 
-[**DefaultNodeMonitor**](defaultNodeMonitor.md)
+[**LtmDefaultNodeMonitor**](ltm_defaultNodeMonitor.md)
 
 ### Authorization
 
@@ -19981,7 +19951,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsAnalyticsGlobalSettings**
-> DnsAnalyticsGlobalSettings PatchDnsAnalyticsGlobalSettings($id, $object)
+> LtmDnsAnalyticsGlobalSettings PatchDnsAnalyticsGlobalSettings($id, $object)
 
 
 
@@ -19993,11 +19963,11 @@ AVR DNS statistics global settings affecting all DNS listeners.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsAnalyticsGlobalSettings**](DnsAnalyticsGlobalSettings.md)|  | 
+ **object** | [**LtmDnsAnalyticsGlobalSettings**](LtmDnsAnalyticsGlobalSettings.md)|  | 
 
 ### Return type
 
-[**DnsAnalyticsGlobalSettings**](dns_analytics_globalSettings.md)
+[**LtmDnsAnalyticsGlobalSettings**](ltm_dns_analytics_globalSettings.md)
 
 ### Authorization
 
@@ -20011,7 +19981,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsCacheGlobalSettings**
-> DnsCacheGlobalSettings PatchDnsCacheGlobalSettings($id, $object)
+> LtmDnsCacheGlobalSettings PatchDnsCacheGlobalSettings($id, $object)
 
 
 
@@ -20023,11 +19993,11 @@ DNS Cache global settings affecting all caches.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheGlobalSettings**](DnsCacheGlobalSettings.md)|  | 
+ **object** | [**LtmDnsCacheGlobalSettings**](LtmDnsCacheGlobalSettings.md)|  | 
 
 ### Return type
 
-[**DnsCacheGlobalSettings**](dns_cache_globalSettings.md)
+[**LtmDnsCacheGlobalSettings**](ltm_dns_cache_globalSettings.md)
 
 ### Authorization
 
@@ -20041,7 +20011,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsCacheResolver**
-> DnsCacheResolver PatchDnsCacheResolver($id, $object)
+> LtmDnsCacheResolver PatchDnsCacheResolver($id, $object)
 
 
 
@@ -20053,11 +20023,11 @@ DNS Cache with recursive resolver.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheResolver**](DnsCacheResolver.md)|  | 
+ **object** | [**LtmDnsCacheResolver**](LtmDnsCacheResolver.md)|  | 
 
 ### Return type
 
-[**DnsCacheResolver**](dns_cache_resolver.md)
+[**LtmDnsCacheResolver**](ltm_dns_cache_resolver.md)
 
 ### Authorization
 
@@ -20071,7 +20041,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsCacheTransparent**
-> DnsCacheTransparent PatchDnsCacheTransparent($id, $object)
+> LtmDnsCacheTransparent PatchDnsCacheTransparent($id, $object)
 
 
 
@@ -20083,11 +20053,11 @@ DNS Cache without a resolver (responses from serverside cached).
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheTransparent**](DnsCacheTransparent.md)|  | 
+ **object** | [**LtmDnsCacheTransparent**](LtmDnsCacheTransparent.md)|  | 
 
 ### Return type
 
-[**DnsCacheTransparent**](dns_cache_transparent.md)
+[**LtmDnsCacheTransparent**](ltm_dns_cache_transparent.md)
 
 ### Authorization
 
@@ -20101,7 +20071,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsCacheValidatingResolver**
-> DnsCacheValidatingResolver PatchDnsCacheValidatingResolver($id, $object)
+> LtmDnsCacheValidatingResolver PatchDnsCacheValidatingResolver($id, $object)
 
 
 
@@ -20113,11 +20083,11 @@ DNS Cache with recursive resolver and DNSSEC validation.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheValidatingResolver**](DnsCacheValidatingResolver.md)|  | 
+ **object** | [**LtmDnsCacheValidatingResolver**](LtmDnsCacheValidatingResolver.md)|  | 
 
 ### Return type
 
-[**DnsCacheValidatingResolver**](dns_cache_validatingResolver.md)
+[**LtmDnsCacheValidatingResolver**](ltm_dns_cache_validatingResolver.md)
 
 ### Authorization
 
@@ -20131,7 +20101,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsDnssecKey**
-> DnsDnssecKey PatchDnsDnssecKey($id, $object)
+> LtmDnsDnssecKey PatchDnsDnssecKey($id, $object)
 
 
 
@@ -20143,11 +20113,11 @@ DNSSEC key configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsDnssecKey**](DnsDnssecKey.md)|  | 
+ **object** | [**LtmDnsDnssecKey**](LtmDnsDnssecKey.md)|  | 
 
 ### Return type
 
-[**DnsDnssecKey**](dns_dnssec_key.md)
+[**LtmDnsDnssecKey**](ltm_dns_dnssec_key.md)
 
 ### Authorization
 
@@ -20161,7 +20131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsDnssecKeyTmGeneration**
-> DnsDnssecKeyTmGeneration PatchDnsDnssecKeyTmGeneration($id, $object)
+> LtmDnsDnssecKeyTmGeneration PatchDnsDnssecKeyTmGeneration($id, $object)
 
 
 
@@ -20173,11 +20143,11 @@ DNSSEC key generation configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsDnssecKeyTmGeneration**](DnsDnssecKeyTmGeneration.md)|  | 
+ **object** | [**LtmDnsDnssecKeyTmGeneration**](LtmDnsDnssecKeyTmGeneration.md)|  | 
 
 ### Return type
 
-[**DnsDnssecKeyTmGeneration**](dns_dnssec_key_tmGeneration.md)
+[**LtmDnsDnssecKeyTmGeneration**](ltm_dns_dnssec_key_tmGeneration.md)
 
 ### Authorization
 
@@ -20191,7 +20161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsDnssecZone**
-> DnsDnssecZone PatchDnsDnssecZone($id, $object)
+> LtmDnsDnssecZone PatchDnsDnssecZone($id, $object)
 
 
 
@@ -20203,11 +20173,11 @@ DNSSEC zone configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsDnssecZone**](DnsDnssecZone.md)|  | 
+ **object** | [**LtmDnsDnssecZone**](LtmDnsDnssecZone.md)|  | 
 
 ### Return type
 
-[**DnsDnssecZone**](dns_dnssec_zone.md)
+[**LtmDnsDnssecZone**](ltm_dns_dnssec_zone.md)
 
 ### Authorization
 
@@ -20221,7 +20191,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsNameserver**
-> DnsNameserver PatchDnsNameserver($id, $object)
+> LtmDnsNameserver PatchDnsNameserver($id, $object)
 
 
 
@@ -20233,11 +20203,11 @@ DNS nameserver configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsNameserver**](DnsNameserver.md)|  | 
+ **object** | [**LtmDnsNameserver**](LtmDnsNameserver.md)|  | 
 
 ### Return type
 
-[**DnsNameserver**](dns_nameserver.md)
+[**LtmDnsNameserver**](ltm_dns_nameserver.md)
 
 ### Authorization
 
@@ -20251,7 +20221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsTsigKey**
-> DnsTsigKey PatchDnsTsigKey($id, $object)
+> LtmDnsTsigKey PatchDnsTsigKey($id, $object)
 
 
 
@@ -20263,11 +20233,11 @@ TSIG Key configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsTsigKey**](DnsTsigKey.md)|  | 
+ **object** | [**LtmDnsTsigKey**](LtmDnsTsigKey.md)|  | 
 
 ### Return type
 
-[**DnsTsigKey**](dns_tsigKey.md)
+[**LtmDnsTsigKey**](ltm_dns_tsigKey.md)
 
 ### Authorization
 
@@ -20281,7 +20251,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchDnsZone**
-> DnsZone PatchDnsZone($id, $object)
+> LtmDnsZone PatchDnsZone($id, $object)
 
 
 
@@ -20293,11 +20263,11 @@ Zone configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsZone**](DnsZone.md)|  | 
+ **object** | [**LtmDnsZone**](LtmDnsZone.md)|  | 
 
 ### Return type
 
-[**DnsZone**](dns_zone.md)
+[**LtmDnsZone**](ltm_dns_zone.md)
 
 ### Authorization
 
@@ -20311,7 +20281,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchEvictionPolicy**
-> EvictionPolicy PatchEvictionPolicy($id, $object)
+> LtmEvictionPolicy PatchEvictionPolicy($id, $object)
 
 
 
@@ -20323,11 +20293,11 @@ Defines an eviction policy, used to select which flows to evict when approaching
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**EvictionPolicy**](EvictionPolicy.md)|  | 
+ **object** | [**LtmEvictionPolicy**](LtmEvictionPolicy.md)|  | 
 
 ### Return type
 
-[**EvictionPolicy**](evictionPolicy.md)
+[**LtmEvictionPolicy**](ltm_evictionPolicy.md)
 
 ### Authorization
 
@@ -20341,7 +20311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchGlobalSettingsConnection**
-> GlobalSettingsConnection PatchGlobalSettingsConnection($id, $object)
+> LtmGlobalSettingsConnection PatchGlobalSettingsConnection($id, $object)
 
 
 
@@ -20353,11 +20323,11 @@ General configuration options for connections
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**GlobalSettingsConnection**](GlobalSettingsConnection.md)|  | 
+ **object** | [**LtmGlobalSettingsConnection**](LtmGlobalSettingsConnection.md)|  | 
 
 ### Return type
 
-[**GlobalSettingsConnection**](globalSettings_connection.md)
+[**LtmGlobalSettingsConnection**](ltm_globalSettings_connection.md)
 
 ### Authorization
 
@@ -20371,7 +20341,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchGlobalSettingsGeneral**
-> GlobalSettingsGeneral PatchGlobalSettingsGeneral($id, $object)
+> LtmGlobalSettingsGeneral PatchGlobalSettingsGeneral($id, $object)
 
 
 
@@ -20383,11 +20353,11 @@ General configuration options
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**GlobalSettingsGeneral**](GlobalSettingsGeneral.md)|  | 
+ **object** | [**LtmGlobalSettingsGeneral**](LtmGlobalSettingsGeneral.md)|  | 
 
 ### Return type
 
-[**GlobalSettingsGeneral**](globalSettings_general.md)
+[**LtmGlobalSettingsGeneral**](ltm_globalSettings_general.md)
 
 ### Authorization
 
@@ -20401,7 +20371,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchGlobalSettingsTrafficControl**
-> GlobalSettingsTrafficControl PatchGlobalSettingsTrafficControl($id, $object)
+> LtmGlobalSettingsTrafficControl PatchGlobalSettingsTrafficControl($id, $object)
 
 
 
@@ -20413,11 +20383,11 @@ General configuration options for traffic
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**GlobalSettingsTrafficControl**](GlobalSettingsTrafficControl.md)|  | 
+ **object** | [**LtmGlobalSettingsTrafficControl**](LtmGlobalSettingsTrafficControl.md)|  | 
 
 ### Return type
 
-[**GlobalSettingsTrafficControl**](globalSettings_trafficControl.md)
+[**LtmGlobalSettingsTrafficControl**](ltm_globalSettings_trafficControl.md)
 
 ### Authorization
 
@@ -20431,7 +20401,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchHtmlRuleCommentRaiseEvent**
-> HtmlRuleCommentRaiseEvent PatchHtmlRuleCommentRaiseEvent($id, $object)
+> LtmHtmlRuleCommentRaiseEvent PatchHtmlRuleCommentRaiseEvent($id, $object)
 
 
 
@@ -20443,11 +20413,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleCommentRaiseEvent**](HtmlRuleCommentRaiseEvent.md)|  | 
+ **object** | [**LtmHtmlRuleCommentRaiseEvent**](LtmHtmlRuleCommentRaiseEvent.md)|  | 
 
 ### Return type
 
-[**HtmlRuleCommentRaiseEvent**](htmlRule_commentRaiseEvent.md)
+[**LtmHtmlRuleCommentRaiseEvent**](ltm_htmlRule_commentRaiseEvent.md)
 
 ### Authorization
 
@@ -20461,7 +20431,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchHtmlRuleCommentRemove**
-> HtmlRuleCommentRemove PatchHtmlRuleCommentRemove($id, $object)
+> LtmHtmlRuleCommentRemove PatchHtmlRuleCommentRemove($id, $object)
 
 
 
@@ -20473,11 +20443,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleCommentRemove**](HtmlRuleCommentRemove.md)|  | 
+ **object** | [**LtmHtmlRuleCommentRemove**](LtmHtmlRuleCommentRemove.md)|  | 
 
 ### Return type
 
-[**HtmlRuleCommentRemove**](htmlRule_commentRemove.md)
+[**LtmHtmlRuleCommentRemove**](ltm_htmlRule_commentRemove.md)
 
 ### Authorization
 
@@ -20491,7 +20461,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchHtmlRuleTagAppendHtml**
-> HtmlRuleTagAppendHtml PatchHtmlRuleTagAppendHtml($id, $object)
+> LtmHtmlRuleTagAppendHtml PatchHtmlRuleTagAppendHtml($id, $object)
 
 
 
@@ -20503,11 +20473,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagAppendHtml**](HtmlRuleTagAppendHtml.md)|  | 
+ **object** | [**LtmHtmlRuleTagAppendHtml**](LtmHtmlRuleTagAppendHtml.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagAppendHtml**](htmlRule_tagAppendHtml.md)
+[**LtmHtmlRuleTagAppendHtml**](ltm_htmlRule_tagAppendHtml.md)
 
 ### Authorization
 
@@ -20521,7 +20491,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchHtmlRuleTagPrependHtml**
-> HtmlRuleTagPrependHtml PatchHtmlRuleTagPrependHtml($id, $object)
+> LtmHtmlRuleTagPrependHtml PatchHtmlRuleTagPrependHtml($id, $object)
 
 
 
@@ -20533,11 +20503,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagPrependHtml**](HtmlRuleTagPrependHtml.md)|  | 
+ **object** | [**LtmHtmlRuleTagPrependHtml**](LtmHtmlRuleTagPrependHtml.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagPrependHtml**](htmlRule_tagPrependHtml.md)
+[**LtmHtmlRuleTagPrependHtml**](ltm_htmlRule_tagPrependHtml.md)
 
 ### Authorization
 
@@ -20551,7 +20521,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchHtmlRuleTagRaiseEvent**
-> HtmlRuleTagRaiseEvent PatchHtmlRuleTagRaiseEvent($id, $object)
+> LtmHtmlRuleTagRaiseEvent PatchHtmlRuleTagRaiseEvent($id, $object)
 
 
 
@@ -20563,11 +20533,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagRaiseEvent**](HtmlRuleTagRaiseEvent.md)|  | 
+ **object** | [**LtmHtmlRuleTagRaiseEvent**](LtmHtmlRuleTagRaiseEvent.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagRaiseEvent**](htmlRule_tagRaiseEvent.md)
+[**LtmHtmlRuleTagRaiseEvent**](ltm_htmlRule_tagRaiseEvent.md)
 
 ### Authorization
 
@@ -20581,7 +20551,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchHtmlRuleTagRemove**
-> HtmlRuleTagRemove PatchHtmlRuleTagRemove($id, $object)
+> LtmHtmlRuleTagRemove PatchHtmlRuleTagRemove($id, $object)
 
 
 
@@ -20593,11 +20563,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagRemove**](HtmlRuleTagRemove.md)|  | 
+ **object** | [**LtmHtmlRuleTagRemove**](LtmHtmlRuleTagRemove.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagRemove**](htmlRule_tagRemove.md)
+[**LtmHtmlRuleTagRemove**](ltm_htmlRule_tagRemove.md)
 
 ### Authorization
 
@@ -20611,7 +20581,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchHtmlRuleTagRemoveAttribute**
-> HtmlRuleTagRemoveAttribute PatchHtmlRuleTagRemoveAttribute($id, $object)
+> LtmHtmlRuleTagRemoveAttribute PatchHtmlRuleTagRemoveAttribute($id, $object)
 
 
 
@@ -20623,11 +20593,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagRemoveAttribute**](HtmlRuleTagRemoveAttribute.md)|  | 
+ **object** | [**LtmHtmlRuleTagRemoveAttribute**](LtmHtmlRuleTagRemoveAttribute.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagRemoveAttribute**](htmlRule_tagRemoveAttribute.md)
+[**LtmHtmlRuleTagRemoveAttribute**](ltm_htmlRule_tagRemoveAttribute.md)
 
 ### Authorization
 
@@ -20641,7 +20611,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchIfile**
-> Ifile PatchIfile($id, $object)
+> LtmIfile PatchIfile($id, $object)
 
 
 
@@ -20653,11 +20623,11 @@ iFile Configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Ifile**](Ifile.md)|  | 
+ **object** | [**LtmIfile**](LtmIfile.md)|  | 
 
 ### Return type
 
-[**Ifile**](ifile.md)
+[**LtmIfile**](ltm_ifile.md)
 
 ### Authorization
 
@@ -20671,7 +20641,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchLsnLogProfile**
-> LsnLogProfile PatchLsnLogProfile($id, $object)
+> LtmLsnLogProfile PatchLsnLogProfile($id, $object)
 
 
 
@@ -20683,11 +20653,11 @@ Defines the configuration for logging of LSN flows.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**LsnLogProfile**](LsnLogProfile.md)|  | 
+ **object** | [**LtmLsnLogProfile**](LtmLsnLogProfile.md)|  | 
 
 ### Return type
 
-[**LsnLogProfile**](lsnLogProfile.md)
+[**LtmLsnLogProfile**](ltm_lsnLogProfile.md)
 
 ### Authorization
 
@@ -20701,7 +20671,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchLsnPool**
-> LsnPool PatchLsnPool($id, $object)
+> LtmLsnPool PatchLsnPool($id, $object)
 
 
 
@@ -20713,11 +20683,11 @@ LSNAT/CGNAT translation address configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**LsnPool**](LsnPool.md)|  | 
+ **object** | [**LtmLsnPool**](LtmLsnPool.md)|  | 
 
 ### Return type
 
-[**LsnPool**](lsnPool.md)
+[**LtmLsnPool**](ltm_lsnPool.md)
 
 ### Authorization
 
@@ -20731,7 +20701,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingDiameterPeer**
-> MessageRoutingDiameterPeer PatchMessageRoutingDiameterPeer($id, $object)
+> LtmMessageRoutingDiameterPeer PatchMessageRoutingDiameterPeer($id, $object)
 
 
 
@@ -20743,11 +20713,11 @@ Peed for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterPeer**](MessageRoutingDiameterPeer.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterPeer**](LtmMessageRoutingDiameterPeer.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterPeer**](messageRouting_diameter_peer.md)
+[**LtmMessageRoutingDiameterPeer**](ltm_messageRouting_diameter_peer.md)
 
 ### Authorization
 
@@ -20761,7 +20731,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingDiameterProfileRouter**
-> MessageRoutingDiameterProfileRouter PatchMessageRoutingDiameterProfileRouter($id, $object)
+> LtmMessageRoutingDiameterProfileRouter PatchMessageRoutingDiameterProfileRouter($id, $object)
 
 
 
@@ -20773,11 +20743,11 @@ Configures a Diameter Router profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterProfileRouter**](MessageRoutingDiameterProfileRouter.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterProfileRouter**](LtmMessageRoutingDiameterProfileRouter.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterProfileRouter**](messageRouting_diameter_profile_router.md)
+[**LtmMessageRoutingDiameterProfileRouter**](ltm_messageRouting_diameter_profile_router.md)
 
 ### Authorization
 
@@ -20791,7 +20761,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingDiameterProfileSession**
-> MessageRoutingDiameterProfileSession PatchMessageRoutingDiameterProfileSession($id, $object)
+> LtmMessageRoutingDiameterProfileSession PatchMessageRoutingDiameterProfileSession($id, $object)
 
 
 
@@ -20803,11 +20773,11 @@ Configures a Diameter Session profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterProfileSession**](MessageRoutingDiameterProfileSession.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterProfileSession**](LtmMessageRoutingDiameterProfileSession.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterProfileSession**](messageRouting_diameter_profile_session.md)
+[**LtmMessageRoutingDiameterProfileSession**](ltm_messageRouting_diameter_profile_session.md)
 
 ### Authorization
 
@@ -20821,7 +20791,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingDiameterRoute**
-> MessageRoutingDiameterRoute PatchMessageRoutingDiameterRoute($id, $object)
+> LtmMessageRoutingDiameterRoute PatchMessageRoutingDiameterRoute($id, $object)
 
 
 
@@ -20833,11 +20803,11 @@ Configures a static route for use in Diameter message routing.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterRoute**](MessageRoutingDiameterRoute.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterRoute**](LtmMessageRoutingDiameterRoute.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterRoute**](messageRouting_diameter_route.md)
+[**LtmMessageRoutingDiameterRoute**](ltm_messageRouting_diameter_route.md)
 
 ### Authorization
 
@@ -20851,7 +20821,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingDiameterTransportConfig**
-> MessageRoutingDiameterTransportConfig PatchMessageRoutingDiameterTransportConfig($id, $object)
+> LtmMessageRoutingDiameterTransportConfig PatchMessageRoutingDiameterTransportConfig($id, $object)
 
 
 
@@ -20863,11 +20833,11 @@ Defines the configuration for an outgoing connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterTransportConfig**](MessageRoutingDiameterTransportConfig.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterTransportConfig**](LtmMessageRoutingDiameterTransportConfig.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfig**](messageRouting_diameter_transportConfig.md)
+[**LtmMessageRoutingDiameterTransportConfig**](ltm_messageRouting_diameter_transportConfig.md)
 
 ### Authorization
 
@@ -20881,7 +20851,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingDiameterTransportConfigProfiles**
-> MessageRoutingDiameterTransportConfigProfiles PatchMessageRoutingDiameterTransportConfigProfiles($id, $object)
+> LtmMessageRoutingDiameterTransportConfigProfiles PatchMessageRoutingDiameterTransportConfigProfiles($id, $object)
 
 
 
@@ -20893,11 +20863,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterTransportConfigProfiles**](MessageRoutingDiameterTransportConfigProfiles.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterTransportConfigProfiles**](LtmMessageRoutingDiameterTransportConfigProfiles.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfigProfiles**](messageRouting_diameter_transportConfig_profiles.md)
+[**LtmMessageRoutingDiameterTransportConfigProfiles**](ltm_messageRouting_diameter_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -20911,7 +20881,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingGenericPeer**
-> MessageRoutingGenericPeer PatchMessageRoutingGenericPeer($id, $object)
+> LtmMessageRoutingGenericPeer PatchMessageRoutingGenericPeer($id, $object)
 
 
 
@@ -20923,11 +20893,11 @@ Peed for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericPeer**](MessageRoutingGenericPeer.md)|  | 
+ **object** | [**LtmMessageRoutingGenericPeer**](LtmMessageRoutingGenericPeer.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericPeer**](messageRouting_generic_peer.md)
+[**LtmMessageRoutingGenericPeer**](ltm_messageRouting_generic_peer.md)
 
 ### Authorization
 
@@ -20941,7 +20911,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingGenericProtocol**
-> MessageRoutingGenericProtocol PatchMessageRoutingGenericProtocol($id, $object)
+> LtmMessageRoutingGenericProtocol PatchMessageRoutingGenericProtocol($id, $object)
 
 
 
@@ -20953,11 +20923,11 @@ Generic message parser for use with the message routing framework.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericProtocol**](MessageRoutingGenericProtocol.md)|  | 
+ **object** | [**LtmMessageRoutingGenericProtocol**](LtmMessageRoutingGenericProtocol.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericProtocol**](messageRouting_generic_protocol.md)
+[**LtmMessageRoutingGenericProtocol**](ltm_messageRouting_generic_protocol.md)
 
 ### Authorization
 
@@ -20971,7 +20941,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingGenericRoute**
-> MessageRoutingGenericRoute PatchMessageRoutingGenericRoute($id, $object)
+> LtmMessageRoutingGenericRoute PatchMessageRoutingGenericRoute($id, $object)
 
 
 
@@ -20983,11 +20953,11 @@ Static route for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericRoute**](MessageRoutingGenericRoute.md)|  | 
+ **object** | [**LtmMessageRoutingGenericRoute**](LtmMessageRoutingGenericRoute.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericRoute**](messageRouting_generic_route.md)
+[**LtmMessageRoutingGenericRoute**](ltm_messageRouting_generic_route.md)
 
 ### Authorization
 
@@ -21001,7 +20971,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingGenericRouter**
-> MessageRoutingGenericRouter PatchMessageRoutingGenericRouter($id, $object)
+> LtmMessageRoutingGenericRouter PatchMessageRoutingGenericRouter($id, $object)
 
 
 
@@ -21013,11 +20983,11 @@ Message routing instance for generic message protocol.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericRouter**](MessageRoutingGenericRouter.md)|  | 
+ **object** | [**LtmMessageRoutingGenericRouter**](LtmMessageRoutingGenericRouter.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericRouter**](messageRouting_generic_router.md)
+[**LtmMessageRoutingGenericRouter**](ltm_messageRouting_generic_router.md)
 
 ### Authorization
 
@@ -21031,7 +21001,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingGenericTransportConfig**
-> MessageRoutingGenericTransportConfig PatchMessageRoutingGenericTransportConfig($id, $object)
+> LtmMessageRoutingGenericTransportConfig PatchMessageRoutingGenericTransportConfig($id, $object)
 
 
 
@@ -21043,11 +21013,11 @@ Defines the configuration for an outgoing connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericTransportConfig**](MessageRoutingGenericTransportConfig.md)|  | 
+ **object** | [**LtmMessageRoutingGenericTransportConfig**](LtmMessageRoutingGenericTransportConfig.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfig**](messageRouting_generic_transportConfig.md)
+[**LtmMessageRoutingGenericTransportConfig**](ltm_messageRouting_generic_transportConfig.md)
 
 ### Authorization
 
@@ -21061,7 +21031,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingGenericTransportConfigProfiles**
-> MessageRoutingGenericTransportConfigProfiles PatchMessageRoutingGenericTransportConfigProfiles($id, $object)
+> LtmMessageRoutingGenericTransportConfigProfiles PatchMessageRoutingGenericTransportConfigProfiles($id, $object)
 
 
 
@@ -21073,11 +21043,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericTransportConfigProfiles**](MessageRoutingGenericTransportConfigProfiles.md)|  | 
+ **object** | [**LtmMessageRoutingGenericTransportConfigProfiles**](LtmMessageRoutingGenericTransportConfigProfiles.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfigProfiles**](messageRouting_generic_transportConfig_profiles.md)
+[**LtmMessageRoutingGenericTransportConfigProfiles**](ltm_messageRouting_generic_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -21091,7 +21061,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingSipPeer**
-> MessageRoutingSipPeer PatchMessageRoutingSipPeer($id, $object)
+> LtmMessageRoutingSipPeer PatchMessageRoutingSipPeer($id, $object)
 
 
 
@@ -21103,11 +21073,11 @@ Peed for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipPeer**](MessageRoutingSipPeer.md)|  | 
+ **object** | [**LtmMessageRoutingSipPeer**](LtmMessageRoutingSipPeer.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipPeer**](messageRouting_sip_peer.md)
+[**LtmMessageRoutingSipPeer**](ltm_messageRouting_sip_peer.md)
 
 ### Authorization
 
@@ -21121,7 +21091,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingSipProfileRouter**
-> MessageRoutingSipProfileRouter PatchMessageRoutingSipProfileRouter($id, $object)
+> LtmMessageRoutingSipProfileRouter PatchMessageRoutingSipProfileRouter($id, $object)
 
 
 
@@ -21133,11 +21103,11 @@ Configures a Session Initiation Protocol (SIP) Router profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipProfileRouter**](MessageRoutingSipProfileRouter.md)|  | 
+ **object** | [**LtmMessageRoutingSipProfileRouter**](LtmMessageRoutingSipProfileRouter.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipProfileRouter**](messageRouting_sip_profile_router.md)
+[**LtmMessageRoutingSipProfileRouter**](ltm_messageRouting_sip_profile_router.md)
 
 ### Authorization
 
@@ -21151,7 +21121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingSipProfileSession**
-> MessageRoutingSipProfileSession PatchMessageRoutingSipProfileSession($id, $object)
+> LtmMessageRoutingSipProfileSession PatchMessageRoutingSipProfileSession($id, $object)
 
 
 
@@ -21163,11 +21133,11 @@ Configures a Session Initiation Protocol (SIP) Session profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipProfileSession**](MessageRoutingSipProfileSession.md)|  | 
+ **object** | [**LtmMessageRoutingSipProfileSession**](LtmMessageRoutingSipProfileSession.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipProfileSession**](messageRouting_sip_profile_session.md)
+[**LtmMessageRoutingSipProfileSession**](ltm_messageRouting_sip_profile_session.md)
 
 ### Authorization
 
@@ -21181,7 +21151,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingSipRoute**
-> MessageRoutingSipRoute PatchMessageRoutingSipRoute($id, $object)
+> LtmMessageRoutingSipRoute PatchMessageRoutingSipRoute($id, $object)
 
 
 
@@ -21193,11 +21163,11 @@ Configures a static route for use in Session Initiation Protocol (SIP) message r
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipRoute**](MessageRoutingSipRoute.md)|  | 
+ **object** | [**LtmMessageRoutingSipRoute**](LtmMessageRoutingSipRoute.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipRoute**](messageRouting_sip_route.md)
+[**LtmMessageRoutingSipRoute**](ltm_messageRouting_sip_route.md)
 
 ### Authorization
 
@@ -21211,7 +21181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingSipTransportConfig**
-> MessageRoutingSipTransportConfig PatchMessageRoutingSipTransportConfig($id, $object)
+> LtmMessageRoutingSipTransportConfig PatchMessageRoutingSipTransportConfig($id, $object)
 
 
 
@@ -21223,11 +21193,11 @@ Defines the configuration for an outgoing connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipTransportConfig**](MessageRoutingSipTransportConfig.md)|  | 
+ **object** | [**LtmMessageRoutingSipTransportConfig**](LtmMessageRoutingSipTransportConfig.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipTransportConfig**](messageRouting_sip_transportConfig.md)
+[**LtmMessageRoutingSipTransportConfig**](ltm_messageRouting_sip_transportConfig.md)
 
 ### Authorization
 
@@ -21241,7 +21211,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMessageRoutingSipTransportConfigProfiles**
-> MessageRoutingSipTransportConfigProfiles PatchMessageRoutingSipTransportConfigProfiles($id, $object)
+> LtmMessageRoutingSipTransportConfigProfiles PatchMessageRoutingSipTransportConfigProfiles($id, $object)
 
 
 
@@ -21253,11 +21223,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipTransportConfigProfiles**](MessageRoutingSipTransportConfigProfiles.md)|  | 
+ **object** | [**LtmMessageRoutingSipTransportConfigProfiles**](LtmMessageRoutingSipTransportConfigProfiles.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipTransportConfigProfiles**](messageRouting_sip_transportConfig_profiles.md)
+[**LtmMessageRoutingSipTransportConfigProfiles**](ltm_messageRouting_sip_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -21271,7 +21241,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorDiameter**
-> MonitorDiameter PatchMonitorDiameter($id, $object)
+> LtmMonitorDiameter PatchMonitorDiameter($id, $object)
 
 
 
@@ -21283,11 +21253,11 @@ Diameter monitor configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorDiameter**](MonitorDiameter.md)|  | 
+ **object** | [**LtmMonitorDiameter**](LtmMonitorDiameter.md)|  | 
 
 ### Return type
 
-[**MonitorDiameter**](monitor_diameter.md)
+[**LtmMonitorDiameter**](ltm_monitor_diameter.md)
 
 ### Authorization
 
@@ -21301,7 +21271,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorDns**
-> MonitorDns PatchMonitorDns($id, $object)
+> LtmMonitorDns PatchMonitorDns($id, $object)
 
 
 
@@ -21313,11 +21283,11 @@ DNS monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorDns**](MonitorDns.md)|  | 
+ **object** | [**LtmMonitorDns**](LtmMonitorDns.md)|  | 
 
 ### Return type
 
-[**MonitorDns**](monitor_dns.md)
+[**LtmMonitorDns**](ltm_monitor_dns.md)
 
 ### Authorization
 
@@ -21331,7 +21301,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorExternal**
-> MonitorExternal PatchMonitorExternal($id, $object)
+> LtmMonitorExternal PatchMonitorExternal($id, $object)
 
 
 
@@ -21343,11 +21313,11 @@ External monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorExternal**](MonitorExternal.md)|  | 
+ **object** | [**LtmMonitorExternal**](LtmMonitorExternal.md)|  | 
 
 ### Return type
 
-[**MonitorExternal**](monitor_external.md)
+[**LtmMonitorExternal**](ltm_monitor_external.md)
 
 ### Authorization
 
@@ -21361,7 +21331,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorFirepass**
-> MonitorFirepass PatchMonitorFirepass($id, $object)
+> LtmMonitorFirepass PatchMonitorFirepass($id, $object)
 
 
 
@@ -21373,11 +21343,11 @@ Firepass monitor configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorFirepass**](MonitorFirepass.md)|  | 
+ **object** | [**LtmMonitorFirepass**](LtmMonitorFirepass.md)|  | 
 
 ### Return type
 
-[**MonitorFirepass**](monitor_firepass.md)
+[**LtmMonitorFirepass**](ltm_monitor_firepass.md)
 
 ### Authorization
 
@@ -21391,7 +21361,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorFtp**
-> MonitorFtp PatchMonitorFtp($id, $object)
+> LtmMonitorFtp PatchMonitorFtp($id, $object)
 
 
 
@@ -21403,11 +21373,11 @@ FTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorFtp**](MonitorFtp.md)|  | 
+ **object** | [**LtmMonitorFtp**](LtmMonitorFtp.md)|  | 
 
 ### Return type
 
-[**MonitorFtp**](monitor_ftp.md)
+[**LtmMonitorFtp**](ltm_monitor_ftp.md)
 
 ### Authorization
 
@@ -21421,7 +21391,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorGatewayIcmp**
-> MonitorGatewayIcmp PatchMonitorGatewayIcmp($id, $object)
+> LtmMonitorGatewayIcmp PatchMonitorGatewayIcmp($id, $object)
 
 
 
@@ -21433,11 +21403,11 @@ Gateway ICMP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorGatewayIcmp**](MonitorGatewayIcmp.md)|  | 
+ **object** | [**LtmMonitorGatewayIcmp**](LtmMonitorGatewayIcmp.md)|  | 
 
 ### Return type
 
-[**MonitorGatewayIcmp**](monitor_gatewayIcmp.md)
+[**LtmMonitorGatewayIcmp**](ltm_monitor_gatewayIcmp.md)
 
 ### Authorization
 
@@ -21451,7 +21421,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorHttp**
-> MonitorHttp PatchMonitorHttp($id, $object)
+> LtmMonitorHttp PatchMonitorHttp($id, $object)
 
 
 
@@ -21463,11 +21433,11 @@ HTTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorHttp**](MonitorHttp.md)|  | 
+ **object** | [**LtmMonitorHttp**](LtmMonitorHttp.md)|  | 
 
 ### Return type
 
-[**MonitorHttp**](monitor_http.md)
+[**LtmMonitorHttp**](ltm_monitor_http.md)
 
 ### Authorization
 
@@ -21481,7 +21451,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorHttps**
-> MonitorHttps PatchMonitorHttps($id, $object)
+> LtmMonitorHttps PatchMonitorHttps($id, $object)
 
 
 
@@ -21493,11 +21463,11 @@ HTTPS monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorHttps**](MonitorHttps.md)|  | 
+ **object** | [**LtmMonitorHttps**](LtmMonitorHttps.md)|  | 
 
 ### Return type
 
-[**MonitorHttps**](monitor_https.md)
+[**LtmMonitorHttps**](ltm_monitor_https.md)
 
 ### Authorization
 
@@ -21511,7 +21481,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorIcmp**
-> MonitorIcmp PatchMonitorIcmp($id, $object)
+> LtmMonitorIcmp PatchMonitorIcmp($id, $object)
 
 
 
@@ -21523,11 +21493,11 @@ ICMP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorIcmp**](MonitorIcmp.md)|  | 
+ **object** | [**LtmMonitorIcmp**](LtmMonitorIcmp.md)|  | 
 
 ### Return type
 
-[**MonitorIcmp**](monitor_icmp.md)
+[**LtmMonitorIcmp**](ltm_monitor_icmp.md)
 
 ### Authorization
 
@@ -21541,7 +21511,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorImap**
-> MonitorImap PatchMonitorImap($id, $object)
+> LtmMonitorImap PatchMonitorImap($id, $object)
 
 
 
@@ -21553,11 +21523,11 @@ IMAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorImap**](MonitorImap.md)|  | 
+ **object** | [**LtmMonitorImap**](LtmMonitorImap.md)|  | 
 
 ### Return type
 
-[**MonitorImap**](monitor_imap.md)
+[**LtmMonitorImap**](ltm_monitor_imap.md)
 
 ### Authorization
 
@@ -21571,7 +21541,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorInband**
-> MonitorInband PatchMonitorInband($id, $object)
+> LtmMonitorInband PatchMonitorInband($id, $object)
 
 
 
@@ -21583,11 +21553,11 @@ Inband monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorInband**](MonitorInband.md)|  | 
+ **object** | [**LtmMonitorInband**](LtmMonitorInband.md)|  | 
 
 ### Return type
 
-[**MonitorInband**](monitor_inband.md)
+[**LtmMonitorInband**](ltm_monitor_inband.md)
 
 ### Authorization
 
@@ -21601,7 +21571,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorLdap**
-> MonitorLdap PatchMonitorLdap($id, $object)
+> LtmMonitorLdap PatchMonitorLdap($id, $object)
 
 
 
@@ -21613,11 +21583,11 @@ LDAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorLdap**](MonitorLdap.md)|  | 
+ **object** | [**LtmMonitorLdap**](LtmMonitorLdap.md)|  | 
 
 ### Return type
 
-[**MonitorLdap**](monitor_ldap.md)
+[**LtmMonitorLdap**](ltm_monitor_ldap.md)
 
 ### Authorization
 
@@ -21631,7 +21601,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorModuleScore**
-> MonitorModuleScore PatchMonitorModuleScore($id, $object)
+> LtmMonitorModuleScore PatchMonitorModuleScore($id, $object)
 
 
 
@@ -21643,11 +21613,11 @@ Module score monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorModuleScore**](MonitorModuleScore.md)|  | 
+ **object** | [**LtmMonitorModuleScore**](LtmMonitorModuleScore.md)|  | 
 
 ### Return type
 
-[**MonitorModuleScore**](monitor_moduleScore.md)
+[**LtmMonitorModuleScore**](ltm_monitor_moduleScore.md)
 
 ### Authorization
 
@@ -21661,7 +21631,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorMssql**
-> MonitorMssql PatchMonitorMssql($id, $object)
+> LtmMonitorMssql PatchMonitorMssql($id, $object)
 
 
 
@@ -21673,11 +21643,11 @@ MSSQL monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorMssql**](MonitorMssql.md)|  | 
+ **object** | [**LtmMonitorMssql**](LtmMonitorMssql.md)|  | 
 
 ### Return type
 
-[**MonitorMssql**](monitor_mssql.md)
+[**LtmMonitorMssql**](ltm_monitor_mssql.md)
 
 ### Authorization
 
@@ -21691,7 +21661,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorMysql**
-> MonitorMysql PatchMonitorMysql($id, $object)
+> LtmMonitorMysql PatchMonitorMysql($id, $object)
 
 
 
@@ -21703,11 +21673,11 @@ MySQL monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorMysql**](MonitorMysql.md)|  | 
+ **object** | [**LtmMonitorMysql**](LtmMonitorMysql.md)|  | 
 
 ### Return type
 
-[**MonitorMysql**](monitor_mysql.md)
+[**LtmMonitorMysql**](ltm_monitor_mysql.md)
 
 ### Authorization
 
@@ -21721,7 +21691,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorNntp**
-> MonitorNntp PatchMonitorNntp($id, $object)
+> LtmMonitorNntp PatchMonitorNntp($id, $object)
 
 
 
@@ -21733,11 +21703,11 @@ NNTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorNntp**](MonitorNntp.md)|  | 
+ **object** | [**LtmMonitorNntp**](LtmMonitorNntp.md)|  | 
 
 ### Return type
 
-[**MonitorNntp**](monitor_nntp.md)
+[**LtmMonitorNntp**](ltm_monitor_nntp.md)
 
 ### Authorization
 
@@ -21751,7 +21721,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorNone**
-> MonitorNone PatchMonitorNone($id, $object)
+> LtmMonitorNone PatchMonitorNone($id, $object)
 
 
 
@@ -21763,11 +21733,11 @@ The NULL monitor.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorNone**](MonitorNone.md)|  | 
+ **object** | [**LtmMonitorNone**](LtmMonitorNone.md)|  | 
 
 ### Return type
 
-[**MonitorNone**](monitor_none.md)
+[**LtmMonitorNone**](ltm_monitor_none.md)
 
 ### Authorization
 
@@ -21781,7 +21751,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorOracle**
-> MonitorOracle PatchMonitorOracle($id, $object)
+> LtmMonitorOracle PatchMonitorOracle($id, $object)
 
 
 
@@ -21793,11 +21763,11 @@ Oracle monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorOracle**](MonitorOracle.md)|  | 
+ **object** | [**LtmMonitorOracle**](LtmMonitorOracle.md)|  | 
 
 ### Return type
 
-[**MonitorOracle**](monitor_oracle.md)
+[**LtmMonitorOracle**](ltm_monitor_oracle.md)
 
 ### Authorization
 
@@ -21811,7 +21781,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorPop3**
-> MonitorPop3 PatchMonitorPop3($id, $object)
+> LtmMonitorPop3 PatchMonitorPop3($id, $object)
 
 
 
@@ -21823,11 +21793,11 @@ POP3 monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorPop3**](MonitorPop3.md)|  | 
+ **object** | [**LtmMonitorPop3**](LtmMonitorPop3.md)|  | 
 
 ### Return type
 
-[**MonitorPop3**](monitor_pop3.md)
+[**LtmMonitorPop3**](ltm_monitor_pop3.md)
 
 ### Authorization
 
@@ -21841,7 +21811,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorPostgresql**
-> MonitorPostgresql PatchMonitorPostgresql($id, $object)
+> LtmMonitorPostgresql PatchMonitorPostgresql($id, $object)
 
 
 
@@ -21853,11 +21823,11 @@ Postgresql monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorPostgresql**](MonitorPostgresql.md)|  | 
+ **object** | [**LtmMonitorPostgresql**](LtmMonitorPostgresql.md)|  | 
 
 ### Return type
 
-[**MonitorPostgresql**](monitor_postgresql.md)
+[**LtmMonitorPostgresql**](ltm_monitor_postgresql.md)
 
 ### Authorization
 
@@ -21871,7 +21841,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorRadius**
-> MonitorRadius PatchMonitorRadius($id, $object)
+> LtmMonitorRadius PatchMonitorRadius($id, $object)
 
 
 
@@ -21883,11 +21853,11 @@ Radius monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRadius**](MonitorRadius.md)|  | 
+ **object** | [**LtmMonitorRadius**](LtmMonitorRadius.md)|  | 
 
 ### Return type
 
-[**MonitorRadius**](monitor_radius.md)
+[**LtmMonitorRadius**](ltm_monitor_radius.md)
 
 ### Authorization
 
@@ -21901,7 +21871,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorRadiusAccounting**
-> MonitorRadiusAccounting PatchMonitorRadiusAccounting($id, $object)
+> LtmMonitorRadiusAccounting PatchMonitorRadiusAccounting($id, $object)
 
 
 
@@ -21913,11 +21883,11 @@ Radius accounting monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRadiusAccounting**](MonitorRadiusAccounting.md)|  | 
+ **object** | [**LtmMonitorRadiusAccounting**](LtmMonitorRadiusAccounting.md)|  | 
 
 ### Return type
 
-[**MonitorRadiusAccounting**](monitor_radiusAccounting.md)
+[**LtmMonitorRadiusAccounting**](ltm_monitor_radiusAccounting.md)
 
 ### Authorization
 
@@ -21931,7 +21901,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorRealServer**
-> MonitorRealServer PatchMonitorRealServer($id, $object)
+> LtmMonitorRealServer PatchMonitorRealServer($id, $object)
 
 
 
@@ -21943,11 +21913,11 @@ Real Server monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRealServer**](MonitorRealServer.md)|  | 
+ **object** | [**LtmMonitorRealServer**](LtmMonitorRealServer.md)|  | 
 
 ### Return type
 
-[**MonitorRealServer**](monitor_realServer.md)
+[**LtmMonitorRealServer**](ltm_monitor_realServer.md)
 
 ### Authorization
 
@@ -21961,7 +21931,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorRpc**
-> MonitorRpc PatchMonitorRpc($id, $object)
+> LtmMonitorRpc PatchMonitorRpc($id, $object)
 
 
 
@@ -21973,11 +21943,11 @@ RPC monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRpc**](MonitorRpc.md)|  | 
+ **object** | [**LtmMonitorRpc**](LtmMonitorRpc.md)|  | 
 
 ### Return type
 
-[**MonitorRpc**](monitor_rpc.md)
+[**LtmMonitorRpc**](ltm_monitor_rpc.md)
 
 ### Authorization
 
@@ -21991,7 +21961,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorSasp**
-> MonitorSasp PatchMonitorSasp($id, $object)
+> LtmMonitorSasp PatchMonitorSasp($id, $object)
 
 
 
@@ -22003,11 +21973,11 @@ SASP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSasp**](MonitorSasp.md)|  | 
+ **object** | [**LtmMonitorSasp**](LtmMonitorSasp.md)|  | 
 
 ### Return type
 
-[**MonitorSasp**](monitor_sasp.md)
+[**LtmMonitorSasp**](ltm_monitor_sasp.md)
 
 ### Authorization
 
@@ -22021,7 +21991,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorScripted**
-> MonitorScripted PatchMonitorScripted($id, $object)
+> LtmMonitorScripted PatchMonitorScripted($id, $object)
 
 
 
@@ -22033,11 +22003,11 @@ Scripted monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorScripted**](MonitorScripted.md)|  | 
+ **object** | [**LtmMonitorScripted**](LtmMonitorScripted.md)|  | 
 
 ### Return type
 
-[**MonitorScripted**](monitor_scripted.md)
+[**LtmMonitorScripted**](ltm_monitor_scripted.md)
 
 ### Authorization
 
@@ -22051,7 +22021,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorSip**
-> MonitorSip PatchMonitorSip($id, $object)
+> LtmMonitorSip PatchMonitorSip($id, $object)
 
 
 
@@ -22063,11 +22033,11 @@ SIP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSip**](MonitorSip.md)|  | 
+ **object** | [**LtmMonitorSip**](LtmMonitorSip.md)|  | 
 
 ### Return type
 
-[**MonitorSip**](monitor_sip.md)
+[**LtmMonitorSip**](ltm_monitor_sip.md)
 
 ### Authorization
 
@@ -22081,7 +22051,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorSmb**
-> MonitorSmb PatchMonitorSmb($id, $object)
+> LtmMonitorSmb PatchMonitorSmb($id, $object)
 
 
 
@@ -22093,11 +22063,11 @@ SMB monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSmb**](MonitorSmb.md)|  | 
+ **object** | [**LtmMonitorSmb**](LtmMonitorSmb.md)|  | 
 
 ### Return type
 
-[**MonitorSmb**](monitor_smb.md)
+[**LtmMonitorSmb**](ltm_monitor_smb.md)
 
 ### Authorization
 
@@ -22111,7 +22081,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorSmtp**
-> MonitorSmtp PatchMonitorSmtp($id, $object)
+> LtmMonitorSmtp PatchMonitorSmtp($id, $object)
 
 
 
@@ -22123,11 +22093,11 @@ SMTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSmtp**](MonitorSmtp.md)|  | 
+ **object** | [**LtmMonitorSmtp**](LtmMonitorSmtp.md)|  | 
 
 ### Return type
 
-[**MonitorSmtp**](monitor_smtp.md)
+[**LtmMonitorSmtp**](ltm_monitor_smtp.md)
 
 ### Authorization
 
@@ -22141,7 +22111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorSnmpDca**
-> MonitorSnmpDca PatchMonitorSnmpDca($id, $object)
+> LtmMonitorSnmpDca PatchMonitorSnmpDca($id, $object)
 
 
 
@@ -22153,11 +22123,11 @@ SNMP DCA monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSnmpDca**](MonitorSnmpDca.md)|  | 
+ **object** | [**LtmMonitorSnmpDca**](LtmMonitorSnmpDca.md)|  | 
 
 ### Return type
 
-[**MonitorSnmpDca**](monitor_snmpDca.md)
+[**LtmMonitorSnmpDca**](ltm_monitor_snmpDca.md)
 
 ### Authorization
 
@@ -22171,7 +22141,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorSnmpDcaBase**
-> MonitorSnmpDcaBase PatchMonitorSnmpDcaBase($id, $object)
+> LtmMonitorSnmpDcaBase PatchMonitorSnmpDcaBase($id, $object)
 
 
 
@@ -22183,11 +22153,11 @@ SNMP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSnmpDcaBase**](MonitorSnmpDcaBase.md)|  | 
+ **object** | [**LtmMonitorSnmpDcaBase**](LtmMonitorSnmpDcaBase.md)|  | 
 
 ### Return type
 
-[**MonitorSnmpDcaBase**](monitor_snmpDcaBase.md)
+[**LtmMonitorSnmpDcaBase**](ltm_monitor_snmpDcaBase.md)
 
 ### Authorization
 
@@ -22201,7 +22171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorSoap**
-> MonitorSoap PatchMonitorSoap($id, $object)
+> LtmMonitorSoap PatchMonitorSoap($id, $object)
 
 
 
@@ -22213,11 +22183,11 @@ SOAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSoap**](MonitorSoap.md)|  | 
+ **object** | [**LtmMonitorSoap**](LtmMonitorSoap.md)|  | 
 
 ### Return type
 
-[**MonitorSoap**](monitor_soap.md)
+[**LtmMonitorSoap**](ltm_monitor_soap.md)
 
 ### Authorization
 
@@ -22231,7 +22201,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorTcp**
-> MonitorTcp PatchMonitorTcp($id, $object)
+> LtmMonitorTcp PatchMonitorTcp($id, $object)
 
 
 
@@ -22243,11 +22213,11 @@ TCP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorTcp**](MonitorTcp.md)|  | 
+ **object** | [**LtmMonitorTcp**](LtmMonitorTcp.md)|  | 
 
 ### Return type
 
-[**MonitorTcp**](monitor_tcp.md)
+[**LtmMonitorTcp**](ltm_monitor_tcp.md)
 
 ### Authorization
 
@@ -22261,7 +22231,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorTcpEcho**
-> MonitorTcpEcho PatchMonitorTcpEcho($id, $object)
+> LtmMonitorTcpEcho PatchMonitorTcpEcho($id, $object)
 
 
 
@@ -22273,11 +22243,11 @@ TCP Echo monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorTcpEcho**](MonitorTcpEcho.md)|  | 
+ **object** | [**LtmMonitorTcpEcho**](LtmMonitorTcpEcho.md)|  | 
 
 ### Return type
 
-[**MonitorTcpEcho**](monitor_tcpEcho.md)
+[**LtmMonitorTcpEcho**](ltm_monitor_tcpEcho.md)
 
 ### Authorization
 
@@ -22291,7 +22261,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorTcpHalfOpen**
-> MonitorTcpHalfOpen PatchMonitorTcpHalfOpen($id, $object)
+> LtmMonitorTcpHalfOpen PatchMonitorTcpHalfOpen($id, $object)
 
 
 
@@ -22303,11 +22273,11 @@ TCP Half Open monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorTcpHalfOpen**](MonitorTcpHalfOpen.md)|  | 
+ **object** | [**LtmMonitorTcpHalfOpen**](LtmMonitorTcpHalfOpen.md)|  | 
 
 ### Return type
 
-[**MonitorTcpHalfOpen**](monitor_tcpHalfOpen.md)
+[**LtmMonitorTcpHalfOpen**](ltm_monitor_tcpHalfOpen.md)
 
 ### Authorization
 
@@ -22321,7 +22291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorUdp**
-> MonitorUdp PatchMonitorUdp($id, $object)
+> LtmMonitorUdp PatchMonitorUdp($id, $object)
 
 
 
@@ -22333,11 +22303,11 @@ UDP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorUdp**](MonitorUdp.md)|  | 
+ **object** | [**LtmMonitorUdp**](LtmMonitorUdp.md)|  | 
 
 ### Return type
 
-[**MonitorUdp**](monitor_udp.md)
+[**LtmMonitorUdp**](ltm_monitor_udp.md)
 
 ### Authorization
 
@@ -22351,7 +22321,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorVirtualLocation**
-> MonitorVirtualLocation PatchMonitorVirtualLocation($id, $object)
+> LtmMonitorVirtualLocation PatchMonitorVirtualLocation($id, $object)
 
 
 
@@ -22363,11 +22333,11 @@ Virtual Location monitor configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorVirtualLocation**](MonitorVirtualLocation.md)|  | 
+ **object** | [**LtmMonitorVirtualLocation**](LtmMonitorVirtualLocation.md)|  | 
 
 ### Return type
 
-[**MonitorVirtualLocation**](monitor_virtualLocation.md)
+[**LtmMonitorVirtualLocation**](ltm_monitor_virtualLocation.md)
 
 ### Authorization
 
@@ -22381,7 +22351,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorWap**
-> MonitorWap PatchMonitorWap($id, $object)
+> LtmMonitorWap PatchMonitorWap($id, $object)
 
 
 
@@ -22393,11 +22363,11 @@ WAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorWap**](MonitorWap.md)|  | 
+ **object** | [**LtmMonitorWap**](LtmMonitorWap.md)|  | 
 
 ### Return type
 
-[**MonitorWap**](monitor_wap.md)
+[**LtmMonitorWap**](ltm_monitor_wap.md)
 
 ### Authorization
 
@@ -22411,7 +22381,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchMonitorWmi**
-> MonitorWmi PatchMonitorWmi($id, $object)
+> LtmMonitorWmi PatchMonitorWmi($id, $object)
 
 
 
@@ -22423,11 +22393,11 @@ WMI monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorWmi**](MonitorWmi.md)|  | 
+ **object** | [**LtmMonitorWmi**](LtmMonitorWmi.md)|  | 
 
 ### Return type
 
-[**MonitorWmi**](monitor_wmi.md)
+[**LtmMonitorWmi**](ltm_monitor_wmi.md)
 
 ### Authorization
 
@@ -22441,7 +22411,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchNat**
-> Nat PatchNat($id, $object)
+> LtmNat PatchNat($id, $object)
 
 
 
@@ -22453,11 +22423,11 @@ Network address translation configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Nat**](Nat.md)|  | 
+ **object** | [**LtmNat**](LtmNat.md)|  | 
 
 ### Return type
 
-[**Nat**](nat.md)
+[**LtmNat**](ltm_nat.md)
 
 ### Authorization
 
@@ -22471,7 +22441,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchNode**
-> Node PatchNode($id, $object)
+> LtmNode PatchNode($id, $object)
 
 
 
@@ -22483,11 +22453,11 @@ Node specific pool member configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Node**](Node.md)|  | 
+ **object** | [**LtmNode**](LtmNode.md)|  | 
 
 ### Return type
 
-[**Node**](node.md)
+[**LtmNode**](ltm_node.md)
 
 ### Authorization
 
@@ -22501,7 +22471,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPersistenceCookie**
-> PersistenceCookie PatchPersistenceCookie($id, $object)
+> LtmPersistenceCookie PatchPersistenceCookie($id, $object)
 
 
 
@@ -22513,11 +22483,11 @@ Virtual server Cookie persistence profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceCookie**](PersistenceCookie.md)|  | 
+ **object** | [**LtmPersistenceCookie**](LtmPersistenceCookie.md)|  | 
 
 ### Return type
 
-[**PersistenceCookie**](persistence_cookie.md)
+[**LtmPersistenceCookie**](ltm_persistence_cookie.md)
 
 ### Authorization
 
@@ -22531,7 +22501,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPersistenceDestAddr**
-> PersistenceDestAddr PatchPersistenceDestAddr($id, $object)
+> LtmPersistenceDestAddr PatchPersistenceDestAddr($id, $object)
 
 
 
@@ -22543,11 +22513,11 @@ Virtual server Destination Address Affinity persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceDestAddr**](PersistenceDestAddr.md)|  | 
+ **object** | [**LtmPersistenceDestAddr**](LtmPersistenceDestAddr.md)|  | 
 
 ### Return type
 
-[**PersistenceDestAddr**](persistence_destAddr.md)
+[**LtmPersistenceDestAddr**](ltm_persistence_destAddr.md)
 
 ### Authorization
 
@@ -22561,7 +22531,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPersistenceGlobalSettings**
-> PersistenceGlobalSettings PatchPersistenceGlobalSettings($id, $object)
+> LtmPersistenceGlobalSettings PatchPersistenceGlobalSettings($id, $object)
 
 
 
@@ -22573,11 +22543,11 @@ Global settings for persistence
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceGlobalSettings**](PersistenceGlobalSettings.md)|  | 
+ **object** | [**LtmPersistenceGlobalSettings**](LtmPersistenceGlobalSettings.md)|  | 
 
 ### Return type
 
-[**PersistenceGlobalSettings**](persistence_globalSettings.md)
+[**LtmPersistenceGlobalSettings**](ltm_persistence_globalSettings.md)
 
 ### Authorization
 
@@ -22591,7 +22561,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPersistenceHash**
-> PersistenceHash PatchPersistenceHash($id, $object)
+> LtmPersistenceHash PatchPersistenceHash($id, $object)
 
 
 
@@ -22603,11 +22573,11 @@ Virtual server Hash persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceHash**](PersistenceHash.md)|  | 
+ **object** | [**LtmPersistenceHash**](LtmPersistenceHash.md)|  | 
 
 ### Return type
 
-[**PersistenceHash**](persistence_hash.md)
+[**LtmPersistenceHash**](ltm_persistence_hash.md)
 
 ### Authorization
 
@@ -22621,7 +22591,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPersistenceMsrdp**
-> PersistenceMsrdp PatchPersistenceMsrdp($id, $object)
+> LtmPersistenceMsrdp PatchPersistenceMsrdp($id, $object)
 
 
 
@@ -22633,11 +22603,11 @@ Virtual server Microsoft Remote Desktop (MSRDP) persistence profile configuratio
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceMsrdp**](PersistenceMsrdp.md)|  | 
+ **object** | [**LtmPersistenceMsrdp**](LtmPersistenceMsrdp.md)|  | 
 
 ### Return type
 
-[**PersistenceMsrdp**](persistence_msrdp.md)
+[**LtmPersistenceMsrdp**](ltm_persistence_msrdp.md)
 
 ### Authorization
 
@@ -22651,7 +22621,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPersistenceSip**
-> PersistenceSip PatchPersistenceSip($id, $object)
+> LtmPersistenceSip PatchPersistenceSip($id, $object)
 
 
 
@@ -22663,11 +22633,11 @@ Virtual server SIP persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceSip**](PersistenceSip.md)|  | 
+ **object** | [**LtmPersistenceSip**](LtmPersistenceSip.md)|  | 
 
 ### Return type
 
-[**PersistenceSip**](persistence_sip.md)
+[**LtmPersistenceSip**](ltm_persistence_sip.md)
 
 ### Authorization
 
@@ -22681,7 +22651,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPersistenceSourceAddr**
-> PersistenceSourceAddr PatchPersistenceSourceAddr($id, $object)
+> LtmPersistenceSourceAddr PatchPersistenceSourceAddr($id, $object)
 
 
 
@@ -22693,11 +22663,11 @@ Virtual server Source Address persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceSourceAddr**](PersistenceSourceAddr.md)|  | 
+ **object** | [**LtmPersistenceSourceAddr**](LtmPersistenceSourceAddr.md)|  | 
 
 ### Return type
 
-[**PersistenceSourceAddr**](persistence_sourceAddr.md)
+[**LtmPersistenceSourceAddr**](ltm_persistence_sourceAddr.md)
 
 ### Authorization
 
@@ -22711,7 +22681,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPersistenceSsl**
-> PersistenceSsl PatchPersistenceSsl($id, $object)
+> LtmPersistenceSsl PatchPersistenceSsl($id, $object)
 
 
 
@@ -22723,11 +22693,11 @@ Virtual server SSL persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceSsl**](PersistenceSsl.md)|  | 
+ **object** | [**LtmPersistenceSsl**](LtmPersistenceSsl.md)|  | 
 
 ### Return type
 
-[**PersistenceSsl**](persistence_ssl.md)
+[**LtmPersistenceSsl**](ltm_persistence_ssl.md)
 
 ### Authorization
 
@@ -22741,7 +22711,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPersistenceUniversal**
-> PersistenceUniversal PatchPersistenceUniversal($id, $object)
+> LtmPersistenceUniversal PatchPersistenceUniversal($id, $object)
 
 
 
@@ -22753,11 +22723,11 @@ Virtual server Universal persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceUniversal**](PersistenceUniversal.md)|  | 
+ **object** | [**LtmPersistenceUniversal**](LtmPersistenceUniversal.md)|  | 
 
 ### Return type
 
-[**PersistenceUniversal**](persistence_universal.md)
+[**LtmPersistenceUniversal**](ltm_persistence_universal.md)
 
 ### Authorization
 
@@ -22771,7 +22741,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPolicy**
-> Policy PatchPolicy($id, $object)
+> LtmPolicy PatchPolicy($id, $object)
 
 
 
@@ -22783,11 +22753,11 @@ Centralized Policy Matching configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Policy**](Policy.md)|  | 
+ **object** | [**LtmPolicy**](LtmPolicy.md)|  | 
 
 ### Return type
 
-[**Policy**](policy.md)
+[**LtmPolicy**](ltm_policy.md)
 
 ### Authorization
 
@@ -22801,7 +22771,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPolicyRules**
-> PolicyRules PatchPolicyRules($id, $object)
+> LtmPolicyRules PatchPolicyRules($id, $object)
 
 
 
@@ -22813,11 +22783,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyRules**](PolicyRules.md)|  | 
+ **object** | [**LtmPolicyRules**](LtmPolicyRules.md)|  | 
 
 ### Return type
 
-[**PolicyRules**](policy_rules.md)
+[**LtmPolicyRules**](ltm_policy_rules.md)
 
 ### Authorization
 
@@ -22831,7 +22801,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPolicyRulesActions**
-> PolicyRulesActions PatchPolicyRulesActions($id, $object)
+> LtmPolicyRulesActions PatchPolicyRulesActions($id, $object)
 
 
 
@@ -22843,11 +22813,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyRulesActions**](PolicyRulesActions.md)|  | 
+ **object** | [**LtmPolicyRulesActions**](LtmPolicyRulesActions.md)|  | 
 
 ### Return type
 
-[**PolicyRulesActions**](policy_rules_actions.md)
+[**LtmPolicyRulesActions**](ltm_policy_rules_actions.md)
 
 ### Authorization
 
@@ -22861,7 +22831,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPolicyRulesConditions**
-> PolicyRulesConditions PatchPolicyRulesConditions($id, $object)
+> LtmPolicyRulesConditions PatchPolicyRulesConditions($id, $object)
 
 
 
@@ -22873,11 +22843,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyRulesConditions**](PolicyRulesConditions.md)|  | 
+ **object** | [**LtmPolicyRulesConditions**](LtmPolicyRulesConditions.md)|  | 
 
 ### Return type
 
-[**PolicyRulesConditions**](policy_rules_conditions.md)
+[**LtmPolicyRulesConditions**](ltm_policy_rules_conditions.md)
 
 ### Authorization
 
@@ -22891,7 +22861,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPolicyStrategy**
-> PolicyStrategy PatchPolicyStrategy($id, $object)
+> LtmPolicyStrategy PatchPolicyStrategy($id, $object)
 
 
 
@@ -22903,11 +22873,11 @@ Centralized Policy Matching rule selection strategy
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyStrategy**](PolicyStrategy.md)|  | 
+ **object** | [**LtmPolicyStrategy**](LtmPolicyStrategy.md)|  | 
 
 ### Return type
 
-[**PolicyStrategy**](policyStrategy.md)
+[**LtmPolicyStrategy**](ltm_policyStrategy.md)
 
 ### Authorization
 
@@ -22921,7 +22891,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPolicyStrategyOperands**
-> PolicyStrategyOperands PatchPolicyStrategyOperands($id, $object)
+> LtmPolicyStrategyOperands PatchPolicyStrategyOperands($id, $object)
 
 
 
@@ -22933,11 +22903,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyStrategyOperands**](PolicyStrategyOperands.md)|  | 
+ **object** | [**LtmPolicyStrategyOperands**](LtmPolicyStrategyOperands.md)|  | 
 
 ### Return type
 
-[**PolicyStrategyOperands**](policyStrategy_operands.md)
+[**LtmPolicyStrategyOperands**](ltm_policyStrategy_operands.md)
 
 ### Authorization
 
@@ -22951,7 +22921,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPool**
-> Pool PatchPool($id, $object)
+> LtmPool PatchPool($id, $object)
 
 
 
@@ -22963,11 +22933,11 @@ Load balancing pool configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Pool**](Pool.md)|  | 
+ **object** | [**LtmPool**](LtmPool.md)|  | 
 
 ### Return type
 
-[**Pool**](pool.md)
+[**LtmPool**](ltm_pool.md)
 
 ### Authorization
 
@@ -22981,7 +22951,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchPoolMembers**
-> PoolMembers PatchPoolMembers($pid, $id, $object)
+> LtmPoolMembers PatchPoolMembers($pid, $id, $object)
 
 
 
@@ -22994,11 +22964,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pid** | **string**| ID of the parent resource | 
  **id** | **string**| ID of the resource | 
- **object** | [**PoolMembers**](PoolMembers.md)|  | 
+ **object** | [**LtmPoolMembers**](LtmPoolMembers.md)|  | 
 
 ### Return type
 
-[**PoolMembers**](pool_members.md)
+[**LtmPoolMembers**](ltm_pool_members.md)
 
 ### Authorization
 
@@ -23012,7 +22982,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileAnalytics**
-> ProfileAnalytics PatchProfileAnalytics($id, $object)
+> LtmProfileAnalytics PatchProfileAnalytics($id, $object)
 
 
 
@@ -23024,11 +22994,11 @@ Virtual server analytics profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileAnalytics**](ProfileAnalytics.md)|  | 
+ **object** | [**LtmProfileAnalytics**](LtmProfileAnalytics.md)|  | 
 
 ### Return type
 
-[**ProfileAnalytics**](profile_analytics.md)
+[**LtmProfileAnalytics**](ltm_profile_analytics.md)
 
 ### Authorization
 
@@ -23042,7 +23012,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileAnalyticsAlerts**
-> ProfileAnalyticsAlerts PatchProfileAnalyticsAlerts($id, $object)
+> LtmProfileAnalyticsAlerts PatchProfileAnalyticsAlerts($id, $object)
 
 
 
@@ -23054,11 +23024,11 @@ Manage the set of analytics alerts that are associated with an analytics profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileAnalyticsAlerts**](ProfileAnalyticsAlerts.md)|  | 
+ **object** | [**LtmProfileAnalyticsAlerts**](LtmProfileAnalyticsAlerts.md)|  | 
 
 ### Return type
 
-[**ProfileAnalyticsAlerts**](profile_analytics_alerts.md)
+[**LtmProfileAnalyticsAlerts**](ltm_profile_analytics_alerts.md)
 
 ### Authorization
 
@@ -23072,7 +23042,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileAnalyticsTrafficCapture**
-> ProfileAnalyticsTrafficCapture PatchProfileAnalyticsTrafficCapture($id, $object)
+> LtmProfileAnalyticsTrafficCapture PatchProfileAnalyticsTrafficCapture($id, $object)
 
 
 
@@ -23084,11 +23054,11 @@ Manage the set of analytics alerts that are associated with an analytics profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileAnalyticsTrafficCapture**](ProfileAnalyticsTrafficCapture.md)|  | 
+ **object** | [**LtmProfileAnalyticsTrafficCapture**](LtmProfileAnalyticsTrafficCapture.md)|  | 
 
 ### Return type
 
-[**ProfileAnalyticsTrafficCapture**](profile_analytics_trafficCapture.md)
+[**LtmProfileAnalyticsTrafficCapture**](ltm_profile_analytics_trafficCapture.md)
 
 ### Authorization
 
@@ -23102,7 +23072,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileCertificateAuthority**
-> ProfileCertificateAuthority PatchProfileCertificateAuthority($id, $object)
+> LtmProfileCertificateAuthority PatchProfileCertificateAuthority($id, $object)
 
 
 
@@ -23114,11 +23084,11 @@ Virtual server Certificate Authority profile configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileCertificateAuthority**](ProfileCertificateAuthority.md)|  | 
+ **object** | [**LtmProfileCertificateAuthority**](LtmProfileCertificateAuthority.md)|  | 
 
 ### Return type
 
-[**ProfileCertificateAuthority**](profile_certificateAuthority.md)
+[**LtmProfileCertificateAuthority**](ltm_profile_certificateAuthority.md)
 
 ### Authorization
 
@@ -23132,7 +23102,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileClassification**
-> ProfileClassification PatchProfileClassification($id, $object)
+> LtmProfileClassification PatchProfileClassification($id, $object)
 
 
 
@@ -23144,11 +23114,11 @@ Virtual server classification profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileClassification**](ProfileClassification.md)|  | 
+ **object** | [**LtmProfileClassification**](LtmProfileClassification.md)|  | 
 
 ### Return type
 
-[**ProfileClassification**](profile_classification.md)
+[**LtmProfileClassification**](ltm_profile_classification.md)
 
 ### Authorization
 
@@ -23162,7 +23132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileClientLdap**
-> ProfileClientLdap PatchProfileClientLdap($id, $object)
+> LtmProfileClientLdap PatchProfileClientLdap($id, $object)
 
 
 
@@ -23174,11 +23144,11 @@ Virtual server Client LDAP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileClientLdap**](ProfileClientLdap.md)|  | 
+ **object** | [**LtmProfileClientLdap**](LtmProfileClientLdap.md)|  | 
 
 ### Return type
 
-[**ProfileClientLdap**](profile_clientLdap.md)
+[**LtmProfileClientLdap**](ltm_profile_clientLdap.md)
 
 ### Authorization
 
@@ -23192,7 +23162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileClientSsl**
-> ProfileClientSsl PatchProfileClientSsl($id, $object)
+> LtmProfileClientSsl PatchProfileClientSsl($id, $object)
 
 
 
@@ -23204,11 +23174,11 @@ Virtual server client-side proxy SSL profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileClientSsl**](ProfileClientSsl.md)|  | 
+ **object** | [**LtmProfileClientSsl**](LtmProfileClientSsl.md)|  | 
 
 ### Return type
 
-[**ProfileClientSsl**](profile_clientSsl.md)
+[**LtmProfileClientSsl**](ltm_profile_clientSsl.md)
 
 ### Authorization
 
@@ -23222,7 +23192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileDhcpv4**
-> ProfileDhcpv4 PatchProfileDhcpv4($id, $object)
+> LtmProfileDhcpv4 PatchProfileDhcpv4($id, $object)
 
 
 
@@ -23234,11 +23204,11 @@ Dynamic Host Configuration Protocol, DHCPv4, profile to manage DHCPv4 network tr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDhcpv4**](ProfileDhcpv4.md)|  | 
+ **object** | [**LtmProfileDhcpv4**](LtmProfileDhcpv4.md)|  | 
 
 ### Return type
 
-[**ProfileDhcpv4**](profile_dhcpv4.md)
+[**LtmProfileDhcpv4**](ltm_profile_dhcpv4.md)
 
 ### Authorization
 
@@ -23252,7 +23222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileDhcpv6**
-> ProfileDhcpv6 PatchProfileDhcpv6($id, $object)
+> LtmProfileDhcpv6 PatchProfileDhcpv6($id, $object)
 
 
 
@@ -23264,11 +23234,11 @@ Dynamic Host Configuration Protocol, DHCPv6, profile to manage DHCPv6 network tr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDhcpv6**](ProfileDhcpv6.md)|  | 
+ **object** | [**LtmProfileDhcpv6**](LtmProfileDhcpv6.md)|  | 
 
 ### Return type
 
-[**ProfileDhcpv6**](profile_dhcpv6.md)
+[**LtmProfileDhcpv6**](ltm_profile_dhcpv6.md)
 
 ### Authorization
 
@@ -23282,7 +23252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileDiameter**
-> ProfileDiameter PatchProfileDiameter($id, $object)
+> LtmProfileDiameter PatchProfileDiameter($id, $object)
 
 
 
@@ -23294,11 +23264,11 @@ Virtual server Diameter traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDiameter**](ProfileDiameter.md)|  | 
+ **object** | [**LtmProfileDiameter**](LtmProfileDiameter.md)|  | 
 
 ### Return type
 
-[**ProfileDiameter**](profile_diameter.md)
+[**LtmProfileDiameter**](ltm_profile_diameter.md)
 
 ### Authorization
 
@@ -23312,7 +23282,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileDns**
-> ProfileDns PatchProfileDns($id, $object)
+> LtmProfileDns PatchProfileDns($id, $object)
 
 
 
@@ -23324,11 +23294,11 @@ Virtual server DNS traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDns**](ProfileDns.md)|  | 
+ **object** | [**LtmProfileDns**](LtmProfileDns.md)|  | 
 
 ### Return type
 
-[**ProfileDns**](profile_dns.md)
+[**LtmProfileDns**](ltm_profile_dns.md)
 
 ### Authorization
 
@@ -23342,7 +23312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileDnsLogging**
-> ProfileDnsLogging PatchProfileDnsLogging($id, $object)
+> LtmProfileDnsLogging PatchProfileDnsLogging($id, $object)
 
 
 
@@ -23354,11 +23324,11 @@ High-speed logging settings for the DNS profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDnsLogging**](ProfileDnsLogging.md)|  | 
+ **object** | [**LtmProfileDnsLogging**](LtmProfileDnsLogging.md)|  | 
 
 ### Return type
 
-[**ProfileDnsLogging**](profile_dnsLogging.md)
+[**LtmProfileDnsLogging**](ltm_profile_dnsLogging.md)
 
 ### Authorization
 
@@ -23372,7 +23342,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileFasthttp**
-> ProfileFasthttp PatchProfileFasthttp($id, $object)
+> LtmProfileFasthttp PatchProfileFasthttp($id, $object)
 
 
 
@@ -23384,11 +23354,11 @@ Virtual server Fast HTTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFasthttp**](ProfileFasthttp.md)|  | 
+ **object** | [**LtmProfileFasthttp**](LtmProfileFasthttp.md)|  | 
 
 ### Return type
 
-[**ProfileFasthttp**](profile_fasthttp.md)
+[**LtmProfileFasthttp**](ltm_profile_fasthttp.md)
 
 ### Authorization
 
@@ -23402,7 +23372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileFastl4**
-> ProfileFastl4 PatchProfileFastl4($id, $object)
+> LtmProfileFastl4 PatchProfileFastl4($id, $object)
 
 
 
@@ -23414,11 +23384,11 @@ Virtual server FastL4 traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFastl4**](ProfileFastl4.md)|  | 
+ **object** | [**LtmProfileFastl4**](LtmProfileFastl4.md)|  | 
 
 ### Return type
 
-[**ProfileFastl4**](profile_fastl4.md)
+[**LtmProfileFastl4**](ltm_profile_fastl4.md)
 
 ### Authorization
 
@@ -23432,7 +23402,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileFix**
-> ProfileFix PatchProfileFix($id, $object)
+> LtmProfileFix PatchProfileFix($id, $object)
 
 
 
@@ -23444,11 +23414,11 @@ Virtual server Financial Information eXchange(FIX) profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFix**](ProfileFix.md)|  | 
+ **object** | [**LtmProfileFix**](LtmProfileFix.md)|  | 
 
 ### Return type
 
-[**ProfileFix**](profile_fix.md)
+[**LtmProfileFix**](ltm_profile_fix.md)
 
 ### Authorization
 
@@ -23462,7 +23432,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileFtp**
-> ProfileFtp PatchProfileFtp($id, $object)
+> LtmProfileFtp PatchProfileFtp($id, $object)
 
 
 
@@ -23474,11 +23444,11 @@ Virtual server FTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFtp**](ProfileFtp.md)|  | 
+ **object** | [**LtmProfileFtp**](LtmProfileFtp.md)|  | 
 
 ### Return type
 
-[**ProfileFtp**](profile_ftp.md)
+[**LtmProfileFtp**](ltm_profile_ftp.md)
 
 ### Authorization
 
@@ -23492,7 +23462,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileGtp**
-> ProfileGtp PatchProfileGtp($id, $object)
+> LtmProfileGtp PatchProfileGtp($id, $object)
 
 
 
@@ -23504,11 +23474,11 @@ Virtual server GTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileGtp**](ProfileGtp.md)|  | 
+ **object** | [**LtmProfileGtp**](LtmProfileGtp.md)|  | 
 
 ### Return type
 
-[**ProfileGtp**](profile_gtp.md)
+[**LtmProfileGtp**](ltm_profile_gtp.md)
 
 ### Authorization
 
@@ -23522,7 +23492,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileHtml**
-> ProfileHtml PatchProfileHtml($id, $object)
+> LtmProfileHtml PatchProfileHtml($id, $object)
 
 
 
@@ -23534,11 +23504,11 @@ Virtual server HTML profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHtml**](ProfileHtml.md)|  | 
+ **object** | [**LtmProfileHtml**](LtmProfileHtml.md)|  | 
 
 ### Return type
 
-[**ProfileHtml**](profile_html.md)
+[**LtmProfileHtml**](ltm_profile_html.md)
 
 ### Authorization
 
@@ -23552,7 +23522,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileHttp**
-> ProfileHttp PatchProfileHttp($id, $object)
+> LtmProfileHttp PatchProfileHttp($id, $object)
 
 
 
@@ -23564,11 +23534,11 @@ Virtual server HTTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHttp**](ProfileHttp.md)|  | 
+ **object** | [**LtmProfileHttp**](LtmProfileHttp.md)|  | 
 
 ### Return type
 
-[**ProfileHttp**](profile_http.md)
+[**LtmProfileHttp**](ltm_profile_http.md)
 
 ### Authorization
 
@@ -23582,7 +23552,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileHttp2**
-> ProfileHttp2 PatchProfileHttp2($id, $object)
+> LtmProfileHttp2 PatchProfileHttp2($id, $object)
 
 
 
@@ -23594,11 +23564,11 @@ Virtual server HTTP/2 traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHttp2**](ProfileHttp2.md)|  | 
+ **object** | [**LtmProfileHttp2**](LtmProfileHttp2.md)|  | 
 
 ### Return type
 
-[**ProfileHttp2**](profile_http2.md)
+[**LtmProfileHttp2**](ltm_profile_http2.md)
 
 ### Authorization
 
@@ -23612,7 +23582,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileHttpCompression**
-> ProfileHttpCompression PatchProfileHttpCompression($id, $object)
+> LtmProfileHttpCompression PatchProfileHttpCompression($id, $object)
 
 
 
@@ -23624,11 +23594,11 @@ Virtual server HTTP compression profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHttpCompression**](ProfileHttpCompression.md)|  | 
+ **object** | [**LtmProfileHttpCompression**](LtmProfileHttpCompression.md)|  | 
 
 ### Return type
 
-[**ProfileHttpCompression**](profile_httpCompression.md)
+[**LtmProfileHttpCompression**](ltm_profile_httpCompression.md)
 
 ### Authorization
 
@@ -23642,7 +23612,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileIcap**
-> ProfileIcap PatchProfileIcap($id, $object)
+> LtmProfileIcap PatchProfileIcap($id, $object)
 
 
 
@@ -23654,11 +23624,11 @@ Virtual server Internet Content Adaptation Protocol (ICAP) profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileIcap**](ProfileIcap.md)|  | 
+ **object** | [**LtmProfileIcap**](LtmProfileIcap.md)|  | 
 
 ### Return type
 
-[**ProfileIcap**](profile_icap.md)
+[**LtmProfileIcap**](ltm_profile_icap.md)
 
 ### Authorization
 
@@ -23672,7 +23642,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileIiop**
-> ProfileIiop PatchProfileIiop($id, $object)
+> LtmProfileIiop PatchProfileIiop($id, $object)
 
 
 
@@ -23684,11 +23654,11 @@ Virtual server IIOP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileIiop**](ProfileIiop.md)|  | 
+ **object** | [**LtmProfileIiop**](LtmProfileIiop.md)|  | 
 
 ### Return type
 
-[**ProfileIiop**](profile_iiop.md)
+[**LtmProfileIiop**](ltm_profile_iiop.md)
 
 ### Authorization
 
@@ -23702,7 +23672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileIpother**
-> ProfileIpother PatchProfileIpother($id, $object)
+> LtmProfileIpother PatchProfileIpother($id, $object)
 
 
 
@@ -23714,11 +23684,11 @@ Virtual server IPOTHER for non-TCP and non-UDP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileIpother**](ProfileIpother.md)|  | 
+ **object** | [**LtmProfileIpother**](LtmProfileIpother.md)|  | 
 
 ### Return type
 
-[**ProfileIpother**](profile_ipother.md)
+[**LtmProfileIpother**](ltm_profile_ipother.md)
 
 ### Authorization
 
@@ -23732,7 +23702,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileMblb**
-> ProfileMblb PatchProfileMblb($id, $object)
+> LtmProfileMblb PatchProfileMblb($id, $object)
 
 
 
@@ -23744,11 +23714,11 @@ MBLB profile configuration (experimental)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileMblb**](ProfileMblb.md)|  | 
+ **object** | [**LtmProfileMblb**](LtmProfileMblb.md)|  | 
 
 ### Return type
 
-[**ProfileMblb**](profile_mblb.md)
+[**LtmProfileMblb**](ltm_profile_mblb.md)
 
 ### Authorization
 
@@ -23762,7 +23732,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileMssql**
-> ProfileMssql PatchProfileMssql($id, $object)
+> LtmProfileMssql PatchProfileMssql($id, $object)
 
 
 
@@ -23774,11 +23744,11 @@ Virtual server MSSQL profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileMssql**](ProfileMssql.md)|  | 
+ **object** | [**LtmProfileMssql**](LtmProfileMssql.md)|  | 
 
 ### Return type
 
-[**ProfileMssql**](profile_mssql.md)
+[**LtmProfileMssql**](ltm_profile_mssql.md)
 
 ### Authorization
 
@@ -23792,7 +23762,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileNtlm**
-> ProfileNtlm PatchProfileNtlm($id, $object)
+> LtmProfileNtlm PatchProfileNtlm($id, $object)
 
 
 
@@ -23804,11 +23774,11 @@ Virtual server NT Lan Manager profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileNtlm**](ProfileNtlm.md)|  | 
+ **object** | [**LtmProfileNtlm**](LtmProfileNtlm.md)|  | 
 
 ### Return type
 
-[**ProfileNtlm**](profile_ntlm.md)
+[**LtmProfileNtlm**](ltm_profile_ntlm.md)
 
 ### Authorization
 
@@ -23822,7 +23792,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileOcspStaplingParams**
-> ProfileOcspStaplingParams PatchProfileOcspStaplingParams($id, $object)
+> LtmProfileOcspStaplingParams PatchProfileOcspStaplingParams($id, $object)
 
 
 
@@ -23834,11 +23804,11 @@ OCSP Stapling Parameters for clientssl profiles. This object should be associate
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileOcspStaplingParams**](ProfileOcspStaplingParams.md)|  | 
+ **object** | [**LtmProfileOcspStaplingParams**](LtmProfileOcspStaplingParams.md)|  | 
 
 ### Return type
 
-[**ProfileOcspStaplingParams**](profile_ocspStaplingParams.md)
+[**LtmProfileOcspStaplingParams**](ltm_profile_ocspStaplingParams.md)
 
 ### Authorization
 
@@ -23852,7 +23822,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileOneConnect**
-> ProfileOneConnect PatchProfileOneConnect($id, $object)
+> LtmProfileOneConnect PatchProfileOneConnect($id, $object)
 
 
 
@@ -23864,11 +23834,11 @@ Virtual server OneConnect profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileOneConnect**](ProfileOneConnect.md)|  | 
+ **object** | [**LtmProfileOneConnect**](LtmProfileOneConnect.md)|  | 
 
 ### Return type
 
-[**ProfileOneConnect**](profile_oneConnect.md)
+[**LtmProfileOneConnect**](ltm_profile_oneConnect.md)
 
 ### Authorization
 
@@ -23882,7 +23852,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfilePcp**
-> ProfilePcp PatchProfilePcp($id, $object)
+> LtmProfilePcp PatchProfilePcp($id, $object)
 
 
 
@@ -23894,11 +23864,11 @@ LSN Pool PCP configuration profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfilePcp**](ProfilePcp.md)|  | 
+ **object** | [**LtmProfilePcp**](LtmProfilePcp.md)|  | 
 
 ### Return type
 
-[**ProfilePcp**](profile_pcp.md)
+[**LtmProfilePcp**](ltm_profile_pcp.md)
 
 ### Authorization
 
@@ -23912,7 +23882,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfilePptp**
-> ProfilePptp PatchProfilePptp($id, $object)
+> LtmProfilePptp PatchProfilePptp($id, $object)
 
 
 
@@ -23924,11 +23894,11 @@ Virtual server Point to Point Tunneling Protocol (PPTP) profile configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfilePptp**](ProfilePptp.md)|  | 
+ **object** | [**LtmProfilePptp**](LtmProfilePptp.md)|  | 
 
 ### Return type
 
-[**ProfilePptp**](profile_pptp.md)
+[**LtmProfilePptp**](ltm_profile_pptp.md)
 
 ### Authorization
 
@@ -23942,7 +23912,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileQoe**
-> ProfileQoe PatchProfileQoe($id, $object)
+> LtmProfileQoe PatchProfileQoe($id, $object)
 
 
 
@@ -23954,11 +23924,11 @@ Virtual server Quality of Experience profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileQoe**](ProfileQoe.md)|  | 
+ **object** | [**LtmProfileQoe**](LtmProfileQoe.md)|  | 
 
 ### Return type
 
-[**ProfileQoe**](profile_qoe.md)
+[**LtmProfileQoe**](ltm_profile_qoe.md)
 
 ### Authorization
 
@@ -23972,7 +23942,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileRadius**
-> ProfileRadius PatchProfileRadius($id, $object)
+> LtmProfileRadius PatchProfileRadius($id, $object)
 
 
 
@@ -23984,11 +23954,11 @@ Virtual server Radius traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRadius**](ProfileRadius.md)|  | 
+ **object** | [**LtmProfileRadius**](LtmProfileRadius.md)|  | 
 
 ### Return type
 
-[**ProfileRadius**](profile_radius.md)
+[**LtmProfileRadius**](ltm_profile_radius.md)
 
 ### Authorization
 
@@ -24002,7 +23972,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileRequestAdapt**
-> ProfileRequestAdapt PatchProfileRequestAdapt($id, $object)
+> LtmProfileRequestAdapt PatchProfileRequestAdapt($id, $object)
 
 
 
@@ -24014,11 +23984,11 @@ Virtual server HTTP request adaptation profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRequestAdapt**](ProfileRequestAdapt.md)|  | 
+ **object** | [**LtmProfileRequestAdapt**](LtmProfileRequestAdapt.md)|  | 
 
 ### Return type
 
-[**ProfileRequestAdapt**](profile_requestAdapt.md)
+[**LtmProfileRequestAdapt**](ltm_profile_requestAdapt.md)
 
 ### Authorization
 
@@ -24032,7 +24002,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileRequestLog**
-> ProfileRequestLog PatchProfileRequestLog($id, $object)
+> LtmProfileRequestLog PatchProfileRequestLog($id, $object)
 
 
 
@@ -24044,11 +24014,11 @@ Virtual server request logging profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRequestLog**](ProfileRequestLog.md)|  | 
+ **object** | [**LtmProfileRequestLog**](LtmProfileRequestLog.md)|  | 
 
 ### Return type
 
-[**ProfileRequestLog**](profile_requestLog.md)
+[**LtmProfileRequestLog**](ltm_profile_requestLog.md)
 
 ### Authorization
 
@@ -24062,7 +24032,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileResponseAdapt**
-> ProfileResponseAdapt PatchProfileResponseAdapt($id, $object)
+> LtmProfileResponseAdapt PatchProfileResponseAdapt($id, $object)
 
 
 
@@ -24074,11 +24044,11 @@ Virtual server HTTP response adaptation profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileResponseAdapt**](ProfileResponseAdapt.md)|  | 
+ **object** | [**LtmProfileResponseAdapt**](LtmProfileResponseAdapt.md)|  | 
 
 ### Return type
 
-[**ProfileResponseAdapt**](profile_responseAdapt.md)
+[**LtmProfileResponseAdapt**](ltm_profile_responseAdapt.md)
 
 ### Authorization
 
@@ -24092,7 +24062,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileRewrite**
-> ProfileRewrite PatchProfileRewrite($id, $object)
+> LtmProfileRewrite PatchProfileRewrite($id, $object)
 
 
 
@@ -24104,11 +24074,11 @@ Virtual server Rewrite profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRewrite**](ProfileRewrite.md)|  | 
+ **object** | [**LtmProfileRewrite**](LtmProfileRewrite.md)|  | 
 
 ### Return type
 
-[**ProfileRewrite**](profile_rewrite.md)
+[**LtmProfileRewrite**](ltm_profile_rewrite.md)
 
 ### Authorization
 
@@ -24122,7 +24092,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileRewriteUriRules**
-> ProfileRewriteUriRules PatchProfileRewriteUriRules($id, $object)
+> LtmProfileRewriteUriRules PatchProfileRewriteUriRules($id, $object)
 
 
 
@@ -24134,11 +24104,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRewriteUriRules**](ProfileRewriteUriRules.md)|  | 
+ **object** | [**LtmProfileRewriteUriRules**](LtmProfileRewriteUriRules.md)|  | 
 
 ### Return type
 
-[**ProfileRewriteUriRules**](profile_rewrite_uriRules.md)
+[**LtmProfileRewriteUriRules**](ltm_profile_rewrite_uriRules.md)
 
 ### Authorization
 
@@ -24152,7 +24122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileRtsp**
-> ProfileRtsp PatchProfileRtsp($id, $object)
+> LtmProfileRtsp PatchProfileRtsp($id, $object)
 
 
 
@@ -24164,11 +24134,11 @@ Virtual server RTSP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRtsp**](ProfileRtsp.md)|  | 
+ **object** | [**LtmProfileRtsp**](LtmProfileRtsp.md)|  | 
 
 ### Return type
 
-[**ProfileRtsp**](profile_rtsp.md)
+[**LtmProfileRtsp**](ltm_profile_rtsp.md)
 
 ### Authorization
 
@@ -24182,7 +24152,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileSctp**
-> ProfileSctp PatchProfileSctp($id, $object)
+> LtmProfileSctp PatchProfileSctp($id, $object)
 
 
 
@@ -24194,11 +24164,11 @@ Virtual server SCTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSctp**](ProfileSctp.md)|  | 
+ **object** | [**LtmProfileSctp**](LtmProfileSctp.md)|  | 
 
 ### Return type
 
-[**ProfileSctp**](profile_sctp.md)
+[**LtmProfileSctp**](ltm_profile_sctp.md)
 
 ### Authorization
 
@@ -24212,7 +24182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileServerLdap**
-> ProfileServerLdap PatchProfileServerLdap($id, $object)
+> LtmProfileServerLdap PatchProfileServerLdap($id, $object)
 
 
 
@@ -24224,11 +24194,11 @@ Virtual server Server LDAP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileServerLdap**](ProfileServerLdap.md)|  | 
+ **object** | [**LtmProfileServerLdap**](LtmProfileServerLdap.md)|  | 
 
 ### Return type
 
-[**ProfileServerLdap**](profile_serverLdap.md)
+[**LtmProfileServerLdap**](ltm_profile_serverLdap.md)
 
 ### Authorization
 
@@ -24242,7 +24212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileServerSsl**
-> ProfileServerSsl PatchProfileServerSsl($id, $object)
+> LtmProfileServerSsl PatchProfileServerSsl($id, $object)
 
 
 
@@ -24254,11 +24224,11 @@ Virtual server server-side proxy SSL profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileServerSsl**](ProfileServerSsl.md)|  | 
+ **object** | [**LtmProfileServerSsl**](LtmProfileServerSsl.md)|  | 
 
 ### Return type
 
-[**ProfileServerSsl**](profile_serverSsl.md)
+[**LtmProfileServerSsl**](ltm_profile_serverSsl.md)
 
 ### Authorization
 
@@ -24272,7 +24242,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileSip**
-> ProfileSip PatchProfileSip($id, $object)
+> LtmProfileSip PatchProfileSip($id, $object)
 
 
 
@@ -24284,11 +24254,11 @@ Virtual server SIP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSip**](ProfileSip.md)|  | 
+ **object** | [**LtmProfileSip**](LtmProfileSip.md)|  | 
 
 ### Return type
 
-[**ProfileSip**](profile_sip.md)
+[**LtmProfileSip**](ltm_profile_sip.md)
 
 ### Authorization
 
@@ -24302,7 +24272,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileSmtp**
-> ProfileSmtp PatchProfileSmtp($id, $object)
+> LtmProfileSmtp PatchProfileSmtp($id, $object)
 
 
 
@@ -24314,11 +24284,11 @@ Virtual server SMTP profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSmtp**](ProfileSmtp.md)|  | 
+ **object** | [**LtmProfileSmtp**](LtmProfileSmtp.md)|  | 
 
 ### Return type
 
-[**ProfileSmtp**](profile_smtp.md)
+[**LtmProfileSmtp**](ltm_profile_smtp.md)
 
 ### Authorization
 
@@ -24332,7 +24302,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileSmtps**
-> ProfileSmtps PatchProfileSmtps($id, $object)
+> LtmProfileSmtps PatchProfileSmtps($id, $object)
 
 
 
@@ -24344,11 +24314,11 @@ Virtual server SMTPs traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSmtps**](ProfileSmtps.md)|  | 
+ **object** | [**LtmProfileSmtps**](LtmProfileSmtps.md)|  | 
 
 ### Return type
 
-[**ProfileSmtps**](profile_smtps.md)
+[**LtmProfileSmtps**](ltm_profile_smtps.md)
 
 ### Authorization
 
@@ -24362,7 +24332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileSocks**
-> ProfileSocks PatchProfileSocks($id, $object)
+> LtmProfileSocks PatchProfileSocks($id, $object)
 
 
 
@@ -24374,11 +24344,11 @@ Virtual server SOCKS traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSocks**](ProfileSocks.md)|  | 
+ **object** | [**LtmProfileSocks**](LtmProfileSocks.md)|  | 
 
 ### Return type
 
-[**ProfileSocks**](profile_socks.md)
+[**LtmProfileSocks**](ltm_profile_socks.md)
 
 ### Authorization
 
@@ -24392,7 +24362,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileSpdy**
-> ProfileSpdy PatchProfileSpdy($id, $object)
+> LtmProfileSpdy PatchProfileSpdy($id, $object)
 
 
 
@@ -24404,11 +24374,11 @@ Virtual server SPDY traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSpdy**](ProfileSpdy.md)|  | 
+ **object** | [**LtmProfileSpdy**](LtmProfileSpdy.md)|  | 
 
 ### Return type
 
-[**ProfileSpdy**](profile_spdy.md)
+[**LtmProfileSpdy**](ltm_profile_spdy.md)
 
 ### Authorization
 
@@ -24422,7 +24392,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileStatistics**
-> ProfileStatistics PatchProfileStatistics($id, $object)
+> LtmProfileStatistics PatchProfileStatistics($id, $object)
 
 
 
@@ -24434,11 +24404,11 @@ Virtual server custom statistics configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileStatistics**](ProfileStatistics.md)|  | 
+ **object** | [**LtmProfileStatistics**](LtmProfileStatistics.md)|  | 
 
 ### Return type
 
-[**ProfileStatistics**](profile_statistics.md)
+[**LtmProfileStatistics**](ltm_profile_statistics.md)
 
 ### Authorization
 
@@ -24452,7 +24422,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileStream**
-> ProfileStream PatchProfileStream($id, $object)
+> LtmProfileStream PatchProfileStream($id, $object)
 
 
 
@@ -24464,11 +24434,11 @@ Virtual server Stream traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileStream**](ProfileStream.md)|  | 
+ **object** | [**LtmProfileStream**](LtmProfileStream.md)|  | 
 
 ### Return type
 
-[**ProfileStream**](profile_stream.md)
+[**LtmProfileStream**](ltm_profile_stream.md)
 
 ### Authorization
 
@@ -24482,7 +24452,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileTcp**
-> ProfileTcp PatchProfileTcp($id, $object)
+> LtmProfileTcp PatchProfileTcp($id, $object)
 
 
 
@@ -24494,11 +24464,11 @@ Virtual server TCP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileTcp**](ProfileTcp.md)|  | 
+ **object** | [**LtmProfileTcp**](LtmProfileTcp.md)|  | 
 
 ### Return type
 
-[**ProfileTcp**](profile_tcp.md)
+[**LtmProfileTcp**](ltm_profile_tcp.md)
 
 ### Authorization
 
@@ -24512,7 +24482,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileTftp**
-> ProfileTftp PatchProfileTftp($id, $object)
+> LtmProfileTftp PatchProfileTftp($id, $object)
 
 
 
@@ -24524,11 +24494,11 @@ Virtual server TFTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileTftp**](ProfileTftp.md)|  | 
+ **object** | [**LtmProfileTftp**](LtmProfileTftp.md)|  | 
 
 ### Return type
 
-[**ProfileTftp**](profile_tftp.md)
+[**LtmProfileTftp**](ltm_profile_tftp.md)
 
 ### Authorization
 
@@ -24542,7 +24512,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileUdp**
-> ProfileUdp PatchProfileUdp($id, $object)
+> LtmProfileUdp PatchProfileUdp($id, $object)
 
 
 
@@ -24554,11 +24524,11 @@ Virtual server UDP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileUdp**](ProfileUdp.md)|  | 
+ **object** | [**LtmProfileUdp**](LtmProfileUdp.md)|  | 
 
 ### Return type
 
-[**ProfileUdp**](profile_udp.md)
+[**LtmProfileUdp**](ltm_profile_udp.md)
 
 ### Authorization
 
@@ -24572,7 +24542,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileWebAcceleration**
-> ProfileWebAcceleration PatchProfileWebAcceleration($id, $object)
+> LtmProfileWebAcceleration PatchProfileWebAcceleration($id, $object)
 
 
 
@@ -24584,11 +24554,11 @@ Virtual server Web Acceleration profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileWebAcceleration**](ProfileWebAcceleration.md)|  | 
+ **object** | [**LtmProfileWebAcceleration**](LtmProfileWebAcceleration.md)|  | 
 
 ### Return type
 
-[**ProfileWebAcceleration**](profile_webAcceleration.md)
+[**LtmProfileWebAcceleration**](ltm_profile_webAcceleration.md)
 
 ### Authorization
 
@@ -24602,7 +24572,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchProfileXml**
-> ProfileXml PatchProfileXml($id, $object)
+> LtmProfileXml PatchProfileXml($id, $object)
 
 
 
@@ -24614,11 +24584,11 @@ Virtual server XML configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileXml**](ProfileXml.md)|  | 
+ **object** | [**LtmProfileXml**](LtmProfileXml.md)|  | 
 
 ### Return type
 
-[**ProfileXml**](profile_xml.md)
+[**LtmProfileXml**](ltm_profile_xml.md)
 
 ### Authorization
 
@@ -24632,7 +24602,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchRule**
-> Rule PatchRule($id, $object)
+> LtmRule PatchRule($id, $object)
 
 
 
@@ -24644,11 +24614,11 @@ iRules configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Rule**](Rule.md)|  | 
+ **object** | [**LtmRule**](LtmRule.md)|  | 
 
 ### Return type
 
-[**Rule**](rule.md)
+[**LtmRule**](ltm_rule.md)
 
 ### Authorization
 
@@ -24662,7 +24632,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchSnat**
-> Snat PatchSnat($id, $object)
+> LtmSnat PatchSnat($id, $object)
 
 
 
@@ -24674,11 +24644,11 @@ Secure network address translation (SNAT) configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Snat**](Snat.md)|  | 
+ **object** | [**LtmSnat**](LtmSnat.md)|  | 
 
 ### Return type
 
-[**Snat**](snat.md)
+[**LtmSnat**](ltm_snat.md)
 
 ### Authorization
 
@@ -24692,7 +24662,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchSnatTranslation**
-> SnatTranslation PatchSnatTranslation($id, $object)
+> LtmSnatTranslation PatchSnatTranslation($id, $object)
 
 
 
@@ -24704,11 +24674,11 @@ SNAT translation address configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**SnatTranslation**](SnatTranslation.md)|  | 
+ **object** | [**LtmSnatTranslation**](LtmSnatTranslation.md)|  | 
 
 ### Return type
 
-[**SnatTranslation**](snatTranslation.md)
+[**LtmSnatTranslation**](ltm_snatTranslation.md)
 
 ### Authorization
 
@@ -24722,7 +24692,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchSnatpool**
-> Snatpool PatchSnatpool($id, $object)
+> LtmSnatpool PatchSnatpool($id, $object)
 
 
 
@@ -24734,11 +24704,11 @@ Collections of SNAT translation addresses
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Snatpool**](Snatpool.md)|  | 
+ **object** | [**LtmSnatpool**](LtmSnatpool.md)|  | 
 
 ### Return type
 
-[**Snatpool**](snatpool.md)
+[**LtmSnatpool**](ltm_snatpool.md)
 
 ### Authorization
 
@@ -24752,7 +24722,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchTacdbCustomdb**
-> TacdbCustomdb PatchTacdbCustomdb($id, $object)
+> LtmTacdbCustomdb PatchTacdbCustomdb($id, $object)
 
 
 
@@ -24764,11 +24734,11 @@ Custom tacdb for detection of device type and OS.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**TacdbCustomdb**](TacdbCustomdb.md)|  | 
+ **object** | [**LtmTacdbCustomdb**](LtmTacdbCustomdb.md)|  | 
 
 ### Return type
 
-[**TacdbCustomdb**](tacdb_customdb.md)
+[**LtmTacdbCustomdb**](ltm_tacdb_customdb.md)
 
 ### Authorization
 
@@ -24782,7 +24752,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchTacdbCustomdbFile**
-> TacdbCustomdbFile PatchTacdbCustomdbFile($id, $object)
+> LtmTacdbCustomdbFile PatchTacdbCustomdbFile($id, $object)
 
 
 
@@ -24794,11 +24764,11 @@ File object for custom tacdb. User should NOT use it. Daemon use it internally.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**TacdbCustomdbFile**](TacdbCustomdbFile.md)|  | 
+ **object** | [**LtmTacdbCustomdbFile**](LtmTacdbCustomdbFile.md)|  | 
 
 ### Return type
 
-[**TacdbCustomdbFile**](tacdb_customdbFile.md)
+[**LtmTacdbCustomdbFile**](ltm_tacdb_customdbFile.md)
 
 ### Authorization
 
@@ -24812,7 +24782,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchTrafficClass**
-> TrafficClass PatchTrafficClass($id, $object)
+> LtmTrafficClass PatchTrafficClass($id, $object)
 
 
 
@@ -24824,11 +24794,11 @@ Traffic Class Configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**TrafficClass**](TrafficClass.md)|  | 
+ **object** | [**LtmTrafficClass**](LtmTrafficClass.md)|  | 
 
 ### Return type
 
-[**TrafficClass**](trafficClass.md)
+[**LtmTrafficClass**](ltm_trafficClass.md)
 
 ### Authorization
 
@@ -24842,7 +24812,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchVirtual**
-> Virtual PatchVirtual($id, $object)
+> LtmVirtual PatchVirtual($id, $object)
 
 
 
@@ -24854,11 +24824,11 @@ Virtual server configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Virtual**](Virtual.md)|  | 
+ **object** | [**LtmVirtual**](LtmVirtual.md)|  | 
 
 ### Return type
 
-[**Virtual**](virtual.md)
+[**LtmVirtual**](ltm_virtual.md)
 
 ### Authorization
 
@@ -24872,7 +24842,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchVirtualAddress**
-> VirtualAddress PatchVirtualAddress($id, $object)
+> LtmVirtualAddress PatchVirtualAddress($id, $object)
 
 
 
@@ -24884,11 +24854,11 @@ Virtual server IP address configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualAddress**](VirtualAddress.md)|  | 
+ **object** | [**LtmVirtualAddress**](LtmVirtualAddress.md)|  | 
 
 ### Return type
 
-[**VirtualAddress**](virtualAddress.md)
+[**LtmVirtualAddress**](ltm_virtualAddress.md)
 
 ### Authorization
 
@@ -24902,7 +24872,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchVirtualPolicies**
-> VirtualPolicies PatchVirtualPolicies($id, $object)
+> LtmVirtualPolicies PatchVirtualPolicies($id, $object)
 
 
 
@@ -24914,11 +24884,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualPolicies**](VirtualPolicies.md)|  | 
+ **object** | [**LtmVirtualPolicies**](LtmVirtualPolicies.md)|  | 
 
 ### Return type
 
-[**VirtualPolicies**](virtual_policies.md)
+[**LtmVirtualPolicies**](ltm_virtual_policies.md)
 
 ### Authorization
 
@@ -24932,7 +24902,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PatchVirtualProfiles**
-> VirtualProfiles PatchVirtualProfiles($id, $object)
+> LtmVirtualProfiles PatchVirtualProfiles($id, $object)
 
 
 
@@ -24944,11 +24914,11 @@ Manage the set of profiles that are associated with virtual servers
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualProfiles**](VirtualProfiles.md)|  | 
+ **object** | [**LtmVirtualProfiles**](LtmVirtualProfiles.md)|  | 
 
 ### Return type
 
-[**VirtualProfiles**](virtual_profiles.md)
+[**LtmVirtualProfiles**](ltm_virtual_profiles.md)
 
 ### Authorization
 
@@ -24962,7 +24932,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAlgLogProfile**
-> AlgLogProfile PostAlgLogProfile($id, $object)
+> LtmAlgLogProfile PostAlgLogProfile($id, $object)
 
 
 
@@ -24974,11 +24944,11 @@ Defines the configuration for logging of ALG flows.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AlgLogProfile**](AlgLogProfile.md)|  | 
+ **object** | [**LtmAlgLogProfile**](LtmAlgLogProfile.md)|  | 
 
 ### Return type
 
-[**AlgLogProfile**](algLogProfile.md)
+[**LtmAlgLogProfile**](ltm_algLogProfile.md)
 
 ### Authorization
 
@@ -24992,7 +24962,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthCrldpServer**
-> AuthCrldpServer PostAuthCrldpServer($id, $object)
+> LtmAuthCrldpServer PostAuthCrldpServer($id, $object)
 
 
 
@@ -25004,11 +24974,11 @@ Certificate Revocation List Distribution Point (CRDLP) server configuration, for
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthCrldpServer**](AuthCrldpServer.md)|  | 
+ **object** | [**LtmAuthCrldpServer**](LtmAuthCrldpServer.md)|  | 
 
 ### Return type
 
-[**AuthCrldpServer**](auth_crldpServer.md)
+[**LtmAuthCrldpServer**](ltm_auth_crldpServer.md)
 
 ### Authorization
 
@@ -25022,7 +24992,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthKerberosDelegation**
-> AuthKerberosDelegation PostAuthKerberosDelegation($id, $object)
+> LtmAuthKerberosDelegation PostAuthKerberosDelegation($id, $object)
 
 
 
@@ -25034,11 +25004,11 @@ Kerberos configuration for remote client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthKerberosDelegation**](AuthKerberosDelegation.md)|  | 
+ **object** | [**LtmAuthKerberosDelegation**](LtmAuthKerberosDelegation.md)|  | 
 
 ### Return type
 
-[**AuthKerberosDelegation**](auth_kerberosDelegation.md)
+[**LtmAuthKerberosDelegation**](ltm_auth_kerberosDelegation.md)
 
 ### Authorization
 
@@ -25052,7 +25022,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthLdap**
-> AuthLdap PostAuthLdap($id, $object)
+> LtmAuthLdap PostAuthLdap($id, $object)
 
 
 
@@ -25064,11 +25034,11 @@ LDAP configuration for remote LDAP client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthLdap**](AuthLdap.md)|  | 
+ **object** | [**LtmAuthLdap**](LtmAuthLdap.md)|  | 
 
 ### Return type
 
-[**AuthLdap**](auth_ldap.md)
+[**LtmAuthLdap**](ltm_auth_ldap.md)
 
 ### Authorization
 
@@ -25082,7 +25052,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthOcspResponder**
-> AuthOcspResponder PostAuthOcspResponder($id, $object)
+> LtmAuthOcspResponder PostAuthOcspResponder($id, $object)
 
 
 
@@ -25094,11 +25064,11 @@ Online Certificate System Protocol (OCSP) responder configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthOcspResponder**](AuthOcspResponder.md)|  | 
+ **object** | [**LtmAuthOcspResponder**](LtmAuthOcspResponder.md)|  | 
 
 ### Return type
 
-[**AuthOcspResponder**](auth_ocspResponder.md)
+[**LtmAuthOcspResponder**](ltm_auth_ocspResponder.md)
 
 ### Authorization
 
@@ -25112,7 +25082,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthProfile**
-> AuthProfile PostAuthProfile($id, $object)
+> LtmAuthProfile PostAuthProfile($id, $object)
 
 
 
@@ -25124,11 +25094,11 @@ Virtual server traffic Authentication profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthProfile**](AuthProfile.md)|  | 
+ **object** | [**LtmAuthProfile**](LtmAuthProfile.md)|  | 
 
 ### Return type
 
-[**AuthProfile**](auth_profile.md)
+[**LtmAuthProfile**](ltm_auth_profile.md)
 
 ### Authorization
 
@@ -25142,7 +25112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthRadius**
-> AuthRadius PostAuthRadius($id, $object)
+> LtmAuthRadius PostAuthRadius($id, $object)
 
 
 
@@ -25154,11 +25124,11 @@ RADIUS configuration for remote RADIUS client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthRadius**](AuthRadius.md)|  | 
+ **object** | [**LtmAuthRadius**](LtmAuthRadius.md)|  | 
 
 ### Return type
 
-[**AuthRadius**](auth_radius.md)
+[**LtmAuthRadius**](ltm_auth_radius.md)
 
 ### Authorization
 
@@ -25172,7 +25142,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthRadiusServer**
-> AuthRadiusServer PostAuthRadiusServer($id, $object)
+> LtmAuthRadiusServer PostAuthRadiusServer($id, $object)
 
 
 
@@ -25184,11 +25154,11 @@ RADIUS server configuration for use with RADIUS authentication profiles
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthRadiusServer**](AuthRadiusServer.md)|  | 
+ **object** | [**LtmAuthRadiusServer**](LtmAuthRadiusServer.md)|  | 
 
 ### Return type
 
-[**AuthRadiusServer**](auth_radiusServer.md)
+[**LtmAuthRadiusServer**](ltm_auth_radiusServer.md)
 
 ### Authorization
 
@@ -25202,7 +25172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthSslCcLdap**
-> AuthSslCcLdap PostAuthSslCcLdap($id, $object)
+> LtmAuthSslCcLdap PostAuthSslCcLdap($id, $object)
 
 
 
@@ -25214,11 +25184,11 @@ SSL client certificate configuration, for use with remote SSL-based LDAP authori
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthSslCcLdap**](AuthSslCcLdap.md)|  | 
+ **object** | [**LtmAuthSslCcLdap**](LtmAuthSslCcLdap.md)|  | 
 
 ### Return type
 
-[**AuthSslCcLdap**](auth_sslCcLdap.md)
+[**LtmAuthSslCcLdap**](ltm_auth_sslCcLdap.md)
 
 ### Authorization
 
@@ -25232,7 +25202,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthSslCrldp**
-> AuthSslCrldp PostAuthSslCrldp($id, $object)
+> LtmAuthSslCrldp PostAuthSslCrldp($id, $object)
 
 
 
@@ -25244,11 +25214,11 @@ SSL client certificate configuration, for use with remote SSL-based CRLDP author
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthSslCrldp**](AuthSslCrldp.md)|  | 
+ **object** | [**LtmAuthSslCrldp**](LtmAuthSslCrldp.md)|  | 
 
 ### Return type
 
-[**AuthSslCrldp**](auth_sslCrldp.md)
+[**LtmAuthSslCrldp**](ltm_auth_sslCrldp.md)
 
 ### Authorization
 
@@ -25262,7 +25232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthSslOcsp**
-> AuthSslOcsp PostAuthSslOcsp($id, $object)
+> LtmAuthSslOcsp PostAuthSslOcsp($id, $object)
 
 
 
@@ -25274,11 +25244,11 @@ OCSP configuration for implementing remote OCSP-based client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthSslOcsp**](AuthSslOcsp.md)|  | 
+ **object** | [**LtmAuthSslOcsp**](LtmAuthSslOcsp.md)|  | 
 
 ### Return type
 
-[**AuthSslOcsp**](auth_sslOcsp.md)
+[**LtmAuthSslOcsp**](ltm_auth_sslOcsp.md)
 
 ### Authorization
 
@@ -25292,7 +25262,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostAuthTacacs**
-> AuthTacacs PostAuthTacacs($id, $object)
+> LtmAuthTacacs PostAuthTacacs($id, $object)
 
 
 
@@ -25304,11 +25274,11 @@ TACACS+ configuration for remote TACACS+ client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthTacacs**](AuthTacacs.md)|  | 
+ **object** | [**LtmAuthTacacs**](LtmAuthTacacs.md)|  | 
 
 ### Return type
 
-[**AuthTacacs**](auth_tacacs.md)
+[**LtmAuthTacacs**](ltm_auth_tacacs.md)
 
 ### Authorization
 
@@ -25322,7 +25292,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationApplication**
-> ClassificationApplication PostClassificationApplication($id, $object)
+> LtmClassificationApplication PostClassificationApplication($id, $object)
 
 
 
@@ -25334,11 +25304,11 @@ Traffic Classification Application
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationApplication**](ClassificationApplication.md)|  | 
+ **object** | [**LtmClassificationApplication**](LtmClassificationApplication.md)|  | 
 
 ### Return type
 
-[**ClassificationApplication**](classification_application.md)
+[**LtmClassificationApplication**](ltm_classification_application.md)
 
 ### Authorization
 
@@ -25352,7 +25322,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationCategory**
-> ClassificationCategory PostClassificationCategory($id, $object)
+> LtmClassificationCategory PostClassificationCategory($id, $object)
 
 
 
@@ -25364,11 +25334,11 @@ Traffic Classification Category
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationCategory**](ClassificationCategory.md)|  | 
+ **object** | [**LtmClassificationCategory**](LtmClassificationCategory.md)|  | 
 
 ### Return type
 
-[**ClassificationCategory**](classification_category.md)
+[**LtmClassificationCategory**](ltm_classification_category.md)
 
 ### Authorization
 
@@ -25382,7 +25352,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationSignatureDefinition**
-> ClassificationSignatureDefinition PostClassificationSignatureDefinition($id, $object)
+> LtmClassificationSignatureDefinition PostClassificationSignatureDefinition($id, $object)
 
 
 
@@ -25394,11 +25364,11 @@ Configure status for classification signature updates.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationSignatureDefinition**](ClassificationSignatureDefinition.md)|  | 
+ **object** | [**LtmClassificationSignatureDefinition**](LtmClassificationSignatureDefinition.md)|  | 
 
 ### Return type
 
-[**ClassificationSignatureDefinition**](classification_signatureDefinition.md)
+[**LtmClassificationSignatureDefinition**](ltm_classification_signatureDefinition.md)
 
 ### Authorization
 
@@ -25412,7 +25382,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationSignatures**
-> ClassificationSignatures PostClassificationSignatures($id, $object)
+> LtmClassificationSignatures PostClassificationSignatures($id, $object)
 
 
 
@@ -25424,11 +25394,11 @@ Load classification signatures file either from folder /var/log/dpi/signatures/,
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationSignatures**](ClassificationSignatures.md)|  | 
+ **object** | [**LtmClassificationSignatures**](LtmClassificationSignatures.md)|  | 
 
 ### Return type
 
-[**ClassificationSignatures**](classification_signatures.md)
+[**LtmClassificationSignatures**](ltm_classification_signatures.md)
 
 ### Authorization
 
@@ -25442,7 +25412,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationStatsApplication**
-> ClassificationStatsApplication PostClassificationStatsApplication($id, $object)
+> LtmClassificationStatsApplication PostClassificationStatsApplication($id, $object)
 
 
 
@@ -25454,11 +25424,11 @@ Statistics of classified applications
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationStatsApplication**](ClassificationStatsApplication.md)|  | 
+ **object** | [**LtmClassificationStatsApplication**](LtmClassificationStatsApplication.md)|  | 
 
 ### Return type
 
-[**ClassificationStatsApplication**](classification_stats_application.md)
+[**LtmClassificationStatsApplication**](ltm_classification_stats_application.md)
 
 ### Authorization
 
@@ -25472,7 +25442,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationStatsUrlCategory**
-> ClassificationStatsUrlCategory PostClassificationStatsUrlCategory($id, $object)
+> LtmClassificationStatsUrlCategory PostClassificationStatsUrlCategory($id, $object)
 
 
 
@@ -25484,11 +25454,11 @@ Statistics of classified url-category
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationStatsUrlCategory**](ClassificationStatsUrlCategory.md)|  | 
+ **object** | [**LtmClassificationStatsUrlCategory**](LtmClassificationStatsUrlCategory.md)|  | 
 
 ### Return type
 
-[**ClassificationStatsUrlCategory**](classification_stats_urlCategory.md)
+[**LtmClassificationStatsUrlCategory**](ltm_classification_stats_urlCategory.md)
 
 ### Authorization
 
@@ -25502,7 +25472,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationUpdateSignatures**
-> ClassificationUpdateSignatures PostClassificationUpdateSignatures($id, $object)
+> LtmClassificationUpdateSignatures PostClassificationUpdateSignatures($id, $object)
 
 
 
@@ -25514,11 +25484,11 @@ Run classification signatures update.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUpdateSignatures**](ClassificationUpdateSignatures.md)|  | 
+ **object** | [**LtmClassificationUpdateSignatures**](LtmClassificationUpdateSignatures.md)|  | 
 
 ### Return type
 
-[**ClassificationUpdateSignatures**](classification_updateSignatures.md)
+[**LtmClassificationUpdateSignatures**](ltm_classification_updateSignatures.md)
 
 ### Authorization
 
@@ -25532,7 +25502,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationUrlCatPolicy**
-> ClassificationUrlCatPolicy PostClassificationUrlCatPolicy($id, $object)
+> LtmClassificationUrlCatPolicy PostClassificationUrlCatPolicy($id, $object)
 
 
 
@@ -25544,11 +25514,11 @@ URL Categorization policy
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrlCatPolicy**](ClassificationUrlCatPolicy.md)|  | 
+ **object** | [**LtmClassificationUrlCatPolicy**](LtmClassificationUrlCatPolicy.md)|  | 
 
 ### Return type
 
-[**ClassificationUrlCatPolicy**](classification_urlCatPolicy.md)
+[**LtmClassificationUrlCatPolicy**](ltm_classification_urlCatPolicy.md)
 
 ### Authorization
 
@@ -25562,7 +25532,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationUrlCategory**
-> ClassificationUrlCategory PostClassificationUrlCategory($id, $object)
+> LtmClassificationUrlCategory PostClassificationUrlCategory($id, $object)
 
 
 
@@ -25574,11 +25544,11 @@ URL Classification Category
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrlCategory**](ClassificationUrlCategory.md)|  | 
+ **object** | [**LtmClassificationUrlCategory**](LtmClassificationUrlCategory.md)|  | 
 
 ### Return type
 
-[**ClassificationUrlCategory**](classification_urlCategory.md)
+[**LtmClassificationUrlCategory**](ltm_classification_urlCategory.md)
 
 ### Authorization
 
@@ -25592,7 +25562,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationUrldbFeedList**
-> ClassificationUrldbFeedList PostClassificationUrldbFeedList($id, $object)
+> LtmClassificationUrldbFeedList PostClassificationUrldbFeedList($id, $object)
 
 
 
@@ -25604,11 +25574,11 @@ Reusable URLDB feed lists for URL Categorization.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrldbFeedList**](ClassificationUrldbFeedList.md)|  | 
+ **object** | [**LtmClassificationUrldbFeedList**](LtmClassificationUrldbFeedList.md)|  | 
 
 ### Return type
 
-[**ClassificationUrldbFeedList**](classification_urldbFeedList.md)
+[**LtmClassificationUrldbFeedList**](ltm_classification_urldbFeedList.md)
 
 ### Authorization
 
@@ -25622,7 +25592,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostClassificationUrldbFile**
-> ClassificationUrldbFile PostClassificationUrldbFile($id, $object)
+> LtmClassificationUrldbFile PostClassificationUrldbFile($id, $object)
 
 
 
@@ -25634,11 +25604,11 @@ File object for custom url category database.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrldbFile**](ClassificationUrldbFile.md)|  | 
+ **object** | [**LtmClassificationUrldbFile**](LtmClassificationUrldbFile.md)|  | 
 
 ### Return type
 
-[**ClassificationUrldbFile**](classification_urldbFile.md)
+[**LtmClassificationUrldbFile**](ltm_classification_urldbFile.md)
 
 ### Authorization
 
@@ -25652,7 +25622,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDataGroupExternal**
-> DataGroupExternal PostDataGroupExternal($id, $object)
+> LtmDataGroupExternal PostDataGroupExternal($id, $object)
 
 
 
@@ -25664,11 +25634,11 @@ External data group configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DataGroupExternal**](DataGroupExternal.md)|  | 
+ **object** | [**LtmDataGroupExternal**](LtmDataGroupExternal.md)|  | 
 
 ### Return type
 
-[**DataGroupExternal**](dataGroup_external.md)
+[**LtmDataGroupExternal**](ltm_dataGroup_external.md)
 
 ### Authorization
 
@@ -25682,7 +25652,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDataGroupInternal**
-> DataGroupInternal PostDataGroupInternal($id, $object)
+> LtmDataGroupInternal PostDataGroupInternal($id, $object)
 
 
 
@@ -25694,11 +25664,11 @@ Internal data group configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DataGroupInternal**](DataGroupInternal.md)|  | 
+ **object** | [**LtmDataGroupInternal**](LtmDataGroupInternal.md)|  | 
 
 ### Return type
 
-[**DataGroupInternal**](dataGroup_internal.md)
+[**LtmDataGroupInternal**](ltm_dataGroup_internal.md)
 
 ### Authorization
 
@@ -25712,7 +25682,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDnsCacheResolver**
-> DnsCacheResolver PostDnsCacheResolver($id, $object)
+> LtmDnsCacheResolver PostDnsCacheResolver($id, $object)
 
 
 
@@ -25724,11 +25694,11 @@ DNS Cache with recursive resolver.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheResolver**](DnsCacheResolver.md)|  | 
+ **object** | [**LtmDnsCacheResolver**](LtmDnsCacheResolver.md)|  | 
 
 ### Return type
 
-[**DnsCacheResolver**](dns_cache_resolver.md)
+[**LtmDnsCacheResolver**](ltm_dns_cache_resolver.md)
 
 ### Authorization
 
@@ -25742,7 +25712,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDnsCacheTransparent**
-> DnsCacheTransparent PostDnsCacheTransparent($id, $object)
+> LtmDnsCacheTransparent PostDnsCacheTransparent($id, $object)
 
 
 
@@ -25754,11 +25724,11 @@ DNS Cache without a resolver (responses from serverside cached).
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheTransparent**](DnsCacheTransparent.md)|  | 
+ **object** | [**LtmDnsCacheTransparent**](LtmDnsCacheTransparent.md)|  | 
 
 ### Return type
 
-[**DnsCacheTransparent**](dns_cache_transparent.md)
+[**LtmDnsCacheTransparent**](ltm_dns_cache_transparent.md)
 
 ### Authorization
 
@@ -25772,7 +25742,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDnsCacheValidatingResolver**
-> DnsCacheValidatingResolver PostDnsCacheValidatingResolver($id, $object)
+> LtmDnsCacheValidatingResolver PostDnsCacheValidatingResolver($id, $object)
 
 
 
@@ -25784,11 +25754,11 @@ DNS Cache with recursive resolver and DNSSEC validation.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheValidatingResolver**](DnsCacheValidatingResolver.md)|  | 
+ **object** | [**LtmDnsCacheValidatingResolver**](LtmDnsCacheValidatingResolver.md)|  | 
 
 ### Return type
 
-[**DnsCacheValidatingResolver**](dns_cache_validatingResolver.md)
+[**LtmDnsCacheValidatingResolver**](ltm_dns_cache_validatingResolver.md)
 
 ### Authorization
 
@@ -25802,7 +25772,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDnsDnsExpressDb**
-> DnsDnsExpressDb PostDnsDnsExpressDb($id, $object)
+> LtmDnsDnsExpressDb PostDnsDnsExpressDb($id, $object)
 
 
 
@@ -25814,11 +25784,11 @@ DNS Express database loaded into BIG-IP.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsDnsExpressDb**](DnsDnsExpressDb.md)|  | 
+ **object** | [**LtmDnsDnsExpressDb**](LtmDnsDnsExpressDb.md)|  | 
 
 ### Return type
 
-[**DnsDnsExpressDb**](dns_dnsExpressDb.md)
+[**LtmDnsDnsExpressDb**](ltm_dns_dnsExpressDb.md)
 
 ### Authorization
 
@@ -25832,7 +25802,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDnsDnssecKey**
-> DnsDnssecKey PostDnsDnssecKey($id, $object)
+> LtmDnsDnssecKey PostDnsDnssecKey($id, $object)
 
 
 
@@ -25844,11 +25814,11 @@ DNSSEC key configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsDnssecKey**](DnsDnssecKey.md)|  | 
+ **object** | [**LtmDnsDnssecKey**](LtmDnsDnssecKey.md)|  | 
 
 ### Return type
 
-[**DnsDnssecKey**](dns_dnssec_key.md)
+[**LtmDnsDnssecKey**](ltm_dns_dnssec_key.md)
 
 ### Authorization
 
@@ -25862,7 +25832,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDnsDnssecZone**
-> DnsDnssecZone PostDnsDnssecZone($id, $object)
+> LtmDnsDnssecZone PostDnsDnssecZone($id, $object)
 
 
 
@@ -25874,11 +25844,11 @@ DNSSEC zone configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsDnssecZone**](DnsDnssecZone.md)|  | 
+ **object** | [**LtmDnsDnssecZone**](LtmDnsDnssecZone.md)|  | 
 
 ### Return type
 
-[**DnsDnssecZone**](dns_dnssec_zone.md)
+[**LtmDnsDnssecZone**](ltm_dns_dnssec_zone.md)
 
 ### Authorization
 
@@ -25892,7 +25862,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDnsNameserver**
-> DnsNameserver PostDnsNameserver($id, $object)
+> LtmDnsNameserver PostDnsNameserver($id, $object)
 
 
 
@@ -25904,11 +25874,11 @@ DNS nameserver configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsNameserver**](DnsNameserver.md)|  | 
+ **object** | [**LtmDnsNameserver**](LtmDnsNameserver.md)|  | 
 
 ### Return type
 
-[**DnsNameserver**](dns_nameserver.md)
+[**LtmDnsNameserver**](ltm_dns_nameserver.md)
 
 ### Authorization
 
@@ -25922,7 +25892,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDnsTsigKey**
-> DnsTsigKey PostDnsTsigKey($id, $object)
+> LtmDnsTsigKey PostDnsTsigKey($id, $object)
 
 
 
@@ -25934,11 +25904,11 @@ TSIG Key configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsTsigKey**](DnsTsigKey.md)|  | 
+ **object** | [**LtmDnsTsigKey**](LtmDnsTsigKey.md)|  | 
 
 ### Return type
 
-[**DnsTsigKey**](dns_tsigKey.md)
+[**LtmDnsTsigKey**](ltm_dns_tsigKey.md)
 
 ### Authorization
 
@@ -25952,7 +25922,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostDnsZone**
-> DnsZone PostDnsZone($id, $object)
+> LtmDnsZone PostDnsZone($id, $object)
 
 
 
@@ -25964,11 +25934,11 @@ Zone configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsZone**](DnsZone.md)|  | 
+ **object** | [**LtmDnsZone**](LtmDnsZone.md)|  | 
 
 ### Return type
 
-[**DnsZone**](dns_zone.md)
+[**LtmDnsZone**](ltm_dns_zone.md)
 
 ### Authorization
 
@@ -25982,7 +25952,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostEvictionPolicy**
-> EvictionPolicy PostEvictionPolicy($id, $object)
+> LtmEvictionPolicy PostEvictionPolicy($id, $object)
 
 
 
@@ -25994,11 +25964,11 @@ Defines an eviction policy, used to select which flows to evict when approaching
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**EvictionPolicy**](EvictionPolicy.md)|  | 
+ **object** | [**LtmEvictionPolicy**](LtmEvictionPolicy.md)|  | 
 
 ### Return type
 
-[**EvictionPolicy**](evictionPolicy.md)
+[**LtmEvictionPolicy**](ltm_evictionPolicy.md)
 
 ### Authorization
 
@@ -26012,7 +25982,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostHtmlRuleCommentRaiseEvent**
-> HtmlRuleCommentRaiseEvent PostHtmlRuleCommentRaiseEvent($id, $object)
+> LtmHtmlRuleCommentRaiseEvent PostHtmlRuleCommentRaiseEvent($id, $object)
 
 
 
@@ -26024,11 +25994,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleCommentRaiseEvent**](HtmlRuleCommentRaiseEvent.md)|  | 
+ **object** | [**LtmHtmlRuleCommentRaiseEvent**](LtmHtmlRuleCommentRaiseEvent.md)|  | 
 
 ### Return type
 
-[**HtmlRuleCommentRaiseEvent**](htmlRule_commentRaiseEvent.md)
+[**LtmHtmlRuleCommentRaiseEvent**](ltm_htmlRule_commentRaiseEvent.md)
 
 ### Authorization
 
@@ -26042,7 +26012,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostHtmlRuleCommentRemove**
-> HtmlRuleCommentRemove PostHtmlRuleCommentRemove($id, $object)
+> LtmHtmlRuleCommentRemove PostHtmlRuleCommentRemove($id, $object)
 
 
 
@@ -26054,11 +26024,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleCommentRemove**](HtmlRuleCommentRemove.md)|  | 
+ **object** | [**LtmHtmlRuleCommentRemove**](LtmHtmlRuleCommentRemove.md)|  | 
 
 ### Return type
 
-[**HtmlRuleCommentRemove**](htmlRule_commentRemove.md)
+[**LtmHtmlRuleCommentRemove**](ltm_htmlRule_commentRemove.md)
 
 ### Authorization
 
@@ -26072,7 +26042,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostHtmlRuleTagAppendHtml**
-> HtmlRuleTagAppendHtml PostHtmlRuleTagAppendHtml($id, $object)
+> LtmHtmlRuleTagAppendHtml PostHtmlRuleTagAppendHtml($id, $object)
 
 
 
@@ -26084,11 +26054,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagAppendHtml**](HtmlRuleTagAppendHtml.md)|  | 
+ **object** | [**LtmHtmlRuleTagAppendHtml**](LtmHtmlRuleTagAppendHtml.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagAppendHtml**](htmlRule_tagAppendHtml.md)
+[**LtmHtmlRuleTagAppendHtml**](ltm_htmlRule_tagAppendHtml.md)
 
 ### Authorization
 
@@ -26102,7 +26072,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostHtmlRuleTagPrependHtml**
-> HtmlRuleTagPrependHtml PostHtmlRuleTagPrependHtml($id, $object)
+> LtmHtmlRuleTagPrependHtml PostHtmlRuleTagPrependHtml($id, $object)
 
 
 
@@ -26114,11 +26084,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagPrependHtml**](HtmlRuleTagPrependHtml.md)|  | 
+ **object** | [**LtmHtmlRuleTagPrependHtml**](LtmHtmlRuleTagPrependHtml.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagPrependHtml**](htmlRule_tagPrependHtml.md)
+[**LtmHtmlRuleTagPrependHtml**](ltm_htmlRule_tagPrependHtml.md)
 
 ### Authorization
 
@@ -26132,7 +26102,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostHtmlRuleTagRaiseEvent**
-> HtmlRuleTagRaiseEvent PostHtmlRuleTagRaiseEvent($id, $object)
+> LtmHtmlRuleTagRaiseEvent PostHtmlRuleTagRaiseEvent($id, $object)
 
 
 
@@ -26144,11 +26114,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagRaiseEvent**](HtmlRuleTagRaiseEvent.md)|  | 
+ **object** | [**LtmHtmlRuleTagRaiseEvent**](LtmHtmlRuleTagRaiseEvent.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagRaiseEvent**](htmlRule_tagRaiseEvent.md)
+[**LtmHtmlRuleTagRaiseEvent**](ltm_htmlRule_tagRaiseEvent.md)
 
 ### Authorization
 
@@ -26162,7 +26132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostHtmlRuleTagRemove**
-> HtmlRuleTagRemove PostHtmlRuleTagRemove($id, $object)
+> LtmHtmlRuleTagRemove PostHtmlRuleTagRemove($id, $object)
 
 
 
@@ -26174,11 +26144,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagRemove**](HtmlRuleTagRemove.md)|  | 
+ **object** | [**LtmHtmlRuleTagRemove**](LtmHtmlRuleTagRemove.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagRemove**](htmlRule_tagRemove.md)
+[**LtmHtmlRuleTagRemove**](ltm_htmlRule_tagRemove.md)
 
 ### Authorization
 
@@ -26192,7 +26162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostHtmlRuleTagRemoveAttribute**
-> HtmlRuleTagRemoveAttribute PostHtmlRuleTagRemoveAttribute($id, $object)
+> LtmHtmlRuleTagRemoveAttribute PostHtmlRuleTagRemoveAttribute($id, $object)
 
 
 
@@ -26204,11 +26174,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagRemoveAttribute**](HtmlRuleTagRemoveAttribute.md)|  | 
+ **object** | [**LtmHtmlRuleTagRemoveAttribute**](LtmHtmlRuleTagRemoveAttribute.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagRemoveAttribute**](htmlRule_tagRemoveAttribute.md)
+[**LtmHtmlRuleTagRemoveAttribute**](ltm_htmlRule_tagRemoveAttribute.md)
 
 ### Authorization
 
@@ -26222,7 +26192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostIfile**
-> Ifile PostIfile($id, $object)
+> LtmIfile PostIfile($id, $object)
 
 
 
@@ -26234,11 +26204,11 @@ iFile Configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Ifile**](Ifile.md)|  | 
+ **object** | [**LtmIfile**](LtmIfile.md)|  | 
 
 ### Return type
 
-[**Ifile**](ifile.md)
+[**LtmIfile**](ltm_ifile.md)
 
 ### Authorization
 
@@ -26252,7 +26222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostLsnLogProfile**
-> LsnLogProfile PostLsnLogProfile($id, $object)
+> LtmLsnLogProfile PostLsnLogProfile($id, $object)
 
 
 
@@ -26264,11 +26234,11 @@ Defines the configuration for logging of LSN flows.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**LsnLogProfile**](LsnLogProfile.md)|  | 
+ **object** | [**LtmLsnLogProfile**](LtmLsnLogProfile.md)|  | 
 
 ### Return type
 
-[**LsnLogProfile**](lsnLogProfile.md)
+[**LtmLsnLogProfile**](ltm_lsnLogProfile.md)
 
 ### Authorization
 
@@ -26282,7 +26252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostLsnPool**
-> LsnPool PostLsnPool($id, $object)
+> LtmLsnPool PostLsnPool($id, $object)
 
 
 
@@ -26294,11 +26264,11 @@ LSNAT/CGNAT translation address configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**LsnPool**](LsnPool.md)|  | 
+ **object** | [**LtmLsnPool**](LtmLsnPool.md)|  | 
 
 ### Return type
 
-[**LsnPool**](lsnPool.md)
+[**LtmLsnPool**](ltm_lsnPool.md)
 
 ### Authorization
 
@@ -26312,7 +26282,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingDiameterPeer**
-> MessageRoutingDiameterPeer PostMessageRoutingDiameterPeer($id, $object)
+> LtmMessageRoutingDiameterPeer PostMessageRoutingDiameterPeer($id, $object)
 
 
 
@@ -26324,11 +26294,11 @@ Peed for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterPeer**](MessageRoutingDiameterPeer.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterPeer**](LtmMessageRoutingDiameterPeer.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterPeer**](messageRouting_diameter_peer.md)
+[**LtmMessageRoutingDiameterPeer**](ltm_messageRouting_diameter_peer.md)
 
 ### Authorization
 
@@ -26342,7 +26312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingDiameterProfileRouter**
-> MessageRoutingDiameterProfileRouter PostMessageRoutingDiameterProfileRouter($id, $object)
+> LtmMessageRoutingDiameterProfileRouter PostMessageRoutingDiameterProfileRouter($id, $object)
 
 
 
@@ -26354,11 +26324,11 @@ Configures a Diameter Router profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterProfileRouter**](MessageRoutingDiameterProfileRouter.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterProfileRouter**](LtmMessageRoutingDiameterProfileRouter.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterProfileRouter**](messageRouting_diameter_profile_router.md)
+[**LtmMessageRoutingDiameterProfileRouter**](ltm_messageRouting_diameter_profile_router.md)
 
 ### Authorization
 
@@ -26372,7 +26342,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingDiameterProfileSession**
-> MessageRoutingDiameterProfileSession PostMessageRoutingDiameterProfileSession($id, $object)
+> LtmMessageRoutingDiameterProfileSession PostMessageRoutingDiameterProfileSession($id, $object)
 
 
 
@@ -26384,11 +26354,11 @@ Configures a Diameter Session profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterProfileSession**](MessageRoutingDiameterProfileSession.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterProfileSession**](LtmMessageRoutingDiameterProfileSession.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterProfileSession**](messageRouting_diameter_profile_session.md)
+[**LtmMessageRoutingDiameterProfileSession**](ltm_messageRouting_diameter_profile_session.md)
 
 ### Authorization
 
@@ -26402,7 +26372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingDiameterRoute**
-> MessageRoutingDiameterRoute PostMessageRoutingDiameterRoute($id, $object)
+> LtmMessageRoutingDiameterRoute PostMessageRoutingDiameterRoute($id, $object)
 
 
 
@@ -26414,11 +26384,11 @@ Configures a static route for use in Diameter message routing.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterRoute**](MessageRoutingDiameterRoute.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterRoute**](LtmMessageRoutingDiameterRoute.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterRoute**](messageRouting_diameter_route.md)
+[**LtmMessageRoutingDiameterRoute**](ltm_messageRouting_diameter_route.md)
 
 ### Authorization
 
@@ -26432,7 +26402,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingDiameterTransportConfig**
-> MessageRoutingDiameterTransportConfig PostMessageRoutingDiameterTransportConfig($id, $object)
+> LtmMessageRoutingDiameterTransportConfig PostMessageRoutingDiameterTransportConfig($id, $object)
 
 
 
@@ -26444,11 +26414,11 @@ Defines the configuration for an outgoing connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterTransportConfig**](MessageRoutingDiameterTransportConfig.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterTransportConfig**](LtmMessageRoutingDiameterTransportConfig.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfig**](messageRouting_diameter_transportConfig.md)
+[**LtmMessageRoutingDiameterTransportConfig**](ltm_messageRouting_diameter_transportConfig.md)
 
 ### Authorization
 
@@ -26462,7 +26432,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingDiameterTransportConfigProfiles**
-> MessageRoutingDiameterTransportConfigProfiles PostMessageRoutingDiameterTransportConfigProfiles($id, $object)
+> LtmMessageRoutingDiameterTransportConfigProfiles PostMessageRoutingDiameterTransportConfigProfiles($id, $object)
 
 
 
@@ -26474,11 +26444,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterTransportConfigProfiles**](MessageRoutingDiameterTransportConfigProfiles.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterTransportConfigProfiles**](LtmMessageRoutingDiameterTransportConfigProfiles.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfigProfiles**](messageRouting_diameter_transportConfig_profiles.md)
+[**LtmMessageRoutingDiameterTransportConfigProfiles**](ltm_messageRouting_diameter_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -26492,7 +26462,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingGenericPeer**
-> MessageRoutingGenericPeer PostMessageRoutingGenericPeer($id, $object)
+> LtmMessageRoutingGenericPeer PostMessageRoutingGenericPeer($id, $object)
 
 
 
@@ -26504,11 +26474,11 @@ Peed for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericPeer**](MessageRoutingGenericPeer.md)|  | 
+ **object** | [**LtmMessageRoutingGenericPeer**](LtmMessageRoutingGenericPeer.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericPeer**](messageRouting_generic_peer.md)
+[**LtmMessageRoutingGenericPeer**](ltm_messageRouting_generic_peer.md)
 
 ### Authorization
 
@@ -26522,7 +26492,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingGenericProtocol**
-> MessageRoutingGenericProtocol PostMessageRoutingGenericProtocol($id, $object)
+> LtmMessageRoutingGenericProtocol PostMessageRoutingGenericProtocol($id, $object)
 
 
 
@@ -26534,11 +26504,11 @@ Generic message parser for use with the message routing framework.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericProtocol**](MessageRoutingGenericProtocol.md)|  | 
+ **object** | [**LtmMessageRoutingGenericProtocol**](LtmMessageRoutingGenericProtocol.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericProtocol**](messageRouting_generic_protocol.md)
+[**LtmMessageRoutingGenericProtocol**](ltm_messageRouting_generic_protocol.md)
 
 ### Authorization
 
@@ -26552,7 +26522,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingGenericRoute**
-> MessageRoutingGenericRoute PostMessageRoutingGenericRoute($id, $object)
+> LtmMessageRoutingGenericRoute PostMessageRoutingGenericRoute($id, $object)
 
 
 
@@ -26564,11 +26534,11 @@ Static route for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericRoute**](MessageRoutingGenericRoute.md)|  | 
+ **object** | [**LtmMessageRoutingGenericRoute**](LtmMessageRoutingGenericRoute.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericRoute**](messageRouting_generic_route.md)
+[**LtmMessageRoutingGenericRoute**](ltm_messageRouting_generic_route.md)
 
 ### Authorization
 
@@ -26582,7 +26552,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingGenericRouter**
-> MessageRoutingGenericRouter PostMessageRoutingGenericRouter($id, $object)
+> LtmMessageRoutingGenericRouter PostMessageRoutingGenericRouter($id, $object)
 
 
 
@@ -26594,11 +26564,11 @@ Message routing instance for generic message protocol.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericRouter**](MessageRoutingGenericRouter.md)|  | 
+ **object** | [**LtmMessageRoutingGenericRouter**](LtmMessageRoutingGenericRouter.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericRouter**](messageRouting_generic_router.md)
+[**LtmMessageRoutingGenericRouter**](ltm_messageRouting_generic_router.md)
 
 ### Authorization
 
@@ -26612,7 +26582,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingGenericTransportConfig**
-> MessageRoutingGenericTransportConfig PostMessageRoutingGenericTransportConfig($id, $object)
+> LtmMessageRoutingGenericTransportConfig PostMessageRoutingGenericTransportConfig($id, $object)
 
 
 
@@ -26624,11 +26594,11 @@ Defines the configuration for an outgoing connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericTransportConfig**](MessageRoutingGenericTransportConfig.md)|  | 
+ **object** | [**LtmMessageRoutingGenericTransportConfig**](LtmMessageRoutingGenericTransportConfig.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfig**](messageRouting_generic_transportConfig.md)
+[**LtmMessageRoutingGenericTransportConfig**](ltm_messageRouting_generic_transportConfig.md)
 
 ### Authorization
 
@@ -26642,7 +26612,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingGenericTransportConfigProfiles**
-> MessageRoutingGenericTransportConfigProfiles PostMessageRoutingGenericTransportConfigProfiles($id, $object)
+> LtmMessageRoutingGenericTransportConfigProfiles PostMessageRoutingGenericTransportConfigProfiles($id, $object)
 
 
 
@@ -26654,11 +26624,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericTransportConfigProfiles**](MessageRoutingGenericTransportConfigProfiles.md)|  | 
+ **object** | [**LtmMessageRoutingGenericTransportConfigProfiles**](LtmMessageRoutingGenericTransportConfigProfiles.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfigProfiles**](messageRouting_generic_transportConfig_profiles.md)
+[**LtmMessageRoutingGenericTransportConfigProfiles**](ltm_messageRouting_generic_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -26672,7 +26642,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingSipPeer**
-> MessageRoutingSipPeer PostMessageRoutingSipPeer($id, $object)
+> LtmMessageRoutingSipPeer PostMessageRoutingSipPeer($id, $object)
 
 
 
@@ -26684,11 +26654,11 @@ Peed for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipPeer**](MessageRoutingSipPeer.md)|  | 
+ **object** | [**LtmMessageRoutingSipPeer**](LtmMessageRoutingSipPeer.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipPeer**](messageRouting_sip_peer.md)
+[**LtmMessageRoutingSipPeer**](ltm_messageRouting_sip_peer.md)
 
 ### Authorization
 
@@ -26702,7 +26672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingSipProfileRouter**
-> MessageRoutingSipProfileRouter PostMessageRoutingSipProfileRouter($id, $object)
+> LtmMessageRoutingSipProfileRouter PostMessageRoutingSipProfileRouter($id, $object)
 
 
 
@@ -26714,11 +26684,11 @@ Configures a Session Initiation Protocol (SIP) Router profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipProfileRouter**](MessageRoutingSipProfileRouter.md)|  | 
+ **object** | [**LtmMessageRoutingSipProfileRouter**](LtmMessageRoutingSipProfileRouter.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipProfileRouter**](messageRouting_sip_profile_router.md)
+[**LtmMessageRoutingSipProfileRouter**](ltm_messageRouting_sip_profile_router.md)
 
 ### Authorization
 
@@ -26732,7 +26702,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingSipProfileSession**
-> MessageRoutingSipProfileSession PostMessageRoutingSipProfileSession($id, $object)
+> LtmMessageRoutingSipProfileSession PostMessageRoutingSipProfileSession($id, $object)
 
 
 
@@ -26744,11 +26714,11 @@ Configures a Session Initiation Protocol (SIP) Session profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipProfileSession**](MessageRoutingSipProfileSession.md)|  | 
+ **object** | [**LtmMessageRoutingSipProfileSession**](LtmMessageRoutingSipProfileSession.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipProfileSession**](messageRouting_sip_profile_session.md)
+[**LtmMessageRoutingSipProfileSession**](ltm_messageRouting_sip_profile_session.md)
 
 ### Authorization
 
@@ -26762,7 +26732,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingSipRoute**
-> MessageRoutingSipRoute PostMessageRoutingSipRoute($id, $object)
+> LtmMessageRoutingSipRoute PostMessageRoutingSipRoute($id, $object)
 
 
 
@@ -26774,11 +26744,11 @@ Configures a static route for use in Session Initiation Protocol (SIP) message r
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipRoute**](MessageRoutingSipRoute.md)|  | 
+ **object** | [**LtmMessageRoutingSipRoute**](LtmMessageRoutingSipRoute.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipRoute**](messageRouting_sip_route.md)
+[**LtmMessageRoutingSipRoute**](ltm_messageRouting_sip_route.md)
 
 ### Authorization
 
@@ -26792,7 +26762,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingSipTransportConfig**
-> MessageRoutingSipTransportConfig PostMessageRoutingSipTransportConfig($id, $object)
+> LtmMessageRoutingSipTransportConfig PostMessageRoutingSipTransportConfig($id, $object)
 
 
 
@@ -26804,11 +26774,11 @@ Defines the configuration for an outgoing connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipTransportConfig**](MessageRoutingSipTransportConfig.md)|  | 
+ **object** | [**LtmMessageRoutingSipTransportConfig**](LtmMessageRoutingSipTransportConfig.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipTransportConfig**](messageRouting_sip_transportConfig.md)
+[**LtmMessageRoutingSipTransportConfig**](ltm_messageRouting_sip_transportConfig.md)
 
 ### Authorization
 
@@ -26822,7 +26792,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMessageRoutingSipTransportConfigProfiles**
-> MessageRoutingSipTransportConfigProfiles PostMessageRoutingSipTransportConfigProfiles($id, $object)
+> LtmMessageRoutingSipTransportConfigProfiles PostMessageRoutingSipTransportConfigProfiles($id, $object)
 
 
 
@@ -26834,11 +26804,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipTransportConfigProfiles**](MessageRoutingSipTransportConfigProfiles.md)|  | 
+ **object** | [**LtmMessageRoutingSipTransportConfigProfiles**](LtmMessageRoutingSipTransportConfigProfiles.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipTransportConfigProfiles**](messageRouting_sip_transportConfig_profiles.md)
+[**LtmMessageRoutingSipTransportConfigProfiles**](ltm_messageRouting_sip_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -26852,7 +26822,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorDiameter**
-> MonitorDiameter PostMonitorDiameter($id, $object)
+> LtmMonitorDiameter PostMonitorDiameter($id, $object)
 
 
 
@@ -26864,11 +26834,11 @@ Diameter monitor configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorDiameter**](MonitorDiameter.md)|  | 
+ **object** | [**LtmMonitorDiameter**](LtmMonitorDiameter.md)|  | 
 
 ### Return type
 
-[**MonitorDiameter**](monitor_diameter.md)
+[**LtmMonitorDiameter**](ltm_monitor_diameter.md)
 
 ### Authorization
 
@@ -26882,7 +26852,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorDns**
-> MonitorDns PostMonitorDns($id, $object)
+> LtmMonitorDns PostMonitorDns($id, $object)
 
 
 
@@ -26894,11 +26864,11 @@ DNS monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorDns**](MonitorDns.md)|  | 
+ **object** | [**LtmMonitorDns**](LtmMonitorDns.md)|  | 
 
 ### Return type
 
-[**MonitorDns**](monitor_dns.md)
+[**LtmMonitorDns**](ltm_monitor_dns.md)
 
 ### Authorization
 
@@ -26912,7 +26882,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorExternal**
-> MonitorExternal PostMonitorExternal($id, $object)
+> LtmMonitorExternal PostMonitorExternal($id, $object)
 
 
 
@@ -26924,11 +26894,11 @@ External monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorExternal**](MonitorExternal.md)|  | 
+ **object** | [**LtmMonitorExternal**](LtmMonitorExternal.md)|  | 
 
 ### Return type
 
-[**MonitorExternal**](monitor_external.md)
+[**LtmMonitorExternal**](ltm_monitor_external.md)
 
 ### Authorization
 
@@ -26942,7 +26912,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorFirepass**
-> MonitorFirepass PostMonitorFirepass($id, $object)
+> LtmMonitorFirepass PostMonitorFirepass($id, $object)
 
 
 
@@ -26954,11 +26924,11 @@ Firepass monitor configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorFirepass**](MonitorFirepass.md)|  | 
+ **object** | [**LtmMonitorFirepass**](LtmMonitorFirepass.md)|  | 
 
 ### Return type
 
-[**MonitorFirepass**](monitor_firepass.md)
+[**LtmMonitorFirepass**](ltm_monitor_firepass.md)
 
 ### Authorization
 
@@ -26972,7 +26942,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorFtp**
-> MonitorFtp PostMonitorFtp($id, $object)
+> LtmMonitorFtp PostMonitorFtp($id, $object)
 
 
 
@@ -26984,11 +26954,11 @@ FTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorFtp**](MonitorFtp.md)|  | 
+ **object** | [**LtmMonitorFtp**](LtmMonitorFtp.md)|  | 
 
 ### Return type
 
-[**MonitorFtp**](monitor_ftp.md)
+[**LtmMonitorFtp**](ltm_monitor_ftp.md)
 
 ### Authorization
 
@@ -27002,7 +26972,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorGatewayIcmp**
-> MonitorGatewayIcmp PostMonitorGatewayIcmp($id, $object)
+> LtmMonitorGatewayIcmp PostMonitorGatewayIcmp($id, $object)
 
 
 
@@ -27014,11 +26984,11 @@ Gateway ICMP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorGatewayIcmp**](MonitorGatewayIcmp.md)|  | 
+ **object** | [**LtmMonitorGatewayIcmp**](LtmMonitorGatewayIcmp.md)|  | 
 
 ### Return type
 
-[**MonitorGatewayIcmp**](monitor_gatewayIcmp.md)
+[**LtmMonitorGatewayIcmp**](ltm_monitor_gatewayIcmp.md)
 
 ### Authorization
 
@@ -27032,7 +27002,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorHttp**
-> MonitorHttp PostMonitorHttp($id, $object)
+> LtmMonitorHttp PostMonitorHttp($id, $object)
 
 
 
@@ -27044,11 +27014,11 @@ HTTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorHttp**](MonitorHttp.md)|  | 
+ **object** | [**LtmMonitorHttp**](LtmMonitorHttp.md)|  | 
 
 ### Return type
 
-[**MonitorHttp**](monitor_http.md)
+[**LtmMonitorHttp**](ltm_monitor_http.md)
 
 ### Authorization
 
@@ -27062,7 +27032,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorHttps**
-> MonitorHttps PostMonitorHttps($id, $object)
+> LtmMonitorHttps PostMonitorHttps($id, $object)
 
 
 
@@ -27074,11 +27044,11 @@ HTTPS monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorHttps**](MonitorHttps.md)|  | 
+ **object** | [**LtmMonitorHttps**](LtmMonitorHttps.md)|  | 
 
 ### Return type
 
-[**MonitorHttps**](monitor_https.md)
+[**LtmMonitorHttps**](ltm_monitor_https.md)
 
 ### Authorization
 
@@ -27092,7 +27062,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorIcmp**
-> MonitorIcmp PostMonitorIcmp($id, $object)
+> LtmMonitorIcmp PostMonitorIcmp($id, $object)
 
 
 
@@ -27104,11 +27074,11 @@ ICMP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorIcmp**](MonitorIcmp.md)|  | 
+ **object** | [**LtmMonitorIcmp**](LtmMonitorIcmp.md)|  | 
 
 ### Return type
 
-[**MonitorIcmp**](monitor_icmp.md)
+[**LtmMonitorIcmp**](ltm_monitor_icmp.md)
 
 ### Authorization
 
@@ -27122,7 +27092,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorImap**
-> MonitorImap PostMonitorImap($id, $object)
+> LtmMonitorImap PostMonitorImap($id, $object)
 
 
 
@@ -27134,11 +27104,11 @@ IMAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorImap**](MonitorImap.md)|  | 
+ **object** | [**LtmMonitorImap**](LtmMonitorImap.md)|  | 
 
 ### Return type
 
-[**MonitorImap**](monitor_imap.md)
+[**LtmMonitorImap**](ltm_monitor_imap.md)
 
 ### Authorization
 
@@ -27152,7 +27122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorInband**
-> MonitorInband PostMonitorInband($id, $object)
+> LtmMonitorInband PostMonitorInband($id, $object)
 
 
 
@@ -27164,11 +27134,11 @@ Inband monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorInband**](MonitorInband.md)|  | 
+ **object** | [**LtmMonitorInband**](LtmMonitorInband.md)|  | 
 
 ### Return type
 
-[**MonitorInband**](monitor_inband.md)
+[**LtmMonitorInband**](ltm_monitor_inband.md)
 
 ### Authorization
 
@@ -27182,7 +27152,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorLdap**
-> MonitorLdap PostMonitorLdap($id, $object)
+> LtmMonitorLdap PostMonitorLdap($id, $object)
 
 
 
@@ -27194,11 +27164,11 @@ LDAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorLdap**](MonitorLdap.md)|  | 
+ **object** | [**LtmMonitorLdap**](LtmMonitorLdap.md)|  | 
 
 ### Return type
 
-[**MonitorLdap**](monitor_ldap.md)
+[**LtmMonitorLdap**](ltm_monitor_ldap.md)
 
 ### Authorization
 
@@ -27212,7 +27182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorModuleScore**
-> MonitorModuleScore PostMonitorModuleScore($id, $object)
+> LtmMonitorModuleScore PostMonitorModuleScore($id, $object)
 
 
 
@@ -27224,11 +27194,11 @@ Module score monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorModuleScore**](MonitorModuleScore.md)|  | 
+ **object** | [**LtmMonitorModuleScore**](LtmMonitorModuleScore.md)|  | 
 
 ### Return type
 
-[**MonitorModuleScore**](monitor_moduleScore.md)
+[**LtmMonitorModuleScore**](ltm_monitor_moduleScore.md)
 
 ### Authorization
 
@@ -27242,7 +27212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorMssql**
-> MonitorMssql PostMonitorMssql($id, $object)
+> LtmMonitorMssql PostMonitorMssql($id, $object)
 
 
 
@@ -27254,11 +27224,11 @@ MSSQL monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorMssql**](MonitorMssql.md)|  | 
+ **object** | [**LtmMonitorMssql**](LtmMonitorMssql.md)|  | 
 
 ### Return type
 
-[**MonitorMssql**](monitor_mssql.md)
+[**LtmMonitorMssql**](ltm_monitor_mssql.md)
 
 ### Authorization
 
@@ -27272,7 +27242,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorMysql**
-> MonitorMysql PostMonitorMysql($id, $object)
+> LtmMonitorMysql PostMonitorMysql($id, $object)
 
 
 
@@ -27284,11 +27254,11 @@ MySQL monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorMysql**](MonitorMysql.md)|  | 
+ **object** | [**LtmMonitorMysql**](LtmMonitorMysql.md)|  | 
 
 ### Return type
 
-[**MonitorMysql**](monitor_mysql.md)
+[**LtmMonitorMysql**](ltm_monitor_mysql.md)
 
 ### Authorization
 
@@ -27302,7 +27272,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorNntp**
-> MonitorNntp PostMonitorNntp($id, $object)
+> LtmMonitorNntp PostMonitorNntp($id, $object)
 
 
 
@@ -27314,11 +27284,11 @@ NNTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorNntp**](MonitorNntp.md)|  | 
+ **object** | [**LtmMonitorNntp**](LtmMonitorNntp.md)|  | 
 
 ### Return type
 
-[**MonitorNntp**](monitor_nntp.md)
+[**LtmMonitorNntp**](ltm_monitor_nntp.md)
 
 ### Authorization
 
@@ -27332,7 +27302,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorNone**
-> MonitorNone PostMonitorNone($id, $object)
+> LtmMonitorNone PostMonitorNone($id, $object)
 
 
 
@@ -27344,11 +27314,11 @@ The NULL monitor.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorNone**](MonitorNone.md)|  | 
+ **object** | [**LtmMonitorNone**](LtmMonitorNone.md)|  | 
 
 ### Return type
 
-[**MonitorNone**](monitor_none.md)
+[**LtmMonitorNone**](ltm_monitor_none.md)
 
 ### Authorization
 
@@ -27362,7 +27332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorOracle**
-> MonitorOracle PostMonitorOracle($id, $object)
+> LtmMonitorOracle PostMonitorOracle($id, $object)
 
 
 
@@ -27374,11 +27344,11 @@ Oracle monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorOracle**](MonitorOracle.md)|  | 
+ **object** | [**LtmMonitorOracle**](LtmMonitorOracle.md)|  | 
 
 ### Return type
 
-[**MonitorOracle**](monitor_oracle.md)
+[**LtmMonitorOracle**](ltm_monitor_oracle.md)
 
 ### Authorization
 
@@ -27392,7 +27362,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorPop3**
-> MonitorPop3 PostMonitorPop3($id, $object)
+> LtmMonitorPop3 PostMonitorPop3($id, $object)
 
 
 
@@ -27404,11 +27374,11 @@ POP3 monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorPop3**](MonitorPop3.md)|  | 
+ **object** | [**LtmMonitorPop3**](LtmMonitorPop3.md)|  | 
 
 ### Return type
 
-[**MonitorPop3**](monitor_pop3.md)
+[**LtmMonitorPop3**](ltm_monitor_pop3.md)
 
 ### Authorization
 
@@ -27422,7 +27392,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorPostgresql**
-> MonitorPostgresql PostMonitorPostgresql($id, $object)
+> LtmMonitorPostgresql PostMonitorPostgresql($id, $object)
 
 
 
@@ -27434,11 +27404,11 @@ Postgresql monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorPostgresql**](MonitorPostgresql.md)|  | 
+ **object** | [**LtmMonitorPostgresql**](LtmMonitorPostgresql.md)|  | 
 
 ### Return type
 
-[**MonitorPostgresql**](monitor_postgresql.md)
+[**LtmMonitorPostgresql**](ltm_monitor_postgresql.md)
 
 ### Authorization
 
@@ -27452,7 +27422,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorRadius**
-> MonitorRadius PostMonitorRadius($id, $object)
+> LtmMonitorRadius PostMonitorRadius($id, $object)
 
 
 
@@ -27464,11 +27434,11 @@ Radius monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRadius**](MonitorRadius.md)|  | 
+ **object** | [**LtmMonitorRadius**](LtmMonitorRadius.md)|  | 
 
 ### Return type
 
-[**MonitorRadius**](monitor_radius.md)
+[**LtmMonitorRadius**](ltm_monitor_radius.md)
 
 ### Authorization
 
@@ -27482,7 +27452,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorRadiusAccounting**
-> MonitorRadiusAccounting PostMonitorRadiusAccounting($id, $object)
+> LtmMonitorRadiusAccounting PostMonitorRadiusAccounting($id, $object)
 
 
 
@@ -27494,11 +27464,11 @@ Radius accounting monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRadiusAccounting**](MonitorRadiusAccounting.md)|  | 
+ **object** | [**LtmMonitorRadiusAccounting**](LtmMonitorRadiusAccounting.md)|  | 
 
 ### Return type
 
-[**MonitorRadiusAccounting**](monitor_radiusAccounting.md)
+[**LtmMonitorRadiusAccounting**](ltm_monitor_radiusAccounting.md)
 
 ### Authorization
 
@@ -27512,7 +27482,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorRealServer**
-> MonitorRealServer PostMonitorRealServer($id, $object)
+> LtmMonitorRealServer PostMonitorRealServer($id, $object)
 
 
 
@@ -27524,11 +27494,11 @@ Real Server monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRealServer**](MonitorRealServer.md)|  | 
+ **object** | [**LtmMonitorRealServer**](LtmMonitorRealServer.md)|  | 
 
 ### Return type
 
-[**MonitorRealServer**](monitor_realServer.md)
+[**LtmMonitorRealServer**](ltm_monitor_realServer.md)
 
 ### Authorization
 
@@ -27542,7 +27512,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorRpc**
-> MonitorRpc PostMonitorRpc($id, $object)
+> LtmMonitorRpc PostMonitorRpc($id, $object)
 
 
 
@@ -27554,11 +27524,11 @@ RPC monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRpc**](MonitorRpc.md)|  | 
+ **object** | [**LtmMonitorRpc**](LtmMonitorRpc.md)|  | 
 
 ### Return type
 
-[**MonitorRpc**](monitor_rpc.md)
+[**LtmMonitorRpc**](ltm_monitor_rpc.md)
 
 ### Authorization
 
@@ -27572,7 +27542,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorSasp**
-> MonitorSasp PostMonitorSasp($id, $object)
+> LtmMonitorSasp PostMonitorSasp($id, $object)
 
 
 
@@ -27584,11 +27554,11 @@ SASP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSasp**](MonitorSasp.md)|  | 
+ **object** | [**LtmMonitorSasp**](LtmMonitorSasp.md)|  | 
 
 ### Return type
 
-[**MonitorSasp**](monitor_sasp.md)
+[**LtmMonitorSasp**](ltm_monitor_sasp.md)
 
 ### Authorization
 
@@ -27602,7 +27572,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorScripted**
-> MonitorScripted PostMonitorScripted($id, $object)
+> LtmMonitorScripted PostMonitorScripted($id, $object)
 
 
 
@@ -27614,11 +27584,11 @@ Scripted monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorScripted**](MonitorScripted.md)|  | 
+ **object** | [**LtmMonitorScripted**](LtmMonitorScripted.md)|  | 
 
 ### Return type
 
-[**MonitorScripted**](monitor_scripted.md)
+[**LtmMonitorScripted**](ltm_monitor_scripted.md)
 
 ### Authorization
 
@@ -27632,7 +27602,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorSip**
-> MonitorSip PostMonitorSip($id, $object)
+> LtmMonitorSip PostMonitorSip($id, $object)
 
 
 
@@ -27644,11 +27614,11 @@ SIP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSip**](MonitorSip.md)|  | 
+ **object** | [**LtmMonitorSip**](LtmMonitorSip.md)|  | 
 
 ### Return type
 
-[**MonitorSip**](monitor_sip.md)
+[**LtmMonitorSip**](ltm_monitor_sip.md)
 
 ### Authorization
 
@@ -27662,7 +27632,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorSmb**
-> MonitorSmb PostMonitorSmb($id, $object)
+> LtmMonitorSmb PostMonitorSmb($id, $object)
 
 
 
@@ -27674,11 +27644,11 @@ SMB monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSmb**](MonitorSmb.md)|  | 
+ **object** | [**LtmMonitorSmb**](LtmMonitorSmb.md)|  | 
 
 ### Return type
 
-[**MonitorSmb**](monitor_smb.md)
+[**LtmMonitorSmb**](ltm_monitor_smb.md)
 
 ### Authorization
 
@@ -27692,7 +27662,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorSmtp**
-> MonitorSmtp PostMonitorSmtp($id, $object)
+> LtmMonitorSmtp PostMonitorSmtp($id, $object)
 
 
 
@@ -27704,11 +27674,11 @@ SMTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSmtp**](MonitorSmtp.md)|  | 
+ **object** | [**LtmMonitorSmtp**](LtmMonitorSmtp.md)|  | 
 
 ### Return type
 
-[**MonitorSmtp**](monitor_smtp.md)
+[**LtmMonitorSmtp**](ltm_monitor_smtp.md)
 
 ### Authorization
 
@@ -27722,7 +27692,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorSnmpDca**
-> MonitorSnmpDca PostMonitorSnmpDca($id, $object)
+> LtmMonitorSnmpDca PostMonitorSnmpDca($id, $object)
 
 
 
@@ -27734,11 +27704,11 @@ SNMP DCA monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSnmpDca**](MonitorSnmpDca.md)|  | 
+ **object** | [**LtmMonitorSnmpDca**](LtmMonitorSnmpDca.md)|  | 
 
 ### Return type
 
-[**MonitorSnmpDca**](monitor_snmpDca.md)
+[**LtmMonitorSnmpDca**](ltm_monitor_snmpDca.md)
 
 ### Authorization
 
@@ -27752,7 +27722,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorSnmpDcaBase**
-> MonitorSnmpDcaBase PostMonitorSnmpDcaBase($id, $object)
+> LtmMonitorSnmpDcaBase PostMonitorSnmpDcaBase($id, $object)
 
 
 
@@ -27764,11 +27734,11 @@ SNMP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSnmpDcaBase**](MonitorSnmpDcaBase.md)|  | 
+ **object** | [**LtmMonitorSnmpDcaBase**](LtmMonitorSnmpDcaBase.md)|  | 
 
 ### Return type
 
-[**MonitorSnmpDcaBase**](monitor_snmpDcaBase.md)
+[**LtmMonitorSnmpDcaBase**](ltm_monitor_snmpDcaBase.md)
 
 ### Authorization
 
@@ -27782,7 +27752,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorSoap**
-> MonitorSoap PostMonitorSoap($id, $object)
+> LtmMonitorSoap PostMonitorSoap($id, $object)
 
 
 
@@ -27794,11 +27764,11 @@ SOAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSoap**](MonitorSoap.md)|  | 
+ **object** | [**LtmMonitorSoap**](LtmMonitorSoap.md)|  | 
 
 ### Return type
 
-[**MonitorSoap**](monitor_soap.md)
+[**LtmMonitorSoap**](ltm_monitor_soap.md)
 
 ### Authorization
 
@@ -27812,7 +27782,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorTcp**
-> MonitorTcp PostMonitorTcp($id, $object)
+> LtmMonitorTcp PostMonitorTcp($id, $object)
 
 
 
@@ -27824,11 +27794,11 @@ TCP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorTcp**](MonitorTcp.md)|  | 
+ **object** | [**LtmMonitorTcp**](LtmMonitorTcp.md)|  | 
 
 ### Return type
 
-[**MonitorTcp**](monitor_tcp.md)
+[**LtmMonitorTcp**](ltm_monitor_tcp.md)
 
 ### Authorization
 
@@ -27842,7 +27812,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorTcpEcho**
-> MonitorTcpEcho PostMonitorTcpEcho($id, $object)
+> LtmMonitorTcpEcho PostMonitorTcpEcho($id, $object)
 
 
 
@@ -27854,11 +27824,11 @@ TCP Echo monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorTcpEcho**](MonitorTcpEcho.md)|  | 
+ **object** | [**LtmMonitorTcpEcho**](LtmMonitorTcpEcho.md)|  | 
 
 ### Return type
 
-[**MonitorTcpEcho**](monitor_tcpEcho.md)
+[**LtmMonitorTcpEcho**](ltm_monitor_tcpEcho.md)
 
 ### Authorization
 
@@ -27872,7 +27842,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorTcpHalfOpen**
-> MonitorTcpHalfOpen PostMonitorTcpHalfOpen($id, $object)
+> LtmMonitorTcpHalfOpen PostMonitorTcpHalfOpen($id, $object)
 
 
 
@@ -27884,11 +27854,11 @@ TCP Half Open monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorTcpHalfOpen**](MonitorTcpHalfOpen.md)|  | 
+ **object** | [**LtmMonitorTcpHalfOpen**](LtmMonitorTcpHalfOpen.md)|  | 
 
 ### Return type
 
-[**MonitorTcpHalfOpen**](monitor_tcpHalfOpen.md)
+[**LtmMonitorTcpHalfOpen**](ltm_monitor_tcpHalfOpen.md)
 
 ### Authorization
 
@@ -27902,7 +27872,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorUdp**
-> MonitorUdp PostMonitorUdp($id, $object)
+> LtmMonitorUdp PostMonitorUdp($id, $object)
 
 
 
@@ -27914,11 +27884,11 @@ UDP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorUdp**](MonitorUdp.md)|  | 
+ **object** | [**LtmMonitorUdp**](LtmMonitorUdp.md)|  | 
 
 ### Return type
 
-[**MonitorUdp**](monitor_udp.md)
+[**LtmMonitorUdp**](ltm_monitor_udp.md)
 
 ### Authorization
 
@@ -27932,7 +27902,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorVirtualLocation**
-> MonitorVirtualLocation PostMonitorVirtualLocation($id, $object)
+> LtmMonitorVirtualLocation PostMonitorVirtualLocation($id, $object)
 
 
 
@@ -27944,11 +27914,11 @@ Virtual Location monitor configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorVirtualLocation**](MonitorVirtualLocation.md)|  | 
+ **object** | [**LtmMonitorVirtualLocation**](LtmMonitorVirtualLocation.md)|  | 
 
 ### Return type
 
-[**MonitorVirtualLocation**](monitor_virtualLocation.md)
+[**LtmMonitorVirtualLocation**](ltm_monitor_virtualLocation.md)
 
 ### Authorization
 
@@ -27962,7 +27932,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorWap**
-> MonitorWap PostMonitorWap($id, $object)
+> LtmMonitorWap PostMonitorWap($id, $object)
 
 
 
@@ -27974,11 +27944,11 @@ WAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorWap**](MonitorWap.md)|  | 
+ **object** | [**LtmMonitorWap**](LtmMonitorWap.md)|  | 
 
 ### Return type
 
-[**MonitorWap**](monitor_wap.md)
+[**LtmMonitorWap**](ltm_monitor_wap.md)
 
 ### Authorization
 
@@ -27992,7 +27962,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostMonitorWmi**
-> MonitorWmi PostMonitorWmi($id, $object)
+> LtmMonitorWmi PostMonitorWmi($id, $object)
 
 
 
@@ -28004,11 +27974,11 @@ WMI monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorWmi**](MonitorWmi.md)|  | 
+ **object** | [**LtmMonitorWmi**](LtmMonitorWmi.md)|  | 
 
 ### Return type
 
-[**MonitorWmi**](monitor_wmi.md)
+[**LtmMonitorWmi**](ltm_monitor_wmi.md)
 
 ### Authorization
 
@@ -28022,7 +27992,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostNat**
-> Nat PostNat($id, $object)
+> LtmNat PostNat($id, $object)
 
 
 
@@ -28034,11 +28004,11 @@ Network address translation configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Nat**](Nat.md)|  | 
+ **object** | [**LtmNat**](LtmNat.md)|  | 
 
 ### Return type
 
-[**Nat**](nat.md)
+[**LtmNat**](ltm_nat.md)
 
 ### Authorization
 
@@ -28052,7 +28022,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostNode**
-> Node PostNode($id, $object)
+> LtmNode PostNode($id, $object)
 
 
 
@@ -28064,11 +28034,11 @@ Node specific pool member configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Node**](Node.md)|  | 
+ **object** | [**LtmNode**](LtmNode.md)|  | 
 
 ### Return type
 
-[**Node**](node.md)
+[**LtmNode**](ltm_node.md)
 
 ### Authorization
 
@@ -28082,7 +28052,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPersistenceCookie**
-> PersistenceCookie PostPersistenceCookie($id, $object)
+> LtmPersistenceCookie PostPersistenceCookie($id, $object)
 
 
 
@@ -28094,11 +28064,11 @@ Virtual server Cookie persistence profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceCookie**](PersistenceCookie.md)|  | 
+ **object** | [**LtmPersistenceCookie**](LtmPersistenceCookie.md)|  | 
 
 ### Return type
 
-[**PersistenceCookie**](persistence_cookie.md)
+[**LtmPersistenceCookie**](ltm_persistence_cookie.md)
 
 ### Authorization
 
@@ -28112,7 +28082,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPersistenceDestAddr**
-> PersistenceDestAddr PostPersistenceDestAddr($id, $object)
+> LtmPersistenceDestAddr PostPersistenceDestAddr($id, $object)
 
 
 
@@ -28124,11 +28094,11 @@ Virtual server Destination Address Affinity persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceDestAddr**](PersistenceDestAddr.md)|  | 
+ **object** | [**LtmPersistenceDestAddr**](LtmPersistenceDestAddr.md)|  | 
 
 ### Return type
 
-[**PersistenceDestAddr**](persistence_destAddr.md)
+[**LtmPersistenceDestAddr**](ltm_persistence_destAddr.md)
 
 ### Authorization
 
@@ -28142,7 +28112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPersistenceHash**
-> PersistenceHash PostPersistenceHash($id, $object)
+> LtmPersistenceHash PostPersistenceHash($id, $object)
 
 
 
@@ -28154,11 +28124,11 @@ Virtual server Hash persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceHash**](PersistenceHash.md)|  | 
+ **object** | [**LtmPersistenceHash**](LtmPersistenceHash.md)|  | 
 
 ### Return type
 
-[**PersistenceHash**](persistence_hash.md)
+[**LtmPersistenceHash**](ltm_persistence_hash.md)
 
 ### Authorization
 
@@ -28172,7 +28142,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPersistenceMsrdp**
-> PersistenceMsrdp PostPersistenceMsrdp($id, $object)
+> LtmPersistenceMsrdp PostPersistenceMsrdp($id, $object)
 
 
 
@@ -28184,11 +28154,11 @@ Virtual server Microsoft Remote Desktop (MSRDP) persistence profile configuratio
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceMsrdp**](PersistenceMsrdp.md)|  | 
+ **object** | [**LtmPersistenceMsrdp**](LtmPersistenceMsrdp.md)|  | 
 
 ### Return type
 
-[**PersistenceMsrdp**](persistence_msrdp.md)
+[**LtmPersistenceMsrdp**](ltm_persistence_msrdp.md)
 
 ### Authorization
 
@@ -28202,7 +28172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPersistenceSip**
-> PersistenceSip PostPersistenceSip($id, $object)
+> LtmPersistenceSip PostPersistenceSip($id, $object)
 
 
 
@@ -28214,11 +28184,11 @@ Virtual server SIP persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceSip**](PersistenceSip.md)|  | 
+ **object** | [**LtmPersistenceSip**](LtmPersistenceSip.md)|  | 
 
 ### Return type
 
-[**PersistenceSip**](persistence_sip.md)
+[**LtmPersistenceSip**](ltm_persistence_sip.md)
 
 ### Authorization
 
@@ -28232,7 +28202,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPersistenceSourceAddr**
-> PersistenceSourceAddr PostPersistenceSourceAddr($id, $object)
+> LtmPersistenceSourceAddr PostPersistenceSourceAddr($id, $object)
 
 
 
@@ -28244,11 +28214,11 @@ Virtual server Source Address persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceSourceAddr**](PersistenceSourceAddr.md)|  | 
+ **object** | [**LtmPersistenceSourceAddr**](LtmPersistenceSourceAddr.md)|  | 
 
 ### Return type
 
-[**PersistenceSourceAddr**](persistence_sourceAddr.md)
+[**LtmPersistenceSourceAddr**](ltm_persistence_sourceAddr.md)
 
 ### Authorization
 
@@ -28262,7 +28232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPersistenceSsl**
-> PersistenceSsl PostPersistenceSsl($id, $object)
+> LtmPersistenceSsl PostPersistenceSsl($id, $object)
 
 
 
@@ -28274,11 +28244,11 @@ Virtual server SSL persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceSsl**](PersistenceSsl.md)|  | 
+ **object** | [**LtmPersistenceSsl**](LtmPersistenceSsl.md)|  | 
 
 ### Return type
 
-[**PersistenceSsl**](persistence_ssl.md)
+[**LtmPersistenceSsl**](ltm_persistence_ssl.md)
 
 ### Authorization
 
@@ -28292,7 +28262,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPersistenceUniversal**
-> PersistenceUniversal PostPersistenceUniversal($id, $object)
+> LtmPersistenceUniversal PostPersistenceUniversal($id, $object)
 
 
 
@@ -28304,11 +28274,11 @@ Virtual server Universal persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceUniversal**](PersistenceUniversal.md)|  | 
+ **object** | [**LtmPersistenceUniversal**](LtmPersistenceUniversal.md)|  | 
 
 ### Return type
 
-[**PersistenceUniversal**](persistence_universal.md)
+[**LtmPersistenceUniversal**](ltm_persistence_universal.md)
 
 ### Authorization
 
@@ -28322,7 +28292,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPolicy**
-> Policy PostPolicy($id, $object)
+> LtmPolicy PostPolicy($id, $object)
 
 
 
@@ -28334,11 +28304,11 @@ Centralized Policy Matching configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Policy**](Policy.md)|  | 
+ **object** | [**LtmPolicy**](LtmPolicy.md)|  | 
 
 ### Return type
 
-[**Policy**](policy.md)
+[**LtmPolicy**](ltm_policy.md)
 
 ### Authorization
 
@@ -28352,7 +28322,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPolicyRules**
-> PolicyRules PostPolicyRules($id, $object)
+> LtmPolicyRules PostPolicyRules($id, $object)
 
 
 
@@ -28364,11 +28334,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyRules**](PolicyRules.md)|  | 
+ **object** | [**LtmPolicyRules**](LtmPolicyRules.md)|  | 
 
 ### Return type
 
-[**PolicyRules**](policy_rules.md)
+[**LtmPolicyRules**](ltm_policy_rules.md)
 
 ### Authorization
 
@@ -28382,7 +28352,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPolicyRulesActions**
-> PolicyRulesActions PostPolicyRulesActions($id, $object)
+> LtmPolicyRulesActions PostPolicyRulesActions($id, $object)
 
 
 
@@ -28394,11 +28364,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyRulesActions**](PolicyRulesActions.md)|  | 
+ **object** | [**LtmPolicyRulesActions**](LtmPolicyRulesActions.md)|  | 
 
 ### Return type
 
-[**PolicyRulesActions**](policy_rules_actions.md)
+[**LtmPolicyRulesActions**](ltm_policy_rules_actions.md)
 
 ### Authorization
 
@@ -28412,7 +28382,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPolicyRulesConditions**
-> PolicyRulesConditions PostPolicyRulesConditions($id, $object)
+> LtmPolicyRulesConditions PostPolicyRulesConditions($id, $object)
 
 
 
@@ -28424,11 +28394,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyRulesConditions**](PolicyRulesConditions.md)|  | 
+ **object** | [**LtmPolicyRulesConditions**](LtmPolicyRulesConditions.md)|  | 
 
 ### Return type
 
-[**PolicyRulesConditions**](policy_rules_conditions.md)
+[**LtmPolicyRulesConditions**](ltm_policy_rules_conditions.md)
 
 ### Authorization
 
@@ -28442,7 +28412,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPolicyStrategy**
-> PolicyStrategy PostPolicyStrategy($id, $object)
+> LtmPolicyStrategy PostPolicyStrategy($id, $object)
 
 
 
@@ -28454,11 +28424,11 @@ Centralized Policy Matching rule selection strategy
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyStrategy**](PolicyStrategy.md)|  | 
+ **object** | [**LtmPolicyStrategy**](LtmPolicyStrategy.md)|  | 
 
 ### Return type
 
-[**PolicyStrategy**](policyStrategy.md)
+[**LtmPolicyStrategy**](ltm_policyStrategy.md)
 
 ### Authorization
 
@@ -28472,7 +28442,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPolicyStrategyOperands**
-> PolicyStrategyOperands PostPolicyStrategyOperands($id, $object)
+> LtmPolicyStrategyOperands PostPolicyStrategyOperands($id, $object)
 
 
 
@@ -28484,11 +28454,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyStrategyOperands**](PolicyStrategyOperands.md)|  | 
+ **object** | [**LtmPolicyStrategyOperands**](LtmPolicyStrategyOperands.md)|  | 
 
 ### Return type
 
-[**PolicyStrategyOperands**](policyStrategy_operands.md)
+[**LtmPolicyStrategyOperands**](ltm_policyStrategy_operands.md)
 
 ### Authorization
 
@@ -28502,7 +28472,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPool**
-> Pool PostPool($id, $object)
+> LtmPool PostPool($id, $object)
 
 
 
@@ -28514,11 +28484,11 @@ Load balancing pool configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Pool**](Pool.md)|  | 
+ **object** | [**LtmPool**](LtmPool.md)|  | 
 
 ### Return type
 
-[**Pool**](pool.md)
+[**LtmPool**](ltm_pool.md)
 
 ### Authorization
 
@@ -28532,7 +28502,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostPoolMembers**
-> PoolMembers PostPoolMembers($pid, $id, $object)
+> LtmPoolMembers PostPoolMembers($pid, $id, $object)
 
 
 
@@ -28545,11 +28515,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pid** | **string**| ID of the parent resource | 
  **id** | **string**| ID of the resource | 
- **object** | [**PoolMembers**](PoolMembers.md)|  | 
+ **object** | [**LtmPoolMembers**](LtmPoolMembers.md)|  | 
 
 ### Return type
 
-[**PoolMembers**](pool_members.md)
+[**LtmPoolMembers**](ltm_pool_members.md)
 
 ### Authorization
 
@@ -28563,7 +28533,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileAnalytics**
-> ProfileAnalytics PostProfileAnalytics($id, $object)
+> LtmProfileAnalytics PostProfileAnalytics($id, $object)
 
 
 
@@ -28575,11 +28545,11 @@ Virtual server analytics profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileAnalytics**](ProfileAnalytics.md)|  | 
+ **object** | [**LtmProfileAnalytics**](LtmProfileAnalytics.md)|  | 
 
 ### Return type
 
-[**ProfileAnalytics**](profile_analytics.md)
+[**LtmProfileAnalytics**](ltm_profile_analytics.md)
 
 ### Authorization
 
@@ -28593,7 +28563,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileAnalyticsAlerts**
-> ProfileAnalyticsAlerts PostProfileAnalyticsAlerts($id, $object)
+> LtmProfileAnalyticsAlerts PostProfileAnalyticsAlerts($id, $object)
 
 
 
@@ -28605,11 +28575,11 @@ Manage the set of analytics alerts that are associated with an analytics profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileAnalyticsAlerts**](ProfileAnalyticsAlerts.md)|  | 
+ **object** | [**LtmProfileAnalyticsAlerts**](LtmProfileAnalyticsAlerts.md)|  | 
 
 ### Return type
 
-[**ProfileAnalyticsAlerts**](profile_analytics_alerts.md)
+[**LtmProfileAnalyticsAlerts**](ltm_profile_analytics_alerts.md)
 
 ### Authorization
 
@@ -28623,7 +28593,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileAnalyticsTrafficCapture**
-> ProfileAnalyticsTrafficCapture PostProfileAnalyticsTrafficCapture($id, $object)
+> LtmProfileAnalyticsTrafficCapture PostProfileAnalyticsTrafficCapture($id, $object)
 
 
 
@@ -28635,11 +28605,11 @@ Manage the set of analytics alerts that are associated with an analytics profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileAnalyticsTrafficCapture**](ProfileAnalyticsTrafficCapture.md)|  | 
+ **object** | [**LtmProfileAnalyticsTrafficCapture**](LtmProfileAnalyticsTrafficCapture.md)|  | 
 
 ### Return type
 
-[**ProfileAnalyticsTrafficCapture**](profile_analytics_trafficCapture.md)
+[**LtmProfileAnalyticsTrafficCapture**](ltm_profile_analytics_trafficCapture.md)
 
 ### Authorization
 
@@ -28653,7 +28623,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileCertificateAuthority**
-> ProfileCertificateAuthority PostProfileCertificateAuthority($id, $object)
+> LtmProfileCertificateAuthority PostProfileCertificateAuthority($id, $object)
 
 
 
@@ -28665,11 +28635,11 @@ Virtual server Certificate Authority profile configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileCertificateAuthority**](ProfileCertificateAuthority.md)|  | 
+ **object** | [**LtmProfileCertificateAuthority**](LtmProfileCertificateAuthority.md)|  | 
 
 ### Return type
 
-[**ProfileCertificateAuthority**](profile_certificateAuthority.md)
+[**LtmProfileCertificateAuthority**](ltm_profile_certificateAuthority.md)
 
 ### Authorization
 
@@ -28683,7 +28653,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileClientLdap**
-> ProfileClientLdap PostProfileClientLdap($id, $object)
+> LtmProfileClientLdap PostProfileClientLdap($id, $object)
 
 
 
@@ -28695,11 +28665,11 @@ Virtual server Client LDAP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileClientLdap**](ProfileClientLdap.md)|  | 
+ **object** | [**LtmProfileClientLdap**](LtmProfileClientLdap.md)|  | 
 
 ### Return type
 
-[**ProfileClientLdap**](profile_clientLdap.md)
+[**LtmProfileClientLdap**](ltm_profile_clientLdap.md)
 
 ### Authorization
 
@@ -28713,7 +28683,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileClientSsl**
-> ProfileClientSsl PostProfileClientSsl($id, $object)
+> LtmProfileClientSsl PostProfileClientSsl($id, $object)
 
 
 
@@ -28725,11 +28695,11 @@ Virtual server client-side proxy SSL profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileClientSsl**](ProfileClientSsl.md)|  | 
+ **object** | [**LtmProfileClientSsl**](LtmProfileClientSsl.md)|  | 
 
 ### Return type
 
-[**ProfileClientSsl**](profile_clientSsl.md)
+[**LtmProfileClientSsl**](ltm_profile_clientSsl.md)
 
 ### Authorization
 
@@ -28743,7 +28713,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileDhcpv4**
-> ProfileDhcpv4 PostProfileDhcpv4($id, $object)
+> LtmProfileDhcpv4 PostProfileDhcpv4($id, $object)
 
 
 
@@ -28755,11 +28725,11 @@ Dynamic Host Configuration Protocol, DHCPv4, profile to manage DHCPv4 network tr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDhcpv4**](ProfileDhcpv4.md)|  | 
+ **object** | [**LtmProfileDhcpv4**](LtmProfileDhcpv4.md)|  | 
 
 ### Return type
 
-[**ProfileDhcpv4**](profile_dhcpv4.md)
+[**LtmProfileDhcpv4**](ltm_profile_dhcpv4.md)
 
 ### Authorization
 
@@ -28773,7 +28743,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileDhcpv6**
-> ProfileDhcpv6 PostProfileDhcpv6($id, $object)
+> LtmProfileDhcpv6 PostProfileDhcpv6($id, $object)
 
 
 
@@ -28785,11 +28755,11 @@ Dynamic Host Configuration Protocol, DHCPv6, profile to manage DHCPv6 network tr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDhcpv6**](ProfileDhcpv6.md)|  | 
+ **object** | [**LtmProfileDhcpv6**](LtmProfileDhcpv6.md)|  | 
 
 ### Return type
 
-[**ProfileDhcpv6**](profile_dhcpv6.md)
+[**LtmProfileDhcpv6**](ltm_profile_dhcpv6.md)
 
 ### Authorization
 
@@ -28803,7 +28773,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileDiameter**
-> ProfileDiameter PostProfileDiameter($id, $object)
+> LtmProfileDiameter PostProfileDiameter($id, $object)
 
 
 
@@ -28815,11 +28785,11 @@ Virtual server Diameter traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDiameter**](ProfileDiameter.md)|  | 
+ **object** | [**LtmProfileDiameter**](LtmProfileDiameter.md)|  | 
 
 ### Return type
 
-[**ProfileDiameter**](profile_diameter.md)
+[**LtmProfileDiameter**](ltm_profile_diameter.md)
 
 ### Authorization
 
@@ -28833,7 +28803,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileDns**
-> ProfileDns PostProfileDns($id, $object)
+> LtmProfileDns PostProfileDns($id, $object)
 
 
 
@@ -28845,11 +28815,11 @@ Virtual server DNS traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDns**](ProfileDns.md)|  | 
+ **object** | [**LtmProfileDns**](LtmProfileDns.md)|  | 
 
 ### Return type
 
-[**ProfileDns**](profile_dns.md)
+[**LtmProfileDns**](ltm_profile_dns.md)
 
 ### Authorization
 
@@ -28863,7 +28833,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileDnsLogging**
-> ProfileDnsLogging PostProfileDnsLogging($id, $object)
+> LtmProfileDnsLogging PostProfileDnsLogging($id, $object)
 
 
 
@@ -28875,11 +28845,11 @@ High-speed logging settings for the DNS profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDnsLogging**](ProfileDnsLogging.md)|  | 
+ **object** | [**LtmProfileDnsLogging**](LtmProfileDnsLogging.md)|  | 
 
 ### Return type
 
-[**ProfileDnsLogging**](profile_dnsLogging.md)
+[**LtmProfileDnsLogging**](ltm_profile_dnsLogging.md)
 
 ### Authorization
 
@@ -28893,7 +28863,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileFasthttp**
-> ProfileFasthttp PostProfileFasthttp($id, $object)
+> LtmProfileFasthttp PostProfileFasthttp($id, $object)
 
 
 
@@ -28905,11 +28875,11 @@ Virtual server Fast HTTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFasthttp**](ProfileFasthttp.md)|  | 
+ **object** | [**LtmProfileFasthttp**](LtmProfileFasthttp.md)|  | 
 
 ### Return type
 
-[**ProfileFasthttp**](profile_fasthttp.md)
+[**LtmProfileFasthttp**](ltm_profile_fasthttp.md)
 
 ### Authorization
 
@@ -28923,7 +28893,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileFastl4**
-> ProfileFastl4 PostProfileFastl4($id, $object)
+> LtmProfileFastl4 PostProfileFastl4($id, $object)
 
 
 
@@ -28935,11 +28905,11 @@ Virtual server FastL4 traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFastl4**](ProfileFastl4.md)|  | 
+ **object** | [**LtmProfileFastl4**](LtmProfileFastl4.md)|  | 
 
 ### Return type
 
-[**ProfileFastl4**](profile_fastl4.md)
+[**LtmProfileFastl4**](ltm_profile_fastl4.md)
 
 ### Authorization
 
@@ -28953,7 +28923,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileFix**
-> ProfileFix PostProfileFix($id, $object)
+> LtmProfileFix PostProfileFix($id, $object)
 
 
 
@@ -28965,11 +28935,11 @@ Virtual server Financial Information eXchange(FIX) profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFix**](ProfileFix.md)|  | 
+ **object** | [**LtmProfileFix**](LtmProfileFix.md)|  | 
 
 ### Return type
 
-[**ProfileFix**](profile_fix.md)
+[**LtmProfileFix**](ltm_profile_fix.md)
 
 ### Authorization
 
@@ -28983,7 +28953,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileFtp**
-> ProfileFtp PostProfileFtp($id, $object)
+> LtmProfileFtp PostProfileFtp($id, $object)
 
 
 
@@ -28995,11 +28965,11 @@ Virtual server FTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFtp**](ProfileFtp.md)|  | 
+ **object** | [**LtmProfileFtp**](LtmProfileFtp.md)|  | 
 
 ### Return type
 
-[**ProfileFtp**](profile_ftp.md)
+[**LtmProfileFtp**](ltm_profile_ftp.md)
 
 ### Authorization
 
@@ -29013,7 +28983,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileGtp**
-> ProfileGtp PostProfileGtp($id, $object)
+> LtmProfileGtp PostProfileGtp($id, $object)
 
 
 
@@ -29025,11 +28995,11 @@ Virtual server GTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileGtp**](ProfileGtp.md)|  | 
+ **object** | [**LtmProfileGtp**](LtmProfileGtp.md)|  | 
 
 ### Return type
 
-[**ProfileGtp**](profile_gtp.md)
+[**LtmProfileGtp**](ltm_profile_gtp.md)
 
 ### Authorization
 
@@ -29043,7 +29013,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileHtml**
-> ProfileHtml PostProfileHtml($id, $object)
+> LtmProfileHtml PostProfileHtml($id, $object)
 
 
 
@@ -29055,11 +29025,11 @@ Virtual server HTML profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHtml**](ProfileHtml.md)|  | 
+ **object** | [**LtmProfileHtml**](LtmProfileHtml.md)|  | 
 
 ### Return type
 
-[**ProfileHtml**](profile_html.md)
+[**LtmProfileHtml**](ltm_profile_html.md)
 
 ### Authorization
 
@@ -29073,7 +29043,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileHttp**
-> ProfileHttp PostProfileHttp($id, $object)
+> LtmProfileHttp PostProfileHttp($id, $object)
 
 
 
@@ -29085,11 +29055,11 @@ Virtual server HTTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHttp**](ProfileHttp.md)|  | 
+ **object** | [**LtmProfileHttp**](LtmProfileHttp.md)|  | 
 
 ### Return type
 
-[**ProfileHttp**](profile_http.md)
+[**LtmProfileHttp**](ltm_profile_http.md)
 
 ### Authorization
 
@@ -29103,7 +29073,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileHttp2**
-> ProfileHttp2 PostProfileHttp2($id, $object)
+> LtmProfileHttp2 PostProfileHttp2($id, $object)
 
 
 
@@ -29115,11 +29085,11 @@ Virtual server HTTP/2 traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHttp2**](ProfileHttp2.md)|  | 
+ **object** | [**LtmProfileHttp2**](LtmProfileHttp2.md)|  | 
 
 ### Return type
 
-[**ProfileHttp2**](profile_http2.md)
+[**LtmProfileHttp2**](ltm_profile_http2.md)
 
 ### Authorization
 
@@ -29133,7 +29103,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileHttpCompression**
-> ProfileHttpCompression PostProfileHttpCompression($id, $object)
+> LtmProfileHttpCompression PostProfileHttpCompression($id, $object)
 
 
 
@@ -29145,11 +29115,11 @@ Virtual server HTTP compression profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHttpCompression**](ProfileHttpCompression.md)|  | 
+ **object** | [**LtmProfileHttpCompression**](LtmProfileHttpCompression.md)|  | 
 
 ### Return type
 
-[**ProfileHttpCompression**](profile_httpCompression.md)
+[**LtmProfileHttpCompression**](ltm_profile_httpCompression.md)
 
 ### Authorization
 
@@ -29163,7 +29133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileIcap**
-> ProfileIcap PostProfileIcap($id, $object)
+> LtmProfileIcap PostProfileIcap($id, $object)
 
 
 
@@ -29175,11 +29145,11 @@ Virtual server Internet Content Adaptation Protocol (ICAP) profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileIcap**](ProfileIcap.md)|  | 
+ **object** | [**LtmProfileIcap**](LtmProfileIcap.md)|  | 
 
 ### Return type
 
-[**ProfileIcap**](profile_icap.md)
+[**LtmProfileIcap**](ltm_profile_icap.md)
 
 ### Authorization
 
@@ -29193,7 +29163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileIiop**
-> ProfileIiop PostProfileIiop($id, $object)
+> LtmProfileIiop PostProfileIiop($id, $object)
 
 
 
@@ -29205,11 +29175,11 @@ Virtual server IIOP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileIiop**](ProfileIiop.md)|  | 
+ **object** | [**LtmProfileIiop**](LtmProfileIiop.md)|  | 
 
 ### Return type
 
-[**ProfileIiop**](profile_iiop.md)
+[**LtmProfileIiop**](ltm_profile_iiop.md)
 
 ### Authorization
 
@@ -29223,7 +29193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileIpother**
-> ProfileIpother PostProfileIpother($id, $object)
+> LtmProfileIpother PostProfileIpother($id, $object)
 
 
 
@@ -29235,11 +29205,11 @@ Virtual server IPOTHER for non-TCP and non-UDP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileIpother**](ProfileIpother.md)|  | 
+ **object** | [**LtmProfileIpother**](LtmProfileIpother.md)|  | 
 
 ### Return type
 
-[**ProfileIpother**](profile_ipother.md)
+[**LtmProfileIpother**](ltm_profile_ipother.md)
 
 ### Authorization
 
@@ -29253,7 +29223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileMblb**
-> ProfileMblb PostProfileMblb($id, $object)
+> LtmProfileMblb PostProfileMblb($id, $object)
 
 
 
@@ -29265,11 +29235,11 @@ MBLB profile configuration (experimental)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileMblb**](ProfileMblb.md)|  | 
+ **object** | [**LtmProfileMblb**](LtmProfileMblb.md)|  | 
 
 ### Return type
 
-[**ProfileMblb**](profile_mblb.md)
+[**LtmProfileMblb**](ltm_profile_mblb.md)
 
 ### Authorization
 
@@ -29283,7 +29253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileMssql**
-> ProfileMssql PostProfileMssql($id, $object)
+> LtmProfileMssql PostProfileMssql($id, $object)
 
 
 
@@ -29295,11 +29265,11 @@ Virtual server MSSQL profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileMssql**](ProfileMssql.md)|  | 
+ **object** | [**LtmProfileMssql**](LtmProfileMssql.md)|  | 
 
 ### Return type
 
-[**ProfileMssql**](profile_mssql.md)
+[**LtmProfileMssql**](ltm_profile_mssql.md)
 
 ### Authorization
 
@@ -29313,7 +29283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileNtlm**
-> ProfileNtlm PostProfileNtlm($id, $object)
+> LtmProfileNtlm PostProfileNtlm($id, $object)
 
 
 
@@ -29325,11 +29295,11 @@ Virtual server NT Lan Manager profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileNtlm**](ProfileNtlm.md)|  | 
+ **object** | [**LtmProfileNtlm**](LtmProfileNtlm.md)|  | 
 
 ### Return type
 
-[**ProfileNtlm**](profile_ntlm.md)
+[**LtmProfileNtlm**](ltm_profile_ntlm.md)
 
 ### Authorization
 
@@ -29343,7 +29313,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileOcspStaplingParams**
-> ProfileOcspStaplingParams PostProfileOcspStaplingParams($id, $object)
+> LtmProfileOcspStaplingParams PostProfileOcspStaplingParams($id, $object)
 
 
 
@@ -29355,11 +29325,11 @@ OCSP Stapling Parameters for clientssl profiles. This object should be associate
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileOcspStaplingParams**](ProfileOcspStaplingParams.md)|  | 
+ **object** | [**LtmProfileOcspStaplingParams**](LtmProfileOcspStaplingParams.md)|  | 
 
 ### Return type
 
-[**ProfileOcspStaplingParams**](profile_ocspStaplingParams.md)
+[**LtmProfileOcspStaplingParams**](ltm_profile_ocspStaplingParams.md)
 
 ### Authorization
 
@@ -29373,7 +29343,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileOneConnect**
-> ProfileOneConnect PostProfileOneConnect($id, $object)
+> LtmProfileOneConnect PostProfileOneConnect($id, $object)
 
 
 
@@ -29385,11 +29355,11 @@ Virtual server OneConnect profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileOneConnect**](ProfileOneConnect.md)|  | 
+ **object** | [**LtmProfileOneConnect**](LtmProfileOneConnect.md)|  | 
 
 ### Return type
 
-[**ProfileOneConnect**](profile_oneConnect.md)
+[**LtmProfileOneConnect**](ltm_profile_oneConnect.md)
 
 ### Authorization
 
@@ -29403,7 +29373,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfilePcp**
-> ProfilePcp PostProfilePcp($id, $object)
+> LtmProfilePcp PostProfilePcp($id, $object)
 
 
 
@@ -29415,11 +29385,11 @@ LSN Pool PCP configuration profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfilePcp**](ProfilePcp.md)|  | 
+ **object** | [**LtmProfilePcp**](LtmProfilePcp.md)|  | 
 
 ### Return type
 
-[**ProfilePcp**](profile_pcp.md)
+[**LtmProfilePcp**](ltm_profile_pcp.md)
 
 ### Authorization
 
@@ -29433,7 +29403,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfilePptp**
-> ProfilePptp PostProfilePptp($id, $object)
+> LtmProfilePptp PostProfilePptp($id, $object)
 
 
 
@@ -29445,11 +29415,11 @@ Virtual server Point to Point Tunneling Protocol (PPTP) profile configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfilePptp**](ProfilePptp.md)|  | 
+ **object** | [**LtmProfilePptp**](LtmProfilePptp.md)|  | 
 
 ### Return type
 
-[**ProfilePptp**](profile_pptp.md)
+[**LtmProfilePptp**](ltm_profile_pptp.md)
 
 ### Authorization
 
@@ -29463,7 +29433,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileQoe**
-> ProfileQoe PostProfileQoe($id, $object)
+> LtmProfileQoe PostProfileQoe($id, $object)
 
 
 
@@ -29475,11 +29445,11 @@ Virtual server Quality of Experience profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileQoe**](ProfileQoe.md)|  | 
+ **object** | [**LtmProfileQoe**](LtmProfileQoe.md)|  | 
 
 ### Return type
 
-[**ProfileQoe**](profile_qoe.md)
+[**LtmProfileQoe**](ltm_profile_qoe.md)
 
 ### Authorization
 
@@ -29493,7 +29463,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileRadius**
-> ProfileRadius PostProfileRadius($id, $object)
+> LtmProfileRadius PostProfileRadius($id, $object)
 
 
 
@@ -29505,11 +29475,11 @@ Virtual server Radius traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRadius**](ProfileRadius.md)|  | 
+ **object** | [**LtmProfileRadius**](LtmProfileRadius.md)|  | 
 
 ### Return type
 
-[**ProfileRadius**](profile_radius.md)
+[**LtmProfileRadius**](ltm_profile_radius.md)
 
 ### Authorization
 
@@ -29523,7 +29493,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileRequestAdapt**
-> ProfileRequestAdapt PostProfileRequestAdapt($id, $object)
+> LtmProfileRequestAdapt PostProfileRequestAdapt($id, $object)
 
 
 
@@ -29535,11 +29505,11 @@ Virtual server HTTP request adaptation profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRequestAdapt**](ProfileRequestAdapt.md)|  | 
+ **object** | [**LtmProfileRequestAdapt**](LtmProfileRequestAdapt.md)|  | 
 
 ### Return type
 
-[**ProfileRequestAdapt**](profile_requestAdapt.md)
+[**LtmProfileRequestAdapt**](ltm_profile_requestAdapt.md)
 
 ### Authorization
 
@@ -29553,7 +29523,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileRequestLog**
-> ProfileRequestLog PostProfileRequestLog($id, $object)
+> LtmProfileRequestLog PostProfileRequestLog($id, $object)
 
 
 
@@ -29565,11 +29535,11 @@ Virtual server request logging profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRequestLog**](ProfileRequestLog.md)|  | 
+ **object** | [**LtmProfileRequestLog**](LtmProfileRequestLog.md)|  | 
 
 ### Return type
 
-[**ProfileRequestLog**](profile_requestLog.md)
+[**LtmProfileRequestLog**](ltm_profile_requestLog.md)
 
 ### Authorization
 
@@ -29583,7 +29553,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileResponseAdapt**
-> ProfileResponseAdapt PostProfileResponseAdapt($id, $object)
+> LtmProfileResponseAdapt PostProfileResponseAdapt($id, $object)
 
 
 
@@ -29595,11 +29565,11 @@ Virtual server HTTP response adaptation profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileResponseAdapt**](ProfileResponseAdapt.md)|  | 
+ **object** | [**LtmProfileResponseAdapt**](LtmProfileResponseAdapt.md)|  | 
 
 ### Return type
 
-[**ProfileResponseAdapt**](profile_responseAdapt.md)
+[**LtmProfileResponseAdapt**](ltm_profile_responseAdapt.md)
 
 ### Authorization
 
@@ -29613,7 +29583,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileRewrite**
-> ProfileRewrite PostProfileRewrite($id, $object)
+> LtmProfileRewrite PostProfileRewrite($id, $object)
 
 
 
@@ -29625,11 +29595,11 @@ Virtual server Rewrite profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRewrite**](ProfileRewrite.md)|  | 
+ **object** | [**LtmProfileRewrite**](LtmProfileRewrite.md)|  | 
 
 ### Return type
 
-[**ProfileRewrite**](profile_rewrite.md)
+[**LtmProfileRewrite**](ltm_profile_rewrite.md)
 
 ### Authorization
 
@@ -29643,7 +29613,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileRewriteUriRules**
-> ProfileRewriteUriRules PostProfileRewriteUriRules($id, $object)
+> LtmProfileRewriteUriRules PostProfileRewriteUriRules($id, $object)
 
 
 
@@ -29655,11 +29625,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRewriteUriRules**](ProfileRewriteUriRules.md)|  | 
+ **object** | [**LtmProfileRewriteUriRules**](LtmProfileRewriteUriRules.md)|  | 
 
 ### Return type
 
-[**ProfileRewriteUriRules**](profile_rewrite_uriRules.md)
+[**LtmProfileRewriteUriRules**](ltm_profile_rewrite_uriRules.md)
 
 ### Authorization
 
@@ -29673,7 +29643,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileRtsp**
-> ProfileRtsp PostProfileRtsp($id, $object)
+> LtmProfileRtsp PostProfileRtsp($id, $object)
 
 
 
@@ -29685,11 +29655,11 @@ Virtual server RTSP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRtsp**](ProfileRtsp.md)|  | 
+ **object** | [**LtmProfileRtsp**](LtmProfileRtsp.md)|  | 
 
 ### Return type
 
-[**ProfileRtsp**](profile_rtsp.md)
+[**LtmProfileRtsp**](ltm_profile_rtsp.md)
 
 ### Authorization
 
@@ -29703,7 +29673,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileSctp**
-> ProfileSctp PostProfileSctp($id, $object)
+> LtmProfileSctp PostProfileSctp($id, $object)
 
 
 
@@ -29715,11 +29685,11 @@ Virtual server SCTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSctp**](ProfileSctp.md)|  | 
+ **object** | [**LtmProfileSctp**](LtmProfileSctp.md)|  | 
 
 ### Return type
 
-[**ProfileSctp**](profile_sctp.md)
+[**LtmProfileSctp**](ltm_profile_sctp.md)
 
 ### Authorization
 
@@ -29733,7 +29703,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileServerLdap**
-> ProfileServerLdap PostProfileServerLdap($id, $object)
+> LtmProfileServerLdap PostProfileServerLdap($id, $object)
 
 
 
@@ -29745,11 +29715,11 @@ Virtual server Server LDAP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileServerLdap**](ProfileServerLdap.md)|  | 
+ **object** | [**LtmProfileServerLdap**](LtmProfileServerLdap.md)|  | 
 
 ### Return type
 
-[**ProfileServerLdap**](profile_serverLdap.md)
+[**LtmProfileServerLdap**](ltm_profile_serverLdap.md)
 
 ### Authorization
 
@@ -29763,7 +29733,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileServerSsl**
-> ProfileServerSsl PostProfileServerSsl($id, $object)
+> LtmProfileServerSsl PostProfileServerSsl($id, $object)
 
 
 
@@ -29775,11 +29745,11 @@ Virtual server server-side proxy SSL profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileServerSsl**](ProfileServerSsl.md)|  | 
+ **object** | [**LtmProfileServerSsl**](LtmProfileServerSsl.md)|  | 
 
 ### Return type
 
-[**ProfileServerSsl**](profile_serverSsl.md)
+[**LtmProfileServerSsl**](ltm_profile_serverSsl.md)
 
 ### Authorization
 
@@ -29793,7 +29763,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileSip**
-> ProfileSip PostProfileSip($id, $object)
+> LtmProfileSip PostProfileSip($id, $object)
 
 
 
@@ -29805,11 +29775,11 @@ Virtual server SIP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSip**](ProfileSip.md)|  | 
+ **object** | [**LtmProfileSip**](LtmProfileSip.md)|  | 
 
 ### Return type
 
-[**ProfileSip**](profile_sip.md)
+[**LtmProfileSip**](ltm_profile_sip.md)
 
 ### Authorization
 
@@ -29823,7 +29793,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileSmtp**
-> ProfileSmtp PostProfileSmtp($id, $object)
+> LtmProfileSmtp PostProfileSmtp($id, $object)
 
 
 
@@ -29835,11 +29805,11 @@ Virtual server SMTP profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSmtp**](ProfileSmtp.md)|  | 
+ **object** | [**LtmProfileSmtp**](LtmProfileSmtp.md)|  | 
 
 ### Return type
 
-[**ProfileSmtp**](profile_smtp.md)
+[**LtmProfileSmtp**](ltm_profile_smtp.md)
 
 ### Authorization
 
@@ -29853,7 +29823,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileSmtps**
-> ProfileSmtps PostProfileSmtps($id, $object)
+> LtmProfileSmtps PostProfileSmtps($id, $object)
 
 
 
@@ -29865,11 +29835,11 @@ Virtual server SMTPs traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSmtps**](ProfileSmtps.md)|  | 
+ **object** | [**LtmProfileSmtps**](LtmProfileSmtps.md)|  | 
 
 ### Return type
 
-[**ProfileSmtps**](profile_smtps.md)
+[**LtmProfileSmtps**](ltm_profile_smtps.md)
 
 ### Authorization
 
@@ -29883,7 +29853,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileSocks**
-> ProfileSocks PostProfileSocks($id, $object)
+> LtmProfileSocks PostProfileSocks($id, $object)
 
 
 
@@ -29895,11 +29865,11 @@ Virtual server SOCKS traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSocks**](ProfileSocks.md)|  | 
+ **object** | [**LtmProfileSocks**](LtmProfileSocks.md)|  | 
 
 ### Return type
 
-[**ProfileSocks**](profile_socks.md)
+[**LtmProfileSocks**](ltm_profile_socks.md)
 
 ### Authorization
 
@@ -29913,7 +29883,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileSpdy**
-> ProfileSpdy PostProfileSpdy($id, $object)
+> LtmProfileSpdy PostProfileSpdy($id, $object)
 
 
 
@@ -29925,11 +29895,11 @@ Virtual server SPDY traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSpdy**](ProfileSpdy.md)|  | 
+ **object** | [**LtmProfileSpdy**](LtmProfileSpdy.md)|  | 
 
 ### Return type
 
-[**ProfileSpdy**](profile_spdy.md)
+[**LtmProfileSpdy**](ltm_profile_spdy.md)
 
 ### Authorization
 
@@ -29943,7 +29913,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileStatistics**
-> ProfileStatistics PostProfileStatistics($id, $object)
+> LtmProfileStatistics PostProfileStatistics($id, $object)
 
 
 
@@ -29955,11 +29925,11 @@ Virtual server custom statistics configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileStatistics**](ProfileStatistics.md)|  | 
+ **object** | [**LtmProfileStatistics**](LtmProfileStatistics.md)|  | 
 
 ### Return type
 
-[**ProfileStatistics**](profile_statistics.md)
+[**LtmProfileStatistics**](ltm_profile_statistics.md)
 
 ### Authorization
 
@@ -29973,7 +29943,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileStream**
-> ProfileStream PostProfileStream($id, $object)
+> LtmProfileStream PostProfileStream($id, $object)
 
 
 
@@ -29985,11 +29955,11 @@ Virtual server Stream traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileStream**](ProfileStream.md)|  | 
+ **object** | [**LtmProfileStream**](LtmProfileStream.md)|  | 
 
 ### Return type
 
-[**ProfileStream**](profile_stream.md)
+[**LtmProfileStream**](ltm_profile_stream.md)
 
 ### Authorization
 
@@ -30003,7 +29973,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileTcp**
-> ProfileTcp PostProfileTcp($id, $object)
+> LtmProfileTcp PostProfileTcp($id, $object)
 
 
 
@@ -30015,11 +29985,11 @@ Virtual server TCP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileTcp**](ProfileTcp.md)|  | 
+ **object** | [**LtmProfileTcp**](LtmProfileTcp.md)|  | 
 
 ### Return type
 
-[**ProfileTcp**](profile_tcp.md)
+[**LtmProfileTcp**](ltm_profile_tcp.md)
 
 ### Authorization
 
@@ -30033,7 +30003,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileTftp**
-> ProfileTftp PostProfileTftp($id, $object)
+> LtmProfileTftp PostProfileTftp($id, $object)
 
 
 
@@ -30045,11 +30015,11 @@ Virtual server TFTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileTftp**](ProfileTftp.md)|  | 
+ **object** | [**LtmProfileTftp**](LtmProfileTftp.md)|  | 
 
 ### Return type
 
-[**ProfileTftp**](profile_tftp.md)
+[**LtmProfileTftp**](ltm_profile_tftp.md)
 
 ### Authorization
 
@@ -30063,7 +30033,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileUdp**
-> ProfileUdp PostProfileUdp($id, $object)
+> LtmProfileUdp PostProfileUdp($id, $object)
 
 
 
@@ -30075,11 +30045,11 @@ Virtual server UDP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileUdp**](ProfileUdp.md)|  | 
+ **object** | [**LtmProfileUdp**](LtmProfileUdp.md)|  | 
 
 ### Return type
 
-[**ProfileUdp**](profile_udp.md)
+[**LtmProfileUdp**](ltm_profile_udp.md)
 
 ### Authorization
 
@@ -30093,7 +30063,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileWebAcceleration**
-> ProfileWebAcceleration PostProfileWebAcceleration($id, $object)
+> LtmProfileWebAcceleration PostProfileWebAcceleration($id, $object)
 
 
 
@@ -30105,11 +30075,11 @@ Virtual server Web Acceleration profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileWebAcceleration**](ProfileWebAcceleration.md)|  | 
+ **object** | [**LtmProfileWebAcceleration**](LtmProfileWebAcceleration.md)|  | 
 
 ### Return type
 
-[**ProfileWebAcceleration**](profile_webAcceleration.md)
+[**LtmProfileWebAcceleration**](ltm_profile_webAcceleration.md)
 
 ### Authorization
 
@@ -30123,7 +30093,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileWebSecurity**
-> ProfileWebSecurity PostProfileWebSecurity($id, $object)
+> LtmProfileWebSecurity PostProfileWebSecurity($id, $object)
 
 
 
@@ -30135,11 +30105,11 @@ Virtual server Web Security profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileWebSecurity**](ProfileWebSecurity.md)|  | 
+ **object** | [**LtmProfileWebSecurity**](LtmProfileWebSecurity.md)|  | 
 
 ### Return type
 
-[**ProfileWebSecurity**](profile_webSecurity.md)
+[**LtmProfileWebSecurity**](ltm_profile_webSecurity.md)
 
 ### Authorization
 
@@ -30153,7 +30123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostProfileXml**
-> ProfileXml PostProfileXml($id, $object)
+> LtmProfileXml PostProfileXml($id, $object)
 
 
 
@@ -30165,11 +30135,11 @@ Virtual server XML configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileXml**](ProfileXml.md)|  | 
+ **object** | [**LtmProfileXml**](LtmProfileXml.md)|  | 
 
 ### Return type
 
-[**ProfileXml**](profile_xml.md)
+[**LtmProfileXml**](ltm_profile_xml.md)
 
 ### Authorization
 
@@ -30183,7 +30153,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostRule**
-> Rule PostRule($id, $object)
+> LtmRule PostRule($id, $object)
 
 
 
@@ -30195,11 +30165,11 @@ iRules configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Rule**](Rule.md)|  | 
+ **object** | [**LtmRule**](LtmRule.md)|  | 
 
 ### Return type
 
-[**Rule**](rule.md)
+[**LtmRule**](ltm_rule.md)
 
 ### Authorization
 
@@ -30213,7 +30183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostSnat**
-> Snat PostSnat($id, $object)
+> LtmSnat PostSnat($id, $object)
 
 
 
@@ -30225,11 +30195,11 @@ Secure network address translation (SNAT) configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Snat**](Snat.md)|  | 
+ **object** | [**LtmSnat**](LtmSnat.md)|  | 
 
 ### Return type
 
-[**Snat**](snat.md)
+[**LtmSnat**](ltm_snat.md)
 
 ### Authorization
 
@@ -30243,7 +30213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostSnatTranslation**
-> SnatTranslation PostSnatTranslation($id, $object)
+> LtmSnatTranslation PostSnatTranslation($id, $object)
 
 
 
@@ -30255,11 +30225,11 @@ SNAT translation address configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**SnatTranslation**](SnatTranslation.md)|  | 
+ **object** | [**LtmSnatTranslation**](LtmSnatTranslation.md)|  | 
 
 ### Return type
 
-[**SnatTranslation**](snatTranslation.md)
+[**LtmSnatTranslation**](ltm_snatTranslation.md)
 
 ### Authorization
 
@@ -30273,7 +30243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostSnatpool**
-> Snatpool PostSnatpool($id, $object)
+> LtmSnatpool PostSnatpool($id, $object)
 
 
 
@@ -30285,11 +30255,11 @@ Collections of SNAT translation addresses
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Snatpool**](Snatpool.md)|  | 
+ **object** | [**LtmSnatpool**](LtmSnatpool.md)|  | 
 
 ### Return type
 
-[**Snatpool**](snatpool.md)
+[**LtmSnatpool**](ltm_snatpool.md)
 
 ### Authorization
 
@@ -30303,7 +30273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostTacdbCustomdb**
-> TacdbCustomdb PostTacdbCustomdb($id, $object)
+> LtmTacdbCustomdb PostTacdbCustomdb($id, $object)
 
 
 
@@ -30315,11 +30285,11 @@ Custom tacdb for detection of device type and OS.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**TacdbCustomdb**](TacdbCustomdb.md)|  | 
+ **object** | [**LtmTacdbCustomdb**](LtmTacdbCustomdb.md)|  | 
 
 ### Return type
 
-[**TacdbCustomdb**](tacdb_customdb.md)
+[**LtmTacdbCustomdb**](ltm_tacdb_customdb.md)
 
 ### Authorization
 
@@ -30333,7 +30303,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostTacdbCustomdbFile**
-> TacdbCustomdbFile PostTacdbCustomdbFile($id, $object)
+> LtmTacdbCustomdbFile PostTacdbCustomdbFile($id, $object)
 
 
 
@@ -30345,11 +30315,11 @@ File object for custom tacdb. User should NOT use it. Daemon use it internally.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**TacdbCustomdbFile**](TacdbCustomdbFile.md)|  | 
+ **object** | [**LtmTacdbCustomdbFile**](LtmTacdbCustomdbFile.md)|  | 
 
 ### Return type
 
-[**TacdbCustomdbFile**](tacdb_customdbFile.md)
+[**LtmTacdbCustomdbFile**](ltm_tacdb_customdbFile.md)
 
 ### Authorization
 
@@ -30363,7 +30333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostTrafficClass**
-> TrafficClass PostTrafficClass($id, $object)
+> LtmTrafficClass PostTrafficClass($id, $object)
 
 
 
@@ -30375,11 +30345,11 @@ Traffic Class Configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**TrafficClass**](TrafficClass.md)|  | 
+ **object** | [**LtmTrafficClass**](LtmTrafficClass.md)|  | 
 
 ### Return type
 
-[**TrafficClass**](trafficClass.md)
+[**LtmTrafficClass**](ltm_trafficClass.md)
 
 ### Authorization
 
@@ -30393,7 +30363,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostVirtual**
-> Virtual PostVirtual($id, $object)
+> LtmVirtual PostVirtual($id, $object)
 
 
 
@@ -30405,11 +30375,11 @@ Virtual server configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Virtual**](Virtual.md)|  | 
+ **object** | [**LtmVirtual**](LtmVirtual.md)|  | 
 
 ### Return type
 
-[**Virtual**](virtual.md)
+[**LtmVirtual**](ltm_virtual.md)
 
 ### Authorization
 
@@ -30423,7 +30393,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostVirtualAddress**
-> VirtualAddress PostVirtualAddress($id, $object)
+> LtmVirtualAddress PostVirtualAddress($id, $object)
 
 
 
@@ -30435,11 +30405,11 @@ Virtual server IP address configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualAddress**](VirtualAddress.md)|  | 
+ **object** | [**LtmVirtualAddress**](LtmVirtualAddress.md)|  | 
 
 ### Return type
 
-[**VirtualAddress**](virtualAddress.md)
+[**LtmVirtualAddress**](ltm_virtualAddress.md)
 
 ### Authorization
 
@@ -30453,7 +30423,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostVirtualFwEnforcedPolicyRules**
-> VirtualFwEnforcedPolicyRules PostVirtualFwEnforcedPolicyRules($id, $object)
+> LtmVirtualFwEnforcedPolicyRules PostVirtualFwEnforcedPolicyRules($id, $object)
 
 
 
@@ -30465,11 +30435,11 @@ Firewall policy rule entry
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualFwEnforcedPolicyRules**](VirtualFwEnforcedPolicyRules.md)|  | 
+ **object** | [**LtmVirtualFwEnforcedPolicyRules**](LtmVirtualFwEnforcedPolicyRules.md)|  | 
 
 ### Return type
 
-[**VirtualFwEnforcedPolicyRules**](virtual_fwEnforcedPolicyRules.md)
+[**LtmVirtualFwEnforcedPolicyRules**](ltm_virtual_fwEnforcedPolicyRules.md)
 
 ### Authorization
 
@@ -30483,7 +30453,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostVirtualFwStagedPolicyRules**
-> VirtualFwStagedPolicyRules PostVirtualFwStagedPolicyRules($id, $object)
+> LtmVirtualFwStagedPolicyRules PostVirtualFwStagedPolicyRules($id, $object)
 
 
 
@@ -30495,11 +30465,11 @@ Firewall policy rule entry
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualFwStagedPolicyRules**](VirtualFwStagedPolicyRules.md)|  | 
+ **object** | [**LtmVirtualFwStagedPolicyRules**](LtmVirtualFwStagedPolicyRules.md)|  | 
 
 ### Return type
 
-[**VirtualFwStagedPolicyRules**](virtual_fwStagedPolicyRules.md)
+[**LtmVirtualFwStagedPolicyRules**](ltm_virtual_fwStagedPolicyRules.md)
 
 ### Authorization
 
@@ -30513,7 +30483,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostVirtualPolicies**
-> VirtualPolicies PostVirtualPolicies($id, $object)
+> LtmVirtualPolicies PostVirtualPolicies($id, $object)
 
 
 
@@ -30525,11 +30495,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualPolicies**](VirtualPolicies.md)|  | 
+ **object** | [**LtmVirtualPolicies**](LtmVirtualPolicies.md)|  | 
 
 ### Return type
 
-[**VirtualPolicies**](virtual_policies.md)
+[**LtmVirtualPolicies**](ltm_virtual_policies.md)
 
 ### Authorization
 
@@ -30543,7 +30513,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PostVirtualProfiles**
-> VirtualProfiles PostVirtualProfiles($id, $object)
+> LtmVirtualProfiles PostVirtualProfiles($id, $object)
 
 
 
@@ -30555,11 +30525,11 @@ Manage the set of profiles that are associated with virtual servers
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualProfiles**](VirtualProfiles.md)|  | 
+ **object** | [**LtmVirtualProfiles**](LtmVirtualProfiles.md)|  | 
 
 ### Return type
 
-[**VirtualProfiles**](virtual_profiles.md)
+[**LtmVirtualProfiles**](ltm_virtual_profiles.md)
 
 ### Authorization
 
@@ -30573,7 +30543,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAlgLogProfile**
-> AlgLogProfile PutAlgLogProfile($id, $object)
+> LtmAlgLogProfile PutAlgLogProfile($id, $object)
 
 
 
@@ -30585,11 +30555,11 @@ Defines the configuration for logging of ALG flows.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AlgLogProfile**](AlgLogProfile.md)|  | 
+ **object** | [**LtmAlgLogProfile**](LtmAlgLogProfile.md)|  | 
 
 ### Return type
 
-[**AlgLogProfile**](algLogProfile.md)
+[**LtmAlgLogProfile**](ltm_algLogProfile.md)
 
 ### Authorization
 
@@ -30603,7 +30573,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthCrldpServer**
-> AuthCrldpServer PutAuthCrldpServer($id, $object)
+> LtmAuthCrldpServer PutAuthCrldpServer($id, $object)
 
 
 
@@ -30615,11 +30585,11 @@ Certificate Revocation List Distribution Point (CRDLP) server configuration, for
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthCrldpServer**](AuthCrldpServer.md)|  | 
+ **object** | [**LtmAuthCrldpServer**](LtmAuthCrldpServer.md)|  | 
 
 ### Return type
 
-[**AuthCrldpServer**](auth_crldpServer.md)
+[**LtmAuthCrldpServer**](ltm_auth_crldpServer.md)
 
 ### Authorization
 
@@ -30633,7 +30603,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthKerberosDelegation**
-> AuthKerberosDelegation PutAuthKerberosDelegation($id, $object)
+> LtmAuthKerberosDelegation PutAuthKerberosDelegation($id, $object)
 
 
 
@@ -30645,11 +30615,11 @@ Kerberos configuration for remote client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthKerberosDelegation**](AuthKerberosDelegation.md)|  | 
+ **object** | [**LtmAuthKerberosDelegation**](LtmAuthKerberosDelegation.md)|  | 
 
 ### Return type
 
-[**AuthKerberosDelegation**](auth_kerberosDelegation.md)
+[**LtmAuthKerberosDelegation**](ltm_auth_kerberosDelegation.md)
 
 ### Authorization
 
@@ -30663,7 +30633,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthLdap**
-> AuthLdap PutAuthLdap($id, $object)
+> LtmAuthLdap PutAuthLdap($id, $object)
 
 
 
@@ -30675,11 +30645,11 @@ LDAP configuration for remote LDAP client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthLdap**](AuthLdap.md)|  | 
+ **object** | [**LtmAuthLdap**](LtmAuthLdap.md)|  | 
 
 ### Return type
 
-[**AuthLdap**](auth_ldap.md)
+[**LtmAuthLdap**](ltm_auth_ldap.md)
 
 ### Authorization
 
@@ -30693,7 +30663,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthOcspResponder**
-> AuthOcspResponder PutAuthOcspResponder($id, $object)
+> LtmAuthOcspResponder PutAuthOcspResponder($id, $object)
 
 
 
@@ -30705,11 +30675,11 @@ Online Certificate System Protocol (OCSP) responder configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthOcspResponder**](AuthOcspResponder.md)|  | 
+ **object** | [**LtmAuthOcspResponder**](LtmAuthOcspResponder.md)|  | 
 
 ### Return type
 
-[**AuthOcspResponder**](auth_ocspResponder.md)
+[**LtmAuthOcspResponder**](ltm_auth_ocspResponder.md)
 
 ### Authorization
 
@@ -30723,7 +30693,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthProfile**
-> AuthProfile PutAuthProfile($id, $object)
+> LtmAuthProfile PutAuthProfile($id, $object)
 
 
 
@@ -30735,11 +30705,11 @@ Virtual server traffic Authentication profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthProfile**](AuthProfile.md)|  | 
+ **object** | [**LtmAuthProfile**](LtmAuthProfile.md)|  | 
 
 ### Return type
 
-[**AuthProfile**](auth_profile.md)
+[**LtmAuthProfile**](ltm_auth_profile.md)
 
 ### Authorization
 
@@ -30753,7 +30723,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthRadius**
-> AuthRadius PutAuthRadius($id, $object)
+> LtmAuthRadius PutAuthRadius($id, $object)
 
 
 
@@ -30765,11 +30735,11 @@ RADIUS configuration for remote RADIUS client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthRadius**](AuthRadius.md)|  | 
+ **object** | [**LtmAuthRadius**](LtmAuthRadius.md)|  | 
 
 ### Return type
 
-[**AuthRadius**](auth_radius.md)
+[**LtmAuthRadius**](ltm_auth_radius.md)
 
 ### Authorization
 
@@ -30783,7 +30753,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthRadiusServer**
-> AuthRadiusServer PutAuthRadiusServer($id, $object)
+> LtmAuthRadiusServer PutAuthRadiusServer($id, $object)
 
 
 
@@ -30795,11 +30765,11 @@ RADIUS server configuration for use with RADIUS authentication profiles
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthRadiusServer**](AuthRadiusServer.md)|  | 
+ **object** | [**LtmAuthRadiusServer**](LtmAuthRadiusServer.md)|  | 
 
 ### Return type
 
-[**AuthRadiusServer**](auth_radiusServer.md)
+[**LtmAuthRadiusServer**](ltm_auth_radiusServer.md)
 
 ### Authorization
 
@@ -30813,7 +30783,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthSslCcLdap**
-> AuthSslCcLdap PutAuthSslCcLdap($id, $object)
+> LtmAuthSslCcLdap PutAuthSslCcLdap($id, $object)
 
 
 
@@ -30825,11 +30795,11 @@ SSL client certificate configuration, for use with remote SSL-based LDAP authori
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthSslCcLdap**](AuthSslCcLdap.md)|  | 
+ **object** | [**LtmAuthSslCcLdap**](LtmAuthSslCcLdap.md)|  | 
 
 ### Return type
 
-[**AuthSslCcLdap**](auth_sslCcLdap.md)
+[**LtmAuthSslCcLdap**](ltm_auth_sslCcLdap.md)
 
 ### Authorization
 
@@ -30843,7 +30813,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthSslCrldp**
-> AuthSslCrldp PutAuthSslCrldp($id, $object)
+> LtmAuthSslCrldp PutAuthSslCrldp($id, $object)
 
 
 
@@ -30855,11 +30825,11 @@ SSL client certificate configuration, for use with remote SSL-based CRLDP author
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthSslCrldp**](AuthSslCrldp.md)|  | 
+ **object** | [**LtmAuthSslCrldp**](LtmAuthSslCrldp.md)|  | 
 
 ### Return type
 
-[**AuthSslCrldp**](auth_sslCrldp.md)
+[**LtmAuthSslCrldp**](ltm_auth_sslCrldp.md)
 
 ### Authorization
 
@@ -30873,7 +30843,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthSslOcsp**
-> AuthSslOcsp PutAuthSslOcsp($id, $object)
+> LtmAuthSslOcsp PutAuthSslOcsp($id, $object)
 
 
 
@@ -30885,11 +30855,11 @@ OCSP configuration for implementing remote OCSP-based client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthSslOcsp**](AuthSslOcsp.md)|  | 
+ **object** | [**LtmAuthSslOcsp**](LtmAuthSslOcsp.md)|  | 
 
 ### Return type
 
-[**AuthSslOcsp**](auth_sslOcsp.md)
+[**LtmAuthSslOcsp**](ltm_auth_sslOcsp.md)
 
 ### Authorization
 
@@ -30903,7 +30873,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutAuthTacacs**
-> AuthTacacs PutAuthTacacs($id, $object)
+> LtmAuthTacacs PutAuthTacacs($id, $object)
 
 
 
@@ -30915,11 +30885,11 @@ TACACS+ configuration for remote TACACS+ client authentication
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**AuthTacacs**](AuthTacacs.md)|  | 
+ **object** | [**LtmAuthTacacs**](LtmAuthTacacs.md)|  | 
 
 ### Return type
 
-[**AuthTacacs**](auth_tacacs.md)
+[**LtmAuthTacacs**](ltm_auth_tacacs.md)
 
 ### Authorization
 
@@ -30933,7 +30903,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutClassificationApplication**
-> ClassificationApplication PutClassificationApplication($id, $object)
+> LtmClassificationApplication PutClassificationApplication($id, $object)
 
 
 
@@ -30945,11 +30915,11 @@ Traffic Classification Application
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationApplication**](ClassificationApplication.md)|  | 
+ **object** | [**LtmClassificationApplication**](LtmClassificationApplication.md)|  | 
 
 ### Return type
 
-[**ClassificationApplication**](classification_application.md)
+[**LtmClassificationApplication**](ltm_classification_application.md)
 
 ### Authorization
 
@@ -30963,7 +30933,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutClassificationCategory**
-> ClassificationCategory PutClassificationCategory($id, $object)
+> LtmClassificationCategory PutClassificationCategory($id, $object)
 
 
 
@@ -30975,11 +30945,11 @@ Traffic Classification Category
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationCategory**](ClassificationCategory.md)|  | 
+ **object** | [**LtmClassificationCategory**](LtmClassificationCategory.md)|  | 
 
 ### Return type
 
-[**ClassificationCategory**](classification_category.md)
+[**LtmClassificationCategory**](ltm_classification_category.md)
 
 ### Authorization
 
@@ -30993,7 +30963,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutClassificationSignatureUpdateSchedule**
-> ClassificationSignatureUpdateSchedule PutClassificationSignatureUpdateSchedule($id, $object)
+> LtmClassificationSignatureUpdateSchedule PutClassificationSignatureUpdateSchedule($id, $object)
 
 
 
@@ -31005,11 +30975,11 @@ Configure scheduling for classification signature updates.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationSignatureUpdateSchedule**](ClassificationSignatureUpdateSchedule.md)|  | 
+ **object** | [**LtmClassificationSignatureUpdateSchedule**](LtmClassificationSignatureUpdateSchedule.md)|  | 
 
 ### Return type
 
-[**ClassificationSignatureUpdateSchedule**](classification_signatureUpdateSchedule.md)
+[**LtmClassificationSignatureUpdateSchedule**](ltm_classification_signatureUpdateSchedule.md)
 
 ### Authorization
 
@@ -31023,7 +30993,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutClassificationSignatureVersion**
-> ClassificationSignatureVersion PutClassificationSignatureVersion($id, $object)
+> LtmClassificationSignatureVersion PutClassificationSignatureVersion($id, $object)
 
 
 
@@ -31035,11 +31005,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationSignatureVersion**](ClassificationSignatureVersion.md)|  | 
+ **object** | [**LtmClassificationSignatureVersion**](LtmClassificationSignatureVersion.md)|  | 
 
 ### Return type
 
-[**ClassificationSignatureVersion**](classification_signatureVersion.md)
+[**LtmClassificationSignatureVersion**](ltm_classification_signatureVersion.md)
 
 ### Authorization
 
@@ -31053,7 +31023,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutClassificationUrlCatPolicy**
-> ClassificationUrlCatPolicy PutClassificationUrlCatPolicy($id, $object)
+> LtmClassificationUrlCatPolicy PutClassificationUrlCatPolicy($id, $object)
 
 
 
@@ -31065,11 +31035,11 @@ URL Categorization policy
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrlCatPolicy**](ClassificationUrlCatPolicy.md)|  | 
+ **object** | [**LtmClassificationUrlCatPolicy**](LtmClassificationUrlCatPolicy.md)|  | 
 
 ### Return type
 
-[**ClassificationUrlCatPolicy**](classification_urlCatPolicy.md)
+[**LtmClassificationUrlCatPolicy**](ltm_classification_urlCatPolicy.md)
 
 ### Authorization
 
@@ -31083,7 +31053,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutClassificationUrlCategory**
-> ClassificationUrlCategory PutClassificationUrlCategory($id, $object)
+> LtmClassificationUrlCategory PutClassificationUrlCategory($id, $object)
 
 
 
@@ -31095,11 +31065,11 @@ URL Classification Category
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrlCategory**](ClassificationUrlCategory.md)|  | 
+ **object** | [**LtmClassificationUrlCategory**](LtmClassificationUrlCategory.md)|  | 
 
 ### Return type
 
-[**ClassificationUrlCategory**](classification_urlCategory.md)
+[**LtmClassificationUrlCategory**](ltm_classification_urlCategory.md)
 
 ### Authorization
 
@@ -31113,7 +31083,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutClassificationUrldbFeedList**
-> ClassificationUrldbFeedList PutClassificationUrldbFeedList($id, $object)
+> LtmClassificationUrldbFeedList PutClassificationUrldbFeedList($id, $object)
 
 
 
@@ -31125,11 +31095,11 @@ Reusable URLDB feed lists for URL Categorization.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrldbFeedList**](ClassificationUrldbFeedList.md)|  | 
+ **object** | [**LtmClassificationUrldbFeedList**](LtmClassificationUrldbFeedList.md)|  | 
 
 ### Return type
 
-[**ClassificationUrldbFeedList**](classification_urldbFeedList.md)
+[**LtmClassificationUrldbFeedList**](ltm_classification_urldbFeedList.md)
 
 ### Authorization
 
@@ -31143,7 +31113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutClassificationUrldbFile**
-> ClassificationUrldbFile PutClassificationUrldbFile($id, $object)
+> LtmClassificationUrldbFile PutClassificationUrldbFile($id, $object)
 
 
 
@@ -31155,11 +31125,11 @@ File object for custom url category database.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ClassificationUrldbFile**](ClassificationUrldbFile.md)|  | 
+ **object** | [**LtmClassificationUrldbFile**](LtmClassificationUrldbFile.md)|  | 
 
 ### Return type
 
-[**ClassificationUrldbFile**](classification_urldbFile.md)
+[**LtmClassificationUrldbFile**](ltm_classification_urldbFile.md)
 
 ### Authorization
 
@@ -31173,7 +31143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDataGroupExternal**
-> DataGroupExternal PutDataGroupExternal($id, $object)
+> LtmDataGroupExternal PutDataGroupExternal($id, $object)
 
 
 
@@ -31185,11 +31155,11 @@ External data group configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DataGroupExternal**](DataGroupExternal.md)|  | 
+ **object** | [**LtmDataGroupExternal**](LtmDataGroupExternal.md)|  | 
 
 ### Return type
 
-[**DataGroupExternal**](dataGroup_external.md)
+[**LtmDataGroupExternal**](ltm_dataGroup_external.md)
 
 ### Authorization
 
@@ -31203,7 +31173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDataGroupInternal**
-> DataGroupInternal PutDataGroupInternal($id, $object)
+> LtmDataGroupInternal PutDataGroupInternal($id, $object)
 
 
 
@@ -31215,11 +31185,11 @@ Internal data group configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DataGroupInternal**](DataGroupInternal.md)|  | 
+ **object** | [**LtmDataGroupInternal**](LtmDataGroupInternal.md)|  | 
 
 ### Return type
 
-[**DataGroupInternal**](dataGroup_internal.md)
+[**LtmDataGroupInternal**](ltm_dataGroup_internal.md)
 
 ### Authorization
 
@@ -31233,7 +31203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDefaultNodeMonitor**
-> DefaultNodeMonitor PutDefaultNodeMonitor($id, $object)
+> LtmDefaultNodeMonitor PutDefaultNodeMonitor($id, $object)
 
 
 
@@ -31245,11 +31215,11 @@ Configure the default-monitor rule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DefaultNodeMonitor**](DefaultNodeMonitor.md)|  | 
+ **object** | [**LtmDefaultNodeMonitor**](LtmDefaultNodeMonitor.md)|  | 
 
 ### Return type
 
-[**DefaultNodeMonitor**](defaultNodeMonitor.md)
+[**LtmDefaultNodeMonitor**](ltm_defaultNodeMonitor.md)
 
 ### Authorization
 
@@ -31263,7 +31233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsAnalyticsGlobalSettings**
-> DnsAnalyticsGlobalSettings PutDnsAnalyticsGlobalSettings($id, $object)
+> LtmDnsAnalyticsGlobalSettings PutDnsAnalyticsGlobalSettings($id, $object)
 
 
 
@@ -31275,11 +31245,11 @@ AVR DNS statistics global settings affecting all DNS listeners.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsAnalyticsGlobalSettings**](DnsAnalyticsGlobalSettings.md)|  | 
+ **object** | [**LtmDnsAnalyticsGlobalSettings**](LtmDnsAnalyticsGlobalSettings.md)|  | 
 
 ### Return type
 
-[**DnsAnalyticsGlobalSettings**](dns_analytics_globalSettings.md)
+[**LtmDnsAnalyticsGlobalSettings**](ltm_dns_analytics_globalSettings.md)
 
 ### Authorization
 
@@ -31293,7 +31263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsCacheGlobalSettings**
-> DnsCacheGlobalSettings PutDnsCacheGlobalSettings($id, $object)
+> LtmDnsCacheGlobalSettings PutDnsCacheGlobalSettings($id, $object)
 
 
 
@@ -31305,11 +31275,11 @@ DNS Cache global settings affecting all caches.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheGlobalSettings**](DnsCacheGlobalSettings.md)|  | 
+ **object** | [**LtmDnsCacheGlobalSettings**](LtmDnsCacheGlobalSettings.md)|  | 
 
 ### Return type
 
-[**DnsCacheGlobalSettings**](dns_cache_globalSettings.md)
+[**LtmDnsCacheGlobalSettings**](ltm_dns_cache_globalSettings.md)
 
 ### Authorization
 
@@ -31323,7 +31293,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsCacheResolver**
-> DnsCacheResolver PutDnsCacheResolver($id, $object)
+> LtmDnsCacheResolver PutDnsCacheResolver($id, $object)
 
 
 
@@ -31335,11 +31305,11 @@ DNS Cache with recursive resolver.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheResolver**](DnsCacheResolver.md)|  | 
+ **object** | [**LtmDnsCacheResolver**](LtmDnsCacheResolver.md)|  | 
 
 ### Return type
 
-[**DnsCacheResolver**](dns_cache_resolver.md)
+[**LtmDnsCacheResolver**](ltm_dns_cache_resolver.md)
 
 ### Authorization
 
@@ -31353,7 +31323,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsCacheTransparent**
-> DnsCacheTransparent PutDnsCacheTransparent($id, $object)
+> LtmDnsCacheTransparent PutDnsCacheTransparent($id, $object)
 
 
 
@@ -31365,11 +31335,11 @@ DNS Cache without a resolver (responses from serverside cached).
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheTransparent**](DnsCacheTransparent.md)|  | 
+ **object** | [**LtmDnsCacheTransparent**](LtmDnsCacheTransparent.md)|  | 
 
 ### Return type
 
-[**DnsCacheTransparent**](dns_cache_transparent.md)
+[**LtmDnsCacheTransparent**](ltm_dns_cache_transparent.md)
 
 ### Authorization
 
@@ -31383,7 +31353,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsCacheValidatingResolver**
-> DnsCacheValidatingResolver PutDnsCacheValidatingResolver($id, $object)
+> LtmDnsCacheValidatingResolver PutDnsCacheValidatingResolver($id, $object)
 
 
 
@@ -31395,11 +31365,11 @@ DNS Cache with recursive resolver and DNSSEC validation.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsCacheValidatingResolver**](DnsCacheValidatingResolver.md)|  | 
+ **object** | [**LtmDnsCacheValidatingResolver**](LtmDnsCacheValidatingResolver.md)|  | 
 
 ### Return type
 
-[**DnsCacheValidatingResolver**](dns_cache_validatingResolver.md)
+[**LtmDnsCacheValidatingResolver**](ltm_dns_cache_validatingResolver.md)
 
 ### Authorization
 
@@ -31413,7 +31383,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsDnssecKey**
-> DnsDnssecKey PutDnsDnssecKey($id, $object)
+> LtmDnsDnssecKey PutDnsDnssecKey($id, $object)
 
 
 
@@ -31425,11 +31395,11 @@ DNSSEC key configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsDnssecKey**](DnsDnssecKey.md)|  | 
+ **object** | [**LtmDnsDnssecKey**](LtmDnsDnssecKey.md)|  | 
 
 ### Return type
 
-[**DnsDnssecKey**](dns_dnssec_key.md)
+[**LtmDnsDnssecKey**](ltm_dns_dnssec_key.md)
 
 ### Authorization
 
@@ -31443,7 +31413,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsDnssecKeyTmGeneration**
-> DnsDnssecKeyTmGeneration PutDnsDnssecKeyTmGeneration($id, $object)
+> LtmDnsDnssecKeyTmGeneration PutDnsDnssecKeyTmGeneration($id, $object)
 
 
 
@@ -31455,11 +31425,11 @@ DNSSEC key generation configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsDnssecKeyTmGeneration**](DnsDnssecKeyTmGeneration.md)|  | 
+ **object** | [**LtmDnsDnssecKeyTmGeneration**](LtmDnsDnssecKeyTmGeneration.md)|  | 
 
 ### Return type
 
-[**DnsDnssecKeyTmGeneration**](dns_dnssec_key_tmGeneration.md)
+[**LtmDnsDnssecKeyTmGeneration**](ltm_dns_dnssec_key_tmGeneration.md)
 
 ### Authorization
 
@@ -31473,7 +31443,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsDnssecZone**
-> DnsDnssecZone PutDnsDnssecZone($id, $object)
+> LtmDnsDnssecZone PutDnsDnssecZone($id, $object)
 
 
 
@@ -31485,11 +31455,11 @@ DNSSEC zone configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsDnssecZone**](DnsDnssecZone.md)|  | 
+ **object** | [**LtmDnsDnssecZone**](LtmDnsDnssecZone.md)|  | 
 
 ### Return type
 
-[**DnsDnssecZone**](dns_dnssec_zone.md)
+[**LtmDnsDnssecZone**](ltm_dns_dnssec_zone.md)
 
 ### Authorization
 
@@ -31503,7 +31473,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsNameserver**
-> DnsNameserver PutDnsNameserver($id, $object)
+> LtmDnsNameserver PutDnsNameserver($id, $object)
 
 
 
@@ -31515,11 +31485,11 @@ DNS nameserver configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsNameserver**](DnsNameserver.md)|  | 
+ **object** | [**LtmDnsNameserver**](LtmDnsNameserver.md)|  | 
 
 ### Return type
 
-[**DnsNameserver**](dns_nameserver.md)
+[**LtmDnsNameserver**](ltm_dns_nameserver.md)
 
 ### Authorization
 
@@ -31533,7 +31503,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsTsigKey**
-> DnsTsigKey PutDnsTsigKey($id, $object)
+> LtmDnsTsigKey PutDnsTsigKey($id, $object)
 
 
 
@@ -31545,11 +31515,11 @@ TSIG Key configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsTsigKey**](DnsTsigKey.md)|  | 
+ **object** | [**LtmDnsTsigKey**](LtmDnsTsigKey.md)|  | 
 
 ### Return type
 
-[**DnsTsigKey**](dns_tsigKey.md)
+[**LtmDnsTsigKey**](ltm_dns_tsigKey.md)
 
 ### Authorization
 
@@ -31563,7 +31533,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutDnsZone**
-> DnsZone PutDnsZone($id, $object)
+> LtmDnsZone PutDnsZone($id, $object)
 
 
 
@@ -31575,11 +31545,11 @@ Zone configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**DnsZone**](DnsZone.md)|  | 
+ **object** | [**LtmDnsZone**](LtmDnsZone.md)|  | 
 
 ### Return type
 
-[**DnsZone**](dns_zone.md)
+[**LtmDnsZone**](ltm_dns_zone.md)
 
 ### Authorization
 
@@ -31593,7 +31563,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutEvictionPolicy**
-> EvictionPolicy PutEvictionPolicy($id, $object)
+> LtmEvictionPolicy PutEvictionPolicy($id, $object)
 
 
 
@@ -31605,11 +31575,11 @@ Defines an eviction policy, used to select which flows to evict when approaching
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**EvictionPolicy**](EvictionPolicy.md)|  | 
+ **object** | [**LtmEvictionPolicy**](LtmEvictionPolicy.md)|  | 
 
 ### Return type
 
-[**EvictionPolicy**](evictionPolicy.md)
+[**LtmEvictionPolicy**](ltm_evictionPolicy.md)
 
 ### Authorization
 
@@ -31623,7 +31593,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutGlobalSettingsConnection**
-> GlobalSettingsConnection PutGlobalSettingsConnection($id, $object)
+> LtmGlobalSettingsConnection PutGlobalSettingsConnection($id, $object)
 
 
 
@@ -31635,11 +31605,11 @@ General configuration options for connections
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**GlobalSettingsConnection**](GlobalSettingsConnection.md)|  | 
+ **object** | [**LtmGlobalSettingsConnection**](LtmGlobalSettingsConnection.md)|  | 
 
 ### Return type
 
-[**GlobalSettingsConnection**](globalSettings_connection.md)
+[**LtmGlobalSettingsConnection**](ltm_globalSettings_connection.md)
 
 ### Authorization
 
@@ -31653,7 +31623,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutGlobalSettingsGeneral**
-> GlobalSettingsGeneral PutGlobalSettingsGeneral($id, $object)
+> LtmGlobalSettingsGeneral PutGlobalSettingsGeneral($id, $object)
 
 
 
@@ -31665,11 +31635,11 @@ General configuration options
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**GlobalSettingsGeneral**](GlobalSettingsGeneral.md)|  | 
+ **object** | [**LtmGlobalSettingsGeneral**](LtmGlobalSettingsGeneral.md)|  | 
 
 ### Return type
 
-[**GlobalSettingsGeneral**](globalSettings_general.md)
+[**LtmGlobalSettingsGeneral**](ltm_globalSettings_general.md)
 
 ### Authorization
 
@@ -31683,7 +31653,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutGlobalSettingsTrafficControl**
-> GlobalSettingsTrafficControl PutGlobalSettingsTrafficControl($id, $object)
+> LtmGlobalSettingsTrafficControl PutGlobalSettingsTrafficControl($id, $object)
 
 
 
@@ -31695,11 +31665,11 @@ General configuration options for traffic
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**GlobalSettingsTrafficControl**](GlobalSettingsTrafficControl.md)|  | 
+ **object** | [**LtmGlobalSettingsTrafficControl**](LtmGlobalSettingsTrafficControl.md)|  | 
 
 ### Return type
 
-[**GlobalSettingsTrafficControl**](globalSettings_trafficControl.md)
+[**LtmGlobalSettingsTrafficControl**](ltm_globalSettings_trafficControl.md)
 
 ### Authorization
 
@@ -31713,7 +31683,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutHtmlRuleCommentRaiseEvent**
-> HtmlRuleCommentRaiseEvent PutHtmlRuleCommentRaiseEvent($id, $object)
+> LtmHtmlRuleCommentRaiseEvent PutHtmlRuleCommentRaiseEvent($id, $object)
 
 
 
@@ -31725,11 +31695,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleCommentRaiseEvent**](HtmlRuleCommentRaiseEvent.md)|  | 
+ **object** | [**LtmHtmlRuleCommentRaiseEvent**](LtmHtmlRuleCommentRaiseEvent.md)|  | 
 
 ### Return type
 
-[**HtmlRuleCommentRaiseEvent**](htmlRule_commentRaiseEvent.md)
+[**LtmHtmlRuleCommentRaiseEvent**](ltm_htmlRule_commentRaiseEvent.md)
 
 ### Authorization
 
@@ -31743,7 +31713,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutHtmlRuleCommentRemove**
-> HtmlRuleCommentRemove PutHtmlRuleCommentRemove($id, $object)
+> LtmHtmlRuleCommentRemove PutHtmlRuleCommentRemove($id, $object)
 
 
 
@@ -31755,11 +31725,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleCommentRemove**](HtmlRuleCommentRemove.md)|  | 
+ **object** | [**LtmHtmlRuleCommentRemove**](LtmHtmlRuleCommentRemove.md)|  | 
 
 ### Return type
 
-[**HtmlRuleCommentRemove**](htmlRule_commentRemove.md)
+[**LtmHtmlRuleCommentRemove**](ltm_htmlRule_commentRemove.md)
 
 ### Authorization
 
@@ -31773,7 +31743,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutHtmlRuleTagAppendHtml**
-> HtmlRuleTagAppendHtml PutHtmlRuleTagAppendHtml($id, $object)
+> LtmHtmlRuleTagAppendHtml PutHtmlRuleTagAppendHtml($id, $object)
 
 
 
@@ -31785,11 +31755,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagAppendHtml**](HtmlRuleTagAppendHtml.md)|  | 
+ **object** | [**LtmHtmlRuleTagAppendHtml**](LtmHtmlRuleTagAppendHtml.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagAppendHtml**](htmlRule_tagAppendHtml.md)
+[**LtmHtmlRuleTagAppendHtml**](ltm_htmlRule_tagAppendHtml.md)
 
 ### Authorization
 
@@ -31803,7 +31773,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutHtmlRuleTagPrependHtml**
-> HtmlRuleTagPrependHtml PutHtmlRuleTagPrependHtml($id, $object)
+> LtmHtmlRuleTagPrependHtml PutHtmlRuleTagPrependHtml($id, $object)
 
 
 
@@ -31815,11 +31785,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagPrependHtml**](HtmlRuleTagPrependHtml.md)|  | 
+ **object** | [**LtmHtmlRuleTagPrependHtml**](LtmHtmlRuleTagPrependHtml.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagPrependHtml**](htmlRule_tagPrependHtml.md)
+[**LtmHtmlRuleTagPrependHtml**](ltm_htmlRule_tagPrependHtml.md)
 
 ### Authorization
 
@@ -31833,7 +31803,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutHtmlRuleTagRaiseEvent**
-> HtmlRuleTagRaiseEvent PutHtmlRuleTagRaiseEvent($id, $object)
+> LtmHtmlRuleTagRaiseEvent PutHtmlRuleTagRaiseEvent($id, $object)
 
 
 
@@ -31845,11 +31815,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagRaiseEvent**](HtmlRuleTagRaiseEvent.md)|  | 
+ **object** | [**LtmHtmlRuleTagRaiseEvent**](LtmHtmlRuleTagRaiseEvent.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagRaiseEvent**](htmlRule_tagRaiseEvent.md)
+[**LtmHtmlRuleTagRaiseEvent**](ltm_htmlRule_tagRaiseEvent.md)
 
 ### Authorization
 
@@ -31863,7 +31833,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutHtmlRuleTagRemove**
-> HtmlRuleTagRemove PutHtmlRuleTagRemove($id, $object)
+> LtmHtmlRuleTagRemove PutHtmlRuleTagRemove($id, $object)
 
 
 
@@ -31875,11 +31845,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagRemove**](HtmlRuleTagRemove.md)|  | 
+ **object** | [**LtmHtmlRuleTagRemove**](LtmHtmlRuleTagRemove.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagRemove**](htmlRule_tagRemove.md)
+[**LtmHtmlRuleTagRemove**](ltm_htmlRule_tagRemove.md)
 
 ### Authorization
 
@@ -31893,7 +31863,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutHtmlRuleTagRemoveAttribute**
-> HtmlRuleTagRemoveAttribute PutHtmlRuleTagRemoveAttribute($id, $object)
+> LtmHtmlRuleTagRemoveAttribute PutHtmlRuleTagRemoveAttribute($id, $object)
 
 
 
@@ -31905,11 +31875,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**HtmlRuleTagRemoveAttribute**](HtmlRuleTagRemoveAttribute.md)|  | 
+ **object** | [**LtmHtmlRuleTagRemoveAttribute**](LtmHtmlRuleTagRemoveAttribute.md)|  | 
 
 ### Return type
 
-[**HtmlRuleTagRemoveAttribute**](htmlRule_tagRemoveAttribute.md)
+[**LtmHtmlRuleTagRemoveAttribute**](ltm_htmlRule_tagRemoveAttribute.md)
 
 ### Authorization
 
@@ -31923,7 +31893,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutIfile**
-> Ifile PutIfile($id, $object)
+> LtmIfile PutIfile($id, $object)
 
 
 
@@ -31935,11 +31905,11 @@ iFile Configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Ifile**](Ifile.md)|  | 
+ **object** | [**LtmIfile**](LtmIfile.md)|  | 
 
 ### Return type
 
-[**Ifile**](ifile.md)
+[**LtmIfile**](ltm_ifile.md)
 
 ### Authorization
 
@@ -31953,7 +31923,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutLsnLogProfile**
-> LsnLogProfile PutLsnLogProfile($id, $object)
+> LtmLsnLogProfile PutLsnLogProfile($id, $object)
 
 
 
@@ -31965,11 +31935,11 @@ Defines the configuration for logging of LSN flows.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**LsnLogProfile**](LsnLogProfile.md)|  | 
+ **object** | [**LtmLsnLogProfile**](LtmLsnLogProfile.md)|  | 
 
 ### Return type
 
-[**LsnLogProfile**](lsnLogProfile.md)
+[**LtmLsnLogProfile**](ltm_lsnLogProfile.md)
 
 ### Authorization
 
@@ -31983,7 +31953,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutLsnPool**
-> LsnPool PutLsnPool($id, $object)
+> LtmLsnPool PutLsnPool($id, $object)
 
 
 
@@ -31995,11 +31965,11 @@ LSNAT/CGNAT translation address configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**LsnPool**](LsnPool.md)|  | 
+ **object** | [**LtmLsnPool**](LtmLsnPool.md)|  | 
 
 ### Return type
 
-[**LsnPool**](lsnPool.md)
+[**LtmLsnPool**](ltm_lsnPool.md)
 
 ### Authorization
 
@@ -32013,7 +31983,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingDiameterPeer**
-> MessageRoutingDiameterPeer PutMessageRoutingDiameterPeer($id, $object)
+> LtmMessageRoutingDiameterPeer PutMessageRoutingDiameterPeer($id, $object)
 
 
 
@@ -32025,11 +31995,11 @@ Peed for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterPeer**](MessageRoutingDiameterPeer.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterPeer**](LtmMessageRoutingDiameterPeer.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterPeer**](messageRouting_diameter_peer.md)
+[**LtmMessageRoutingDiameterPeer**](ltm_messageRouting_diameter_peer.md)
 
 ### Authorization
 
@@ -32043,7 +32013,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingDiameterProfileRouter**
-> MessageRoutingDiameterProfileRouter PutMessageRoutingDiameterProfileRouter($id, $object)
+> LtmMessageRoutingDiameterProfileRouter PutMessageRoutingDiameterProfileRouter($id, $object)
 
 
 
@@ -32055,11 +32025,11 @@ Configures a Diameter Router profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterProfileRouter**](MessageRoutingDiameterProfileRouter.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterProfileRouter**](LtmMessageRoutingDiameterProfileRouter.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterProfileRouter**](messageRouting_diameter_profile_router.md)
+[**LtmMessageRoutingDiameterProfileRouter**](ltm_messageRouting_diameter_profile_router.md)
 
 ### Authorization
 
@@ -32073,7 +32043,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingDiameterProfileSession**
-> MessageRoutingDiameterProfileSession PutMessageRoutingDiameterProfileSession($id, $object)
+> LtmMessageRoutingDiameterProfileSession PutMessageRoutingDiameterProfileSession($id, $object)
 
 
 
@@ -32085,11 +32055,11 @@ Configures a Diameter Session profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterProfileSession**](MessageRoutingDiameterProfileSession.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterProfileSession**](LtmMessageRoutingDiameterProfileSession.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterProfileSession**](messageRouting_diameter_profile_session.md)
+[**LtmMessageRoutingDiameterProfileSession**](ltm_messageRouting_diameter_profile_session.md)
 
 ### Authorization
 
@@ -32103,7 +32073,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingDiameterRoute**
-> MessageRoutingDiameterRoute PutMessageRoutingDiameterRoute($id, $object)
+> LtmMessageRoutingDiameterRoute PutMessageRoutingDiameterRoute($id, $object)
 
 
 
@@ -32115,11 +32085,11 @@ Configures a static route for use in Diameter message routing.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterRoute**](MessageRoutingDiameterRoute.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterRoute**](LtmMessageRoutingDiameterRoute.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterRoute**](messageRouting_diameter_route.md)
+[**LtmMessageRoutingDiameterRoute**](ltm_messageRouting_diameter_route.md)
 
 ### Authorization
 
@@ -32133,7 +32103,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingDiameterTransportConfig**
-> MessageRoutingDiameterTransportConfig PutMessageRoutingDiameterTransportConfig($id, $object)
+> LtmMessageRoutingDiameterTransportConfig PutMessageRoutingDiameterTransportConfig($id, $object)
 
 
 
@@ -32145,11 +32115,11 @@ Defines the configuration for an outgoing connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterTransportConfig**](MessageRoutingDiameterTransportConfig.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterTransportConfig**](LtmMessageRoutingDiameterTransportConfig.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfig**](messageRouting_diameter_transportConfig.md)
+[**LtmMessageRoutingDiameterTransportConfig**](ltm_messageRouting_diameter_transportConfig.md)
 
 ### Authorization
 
@@ -32163,7 +32133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingDiameterTransportConfigProfiles**
-> MessageRoutingDiameterTransportConfigProfiles PutMessageRoutingDiameterTransportConfigProfiles($id, $object)
+> LtmMessageRoutingDiameterTransportConfigProfiles PutMessageRoutingDiameterTransportConfigProfiles($id, $object)
 
 
 
@@ -32175,11 +32145,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingDiameterTransportConfigProfiles**](MessageRoutingDiameterTransportConfigProfiles.md)|  | 
+ **object** | [**LtmMessageRoutingDiameterTransportConfigProfiles**](LtmMessageRoutingDiameterTransportConfigProfiles.md)|  | 
 
 ### Return type
 
-[**MessageRoutingDiameterTransportConfigProfiles**](messageRouting_diameter_transportConfig_profiles.md)
+[**LtmMessageRoutingDiameterTransportConfigProfiles**](ltm_messageRouting_diameter_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -32193,7 +32163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingGenericPeer**
-> MessageRoutingGenericPeer PutMessageRoutingGenericPeer($id, $object)
+> LtmMessageRoutingGenericPeer PutMessageRoutingGenericPeer($id, $object)
 
 
 
@@ -32205,11 +32175,11 @@ Peed for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericPeer**](MessageRoutingGenericPeer.md)|  | 
+ **object** | [**LtmMessageRoutingGenericPeer**](LtmMessageRoutingGenericPeer.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericPeer**](messageRouting_generic_peer.md)
+[**LtmMessageRoutingGenericPeer**](ltm_messageRouting_generic_peer.md)
 
 ### Authorization
 
@@ -32223,7 +32193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingGenericProtocol**
-> MessageRoutingGenericProtocol PutMessageRoutingGenericProtocol($id, $object)
+> LtmMessageRoutingGenericProtocol PutMessageRoutingGenericProtocol($id, $object)
 
 
 
@@ -32235,11 +32205,11 @@ Generic message parser for use with the message routing framework.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericProtocol**](MessageRoutingGenericProtocol.md)|  | 
+ **object** | [**LtmMessageRoutingGenericProtocol**](LtmMessageRoutingGenericProtocol.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericProtocol**](messageRouting_generic_protocol.md)
+[**LtmMessageRoutingGenericProtocol**](ltm_messageRouting_generic_protocol.md)
 
 ### Authorization
 
@@ -32253,7 +32223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingGenericRoute**
-> MessageRoutingGenericRoute PutMessageRoutingGenericRoute($id, $object)
+> LtmMessageRoutingGenericRoute PutMessageRoutingGenericRoute($id, $object)
 
 
 
@@ -32265,11 +32235,11 @@ Static route for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericRoute**](MessageRoutingGenericRoute.md)|  | 
+ **object** | [**LtmMessageRoutingGenericRoute**](LtmMessageRoutingGenericRoute.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericRoute**](messageRouting_generic_route.md)
+[**LtmMessageRoutingGenericRoute**](ltm_messageRouting_generic_route.md)
 
 ### Authorization
 
@@ -32283,7 +32253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingGenericRouter**
-> MessageRoutingGenericRouter PutMessageRoutingGenericRouter($id, $object)
+> LtmMessageRoutingGenericRouter PutMessageRoutingGenericRouter($id, $object)
 
 
 
@@ -32295,11 +32265,11 @@ Message routing instance for generic message protocol.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericRouter**](MessageRoutingGenericRouter.md)|  | 
+ **object** | [**LtmMessageRoutingGenericRouter**](LtmMessageRoutingGenericRouter.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericRouter**](messageRouting_generic_router.md)
+[**LtmMessageRoutingGenericRouter**](ltm_messageRouting_generic_router.md)
 
 ### Authorization
 
@@ -32313,7 +32283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingGenericTransportConfig**
-> MessageRoutingGenericTransportConfig PutMessageRoutingGenericTransportConfig($id, $object)
+> LtmMessageRoutingGenericTransportConfig PutMessageRoutingGenericTransportConfig($id, $object)
 
 
 
@@ -32325,11 +32295,11 @@ Defines the configuration for an outgoing connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericTransportConfig**](MessageRoutingGenericTransportConfig.md)|  | 
+ **object** | [**LtmMessageRoutingGenericTransportConfig**](LtmMessageRoutingGenericTransportConfig.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfig**](messageRouting_generic_transportConfig.md)
+[**LtmMessageRoutingGenericTransportConfig**](ltm_messageRouting_generic_transportConfig.md)
 
 ### Authorization
 
@@ -32343,7 +32313,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingGenericTransportConfigProfiles**
-> MessageRoutingGenericTransportConfigProfiles PutMessageRoutingGenericTransportConfigProfiles($id, $object)
+> LtmMessageRoutingGenericTransportConfigProfiles PutMessageRoutingGenericTransportConfigProfiles($id, $object)
 
 
 
@@ -32355,11 +32325,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingGenericTransportConfigProfiles**](MessageRoutingGenericTransportConfigProfiles.md)|  | 
+ **object** | [**LtmMessageRoutingGenericTransportConfigProfiles**](LtmMessageRoutingGenericTransportConfigProfiles.md)|  | 
 
 ### Return type
 
-[**MessageRoutingGenericTransportConfigProfiles**](messageRouting_generic_transportConfig_profiles.md)
+[**LtmMessageRoutingGenericTransportConfigProfiles**](ltm_messageRouting_generic_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -32373,7 +32343,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingSipPeer**
-> MessageRoutingSipPeer PutMessageRoutingSipPeer($id, $object)
+> LtmMessageRoutingSipPeer PutMessageRoutingSipPeer($id, $object)
 
 
 
@@ -32385,11 +32355,11 @@ Peed for routing generic message protocol messages.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipPeer**](MessageRoutingSipPeer.md)|  | 
+ **object** | [**LtmMessageRoutingSipPeer**](LtmMessageRoutingSipPeer.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipPeer**](messageRouting_sip_peer.md)
+[**LtmMessageRoutingSipPeer**](ltm_messageRouting_sip_peer.md)
 
 ### Authorization
 
@@ -32403,7 +32373,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingSipProfileRouter**
-> MessageRoutingSipProfileRouter PutMessageRoutingSipProfileRouter($id, $object)
+> LtmMessageRoutingSipProfileRouter PutMessageRoutingSipProfileRouter($id, $object)
 
 
 
@@ -32415,11 +32385,11 @@ Configures a Session Initiation Protocol (SIP) Router profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipProfileRouter**](MessageRoutingSipProfileRouter.md)|  | 
+ **object** | [**LtmMessageRoutingSipProfileRouter**](LtmMessageRoutingSipProfileRouter.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipProfileRouter**](messageRouting_sip_profile_router.md)
+[**LtmMessageRoutingSipProfileRouter**](ltm_messageRouting_sip_profile_router.md)
 
 ### Authorization
 
@@ -32433,7 +32403,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingSipProfileSession**
-> MessageRoutingSipProfileSession PutMessageRoutingSipProfileSession($id, $object)
+> LtmMessageRoutingSipProfileSession PutMessageRoutingSipProfileSession($id, $object)
 
 
 
@@ -32445,11 +32415,11 @@ Configures a Session Initiation Protocol (SIP) Session profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipProfileSession**](MessageRoutingSipProfileSession.md)|  | 
+ **object** | [**LtmMessageRoutingSipProfileSession**](LtmMessageRoutingSipProfileSession.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipProfileSession**](messageRouting_sip_profile_session.md)
+[**LtmMessageRoutingSipProfileSession**](ltm_messageRouting_sip_profile_session.md)
 
 ### Authorization
 
@@ -32463,7 +32433,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingSipRoute**
-> MessageRoutingSipRoute PutMessageRoutingSipRoute($id, $object)
+> LtmMessageRoutingSipRoute PutMessageRoutingSipRoute($id, $object)
 
 
 
@@ -32475,11 +32445,11 @@ Configures a static route for use in Session Initiation Protocol (SIP) message r
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipRoute**](MessageRoutingSipRoute.md)|  | 
+ **object** | [**LtmMessageRoutingSipRoute**](LtmMessageRoutingSipRoute.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipRoute**](messageRouting_sip_route.md)
+[**LtmMessageRoutingSipRoute**](ltm_messageRouting_sip_route.md)
 
 ### Authorization
 
@@ -32493,7 +32463,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingSipTransportConfig**
-> MessageRoutingSipTransportConfig PutMessageRoutingSipTransportConfig($id, $object)
+> LtmMessageRoutingSipTransportConfig PutMessageRoutingSipTransportConfig($id, $object)
 
 
 
@@ -32505,11 +32475,11 @@ Defines the configuration for an outgoing connection.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipTransportConfig**](MessageRoutingSipTransportConfig.md)|  | 
+ **object** | [**LtmMessageRoutingSipTransportConfig**](LtmMessageRoutingSipTransportConfig.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipTransportConfig**](messageRouting_sip_transportConfig.md)
+[**LtmMessageRoutingSipTransportConfig**](ltm_messageRouting_sip_transportConfig.md)
 
 ### Authorization
 
@@ -32523,7 +32493,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMessageRoutingSipTransportConfigProfiles**
-> MessageRoutingSipTransportConfigProfiles PutMessageRoutingSipTransportConfigProfiles($id, $object)
+> LtmMessageRoutingSipTransportConfigProfiles PutMessageRoutingSipTransportConfigProfiles($id, $object)
 
 
 
@@ -32535,11 +32505,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MessageRoutingSipTransportConfigProfiles**](MessageRoutingSipTransportConfigProfiles.md)|  | 
+ **object** | [**LtmMessageRoutingSipTransportConfigProfiles**](LtmMessageRoutingSipTransportConfigProfiles.md)|  | 
 
 ### Return type
 
-[**MessageRoutingSipTransportConfigProfiles**](messageRouting_sip_transportConfig_profiles.md)
+[**LtmMessageRoutingSipTransportConfigProfiles**](ltm_messageRouting_sip_transportConfig_profiles.md)
 
 ### Authorization
 
@@ -32553,7 +32523,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorDiameter**
-> MonitorDiameter PutMonitorDiameter($id, $object)
+> LtmMonitorDiameter PutMonitorDiameter($id, $object)
 
 
 
@@ -32565,11 +32535,11 @@ Diameter monitor configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorDiameter**](MonitorDiameter.md)|  | 
+ **object** | [**LtmMonitorDiameter**](LtmMonitorDiameter.md)|  | 
 
 ### Return type
 
-[**MonitorDiameter**](monitor_diameter.md)
+[**LtmMonitorDiameter**](ltm_monitor_diameter.md)
 
 ### Authorization
 
@@ -32583,7 +32553,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorDns**
-> MonitorDns PutMonitorDns($id, $object)
+> LtmMonitorDns PutMonitorDns($id, $object)
 
 
 
@@ -32595,11 +32565,11 @@ DNS monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorDns**](MonitorDns.md)|  | 
+ **object** | [**LtmMonitorDns**](LtmMonitorDns.md)|  | 
 
 ### Return type
 
-[**MonitorDns**](monitor_dns.md)
+[**LtmMonitorDns**](ltm_monitor_dns.md)
 
 ### Authorization
 
@@ -32613,7 +32583,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorExternal**
-> MonitorExternal PutMonitorExternal($id, $object)
+> LtmMonitorExternal PutMonitorExternal($id, $object)
 
 
 
@@ -32625,11 +32595,11 @@ External monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorExternal**](MonitorExternal.md)|  | 
+ **object** | [**LtmMonitorExternal**](LtmMonitorExternal.md)|  | 
 
 ### Return type
 
-[**MonitorExternal**](monitor_external.md)
+[**LtmMonitorExternal**](ltm_monitor_external.md)
 
 ### Authorization
 
@@ -32643,7 +32613,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorFirepass**
-> MonitorFirepass PutMonitorFirepass($id, $object)
+> LtmMonitorFirepass PutMonitorFirepass($id, $object)
 
 
 
@@ -32655,11 +32625,11 @@ Firepass monitor configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorFirepass**](MonitorFirepass.md)|  | 
+ **object** | [**LtmMonitorFirepass**](LtmMonitorFirepass.md)|  | 
 
 ### Return type
 
-[**MonitorFirepass**](monitor_firepass.md)
+[**LtmMonitorFirepass**](ltm_monitor_firepass.md)
 
 ### Authorization
 
@@ -32673,7 +32643,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorFtp**
-> MonitorFtp PutMonitorFtp($id, $object)
+> LtmMonitorFtp PutMonitorFtp($id, $object)
 
 
 
@@ -32685,11 +32655,11 @@ FTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorFtp**](MonitorFtp.md)|  | 
+ **object** | [**LtmMonitorFtp**](LtmMonitorFtp.md)|  | 
 
 ### Return type
 
-[**MonitorFtp**](monitor_ftp.md)
+[**LtmMonitorFtp**](ltm_monitor_ftp.md)
 
 ### Authorization
 
@@ -32703,7 +32673,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorGatewayIcmp**
-> MonitorGatewayIcmp PutMonitorGatewayIcmp($id, $object)
+> LtmMonitorGatewayIcmp PutMonitorGatewayIcmp($id, $object)
 
 
 
@@ -32715,11 +32685,11 @@ Gateway ICMP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorGatewayIcmp**](MonitorGatewayIcmp.md)|  | 
+ **object** | [**LtmMonitorGatewayIcmp**](LtmMonitorGatewayIcmp.md)|  | 
 
 ### Return type
 
-[**MonitorGatewayIcmp**](monitor_gatewayIcmp.md)
+[**LtmMonitorGatewayIcmp**](ltm_monitor_gatewayIcmp.md)
 
 ### Authorization
 
@@ -32733,7 +32703,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorHttp**
-> MonitorHttp PutMonitorHttp($id, $object)
+> LtmMonitorHttp PutMonitorHttp($id, $object)
 
 
 
@@ -32745,11 +32715,11 @@ HTTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorHttp**](MonitorHttp.md)|  | 
+ **object** | [**LtmMonitorHttp**](LtmMonitorHttp.md)|  | 
 
 ### Return type
 
-[**MonitorHttp**](monitor_http.md)
+[**LtmMonitorHttp**](ltm_monitor_http.md)
 
 ### Authorization
 
@@ -32763,7 +32733,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorHttps**
-> MonitorHttps PutMonitorHttps($id, $object)
+> LtmMonitorHttps PutMonitorHttps($id, $object)
 
 
 
@@ -32775,11 +32745,11 @@ HTTPS monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorHttps**](MonitorHttps.md)|  | 
+ **object** | [**LtmMonitorHttps**](LtmMonitorHttps.md)|  | 
 
 ### Return type
 
-[**MonitorHttps**](monitor_https.md)
+[**LtmMonitorHttps**](ltm_monitor_https.md)
 
 ### Authorization
 
@@ -32793,7 +32763,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorIcmp**
-> MonitorIcmp PutMonitorIcmp($id, $object)
+> LtmMonitorIcmp PutMonitorIcmp($id, $object)
 
 
 
@@ -32805,11 +32775,11 @@ ICMP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorIcmp**](MonitorIcmp.md)|  | 
+ **object** | [**LtmMonitorIcmp**](LtmMonitorIcmp.md)|  | 
 
 ### Return type
 
-[**MonitorIcmp**](monitor_icmp.md)
+[**LtmMonitorIcmp**](ltm_monitor_icmp.md)
 
 ### Authorization
 
@@ -32823,7 +32793,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorImap**
-> MonitorImap PutMonitorImap($id, $object)
+> LtmMonitorImap PutMonitorImap($id, $object)
 
 
 
@@ -32835,11 +32805,11 @@ IMAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorImap**](MonitorImap.md)|  | 
+ **object** | [**LtmMonitorImap**](LtmMonitorImap.md)|  | 
 
 ### Return type
 
-[**MonitorImap**](monitor_imap.md)
+[**LtmMonitorImap**](ltm_monitor_imap.md)
 
 ### Authorization
 
@@ -32853,7 +32823,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorInband**
-> MonitorInband PutMonitorInband($id, $object)
+> LtmMonitorInband PutMonitorInband($id, $object)
 
 
 
@@ -32865,11 +32835,11 @@ Inband monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorInband**](MonitorInband.md)|  | 
+ **object** | [**LtmMonitorInband**](LtmMonitorInband.md)|  | 
 
 ### Return type
 
-[**MonitorInband**](monitor_inband.md)
+[**LtmMonitorInband**](ltm_monitor_inband.md)
 
 ### Authorization
 
@@ -32883,7 +32853,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorLdap**
-> MonitorLdap PutMonitorLdap($id, $object)
+> LtmMonitorLdap PutMonitorLdap($id, $object)
 
 
 
@@ -32895,11 +32865,11 @@ LDAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorLdap**](MonitorLdap.md)|  | 
+ **object** | [**LtmMonitorLdap**](LtmMonitorLdap.md)|  | 
 
 ### Return type
 
-[**MonitorLdap**](monitor_ldap.md)
+[**LtmMonitorLdap**](ltm_monitor_ldap.md)
 
 ### Authorization
 
@@ -32913,7 +32883,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorModuleScore**
-> MonitorModuleScore PutMonitorModuleScore($id, $object)
+> LtmMonitorModuleScore PutMonitorModuleScore($id, $object)
 
 
 
@@ -32925,11 +32895,11 @@ Module score monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorModuleScore**](MonitorModuleScore.md)|  | 
+ **object** | [**LtmMonitorModuleScore**](LtmMonitorModuleScore.md)|  | 
 
 ### Return type
 
-[**MonitorModuleScore**](monitor_moduleScore.md)
+[**LtmMonitorModuleScore**](ltm_monitor_moduleScore.md)
 
 ### Authorization
 
@@ -32943,7 +32913,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorMssql**
-> MonitorMssql PutMonitorMssql($id, $object)
+> LtmMonitorMssql PutMonitorMssql($id, $object)
 
 
 
@@ -32955,11 +32925,11 @@ MSSQL monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorMssql**](MonitorMssql.md)|  | 
+ **object** | [**LtmMonitorMssql**](LtmMonitorMssql.md)|  | 
 
 ### Return type
 
-[**MonitorMssql**](monitor_mssql.md)
+[**LtmMonitorMssql**](ltm_monitor_mssql.md)
 
 ### Authorization
 
@@ -32973,7 +32943,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorMysql**
-> MonitorMysql PutMonitorMysql($id, $object)
+> LtmMonitorMysql PutMonitorMysql($id, $object)
 
 
 
@@ -32985,11 +32955,11 @@ MySQL monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorMysql**](MonitorMysql.md)|  | 
+ **object** | [**LtmMonitorMysql**](LtmMonitorMysql.md)|  | 
 
 ### Return type
 
-[**MonitorMysql**](monitor_mysql.md)
+[**LtmMonitorMysql**](ltm_monitor_mysql.md)
 
 ### Authorization
 
@@ -33003,7 +32973,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorNntp**
-> MonitorNntp PutMonitorNntp($id, $object)
+> LtmMonitorNntp PutMonitorNntp($id, $object)
 
 
 
@@ -33015,11 +32985,11 @@ NNTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorNntp**](MonitorNntp.md)|  | 
+ **object** | [**LtmMonitorNntp**](LtmMonitorNntp.md)|  | 
 
 ### Return type
 
-[**MonitorNntp**](monitor_nntp.md)
+[**LtmMonitorNntp**](ltm_monitor_nntp.md)
 
 ### Authorization
 
@@ -33033,7 +33003,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorNone**
-> MonitorNone PutMonitorNone($id, $object)
+> LtmMonitorNone PutMonitorNone($id, $object)
 
 
 
@@ -33045,11 +33015,11 @@ The NULL monitor.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorNone**](MonitorNone.md)|  | 
+ **object** | [**LtmMonitorNone**](LtmMonitorNone.md)|  | 
 
 ### Return type
 
-[**MonitorNone**](monitor_none.md)
+[**LtmMonitorNone**](ltm_monitor_none.md)
 
 ### Authorization
 
@@ -33063,7 +33033,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorOracle**
-> MonitorOracle PutMonitorOracle($id, $object)
+> LtmMonitorOracle PutMonitorOracle($id, $object)
 
 
 
@@ -33075,11 +33045,11 @@ Oracle monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorOracle**](MonitorOracle.md)|  | 
+ **object** | [**LtmMonitorOracle**](LtmMonitorOracle.md)|  | 
 
 ### Return type
 
-[**MonitorOracle**](monitor_oracle.md)
+[**LtmMonitorOracle**](ltm_monitor_oracle.md)
 
 ### Authorization
 
@@ -33093,7 +33063,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorPop3**
-> MonitorPop3 PutMonitorPop3($id, $object)
+> LtmMonitorPop3 PutMonitorPop3($id, $object)
 
 
 
@@ -33105,11 +33075,11 @@ POP3 monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorPop3**](MonitorPop3.md)|  | 
+ **object** | [**LtmMonitorPop3**](LtmMonitorPop3.md)|  | 
 
 ### Return type
 
-[**MonitorPop3**](monitor_pop3.md)
+[**LtmMonitorPop3**](ltm_monitor_pop3.md)
 
 ### Authorization
 
@@ -33123,7 +33093,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorPostgresql**
-> MonitorPostgresql PutMonitorPostgresql($id, $object)
+> LtmMonitorPostgresql PutMonitorPostgresql($id, $object)
 
 
 
@@ -33135,11 +33105,11 @@ Postgresql monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorPostgresql**](MonitorPostgresql.md)|  | 
+ **object** | [**LtmMonitorPostgresql**](LtmMonitorPostgresql.md)|  | 
 
 ### Return type
 
-[**MonitorPostgresql**](monitor_postgresql.md)
+[**LtmMonitorPostgresql**](ltm_monitor_postgresql.md)
 
 ### Authorization
 
@@ -33153,7 +33123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorRadius**
-> MonitorRadius PutMonitorRadius($id, $object)
+> LtmMonitorRadius PutMonitorRadius($id, $object)
 
 
 
@@ -33165,11 +33135,11 @@ Radius monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRadius**](MonitorRadius.md)|  | 
+ **object** | [**LtmMonitorRadius**](LtmMonitorRadius.md)|  | 
 
 ### Return type
 
-[**MonitorRadius**](monitor_radius.md)
+[**LtmMonitorRadius**](ltm_monitor_radius.md)
 
 ### Authorization
 
@@ -33183,7 +33153,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorRadiusAccounting**
-> MonitorRadiusAccounting PutMonitorRadiusAccounting($id, $object)
+> LtmMonitorRadiusAccounting PutMonitorRadiusAccounting($id, $object)
 
 
 
@@ -33195,11 +33165,11 @@ Radius accounting monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRadiusAccounting**](MonitorRadiusAccounting.md)|  | 
+ **object** | [**LtmMonitorRadiusAccounting**](LtmMonitorRadiusAccounting.md)|  | 
 
 ### Return type
 
-[**MonitorRadiusAccounting**](monitor_radiusAccounting.md)
+[**LtmMonitorRadiusAccounting**](ltm_monitor_radiusAccounting.md)
 
 ### Authorization
 
@@ -33213,7 +33183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorRealServer**
-> MonitorRealServer PutMonitorRealServer($id, $object)
+> LtmMonitorRealServer PutMonitorRealServer($id, $object)
 
 
 
@@ -33225,11 +33195,11 @@ Real Server monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRealServer**](MonitorRealServer.md)|  | 
+ **object** | [**LtmMonitorRealServer**](LtmMonitorRealServer.md)|  | 
 
 ### Return type
 
-[**MonitorRealServer**](monitor_realServer.md)
+[**LtmMonitorRealServer**](ltm_monitor_realServer.md)
 
 ### Authorization
 
@@ -33243,7 +33213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorRpc**
-> MonitorRpc PutMonitorRpc($id, $object)
+> LtmMonitorRpc PutMonitorRpc($id, $object)
 
 
 
@@ -33255,11 +33225,11 @@ RPC monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorRpc**](MonitorRpc.md)|  | 
+ **object** | [**LtmMonitorRpc**](LtmMonitorRpc.md)|  | 
 
 ### Return type
 
-[**MonitorRpc**](monitor_rpc.md)
+[**LtmMonitorRpc**](ltm_monitor_rpc.md)
 
 ### Authorization
 
@@ -33273,7 +33243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorSasp**
-> MonitorSasp PutMonitorSasp($id, $object)
+> LtmMonitorSasp PutMonitorSasp($id, $object)
 
 
 
@@ -33285,11 +33255,11 @@ SASP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSasp**](MonitorSasp.md)|  | 
+ **object** | [**LtmMonitorSasp**](LtmMonitorSasp.md)|  | 
 
 ### Return type
 
-[**MonitorSasp**](monitor_sasp.md)
+[**LtmMonitorSasp**](ltm_monitor_sasp.md)
 
 ### Authorization
 
@@ -33303,7 +33273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorScripted**
-> MonitorScripted PutMonitorScripted($id, $object)
+> LtmMonitorScripted PutMonitorScripted($id, $object)
 
 
 
@@ -33315,11 +33285,11 @@ Scripted monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorScripted**](MonitorScripted.md)|  | 
+ **object** | [**LtmMonitorScripted**](LtmMonitorScripted.md)|  | 
 
 ### Return type
 
-[**MonitorScripted**](monitor_scripted.md)
+[**LtmMonitorScripted**](ltm_monitor_scripted.md)
 
 ### Authorization
 
@@ -33333,7 +33303,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorSip**
-> MonitorSip PutMonitorSip($id, $object)
+> LtmMonitorSip PutMonitorSip($id, $object)
 
 
 
@@ -33345,11 +33315,11 @@ SIP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSip**](MonitorSip.md)|  | 
+ **object** | [**LtmMonitorSip**](LtmMonitorSip.md)|  | 
 
 ### Return type
 
-[**MonitorSip**](monitor_sip.md)
+[**LtmMonitorSip**](ltm_monitor_sip.md)
 
 ### Authorization
 
@@ -33363,7 +33333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorSmb**
-> MonitorSmb PutMonitorSmb($id, $object)
+> LtmMonitorSmb PutMonitorSmb($id, $object)
 
 
 
@@ -33375,11 +33345,11 @@ SMB monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSmb**](MonitorSmb.md)|  | 
+ **object** | [**LtmMonitorSmb**](LtmMonitorSmb.md)|  | 
 
 ### Return type
 
-[**MonitorSmb**](monitor_smb.md)
+[**LtmMonitorSmb**](ltm_monitor_smb.md)
 
 ### Authorization
 
@@ -33393,7 +33363,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorSmtp**
-> MonitorSmtp PutMonitorSmtp($id, $object)
+> LtmMonitorSmtp PutMonitorSmtp($id, $object)
 
 
 
@@ -33405,11 +33375,11 @@ SMTP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSmtp**](MonitorSmtp.md)|  | 
+ **object** | [**LtmMonitorSmtp**](LtmMonitorSmtp.md)|  | 
 
 ### Return type
 
-[**MonitorSmtp**](monitor_smtp.md)
+[**LtmMonitorSmtp**](ltm_monitor_smtp.md)
 
 ### Authorization
 
@@ -33423,7 +33393,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorSnmpDca**
-> MonitorSnmpDca PutMonitorSnmpDca($id, $object)
+> LtmMonitorSnmpDca PutMonitorSnmpDca($id, $object)
 
 
 
@@ -33435,11 +33405,11 @@ SNMP DCA monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSnmpDca**](MonitorSnmpDca.md)|  | 
+ **object** | [**LtmMonitorSnmpDca**](LtmMonitorSnmpDca.md)|  | 
 
 ### Return type
 
-[**MonitorSnmpDca**](monitor_snmpDca.md)
+[**LtmMonitorSnmpDca**](ltm_monitor_snmpDca.md)
 
 ### Authorization
 
@@ -33453,7 +33423,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorSnmpDcaBase**
-> MonitorSnmpDcaBase PutMonitorSnmpDcaBase($id, $object)
+> LtmMonitorSnmpDcaBase PutMonitorSnmpDcaBase($id, $object)
 
 
 
@@ -33465,11 +33435,11 @@ SNMP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSnmpDcaBase**](MonitorSnmpDcaBase.md)|  | 
+ **object** | [**LtmMonitorSnmpDcaBase**](LtmMonitorSnmpDcaBase.md)|  | 
 
 ### Return type
 
-[**MonitorSnmpDcaBase**](monitor_snmpDcaBase.md)
+[**LtmMonitorSnmpDcaBase**](ltm_monitor_snmpDcaBase.md)
 
 ### Authorization
 
@@ -33483,7 +33453,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorSoap**
-> MonitorSoap PutMonitorSoap($id, $object)
+> LtmMonitorSoap PutMonitorSoap($id, $object)
 
 
 
@@ -33495,11 +33465,11 @@ SOAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorSoap**](MonitorSoap.md)|  | 
+ **object** | [**LtmMonitorSoap**](LtmMonitorSoap.md)|  | 
 
 ### Return type
 
-[**MonitorSoap**](monitor_soap.md)
+[**LtmMonitorSoap**](ltm_monitor_soap.md)
 
 ### Authorization
 
@@ -33513,7 +33483,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorTcp**
-> MonitorTcp PutMonitorTcp($id, $object)
+> LtmMonitorTcp PutMonitorTcp($id, $object)
 
 
 
@@ -33525,11 +33495,11 @@ TCP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorTcp**](MonitorTcp.md)|  | 
+ **object** | [**LtmMonitorTcp**](LtmMonitorTcp.md)|  | 
 
 ### Return type
 
-[**MonitorTcp**](monitor_tcp.md)
+[**LtmMonitorTcp**](ltm_monitor_tcp.md)
 
 ### Authorization
 
@@ -33543,7 +33513,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorTcpEcho**
-> MonitorTcpEcho PutMonitorTcpEcho($id, $object)
+> LtmMonitorTcpEcho PutMonitorTcpEcho($id, $object)
 
 
 
@@ -33555,11 +33525,11 @@ TCP Echo monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorTcpEcho**](MonitorTcpEcho.md)|  | 
+ **object** | [**LtmMonitorTcpEcho**](LtmMonitorTcpEcho.md)|  | 
 
 ### Return type
 
-[**MonitorTcpEcho**](monitor_tcpEcho.md)
+[**LtmMonitorTcpEcho**](ltm_monitor_tcpEcho.md)
 
 ### Authorization
 
@@ -33573,7 +33543,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorTcpHalfOpen**
-> MonitorTcpHalfOpen PutMonitorTcpHalfOpen($id, $object)
+> LtmMonitorTcpHalfOpen PutMonitorTcpHalfOpen($id, $object)
 
 
 
@@ -33585,11 +33555,11 @@ TCP Half Open monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorTcpHalfOpen**](MonitorTcpHalfOpen.md)|  | 
+ **object** | [**LtmMonitorTcpHalfOpen**](LtmMonitorTcpHalfOpen.md)|  | 
 
 ### Return type
 
-[**MonitorTcpHalfOpen**](monitor_tcpHalfOpen.md)
+[**LtmMonitorTcpHalfOpen**](ltm_monitor_tcpHalfOpen.md)
 
 ### Authorization
 
@@ -33603,7 +33573,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorUdp**
-> MonitorUdp PutMonitorUdp($id, $object)
+> LtmMonitorUdp PutMonitorUdp($id, $object)
 
 
 
@@ -33615,11 +33585,11 @@ UDP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorUdp**](MonitorUdp.md)|  | 
+ **object** | [**LtmMonitorUdp**](LtmMonitorUdp.md)|  | 
 
 ### Return type
 
-[**MonitorUdp**](monitor_udp.md)
+[**LtmMonitorUdp**](ltm_monitor_udp.md)
 
 ### Authorization
 
@@ -33633,7 +33603,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorVirtualLocation**
-> MonitorVirtualLocation PutMonitorVirtualLocation($id, $object)
+> LtmMonitorVirtualLocation PutMonitorVirtualLocation($id, $object)
 
 
 
@@ -33645,11 +33615,11 @@ Virtual Location monitor configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorVirtualLocation**](MonitorVirtualLocation.md)|  | 
+ **object** | [**LtmMonitorVirtualLocation**](LtmMonitorVirtualLocation.md)|  | 
 
 ### Return type
 
-[**MonitorVirtualLocation**](monitor_virtualLocation.md)
+[**LtmMonitorVirtualLocation**](ltm_monitor_virtualLocation.md)
 
 ### Authorization
 
@@ -33663,7 +33633,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorWap**
-> MonitorWap PutMonitorWap($id, $object)
+> LtmMonitorWap PutMonitorWap($id, $object)
 
 
 
@@ -33675,11 +33645,11 @@ WAP monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorWap**](MonitorWap.md)|  | 
+ **object** | [**LtmMonitorWap**](LtmMonitorWap.md)|  | 
 
 ### Return type
 
-[**MonitorWap**](monitor_wap.md)
+[**LtmMonitorWap**](ltm_monitor_wap.md)
 
 ### Authorization
 
@@ -33693,7 +33663,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutMonitorWmi**
-> MonitorWmi PutMonitorWmi($id, $object)
+> LtmMonitorWmi PutMonitorWmi($id, $object)
 
 
 
@@ -33705,11 +33675,11 @@ WMI monitor configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**MonitorWmi**](MonitorWmi.md)|  | 
+ **object** | [**LtmMonitorWmi**](LtmMonitorWmi.md)|  | 
 
 ### Return type
 
-[**MonitorWmi**](monitor_wmi.md)
+[**LtmMonitorWmi**](ltm_monitor_wmi.md)
 
 ### Authorization
 
@@ -33723,7 +33693,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutNat**
-> Nat PutNat($id, $object)
+> LtmNat PutNat($id, $object)
 
 
 
@@ -33735,11 +33705,11 @@ Network address translation configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Nat**](Nat.md)|  | 
+ **object** | [**LtmNat**](LtmNat.md)|  | 
 
 ### Return type
 
-[**Nat**](nat.md)
+[**LtmNat**](ltm_nat.md)
 
 ### Authorization
 
@@ -33753,7 +33723,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutNode**
-> Node PutNode($id, $object)
+> LtmNode PutNode($id, $object)
 
 
 
@@ -33765,11 +33735,11 @@ Node specific pool member configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Node**](Node.md)|  | 
+ **object** | [**LtmNode**](LtmNode.md)|  | 
 
 ### Return type
 
-[**Node**](node.md)
+[**LtmNode**](ltm_node.md)
 
 ### Authorization
 
@@ -33783,7 +33753,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPersistenceCookie**
-> PersistenceCookie PutPersistenceCookie($id, $object)
+> LtmPersistenceCookie PutPersistenceCookie($id, $object)
 
 
 
@@ -33795,11 +33765,11 @@ Virtual server Cookie persistence profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceCookie**](PersistenceCookie.md)|  | 
+ **object** | [**LtmPersistenceCookie**](LtmPersistenceCookie.md)|  | 
 
 ### Return type
 
-[**PersistenceCookie**](persistence_cookie.md)
+[**LtmPersistenceCookie**](ltm_persistence_cookie.md)
 
 ### Authorization
 
@@ -33813,7 +33783,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPersistenceDestAddr**
-> PersistenceDestAddr PutPersistenceDestAddr($id, $object)
+> LtmPersistenceDestAddr PutPersistenceDestAddr($id, $object)
 
 
 
@@ -33825,11 +33795,11 @@ Virtual server Destination Address Affinity persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceDestAddr**](PersistenceDestAddr.md)|  | 
+ **object** | [**LtmPersistenceDestAddr**](LtmPersistenceDestAddr.md)|  | 
 
 ### Return type
 
-[**PersistenceDestAddr**](persistence_destAddr.md)
+[**LtmPersistenceDestAddr**](ltm_persistence_destAddr.md)
 
 ### Authorization
 
@@ -33843,7 +33813,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPersistenceGlobalSettings**
-> PersistenceGlobalSettings PutPersistenceGlobalSettings($id, $object)
+> LtmPersistenceGlobalSettings PutPersistenceGlobalSettings($id, $object)
 
 
 
@@ -33855,11 +33825,11 @@ Global settings for persistence
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceGlobalSettings**](PersistenceGlobalSettings.md)|  | 
+ **object** | [**LtmPersistenceGlobalSettings**](LtmPersistenceGlobalSettings.md)|  | 
 
 ### Return type
 
-[**PersistenceGlobalSettings**](persistence_globalSettings.md)
+[**LtmPersistenceGlobalSettings**](ltm_persistence_globalSettings.md)
 
 ### Authorization
 
@@ -33873,7 +33843,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPersistenceHash**
-> PersistenceHash PutPersistenceHash($id, $object)
+> LtmPersistenceHash PutPersistenceHash($id, $object)
 
 
 
@@ -33885,11 +33855,11 @@ Virtual server Hash persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceHash**](PersistenceHash.md)|  | 
+ **object** | [**LtmPersistenceHash**](LtmPersistenceHash.md)|  | 
 
 ### Return type
 
-[**PersistenceHash**](persistence_hash.md)
+[**LtmPersistenceHash**](ltm_persistence_hash.md)
 
 ### Authorization
 
@@ -33903,7 +33873,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPersistenceMsrdp**
-> PersistenceMsrdp PutPersistenceMsrdp($id, $object)
+> LtmPersistenceMsrdp PutPersistenceMsrdp($id, $object)
 
 
 
@@ -33915,11 +33885,11 @@ Virtual server Microsoft Remote Desktop (MSRDP) persistence profile configuratio
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceMsrdp**](PersistenceMsrdp.md)|  | 
+ **object** | [**LtmPersistenceMsrdp**](LtmPersistenceMsrdp.md)|  | 
 
 ### Return type
 
-[**PersistenceMsrdp**](persistence_msrdp.md)
+[**LtmPersistenceMsrdp**](ltm_persistence_msrdp.md)
 
 ### Authorization
 
@@ -33933,7 +33903,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPersistenceSip**
-> PersistenceSip PutPersistenceSip($id, $object)
+> LtmPersistenceSip PutPersistenceSip($id, $object)
 
 
 
@@ -33945,11 +33915,11 @@ Virtual server SIP persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceSip**](PersistenceSip.md)|  | 
+ **object** | [**LtmPersistenceSip**](LtmPersistenceSip.md)|  | 
 
 ### Return type
 
-[**PersistenceSip**](persistence_sip.md)
+[**LtmPersistenceSip**](ltm_persistence_sip.md)
 
 ### Authorization
 
@@ -33963,7 +33933,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPersistenceSourceAddr**
-> PersistenceSourceAddr PutPersistenceSourceAddr($id, $object)
+> LtmPersistenceSourceAddr PutPersistenceSourceAddr($id, $object)
 
 
 
@@ -33975,11 +33945,11 @@ Virtual server Source Address persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceSourceAddr**](PersistenceSourceAddr.md)|  | 
+ **object** | [**LtmPersistenceSourceAddr**](LtmPersistenceSourceAddr.md)|  | 
 
 ### Return type
 
-[**PersistenceSourceAddr**](persistence_sourceAddr.md)
+[**LtmPersistenceSourceAddr**](ltm_persistence_sourceAddr.md)
 
 ### Authorization
 
@@ -33993,7 +33963,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPersistenceSsl**
-> PersistenceSsl PutPersistenceSsl($id, $object)
+> LtmPersistenceSsl PutPersistenceSsl($id, $object)
 
 
 
@@ -34005,11 +33975,11 @@ Virtual server SSL persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceSsl**](PersistenceSsl.md)|  | 
+ **object** | [**LtmPersistenceSsl**](LtmPersistenceSsl.md)|  | 
 
 ### Return type
 
-[**PersistenceSsl**](persistence_ssl.md)
+[**LtmPersistenceSsl**](ltm_persistence_ssl.md)
 
 ### Authorization
 
@@ -34023,7 +33993,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPersistenceUniversal**
-> PersistenceUniversal PutPersistenceUniversal($id, $object)
+> LtmPersistenceUniversal PutPersistenceUniversal($id, $object)
 
 
 
@@ -34035,11 +34005,11 @@ Virtual server Universal persistence profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PersistenceUniversal**](PersistenceUniversal.md)|  | 
+ **object** | [**LtmPersistenceUniversal**](LtmPersistenceUniversal.md)|  | 
 
 ### Return type
 
-[**PersistenceUniversal**](persistence_universal.md)
+[**LtmPersistenceUniversal**](ltm_persistence_universal.md)
 
 ### Authorization
 
@@ -34053,7 +34023,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPolicy**
-> Policy PutPolicy($id, $object)
+> LtmPolicy PutPolicy($id, $object)
 
 
 
@@ -34065,11 +34035,11 @@ Centralized Policy Matching configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Policy**](Policy.md)|  | 
+ **object** | [**LtmPolicy**](LtmPolicy.md)|  | 
 
 ### Return type
 
-[**Policy**](policy.md)
+[**LtmPolicy**](ltm_policy.md)
 
 ### Authorization
 
@@ -34083,7 +34053,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPolicyRules**
-> PolicyRules PutPolicyRules($id, $object)
+> LtmPolicyRules PutPolicyRules($id, $object)
 
 
 
@@ -34095,11 +34065,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyRules**](PolicyRules.md)|  | 
+ **object** | [**LtmPolicyRules**](LtmPolicyRules.md)|  | 
 
 ### Return type
 
-[**PolicyRules**](policy_rules.md)
+[**LtmPolicyRules**](ltm_policy_rules.md)
 
 ### Authorization
 
@@ -34113,7 +34083,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPolicyRulesActions**
-> PolicyRulesActions PutPolicyRulesActions($id, $object)
+> LtmPolicyRulesActions PutPolicyRulesActions($id, $object)
 
 
 
@@ -34125,11 +34095,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyRulesActions**](PolicyRulesActions.md)|  | 
+ **object** | [**LtmPolicyRulesActions**](LtmPolicyRulesActions.md)|  | 
 
 ### Return type
 
-[**PolicyRulesActions**](policy_rules_actions.md)
+[**LtmPolicyRulesActions**](ltm_policy_rules_actions.md)
 
 ### Authorization
 
@@ -34143,7 +34113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPolicyRulesConditions**
-> PolicyRulesConditions PutPolicyRulesConditions($id, $object)
+> LtmPolicyRulesConditions PutPolicyRulesConditions($id, $object)
 
 
 
@@ -34155,11 +34125,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyRulesConditions**](PolicyRulesConditions.md)|  | 
+ **object** | [**LtmPolicyRulesConditions**](LtmPolicyRulesConditions.md)|  | 
 
 ### Return type
 
-[**PolicyRulesConditions**](policy_rules_conditions.md)
+[**LtmPolicyRulesConditions**](ltm_policy_rules_conditions.md)
 
 ### Authorization
 
@@ -34173,7 +34143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPolicyStrategy**
-> PolicyStrategy PutPolicyStrategy($id, $object)
+> LtmPolicyStrategy PutPolicyStrategy($id, $object)
 
 
 
@@ -34185,11 +34155,11 @@ Centralized Policy Matching rule selection strategy
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyStrategy**](PolicyStrategy.md)|  | 
+ **object** | [**LtmPolicyStrategy**](LtmPolicyStrategy.md)|  | 
 
 ### Return type
 
-[**PolicyStrategy**](policyStrategy.md)
+[**LtmPolicyStrategy**](ltm_policyStrategy.md)
 
 ### Authorization
 
@@ -34203,7 +34173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPolicyStrategyOperands**
-> PolicyStrategyOperands PutPolicyStrategyOperands($id, $object)
+> LtmPolicyStrategyOperands PutPolicyStrategyOperands($id, $object)
 
 
 
@@ -34215,11 +34185,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**PolicyStrategyOperands**](PolicyStrategyOperands.md)|  | 
+ **object** | [**LtmPolicyStrategyOperands**](LtmPolicyStrategyOperands.md)|  | 
 
 ### Return type
 
-[**PolicyStrategyOperands**](policyStrategy_operands.md)
+[**LtmPolicyStrategyOperands**](ltm_policyStrategy_operands.md)
 
 ### Authorization
 
@@ -34233,7 +34203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPool**
-> Pool PutPool($id, $object)
+> LtmPool PutPool($id, $object)
 
 
 
@@ -34245,11 +34215,11 @@ Load balancing pool configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Pool**](Pool.md)|  | 
+ **object** | [**LtmPool**](LtmPool.md)|  | 
 
 ### Return type
 
-[**Pool**](pool.md)
+[**LtmPool**](ltm_pool.md)
 
 ### Authorization
 
@@ -34263,7 +34233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutPoolMembers**
-> PoolMembers PutPoolMembers($pid, $id, $object)
+> LtmPoolMembers PutPoolMembers($pid, $id, $object)
 
 
 
@@ -34276,11 +34246,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pid** | **string**| ID of the parent resource | 
  **id** | **string**| ID of the resource | 
- **object** | [**PoolMembers**](PoolMembers.md)|  | 
+ **object** | [**LtmPoolMembers**](LtmPoolMembers.md)|  | 
 
 ### Return type
 
-[**PoolMembers**](pool_members.md)
+[**LtmPoolMembers**](ltm_pool_members.md)
 
 ### Authorization
 
@@ -34294,7 +34264,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileAnalytics**
-> ProfileAnalytics PutProfileAnalytics($id, $object)
+> LtmProfileAnalytics PutProfileAnalytics($id, $object)
 
 
 
@@ -34306,11 +34276,11 @@ Virtual server analytics profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileAnalytics**](ProfileAnalytics.md)|  | 
+ **object** | [**LtmProfileAnalytics**](LtmProfileAnalytics.md)|  | 
 
 ### Return type
 
-[**ProfileAnalytics**](profile_analytics.md)
+[**LtmProfileAnalytics**](ltm_profile_analytics.md)
 
 ### Authorization
 
@@ -34324,7 +34294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileAnalyticsAlerts**
-> ProfileAnalyticsAlerts PutProfileAnalyticsAlerts($id, $object)
+> LtmProfileAnalyticsAlerts PutProfileAnalyticsAlerts($id, $object)
 
 
 
@@ -34336,11 +34306,11 @@ Manage the set of analytics alerts that are associated with an analytics profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileAnalyticsAlerts**](ProfileAnalyticsAlerts.md)|  | 
+ **object** | [**LtmProfileAnalyticsAlerts**](LtmProfileAnalyticsAlerts.md)|  | 
 
 ### Return type
 
-[**ProfileAnalyticsAlerts**](profile_analytics_alerts.md)
+[**LtmProfileAnalyticsAlerts**](ltm_profile_analytics_alerts.md)
 
 ### Authorization
 
@@ -34354,7 +34324,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileAnalyticsTrafficCapture**
-> ProfileAnalyticsTrafficCapture PutProfileAnalyticsTrafficCapture($id, $object)
+> LtmProfileAnalyticsTrafficCapture PutProfileAnalyticsTrafficCapture($id, $object)
 
 
 
@@ -34366,11 +34336,11 @@ Manage the set of analytics alerts that are associated with an analytics profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileAnalyticsTrafficCapture**](ProfileAnalyticsTrafficCapture.md)|  | 
+ **object** | [**LtmProfileAnalyticsTrafficCapture**](LtmProfileAnalyticsTrafficCapture.md)|  | 
 
 ### Return type
 
-[**ProfileAnalyticsTrafficCapture**](profile_analytics_trafficCapture.md)
+[**LtmProfileAnalyticsTrafficCapture**](ltm_profile_analytics_trafficCapture.md)
 
 ### Authorization
 
@@ -34384,7 +34354,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileCertificateAuthority**
-> ProfileCertificateAuthority PutProfileCertificateAuthority($id, $object)
+> LtmProfileCertificateAuthority PutProfileCertificateAuthority($id, $object)
 
 
 
@@ -34396,11 +34366,11 @@ Virtual server Certificate Authority profile configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileCertificateAuthority**](ProfileCertificateAuthority.md)|  | 
+ **object** | [**LtmProfileCertificateAuthority**](LtmProfileCertificateAuthority.md)|  | 
 
 ### Return type
 
-[**ProfileCertificateAuthority**](profile_certificateAuthority.md)
+[**LtmProfileCertificateAuthority**](ltm_profile_certificateAuthority.md)
 
 ### Authorization
 
@@ -34414,7 +34384,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileClassification**
-> ProfileClassification PutProfileClassification($id, $object)
+> LtmProfileClassification PutProfileClassification($id, $object)
 
 
 
@@ -34426,11 +34396,11 @@ Virtual server classification profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileClassification**](ProfileClassification.md)|  | 
+ **object** | [**LtmProfileClassification**](LtmProfileClassification.md)|  | 
 
 ### Return type
 
-[**ProfileClassification**](profile_classification.md)
+[**LtmProfileClassification**](ltm_profile_classification.md)
 
 ### Authorization
 
@@ -34444,7 +34414,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileClientLdap**
-> ProfileClientLdap PutProfileClientLdap($id, $object)
+> LtmProfileClientLdap PutProfileClientLdap($id, $object)
 
 
 
@@ -34456,11 +34426,11 @@ Virtual server Client LDAP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileClientLdap**](ProfileClientLdap.md)|  | 
+ **object** | [**LtmProfileClientLdap**](LtmProfileClientLdap.md)|  | 
 
 ### Return type
 
-[**ProfileClientLdap**](profile_clientLdap.md)
+[**LtmProfileClientLdap**](ltm_profile_clientLdap.md)
 
 ### Authorization
 
@@ -34474,7 +34444,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileClientSsl**
-> ProfileClientSsl PutProfileClientSsl($id, $object)
+> LtmProfileClientSsl PutProfileClientSsl($id, $object)
 
 
 
@@ -34486,11 +34456,11 @@ Virtual server client-side proxy SSL profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileClientSsl**](ProfileClientSsl.md)|  | 
+ **object** | [**LtmProfileClientSsl**](LtmProfileClientSsl.md)|  | 
 
 ### Return type
 
-[**ProfileClientSsl**](profile_clientSsl.md)
+[**LtmProfileClientSsl**](ltm_profile_clientSsl.md)
 
 ### Authorization
 
@@ -34504,7 +34474,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileDhcpv4**
-> ProfileDhcpv4 PutProfileDhcpv4($id, $object)
+> LtmProfileDhcpv4 PutProfileDhcpv4($id, $object)
 
 
 
@@ -34516,11 +34486,11 @@ Dynamic Host Configuration Protocol, DHCPv4, profile to manage DHCPv4 network tr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDhcpv4**](ProfileDhcpv4.md)|  | 
+ **object** | [**LtmProfileDhcpv4**](LtmProfileDhcpv4.md)|  | 
 
 ### Return type
 
-[**ProfileDhcpv4**](profile_dhcpv4.md)
+[**LtmProfileDhcpv4**](ltm_profile_dhcpv4.md)
 
 ### Authorization
 
@@ -34534,7 +34504,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileDhcpv6**
-> ProfileDhcpv6 PutProfileDhcpv6($id, $object)
+> LtmProfileDhcpv6 PutProfileDhcpv6($id, $object)
 
 
 
@@ -34546,11 +34516,11 @@ Dynamic Host Configuration Protocol, DHCPv6, profile to manage DHCPv6 network tr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDhcpv6**](ProfileDhcpv6.md)|  | 
+ **object** | [**LtmProfileDhcpv6**](LtmProfileDhcpv6.md)|  | 
 
 ### Return type
 
-[**ProfileDhcpv6**](profile_dhcpv6.md)
+[**LtmProfileDhcpv6**](ltm_profile_dhcpv6.md)
 
 ### Authorization
 
@@ -34564,7 +34534,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileDiameter**
-> ProfileDiameter PutProfileDiameter($id, $object)
+> LtmProfileDiameter PutProfileDiameter($id, $object)
 
 
 
@@ -34576,11 +34546,11 @@ Virtual server Diameter traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDiameter**](ProfileDiameter.md)|  | 
+ **object** | [**LtmProfileDiameter**](LtmProfileDiameter.md)|  | 
 
 ### Return type
 
-[**ProfileDiameter**](profile_diameter.md)
+[**LtmProfileDiameter**](ltm_profile_diameter.md)
 
 ### Authorization
 
@@ -34594,7 +34564,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileDns**
-> ProfileDns PutProfileDns($id, $object)
+> LtmProfileDns PutProfileDns($id, $object)
 
 
 
@@ -34606,11 +34576,11 @@ Virtual server DNS traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDns**](ProfileDns.md)|  | 
+ **object** | [**LtmProfileDns**](LtmProfileDns.md)|  | 
 
 ### Return type
 
-[**ProfileDns**](profile_dns.md)
+[**LtmProfileDns**](ltm_profile_dns.md)
 
 ### Authorization
 
@@ -34624,7 +34594,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileDnsLogging**
-> ProfileDnsLogging PutProfileDnsLogging($id, $object)
+> LtmProfileDnsLogging PutProfileDnsLogging($id, $object)
 
 
 
@@ -34636,11 +34606,11 @@ High-speed logging settings for the DNS profile.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileDnsLogging**](ProfileDnsLogging.md)|  | 
+ **object** | [**LtmProfileDnsLogging**](LtmProfileDnsLogging.md)|  | 
 
 ### Return type
 
-[**ProfileDnsLogging**](profile_dnsLogging.md)
+[**LtmProfileDnsLogging**](ltm_profile_dnsLogging.md)
 
 ### Authorization
 
@@ -34654,7 +34624,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileFasthttp**
-> ProfileFasthttp PutProfileFasthttp($id, $object)
+> LtmProfileFasthttp PutProfileFasthttp($id, $object)
 
 
 
@@ -34666,11 +34636,11 @@ Virtual server Fast HTTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFasthttp**](ProfileFasthttp.md)|  | 
+ **object** | [**LtmProfileFasthttp**](LtmProfileFasthttp.md)|  | 
 
 ### Return type
 
-[**ProfileFasthttp**](profile_fasthttp.md)
+[**LtmProfileFasthttp**](ltm_profile_fasthttp.md)
 
 ### Authorization
 
@@ -34684,7 +34654,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileFastl4**
-> ProfileFastl4 PutProfileFastl4($id, $object)
+> LtmProfileFastl4 PutProfileFastl4($id, $object)
 
 
 
@@ -34696,11 +34666,11 @@ Virtual server FastL4 traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFastl4**](ProfileFastl4.md)|  | 
+ **object** | [**LtmProfileFastl4**](LtmProfileFastl4.md)|  | 
 
 ### Return type
 
-[**ProfileFastl4**](profile_fastl4.md)
+[**LtmProfileFastl4**](ltm_profile_fastl4.md)
 
 ### Authorization
 
@@ -34714,7 +34684,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileFix**
-> ProfileFix PutProfileFix($id, $object)
+> LtmProfileFix PutProfileFix($id, $object)
 
 
 
@@ -34726,11 +34696,11 @@ Virtual server Financial Information eXchange(FIX) profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFix**](ProfileFix.md)|  | 
+ **object** | [**LtmProfileFix**](LtmProfileFix.md)|  | 
 
 ### Return type
 
-[**ProfileFix**](profile_fix.md)
+[**LtmProfileFix**](ltm_profile_fix.md)
 
 ### Authorization
 
@@ -34744,7 +34714,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileFtp**
-> ProfileFtp PutProfileFtp($id, $object)
+> LtmProfileFtp PutProfileFtp($id, $object)
 
 
 
@@ -34756,11 +34726,11 @@ Virtual server FTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileFtp**](ProfileFtp.md)|  | 
+ **object** | [**LtmProfileFtp**](LtmProfileFtp.md)|  | 
 
 ### Return type
 
-[**ProfileFtp**](profile_ftp.md)
+[**LtmProfileFtp**](ltm_profile_ftp.md)
 
 ### Authorization
 
@@ -34774,7 +34744,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileGtp**
-> ProfileGtp PutProfileGtp($id, $object)
+> LtmProfileGtp PutProfileGtp($id, $object)
 
 
 
@@ -34786,11 +34756,11 @@ Virtual server GTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileGtp**](ProfileGtp.md)|  | 
+ **object** | [**LtmProfileGtp**](LtmProfileGtp.md)|  | 
 
 ### Return type
 
-[**ProfileGtp**](profile_gtp.md)
+[**LtmProfileGtp**](ltm_profile_gtp.md)
 
 ### Authorization
 
@@ -34804,7 +34774,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileHtml**
-> ProfileHtml PutProfileHtml($id, $object)
+> LtmProfileHtml PutProfileHtml($id, $object)
 
 
 
@@ -34816,11 +34786,11 @@ Virtual server HTML profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHtml**](ProfileHtml.md)|  | 
+ **object** | [**LtmProfileHtml**](LtmProfileHtml.md)|  | 
 
 ### Return type
 
-[**ProfileHtml**](profile_html.md)
+[**LtmProfileHtml**](ltm_profile_html.md)
 
 ### Authorization
 
@@ -34834,7 +34804,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileHttp**
-> ProfileHttp PutProfileHttp($id, $object)
+> LtmProfileHttp PutProfileHttp($id, $object)
 
 
 
@@ -34846,11 +34816,11 @@ Virtual server HTTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHttp**](ProfileHttp.md)|  | 
+ **object** | [**LtmProfileHttp**](LtmProfileHttp.md)|  | 
 
 ### Return type
 
-[**ProfileHttp**](profile_http.md)
+[**LtmProfileHttp**](ltm_profile_http.md)
 
 ### Authorization
 
@@ -34864,7 +34834,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileHttp2**
-> ProfileHttp2 PutProfileHttp2($id, $object)
+> LtmProfileHttp2 PutProfileHttp2($id, $object)
 
 
 
@@ -34876,11 +34846,11 @@ Virtual server HTTP/2 traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHttp2**](ProfileHttp2.md)|  | 
+ **object** | [**LtmProfileHttp2**](LtmProfileHttp2.md)|  | 
 
 ### Return type
 
-[**ProfileHttp2**](profile_http2.md)
+[**LtmProfileHttp2**](ltm_profile_http2.md)
 
 ### Authorization
 
@@ -34894,7 +34864,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileHttpCompression**
-> ProfileHttpCompression PutProfileHttpCompression($id, $object)
+> LtmProfileHttpCompression PutProfileHttpCompression($id, $object)
 
 
 
@@ -34906,11 +34876,11 @@ Virtual server HTTP compression profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileHttpCompression**](ProfileHttpCompression.md)|  | 
+ **object** | [**LtmProfileHttpCompression**](LtmProfileHttpCompression.md)|  | 
 
 ### Return type
 
-[**ProfileHttpCompression**](profile_httpCompression.md)
+[**LtmProfileHttpCompression**](ltm_profile_httpCompression.md)
 
 ### Authorization
 
@@ -34924,7 +34894,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileIcap**
-> ProfileIcap PutProfileIcap($id, $object)
+> LtmProfileIcap PutProfileIcap($id, $object)
 
 
 
@@ -34936,11 +34906,11 @@ Virtual server Internet Content Adaptation Protocol (ICAP) profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileIcap**](ProfileIcap.md)|  | 
+ **object** | [**LtmProfileIcap**](LtmProfileIcap.md)|  | 
 
 ### Return type
 
-[**ProfileIcap**](profile_icap.md)
+[**LtmProfileIcap**](ltm_profile_icap.md)
 
 ### Authorization
 
@@ -34954,7 +34924,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileIiop**
-> ProfileIiop PutProfileIiop($id, $object)
+> LtmProfileIiop PutProfileIiop($id, $object)
 
 
 
@@ -34966,11 +34936,11 @@ Virtual server IIOP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileIiop**](ProfileIiop.md)|  | 
+ **object** | [**LtmProfileIiop**](LtmProfileIiop.md)|  | 
 
 ### Return type
 
-[**ProfileIiop**](profile_iiop.md)
+[**LtmProfileIiop**](ltm_profile_iiop.md)
 
 ### Authorization
 
@@ -34984,7 +34954,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileIpother**
-> ProfileIpother PutProfileIpother($id, $object)
+> LtmProfileIpother PutProfileIpother($id, $object)
 
 
 
@@ -34996,11 +34966,11 @@ Virtual server IPOTHER for non-TCP and non-UDP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileIpother**](ProfileIpother.md)|  | 
+ **object** | [**LtmProfileIpother**](LtmProfileIpother.md)|  | 
 
 ### Return type
 
-[**ProfileIpother**](profile_ipother.md)
+[**LtmProfileIpother**](ltm_profile_ipother.md)
 
 ### Authorization
 
@@ -35014,7 +34984,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileMblb**
-> ProfileMblb PutProfileMblb($id, $object)
+> LtmProfileMblb PutProfileMblb($id, $object)
 
 
 
@@ -35026,11 +34996,11 @@ MBLB profile configuration (experimental)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileMblb**](ProfileMblb.md)|  | 
+ **object** | [**LtmProfileMblb**](LtmProfileMblb.md)|  | 
 
 ### Return type
 
-[**ProfileMblb**](profile_mblb.md)
+[**LtmProfileMblb**](ltm_profile_mblb.md)
 
 ### Authorization
 
@@ -35044,7 +35014,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileMssql**
-> ProfileMssql PutProfileMssql($id, $object)
+> LtmProfileMssql PutProfileMssql($id, $object)
 
 
 
@@ -35056,11 +35026,11 @@ Virtual server MSSQL profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileMssql**](ProfileMssql.md)|  | 
+ **object** | [**LtmProfileMssql**](LtmProfileMssql.md)|  | 
 
 ### Return type
 
-[**ProfileMssql**](profile_mssql.md)
+[**LtmProfileMssql**](ltm_profile_mssql.md)
 
 ### Authorization
 
@@ -35074,7 +35044,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileNtlm**
-> ProfileNtlm PutProfileNtlm($id, $object)
+> LtmProfileNtlm PutProfileNtlm($id, $object)
 
 
 
@@ -35086,11 +35056,11 @@ Virtual server NT Lan Manager profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileNtlm**](ProfileNtlm.md)|  | 
+ **object** | [**LtmProfileNtlm**](LtmProfileNtlm.md)|  | 
 
 ### Return type
 
-[**ProfileNtlm**](profile_ntlm.md)
+[**LtmProfileNtlm**](ltm_profile_ntlm.md)
 
 ### Authorization
 
@@ -35104,7 +35074,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileOcspStaplingParams**
-> ProfileOcspStaplingParams PutProfileOcspStaplingParams($id, $object)
+> LtmProfileOcspStaplingParams PutProfileOcspStaplingParams($id, $object)
 
 
 
@@ -35116,11 +35086,11 @@ OCSP Stapling Parameters for clientssl profiles. This object should be associate
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileOcspStaplingParams**](ProfileOcspStaplingParams.md)|  | 
+ **object** | [**LtmProfileOcspStaplingParams**](LtmProfileOcspStaplingParams.md)|  | 
 
 ### Return type
 
-[**ProfileOcspStaplingParams**](profile_ocspStaplingParams.md)
+[**LtmProfileOcspStaplingParams**](ltm_profile_ocspStaplingParams.md)
 
 ### Authorization
 
@@ -35134,7 +35104,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileOneConnect**
-> ProfileOneConnect PutProfileOneConnect($id, $object)
+> LtmProfileOneConnect PutProfileOneConnect($id, $object)
 
 
 
@@ -35146,11 +35116,11 @@ Virtual server OneConnect profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileOneConnect**](ProfileOneConnect.md)|  | 
+ **object** | [**LtmProfileOneConnect**](LtmProfileOneConnect.md)|  | 
 
 ### Return type
 
-[**ProfileOneConnect**](profile_oneConnect.md)
+[**LtmProfileOneConnect**](ltm_profile_oneConnect.md)
 
 ### Authorization
 
@@ -35164,7 +35134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfilePcp**
-> ProfilePcp PutProfilePcp($id, $object)
+> LtmProfilePcp PutProfilePcp($id, $object)
 
 
 
@@ -35176,11 +35146,11 @@ LSN Pool PCP configuration profile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfilePcp**](ProfilePcp.md)|  | 
+ **object** | [**LtmProfilePcp**](LtmProfilePcp.md)|  | 
 
 ### Return type
 
-[**ProfilePcp**](profile_pcp.md)
+[**LtmProfilePcp**](ltm_profile_pcp.md)
 
 ### Authorization
 
@@ -35194,7 +35164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfilePptp**
-> ProfilePptp PutProfilePptp($id, $object)
+> LtmProfilePptp PutProfilePptp($id, $object)
 
 
 
@@ -35206,11 +35176,11 @@ Virtual server Point to Point Tunneling Protocol (PPTP) profile configuration.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfilePptp**](ProfilePptp.md)|  | 
+ **object** | [**LtmProfilePptp**](LtmProfilePptp.md)|  | 
 
 ### Return type
 
-[**ProfilePptp**](profile_pptp.md)
+[**LtmProfilePptp**](ltm_profile_pptp.md)
 
 ### Authorization
 
@@ -35224,7 +35194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileQoe**
-> ProfileQoe PutProfileQoe($id, $object)
+> LtmProfileQoe PutProfileQoe($id, $object)
 
 
 
@@ -35236,11 +35206,11 @@ Virtual server Quality of Experience profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileQoe**](ProfileQoe.md)|  | 
+ **object** | [**LtmProfileQoe**](LtmProfileQoe.md)|  | 
 
 ### Return type
 
-[**ProfileQoe**](profile_qoe.md)
+[**LtmProfileQoe**](ltm_profile_qoe.md)
 
 ### Authorization
 
@@ -35254,7 +35224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileRadius**
-> ProfileRadius PutProfileRadius($id, $object)
+> LtmProfileRadius PutProfileRadius($id, $object)
 
 
 
@@ -35266,11 +35236,11 @@ Virtual server Radius traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRadius**](ProfileRadius.md)|  | 
+ **object** | [**LtmProfileRadius**](LtmProfileRadius.md)|  | 
 
 ### Return type
 
-[**ProfileRadius**](profile_radius.md)
+[**LtmProfileRadius**](ltm_profile_radius.md)
 
 ### Authorization
 
@@ -35284,7 +35254,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileRequestAdapt**
-> ProfileRequestAdapt PutProfileRequestAdapt($id, $object)
+> LtmProfileRequestAdapt PutProfileRequestAdapt($id, $object)
 
 
 
@@ -35296,11 +35266,11 @@ Virtual server HTTP request adaptation profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRequestAdapt**](ProfileRequestAdapt.md)|  | 
+ **object** | [**LtmProfileRequestAdapt**](LtmProfileRequestAdapt.md)|  | 
 
 ### Return type
 
-[**ProfileRequestAdapt**](profile_requestAdapt.md)
+[**LtmProfileRequestAdapt**](ltm_profile_requestAdapt.md)
 
 ### Authorization
 
@@ -35314,7 +35284,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileRequestLog**
-> ProfileRequestLog PutProfileRequestLog($id, $object)
+> LtmProfileRequestLog PutProfileRequestLog($id, $object)
 
 
 
@@ -35326,11 +35296,11 @@ Virtual server request logging profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRequestLog**](ProfileRequestLog.md)|  | 
+ **object** | [**LtmProfileRequestLog**](LtmProfileRequestLog.md)|  | 
 
 ### Return type
 
-[**ProfileRequestLog**](profile_requestLog.md)
+[**LtmProfileRequestLog**](ltm_profile_requestLog.md)
 
 ### Authorization
 
@@ -35344,7 +35314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileResponseAdapt**
-> ProfileResponseAdapt PutProfileResponseAdapt($id, $object)
+> LtmProfileResponseAdapt PutProfileResponseAdapt($id, $object)
 
 
 
@@ -35356,11 +35326,11 @@ Virtual server HTTP response adaptation profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileResponseAdapt**](ProfileResponseAdapt.md)|  | 
+ **object** | [**LtmProfileResponseAdapt**](LtmProfileResponseAdapt.md)|  | 
 
 ### Return type
 
-[**ProfileResponseAdapt**](profile_responseAdapt.md)
+[**LtmProfileResponseAdapt**](ltm_profile_responseAdapt.md)
 
 ### Authorization
 
@@ -35374,7 +35344,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileRewrite**
-> ProfileRewrite PutProfileRewrite($id, $object)
+> LtmProfileRewrite PutProfileRewrite($id, $object)
 
 
 
@@ -35386,11 +35356,11 @@ Virtual server Rewrite profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRewrite**](ProfileRewrite.md)|  | 
+ **object** | [**LtmProfileRewrite**](LtmProfileRewrite.md)|  | 
 
 ### Return type
 
-[**ProfileRewrite**](profile_rewrite.md)
+[**LtmProfileRewrite**](ltm_profile_rewrite.md)
 
 ### Authorization
 
@@ -35404,7 +35374,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileRewriteUriRules**
-> ProfileRewriteUriRules PutProfileRewriteUriRules($id, $object)
+> LtmProfileRewriteUriRules PutProfileRewriteUriRules($id, $object)
 
 
 
@@ -35416,11 +35386,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRewriteUriRules**](ProfileRewriteUriRules.md)|  | 
+ **object** | [**LtmProfileRewriteUriRules**](LtmProfileRewriteUriRules.md)|  | 
 
 ### Return type
 
-[**ProfileRewriteUriRules**](profile_rewrite_uriRules.md)
+[**LtmProfileRewriteUriRules**](ltm_profile_rewrite_uriRules.md)
 
 ### Authorization
 
@@ -35434,7 +35404,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileRtsp**
-> ProfileRtsp PutProfileRtsp($id, $object)
+> LtmProfileRtsp PutProfileRtsp($id, $object)
 
 
 
@@ -35446,11 +35416,11 @@ Virtual server RTSP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileRtsp**](ProfileRtsp.md)|  | 
+ **object** | [**LtmProfileRtsp**](LtmProfileRtsp.md)|  | 
 
 ### Return type
 
-[**ProfileRtsp**](profile_rtsp.md)
+[**LtmProfileRtsp**](ltm_profile_rtsp.md)
 
 ### Authorization
 
@@ -35464,7 +35434,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileSctp**
-> ProfileSctp PutProfileSctp($id, $object)
+> LtmProfileSctp PutProfileSctp($id, $object)
 
 
 
@@ -35476,11 +35446,11 @@ Virtual server SCTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSctp**](ProfileSctp.md)|  | 
+ **object** | [**LtmProfileSctp**](LtmProfileSctp.md)|  | 
 
 ### Return type
 
-[**ProfileSctp**](profile_sctp.md)
+[**LtmProfileSctp**](ltm_profile_sctp.md)
 
 ### Authorization
 
@@ -35494,7 +35464,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileServerLdap**
-> ProfileServerLdap PutProfileServerLdap($id, $object)
+> LtmProfileServerLdap PutProfileServerLdap($id, $object)
 
 
 
@@ -35506,11 +35476,11 @@ Virtual server Server LDAP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileServerLdap**](ProfileServerLdap.md)|  | 
+ **object** | [**LtmProfileServerLdap**](LtmProfileServerLdap.md)|  | 
 
 ### Return type
 
-[**ProfileServerLdap**](profile_serverLdap.md)
+[**LtmProfileServerLdap**](ltm_profile_serverLdap.md)
 
 ### Authorization
 
@@ -35524,7 +35494,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileServerSsl**
-> ProfileServerSsl PutProfileServerSsl($id, $object)
+> LtmProfileServerSsl PutProfileServerSsl($id, $object)
 
 
 
@@ -35536,11 +35506,11 @@ Virtual server server-side proxy SSL profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileServerSsl**](ProfileServerSsl.md)|  | 
+ **object** | [**LtmProfileServerSsl**](LtmProfileServerSsl.md)|  | 
 
 ### Return type
 
-[**ProfileServerSsl**](profile_serverSsl.md)
+[**LtmProfileServerSsl**](ltm_profile_serverSsl.md)
 
 ### Authorization
 
@@ -35554,7 +35524,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileSip**
-> ProfileSip PutProfileSip($id, $object)
+> LtmProfileSip PutProfileSip($id, $object)
 
 
 
@@ -35566,11 +35536,11 @@ Virtual server SIP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSip**](ProfileSip.md)|  | 
+ **object** | [**LtmProfileSip**](LtmProfileSip.md)|  | 
 
 ### Return type
 
-[**ProfileSip**](profile_sip.md)
+[**LtmProfileSip**](ltm_profile_sip.md)
 
 ### Authorization
 
@@ -35584,7 +35554,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileSmtp**
-> ProfileSmtp PutProfileSmtp($id, $object)
+> LtmProfileSmtp PutProfileSmtp($id, $object)
 
 
 
@@ -35596,11 +35566,11 @@ Virtual server SMTP profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSmtp**](ProfileSmtp.md)|  | 
+ **object** | [**LtmProfileSmtp**](LtmProfileSmtp.md)|  | 
 
 ### Return type
 
-[**ProfileSmtp**](profile_smtp.md)
+[**LtmProfileSmtp**](ltm_profile_smtp.md)
 
 ### Authorization
 
@@ -35614,7 +35584,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileSmtps**
-> ProfileSmtps PutProfileSmtps($id, $object)
+> LtmProfileSmtps PutProfileSmtps($id, $object)
 
 
 
@@ -35626,11 +35596,11 @@ Virtual server SMTPs traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSmtps**](ProfileSmtps.md)|  | 
+ **object** | [**LtmProfileSmtps**](LtmProfileSmtps.md)|  | 
 
 ### Return type
 
-[**ProfileSmtps**](profile_smtps.md)
+[**LtmProfileSmtps**](ltm_profile_smtps.md)
 
 ### Authorization
 
@@ -35644,7 +35614,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileSocks**
-> ProfileSocks PutProfileSocks($id, $object)
+> LtmProfileSocks PutProfileSocks($id, $object)
 
 
 
@@ -35656,11 +35626,11 @@ Virtual server SOCKS traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSocks**](ProfileSocks.md)|  | 
+ **object** | [**LtmProfileSocks**](LtmProfileSocks.md)|  | 
 
 ### Return type
 
-[**ProfileSocks**](profile_socks.md)
+[**LtmProfileSocks**](ltm_profile_socks.md)
 
 ### Authorization
 
@@ -35674,7 +35644,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileSpdy**
-> ProfileSpdy PutProfileSpdy($id, $object)
+> LtmProfileSpdy PutProfileSpdy($id, $object)
 
 
 
@@ -35686,11 +35656,11 @@ Virtual server SPDY traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileSpdy**](ProfileSpdy.md)|  | 
+ **object** | [**LtmProfileSpdy**](LtmProfileSpdy.md)|  | 
 
 ### Return type
 
-[**ProfileSpdy**](profile_spdy.md)
+[**LtmProfileSpdy**](ltm_profile_spdy.md)
 
 ### Authorization
 
@@ -35704,7 +35674,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileStatistics**
-> ProfileStatistics PutProfileStatistics($id, $object)
+> LtmProfileStatistics PutProfileStatistics($id, $object)
 
 
 
@@ -35716,11 +35686,11 @@ Virtual server custom statistics configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileStatistics**](ProfileStatistics.md)|  | 
+ **object** | [**LtmProfileStatistics**](LtmProfileStatistics.md)|  | 
 
 ### Return type
 
-[**ProfileStatistics**](profile_statistics.md)
+[**LtmProfileStatistics**](ltm_profile_statistics.md)
 
 ### Authorization
 
@@ -35734,7 +35704,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileStream**
-> ProfileStream PutProfileStream($id, $object)
+> LtmProfileStream PutProfileStream($id, $object)
 
 
 
@@ -35746,11 +35716,11 @@ Virtual server Stream traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileStream**](ProfileStream.md)|  | 
+ **object** | [**LtmProfileStream**](LtmProfileStream.md)|  | 
 
 ### Return type
 
-[**ProfileStream**](profile_stream.md)
+[**LtmProfileStream**](ltm_profile_stream.md)
 
 ### Authorization
 
@@ -35764,7 +35734,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileTcp**
-> ProfileTcp PutProfileTcp($id, $object)
+> LtmProfileTcp PutProfileTcp($id, $object)
 
 
 
@@ -35776,11 +35746,11 @@ Virtual server TCP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileTcp**](ProfileTcp.md)|  | 
+ **object** | [**LtmProfileTcp**](LtmProfileTcp.md)|  | 
 
 ### Return type
 
-[**ProfileTcp**](profile_tcp.md)
+[**LtmProfileTcp**](ltm_profile_tcp.md)
 
 ### Authorization
 
@@ -35794,7 +35764,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileTftp**
-> ProfileTftp PutProfileTftp($id, $object)
+> LtmProfileTftp PutProfileTftp($id, $object)
 
 
 
@@ -35806,11 +35776,11 @@ Virtual server TFTP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileTftp**](ProfileTftp.md)|  | 
+ **object** | [**LtmProfileTftp**](LtmProfileTftp.md)|  | 
 
 ### Return type
 
-[**ProfileTftp**](profile_tftp.md)
+[**LtmProfileTftp**](ltm_profile_tftp.md)
 
 ### Authorization
 
@@ -35824,7 +35794,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileUdp**
-> ProfileUdp PutProfileUdp($id, $object)
+> LtmProfileUdp PutProfileUdp($id, $object)
 
 
 
@@ -35836,11 +35806,11 @@ Virtual server UDP traffic profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileUdp**](ProfileUdp.md)|  | 
+ **object** | [**LtmProfileUdp**](LtmProfileUdp.md)|  | 
 
 ### Return type
 
-[**ProfileUdp**](profile_udp.md)
+[**LtmProfileUdp**](ltm_profile_udp.md)
 
 ### Authorization
 
@@ -35854,7 +35824,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileWebAcceleration**
-> ProfileWebAcceleration PutProfileWebAcceleration($id, $object)
+> LtmProfileWebAcceleration PutProfileWebAcceleration($id, $object)
 
 
 
@@ -35866,11 +35836,11 @@ Virtual server Web Acceleration profile configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileWebAcceleration**](ProfileWebAcceleration.md)|  | 
+ **object** | [**LtmProfileWebAcceleration**](LtmProfileWebAcceleration.md)|  | 
 
 ### Return type
 
-[**ProfileWebAcceleration**](profile_webAcceleration.md)
+[**LtmProfileWebAcceleration**](ltm_profile_webAcceleration.md)
 
 ### Authorization
 
@@ -35884,7 +35854,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutProfileXml**
-> ProfileXml PutProfileXml($id, $object)
+> LtmProfileXml PutProfileXml($id, $object)
 
 
 
@@ -35896,11 +35866,11 @@ Virtual server XML configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**ProfileXml**](ProfileXml.md)|  | 
+ **object** | [**LtmProfileXml**](LtmProfileXml.md)|  | 
 
 ### Return type
 
-[**ProfileXml**](profile_xml.md)
+[**LtmProfileXml**](ltm_profile_xml.md)
 
 ### Authorization
 
@@ -35914,7 +35884,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutRule**
-> Rule PutRule($id, $object)
+> LtmRule PutRule($id, $object)
 
 
 
@@ -35926,11 +35896,11 @@ iRules configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Rule**](Rule.md)|  | 
+ **object** | [**LtmRule**](LtmRule.md)|  | 
 
 ### Return type
 
-[**Rule**](rule.md)
+[**LtmRule**](ltm_rule.md)
 
 ### Authorization
 
@@ -35944,7 +35914,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutSnat**
-> Snat PutSnat($id, $object)
+> LtmSnat PutSnat($id, $object)
 
 
 
@@ -35956,11 +35926,11 @@ Secure network address translation (SNAT) configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Snat**](Snat.md)|  | 
+ **object** | [**LtmSnat**](LtmSnat.md)|  | 
 
 ### Return type
 
-[**Snat**](snat.md)
+[**LtmSnat**](ltm_snat.md)
 
 ### Authorization
 
@@ -35974,7 +35944,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutSnatTranslation**
-> SnatTranslation PutSnatTranslation($id, $object)
+> LtmSnatTranslation PutSnatTranslation($id, $object)
 
 
 
@@ -35986,11 +35956,11 @@ SNAT translation address configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**SnatTranslation**](SnatTranslation.md)|  | 
+ **object** | [**LtmSnatTranslation**](LtmSnatTranslation.md)|  | 
 
 ### Return type
 
-[**SnatTranslation**](snatTranslation.md)
+[**LtmSnatTranslation**](ltm_snatTranslation.md)
 
 ### Authorization
 
@@ -36004,7 +35974,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutSnatpool**
-> Snatpool PutSnatpool($id, $object)
+> LtmSnatpool PutSnatpool($id, $object)
 
 
 
@@ -36016,11 +35986,11 @@ Collections of SNAT translation addresses
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Snatpool**](Snatpool.md)|  | 
+ **object** | [**LtmSnatpool**](LtmSnatpool.md)|  | 
 
 ### Return type
 
-[**Snatpool**](snatpool.md)
+[**LtmSnatpool**](ltm_snatpool.md)
 
 ### Authorization
 
@@ -36034,7 +36004,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutTacdbCustomdb**
-> TacdbCustomdb PutTacdbCustomdb($id, $object)
+> LtmTacdbCustomdb PutTacdbCustomdb($id, $object)
 
 
 
@@ -36046,11 +36016,11 @@ Custom tacdb for detection of device type and OS.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**TacdbCustomdb**](TacdbCustomdb.md)|  | 
+ **object** | [**LtmTacdbCustomdb**](LtmTacdbCustomdb.md)|  | 
 
 ### Return type
 
-[**TacdbCustomdb**](tacdb_customdb.md)
+[**LtmTacdbCustomdb**](ltm_tacdb_customdb.md)
 
 ### Authorization
 
@@ -36064,7 +36034,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutTacdbCustomdbFile**
-> TacdbCustomdbFile PutTacdbCustomdbFile($id, $object)
+> LtmTacdbCustomdbFile PutTacdbCustomdbFile($id, $object)
 
 
 
@@ -36076,11 +36046,11 @@ File object for custom tacdb. User should NOT use it. Daemon use it internally.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**TacdbCustomdbFile**](TacdbCustomdbFile.md)|  | 
+ **object** | [**LtmTacdbCustomdbFile**](LtmTacdbCustomdbFile.md)|  | 
 
 ### Return type
 
-[**TacdbCustomdbFile**](tacdb_customdbFile.md)
+[**LtmTacdbCustomdbFile**](ltm_tacdb_customdbFile.md)
 
 ### Authorization
 
@@ -36094,7 +36064,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutTrafficClass**
-> TrafficClass PutTrafficClass($id, $object)
+> LtmTrafficClass PutTrafficClass($id, $object)
 
 
 
@@ -36106,11 +36076,11 @@ Traffic Class Configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**TrafficClass**](TrafficClass.md)|  | 
+ **object** | [**LtmTrafficClass**](LtmTrafficClass.md)|  | 
 
 ### Return type
 
-[**TrafficClass**](trafficClass.md)
+[**LtmTrafficClass**](ltm_trafficClass.md)
 
 ### Authorization
 
@@ -36124,7 +36094,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutVirtual**
-> Virtual PutVirtual($id, $object)
+> LtmVirtual PutVirtual($id, $object)
 
 
 
@@ -36136,11 +36106,11 @@ Virtual server configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**Virtual**](Virtual.md)|  | 
+ **object** | [**LtmVirtual**](LtmVirtual.md)|  | 
 
 ### Return type
 
-[**Virtual**](virtual.md)
+[**LtmVirtual**](ltm_virtual.md)
 
 ### Authorization
 
@@ -36154,7 +36124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutVirtualAddress**
-> VirtualAddress PutVirtualAddress($id, $object)
+> LtmVirtualAddress PutVirtualAddress($id, $object)
 
 
 
@@ -36166,11 +36136,11 @@ Virtual server IP address configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualAddress**](VirtualAddress.md)|  | 
+ **object** | [**LtmVirtualAddress**](LtmVirtualAddress.md)|  | 
 
 ### Return type
 
-[**VirtualAddress**](virtualAddress.md)
+[**LtmVirtualAddress**](ltm_virtualAddress.md)
 
 ### Authorization
 
@@ -36184,7 +36154,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutVirtualPolicies**
-> VirtualPolicies PutVirtualPolicies($id, $object)
+> LtmVirtualPolicies PutVirtualPolicies($id, $object)
 
 
 
@@ -36196,11 +36166,11 @@ Name | Type | Description  | Notes
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualPolicies**](VirtualPolicies.md)|  | 
+ **object** | [**LtmVirtualPolicies**](LtmVirtualPolicies.md)|  | 
 
 ### Return type
 
-[**VirtualPolicies**](virtual_policies.md)
+[**LtmVirtualPolicies**](ltm_virtual_policies.md)
 
 ### Authorization
 
@@ -36214,7 +36184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **PutVirtualProfiles**
-> VirtualProfiles PutVirtualProfiles($id, $object)
+> LtmVirtualProfiles PutVirtualProfiles($id, $object)
 
 
 
@@ -36226,11 +36196,11 @@ Manage the set of profiles that are associated with virtual servers
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the resource | 
- **object** | [**VirtualProfiles**](VirtualProfiles.md)|  | 
+ **object** | [**LtmVirtualProfiles**](LtmVirtualProfiles.md)|  | 
 
 ### Return type
 
-[**VirtualProfiles**](virtual_profiles.md)
+[**LtmVirtualProfiles**](ltm_virtual_profiles.md)
 
 ### Authorization
 
