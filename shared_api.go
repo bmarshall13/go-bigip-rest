@@ -23,7 +23,6 @@
 package f5api
 
 import (
-	"errors"
 	"fmt"
 	"net/url"
 	"strings"
@@ -46,16 +45,11 @@ func unused_import_hack_SharedApi() {
 // Login to generate an API token.
 //
 // loginBody is for User to authenticate as.
-func (a SharedApi) Login(loginBody LoginBody) (*LoginResp, *APIResponse, error) {
+func (a SharedApi) Login(loginBody LoginBody) (*LoginResp, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/shared/authn/login"
-
-	// verify the required parameter 'loginBody' is set
-	if &loginBody == nil {
-		return new(LoginResp), nil, errors.New("Missing required parameter 'loginBody' when calling SharedApi->Login")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -63,8 +57,7 @@ func (a SharedApi) Login(loginBody LoginBody) (*LoginResp, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (basicAuth) required
-
+	// authentication '(basicAuth)' required
 	// http basic authentication required
 	if a.configuration.UserName != "" || a.configuration.Password != "" {
 		headerParams["Authorization"] = "Basic " + a.configuration.getBasicAuthEncodedString()
@@ -97,11 +90,16 @@ func (a SharedApi) Login(loginBody LoginBody) (*LoginResp, *APIResponse, error) 
 	// body params
 	postBody = &loginBody
 
-	var successPayload = new(LoginResp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(LoginResp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }

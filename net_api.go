@@ -23,7 +23,6 @@
 package f5api
 
 import (
-	"errors"
 	"fmt"
 	"net/url"
 	"strings"
@@ -46,17 +45,12 @@ func unused_import_hack_NetApi() {
 // Manage the Address Resolution Protocol (ARP) table.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteArp(id string) (*APIResponse, error) {
+func (a NetApi) DeleteArp(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/arp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteArp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -64,11 +58,9 @@ func (a NetApi) DeleteArp(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -94,13 +86,10 @@ func (a NetApi) DeleteArp(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteBwcPolicy
@@ -109,17 +98,12 @@ func (a NetApi) DeleteArp(id string) (*APIResponse, error) {
 // Bandwidth control policy for traffic flow..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteBwcPolicy(id string) (*APIResponse, error) {
+func (a NetApi) DeleteBwcPolicy(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/policy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteBwcPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -127,11 +111,9 @@ func (a NetApi) DeleteBwcPolicy(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -157,13 +139,10 @@ func (a NetApi) DeleteBwcPolicy(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteBwcPriorityGroup
@@ -172,17 +151,12 @@ func (a NetApi) DeleteBwcPolicy(id string) (*APIResponse, error) {
 // Bandwidth traffic group for bandwidth policy traffic flows..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteBwcPriorityGroup(id string) (*APIResponse, error) {
+func (a NetApi) DeleteBwcPriorityGroup(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteBwcPriorityGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -190,11 +164,9 @@ func (a NetApi) DeleteBwcPriorityGroup(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -220,13 +192,10 @@ func (a NetApi) DeleteBwcPriorityGroup(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteBwcPriorityGroupPriorityClasses
@@ -235,17 +204,12 @@ func (a NetApi) DeleteBwcPriorityGroup(id string) (*APIResponse, error) {
 // Bandwidth traffic classes in the bandwidth traffic group..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteBwcPriorityGroupPriorityClasses(id string) (*APIResponse, error) {
+func (a NetApi) DeleteBwcPriorityGroupPriorityClasses(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/priorityClasses/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteBwcPriorityGroupPriorityClasses")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -253,11 +217,9 @@ func (a NetApi) DeleteBwcPriorityGroupPriorityClasses(id string) (*APIResponse, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -283,13 +245,10 @@ func (a NetApi) DeleteBwcPriorityGroupPriorityClasses(id string) (*APIResponse, 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteBwcProbe
@@ -298,17 +257,12 @@ func (a NetApi) DeleteBwcPriorityGroupPriorityClasses(id string) (*APIResponse, 
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteBwcProbe(id string) (*APIResponse, error) {
+func (a NetApi) DeleteBwcProbe(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/probe/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteBwcProbe")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -316,11 +270,9 @@ func (a NetApi) DeleteBwcProbe(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -346,13 +298,10 @@ func (a NetApi) DeleteBwcProbe(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteCmetrics
@@ -361,17 +310,12 @@ func (a NetApi) DeleteBwcProbe(id string) (*APIResponse, error) {
 // Route metrics table display.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteCmetrics(id string) (*APIResponse, error) {
+func (a NetApi) DeleteCmetrics(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cmetrics/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteCmetrics")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -379,11 +323,9 @@ func (a NetApi) DeleteCmetrics(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -409,13 +351,10 @@ func (a NetApi) DeleteCmetrics(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteCosMap8021p
@@ -424,17 +363,12 @@ func (a NetApi) DeleteCmetrics(id string) (*APIResponse, error) {
 // Configures vlan 8021.p tag to traffic priority mapping..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteCosMap8021p(id string) (*APIResponse, error) {
+func (a NetApi) DeleteCosMap8021p(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/map_8021p/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteCosMap8021p")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -442,11 +376,9 @@ func (a NetApi) DeleteCosMap8021p(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -472,13 +404,10 @@ func (a NetApi) DeleteCosMap8021p(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteCosMapDscp
@@ -487,17 +416,12 @@ func (a NetApi) DeleteCosMap8021p(id string) (*APIResponse, error) {
 // Configures IP DSCP field to traffic priority mapping..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteCosMapDscp(id string) (*APIResponse, error) {
+func (a NetApi) DeleteCosMapDscp(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/mapDscp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteCosMapDscp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -505,11 +429,9 @@ func (a NetApi) DeleteCosMapDscp(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -535,13 +457,10 @@ func (a NetApi) DeleteCosMapDscp(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteCosTrafficPriority
@@ -550,17 +469,12 @@ func (a NetApi) DeleteCosMapDscp(id string) (*APIResponse, error) {
 // Configures a traffic priority object..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteCosTrafficPriority(id string) (*APIResponse, error) {
+func (a NetApi) DeleteCosTrafficPriority(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/trafficPriority/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteCosTrafficPriority")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -568,11 +482,9 @@ func (a NetApi) DeleteCosTrafficPriority(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -598,13 +510,10 @@ func (a NetApi) DeleteCosTrafficPriority(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteDnsResolver
@@ -613,17 +522,12 @@ func (a NetApi) DeleteCosTrafficPriority(id string) (*APIResponse, error) {
 // DNS Resolver object..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteDnsResolver(id string) (*APIResponse, error) {
+func (a NetApi) DeleteDnsResolver(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/dnsResolver/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteDnsResolver")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -631,11 +535,9 @@ func (a NetApi) DeleteDnsResolver(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -661,13 +563,10 @@ func (a NetApi) DeleteDnsResolver(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteFdbTunnel
@@ -676,17 +575,12 @@ func (a NetApi) DeleteDnsResolver(id string) (*APIResponse, error) {
 // Tunnel forwarding database configuration and status.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteFdbTunnel(id string) (*APIResponse, error) {
+func (a NetApi) DeleteFdbTunnel(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/tunnel/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteFdbTunnel")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -694,11 +588,9 @@ func (a NetApi) DeleteFdbTunnel(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -724,13 +616,10 @@ func (a NetApi) DeleteFdbTunnel(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteFdbTunnelRecords
@@ -739,17 +628,12 @@ func (a NetApi) DeleteFdbTunnel(id string) (*APIResponse, error) {
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteFdbTunnelRecords(id string) (*APIResponse, error) {
+func (a NetApi) DeleteFdbTunnelRecords(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/tunnel/records/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteFdbTunnelRecords")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -757,11 +641,9 @@ func (a NetApi) DeleteFdbTunnelRecords(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -787,13 +669,10 @@ func (a NetApi) DeleteFdbTunnelRecords(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteFdbVlan
@@ -802,17 +681,12 @@ func (a NetApi) DeleteFdbTunnelRecords(id string) (*APIResponse, error) {
 // VLAN forwarding database configuration and status.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteFdbVlan(id string) (*APIResponse, error) {
+func (a NetApi) DeleteFdbVlan(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/vlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteFdbVlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -820,11 +694,9 @@ func (a NetApi) DeleteFdbVlan(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -850,13 +722,10 @@ func (a NetApi) DeleteFdbVlan(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteIpsecIkePeer
@@ -865,17 +734,12 @@ func (a NetApi) DeleteFdbVlan(id string) (*APIResponse, error) {
 // Specifies IKE phase 1 parameters for remote ike peers..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteIpsecIkePeer(id string) (*APIResponse, error) {
+func (a NetApi) DeleteIpsecIkePeer(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikePeer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteIpsecIkePeer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -883,11 +747,9 @@ func (a NetApi) DeleteIpsecIkePeer(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -913,13 +775,10 @@ func (a NetApi) DeleteIpsecIkePeer(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteIpsecIkeSa
@@ -928,17 +787,12 @@ func (a NetApi) DeleteIpsecIkePeer(id string) (*APIResponse, error) {
 // Displays IKE security associations.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteIpsecIkeSa(id string) (*APIResponse, error) {
+func (a NetApi) DeleteIpsecIkeSa(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikeSa/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteIpsecIkeSa")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -946,11 +800,9 @@ func (a NetApi) DeleteIpsecIkeSa(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -976,13 +828,10 @@ func (a NetApi) DeleteIpsecIkeSa(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteIpsecIpsecPolicy
@@ -991,17 +840,12 @@ func (a NetApi) DeleteIpsecIkeSa(id string) (*APIResponse, error) {
 // Configure IPsec security policy..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteIpsecIpsecPolicy(id string) (*APIResponse, error) {
+func (a NetApi) DeleteIpsecIpsecPolicy(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ipsecPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteIpsecIpsecPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1009,11 +853,9 @@ func (a NetApi) DeleteIpsecIpsecPolicy(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1039,13 +881,10 @@ func (a NetApi) DeleteIpsecIpsecPolicy(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteIpsecIpsecSa
@@ -1054,17 +893,12 @@ func (a NetApi) DeleteIpsecIpsecPolicy(id string) (*APIResponse, error) {
 // Displays IPsec security associations.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteIpsecIpsecSa(id string) (*APIResponse, error) {
+func (a NetApi) DeleteIpsecIpsecSa(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ipsecSa/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteIpsecIpsecSa")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1072,11 +906,9 @@ func (a NetApi) DeleteIpsecIpsecSa(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1102,13 +934,10 @@ func (a NetApi) DeleteIpsecIpsecSa(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteIpsecManualSecurityAssociation
@@ -1117,17 +946,12 @@ func (a NetApi) DeleteIpsecIpsecSa(id string) (*APIResponse, error) {
 // Specifies manually configured Security Association parameters..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteIpsecManualSecurityAssociation(id string) (*APIResponse, error) {
+func (a NetApi) DeleteIpsecManualSecurityAssociation(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/manualSecurityAssociation/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteIpsecManualSecurityAssociation")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1135,11 +959,9 @@ func (a NetApi) DeleteIpsecManualSecurityAssociation(id string) (*APIResponse, e
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1165,13 +987,10 @@ func (a NetApi) DeleteIpsecManualSecurityAssociation(id string) (*APIResponse, e
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteIpsecTrafficSelector
@@ -1180,17 +999,12 @@ func (a NetApi) DeleteIpsecManualSecurityAssociation(id string) (*APIResponse, e
 // Traffic Selector configuration..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteIpsecTrafficSelector(id string) (*APIResponse, error) {
+func (a NetApi) DeleteIpsecTrafficSelector(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/trafficSelector/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteIpsecTrafficSelector")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1198,11 +1012,9 @@ func (a NetApi) DeleteIpsecTrafficSelector(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1228,13 +1040,10 @@ func (a NetApi) DeleteIpsecTrafficSelector(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteNdp
@@ -1243,17 +1052,12 @@ func (a NetApi) DeleteIpsecTrafficSelector(id string) (*APIResponse, error) {
 // Manage the IPv6 Neighbor Discovery Protocol (NDP) table..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteNdp(id string) (*APIResponse, error) {
+func (a NetApi) DeleteNdp(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ndp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteNdp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1261,11 +1065,9 @@ func (a NetApi) DeleteNdp(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1291,13 +1093,10 @@ func (a NetApi) DeleteNdp(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeletePacketFilter
@@ -1306,17 +1105,12 @@ func (a NetApi) DeleteNdp(id string) (*APIResponse, error) {
 // Packet filter configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeletePacketFilter(id string) (*APIResponse, error) {
+func (a NetApi) DeletePacketFilter(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/packetFilter/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeletePacketFilter")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1324,11 +1118,9 @@ func (a NetApi) DeletePacketFilter(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1354,13 +1146,10 @@ func (a NetApi) DeletePacketFilter(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeletePortMirror
@@ -1369,17 +1158,12 @@ func (a NetApi) DeletePacketFilter(id string) (*APIResponse, error) {
 // Interface port mirroring configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeletePortMirror(id string) (*APIResponse, error) {
+func (a NetApi) DeletePortMirror(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/portMirror/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeletePortMirror")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1387,11 +1171,9 @@ func (a NetApi) DeletePortMirror(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1417,13 +1199,10 @@ func (a NetApi) DeletePortMirror(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteRateShapingColorPolicer
@@ -1432,17 +1211,12 @@ func (a NetApi) DeletePortMirror(id string) (*APIResponse, error) {
 // Color based policer configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteRateShapingColorPolicer(id string) (*APIResponse, error) {
+func (a NetApi) DeleteRateShapingColorPolicer(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/colorPolicer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteRateShapingColorPolicer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1450,11 +1224,9 @@ func (a NetApi) DeleteRateShapingColorPolicer(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1480,13 +1252,10 @@ func (a NetApi) DeleteRateShapingColorPolicer(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteRateShapingDropPolicy
@@ -1495,17 +1264,12 @@ func (a NetApi) DeleteRateShapingColorPolicer(id string) (*APIResponse, error) {
 // Drop policy configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteRateShapingDropPolicy(id string) (*APIResponse, error) {
+func (a NetApi) DeleteRateShapingDropPolicy(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/dropPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteRateShapingDropPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1513,11 +1277,9 @@ func (a NetApi) DeleteRateShapingDropPolicy(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1543,13 +1305,10 @@ func (a NetApi) DeleteRateShapingDropPolicy(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteRateShapingQueue
@@ -1558,17 +1317,12 @@ func (a NetApi) DeleteRateShapingDropPolicy(id string) (*APIResponse, error) {
 // Queuing method configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteRateShapingQueue(id string) (*APIResponse, error) {
+func (a NetApi) DeleteRateShapingQueue(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/queue/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteRateShapingQueue")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1576,11 +1330,9 @@ func (a NetApi) DeleteRateShapingQueue(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1606,13 +1358,10 @@ func (a NetApi) DeleteRateShapingQueue(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteRateShapingShapingPolicy
@@ -1621,17 +1370,12 @@ func (a NetApi) DeleteRateShapingQueue(id string) (*APIResponse, error) {
 // Shaping policy configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteRateShapingShapingPolicy(id string) (*APIResponse, error) {
+func (a NetApi) DeleteRateShapingShapingPolicy(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/shapingPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteRateShapingShapingPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1639,11 +1383,9 @@ func (a NetApi) DeleteRateShapingShapingPolicy(id string) (*APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1669,13 +1411,10 @@ func (a NetApi) DeleteRateShapingShapingPolicy(id string) (*APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteRateShapingTmClass
@@ -1684,17 +1423,12 @@ func (a NetApi) DeleteRateShapingShapingPolicy(id string) (*APIResponse, error) 
 // Rate class configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteRateShapingTmClass(id string) (*APIResponse, error) {
+func (a NetApi) DeleteRateShapingTmClass(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/tmClass/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteRateShapingTmClass")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1702,11 +1436,9 @@ func (a NetApi) DeleteRateShapingTmClass(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1732,13 +1464,10 @@ func (a NetApi) DeleteRateShapingTmClass(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteRoute
@@ -1747,17 +1476,12 @@ func (a NetApi) DeleteRateShapingTmClass(id string) (*APIResponse, error) {
 // Routing tables and configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteRoute(id string) (*APIResponse, error) {
+func (a NetApi) DeleteRoute(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/route/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteRoute")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1765,11 +1489,9 @@ func (a NetApi) DeleteRoute(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1795,13 +1517,10 @@ func (a NetApi) DeleteRoute(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteRouteDomain
@@ -1810,17 +1529,12 @@ func (a NetApi) DeleteRoute(id string) (*APIResponse, error) {
 // Route domain configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteRouteDomain(id string) (*APIResponse, error) {
+func (a NetApi) DeleteRouteDomain(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteRouteDomain")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1828,11 +1542,9 @@ func (a NetApi) DeleteRouteDomain(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1858,13 +1570,10 @@ func (a NetApi) DeleteRouteDomain(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteRouterAdvertisement
@@ -1873,17 +1582,12 @@ func (a NetApi) DeleteRouteDomain(id string) (*APIResponse, error) {
 // Configures IPv6 prefixes for router advertisement on a VLAN..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteRouterAdvertisement(id string) (*APIResponse, error) {
+func (a NetApi) DeleteRouterAdvertisement(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteRouterAdvertisement")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1891,11 +1595,9 @@ func (a NetApi) DeleteRouterAdvertisement(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1921,13 +1623,10 @@ func (a NetApi) DeleteRouterAdvertisement(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteRouterAdvertisementPrefixes
@@ -1936,17 +1635,12 @@ func (a NetApi) DeleteRouterAdvertisement(id string) (*APIResponse, error) {
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteRouterAdvertisementPrefixes(id string) (*APIResponse, error) {
+func (a NetApi) DeleteRouterAdvertisementPrefixes(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/prefixes/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteRouterAdvertisementPrefixes")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -1954,11 +1648,9 @@ func (a NetApi) DeleteRouterAdvertisementPrefixes(id string) (*APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -1984,13 +1676,10 @@ func (a NetApi) DeleteRouterAdvertisementPrefixes(id string) (*APIResponse, erro
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteSelf
@@ -1999,17 +1688,12 @@ func (a NetApi) DeleteRouterAdvertisementPrefixes(id string) (*APIResponse, erro
 // Self-IP address configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteSelf(id string) (*APIResponse, error) {
+func (a NetApi) DeleteSelf(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteSelf")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2017,11 +1701,9 @@ func (a NetApi) DeleteSelf(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2047,13 +1729,10 @@ func (a NetApi) DeleteSelf(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteServicePolicy
@@ -2062,17 +1741,12 @@ func (a NetApi) DeleteSelf(id string) (*APIResponse, error) {
 // Service Policy configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteServicePolicy(id string) (*APIResponse, error) {
+func (a NetApi) DeleteServicePolicy(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/servicePolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteServicePolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2080,11 +1754,9 @@ func (a NetApi) DeleteServicePolicy(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2110,13 +1782,10 @@ func (a NetApi) DeleteServicePolicy(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteStp
@@ -2125,17 +1794,12 @@ func (a NetApi) DeleteServicePolicy(id string) (*APIResponse, error) {
 // STP configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteStp(id string) (*APIResponse, error) {
+func (a NetApi) DeleteStp(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/stp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteStp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2143,11 +1807,9 @@ func (a NetApi) DeleteStp(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2173,13 +1835,10 @@ func (a NetApi) DeleteStp(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTimerPolicy
@@ -2188,17 +1847,12 @@ func (a NetApi) DeleteStp(id string) (*APIResponse, error) {
 // Timer Policy configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTimerPolicy(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTimerPolicy(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/timerPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTimerPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2206,11 +1860,9 @@ func (a NetApi) DeleteTimerPolicy(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2236,13 +1888,10 @@ func (a NetApi) DeleteTimerPolicy(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTrunk
@@ -2251,17 +1900,12 @@ func (a NetApi) DeleteTimerPolicy(id string) (*APIResponse, error) {
 // Trunk configuration and statistics.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTrunk(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTrunk(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/trunk/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTrunk")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2269,11 +1913,9 @@ func (a NetApi) DeleteTrunk(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2299,13 +1941,10 @@ func (a NetApi) DeleteTrunk(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsEtherip
@@ -2314,17 +1953,12 @@ func (a NetApi) DeleteTrunk(id string) (*APIResponse, error) {
 // EtherIP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsEtherip(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsEtherip(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/etherip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsEtherip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2332,11 +1966,9 @@ func (a NetApi) DeleteTunnelsEtherip(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2362,13 +1994,10 @@ func (a NetApi) DeleteTunnelsEtherip(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsFec
@@ -2377,17 +2006,12 @@ func (a NetApi) DeleteTunnelsEtherip(id string) (*APIResponse, error) {
 // FEC tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsFec(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsFec(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/fec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsFec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2395,11 +2019,9 @@ func (a NetApi) DeleteTunnelsFec(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2425,13 +2047,10 @@ func (a NetApi) DeleteTunnelsFec(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsGeneve
@@ -2440,17 +2059,12 @@ func (a NetApi) DeleteTunnelsFec(id string) (*APIResponse, error) {
 // Geneve tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsGeneve(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsGeneve(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/geneve/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsGeneve")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2458,11 +2072,9 @@ func (a NetApi) DeleteTunnelsGeneve(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2488,13 +2100,10 @@ func (a NetApi) DeleteTunnelsGeneve(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsGre
@@ -2503,17 +2112,12 @@ func (a NetApi) DeleteTunnelsGeneve(id string) (*APIResponse, error) {
 // GRE tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsGre(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsGre(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/gre/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsGre")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2521,11 +2125,9 @@ func (a NetApi) DeleteTunnelsGre(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2551,13 +2153,10 @@ func (a NetApi) DeleteTunnelsGre(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsIpip
@@ -2566,17 +2165,12 @@ func (a NetApi) DeleteTunnelsGre(id string) (*APIResponse, error) {
 // IPIP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsIpip(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsIpip(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsIpip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2584,11 +2178,9 @@ func (a NetApi) DeleteTunnelsIpip(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2614,13 +2206,10 @@ func (a NetApi) DeleteTunnelsIpip(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsIpsec
@@ -2629,17 +2218,12 @@ func (a NetApi) DeleteTunnelsIpip(id string) (*APIResponse, error) {
 // IPSEC tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsIpsec(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsIpsec(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipsec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsIpsec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2647,11 +2231,9 @@ func (a NetApi) DeleteTunnelsIpsec(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2677,13 +2259,10 @@ func (a NetApi) DeleteTunnelsIpsec(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsMap
@@ -2692,17 +2271,12 @@ func (a NetApi) DeleteTunnelsIpsec(id string) (*APIResponse, error) {
 // MAP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsMap(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsMap(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/map/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsMap")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2710,11 +2284,9 @@ func (a NetApi) DeleteTunnelsMap(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2740,13 +2312,10 @@ func (a NetApi) DeleteTunnelsMap(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsPpp
@@ -2755,17 +2324,12 @@ func (a NetApi) DeleteTunnelsMap(id string) (*APIResponse, error) {
 // PPP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsPpp(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsPpp(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ppp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsPpp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2773,11 +2337,9 @@ func (a NetApi) DeleteTunnelsPpp(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2803,13 +2365,10 @@ func (a NetApi) DeleteTunnelsPpp(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsTcpForward
@@ -2818,17 +2377,12 @@ func (a NetApi) DeleteTunnelsPpp(id string) (*APIResponse, error) {
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsTcpForward(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsTcpForward(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tcpForward/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsTcpForward")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2836,11 +2390,9 @@ func (a NetApi) DeleteTunnelsTcpForward(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2866,13 +2418,10 @@ func (a NetApi) DeleteTunnelsTcpForward(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsTunnel
@@ -2881,17 +2430,12 @@ func (a NetApi) DeleteTunnelsTcpForward(id string) (*APIResponse, error) {
 // Tunnel configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsTunnel(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsTunnel(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tunnel/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsTunnel")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2899,11 +2443,9 @@ func (a NetApi) DeleteTunnelsTunnel(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2929,13 +2471,10 @@ func (a NetApi) DeleteTunnelsTunnel(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsV6rd
@@ -2944,17 +2483,12 @@ func (a NetApi) DeleteTunnelsTunnel(id string) (*APIResponse, error) {
 // 6RD tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsV6rd(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsV6rd(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/v6rd/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsV6rd")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -2962,11 +2496,9 @@ func (a NetApi) DeleteTunnelsV6rd(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -2992,13 +2524,10 @@ func (a NetApi) DeleteTunnelsV6rd(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsVxlan
@@ -3007,17 +2536,12 @@ func (a NetApi) DeleteTunnelsV6rd(id string) (*APIResponse, error) {
 // VXLAN tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsVxlan(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsVxlan(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/vxlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsVxlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3025,11 +2549,9 @@ func (a NetApi) DeleteTunnelsVxlan(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3055,13 +2577,10 @@ func (a NetApi) DeleteTunnelsVxlan(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteTunnelsWccp
@@ -3070,17 +2589,12 @@ func (a NetApi) DeleteTunnelsVxlan(id string) (*APIResponse, error) {
 // WCCP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteTunnelsWccp(id string) (*APIResponse, error) {
+func (a NetApi) DeleteTunnelsWccp(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteTunnelsWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3088,11 +2602,9 @@ func (a NetApi) DeleteTunnelsWccp(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3118,13 +2630,10 @@ func (a NetApi) DeleteTunnelsWccp(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteVlan
@@ -3133,17 +2642,12 @@ func (a NetApi) DeleteTunnelsWccp(id string) (*APIResponse, error) {
 // VLAN configuration and statistics.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteVlan(id string) (*APIResponse, error) {
+func (a NetApi) DeleteVlan(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteVlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3151,11 +2655,9 @@ func (a NetApi) DeleteVlan(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3181,13 +2683,10 @@ func (a NetApi) DeleteVlan(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteVlanGroup
@@ -3196,17 +2695,12 @@ func (a NetApi) DeleteVlan(id string) (*APIResponse, error) {
 // VLAN group configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteVlanGroup(id string) (*APIResponse, error) {
+func (a NetApi) DeleteVlanGroup(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlanGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteVlanGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3214,11 +2708,9 @@ func (a NetApi) DeleteVlanGroup(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3244,13 +2736,10 @@ func (a NetApi) DeleteVlanGroup(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteVlanInterfaces
@@ -3259,17 +2748,12 @@ func (a NetApi) DeleteVlanGroup(id string) (*APIResponse, error) {
 // Specifies which interfaces you want this VLAN to use for traffic management..
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteVlanInterfaces(id string) (*APIResponse, error) {
+func (a NetApi) DeleteVlanInterfaces(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/interfaces/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteVlanInterfaces")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3277,11 +2761,9 @@ func (a NetApi) DeleteVlanInterfaces(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3307,13 +2789,10 @@ func (a NetApi) DeleteVlanInterfaces(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteWccp
@@ -3322,17 +2801,12 @@ func (a NetApi) DeleteVlanInterfaces(id string) (*APIResponse, error) {
 // WCCP configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteWccp(id string) (*APIResponse, error) {
+func (a NetApi) DeleteWccp(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3340,11 +2814,9 @@ func (a NetApi) DeleteWccp(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3370,13 +2842,10 @@ func (a NetApi) DeleteWccp(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // DeleteWccpServices
@@ -3385,17 +2854,12 @@ func (a NetApi) DeleteWccp(id string) (*APIResponse, error) {
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) DeleteWccpServices(id string) (*APIResponse, error) {
+func (a NetApi) DeleteWccpServices(id string) error {
 
 	var httpMethod = "Delete"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/services/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return nil, errors.New("Missing required parameter 'id' when calling NetApi->DeleteWccpServices")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3403,11 +2867,9 @@ func (a NetApi) DeleteWccpServices(id string) (*APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3433,13 +2895,10 @@ func (a NetApi) DeleteWccpServices(id string) (*APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return NewAPIResponse(httpResponse.RawResponse), err
-	}
 
-	return NewAPIResponse(httpResponse.RawResponse), err
+	return NewAPIResponse(httpResponse, err)
+
 }
 
 // GetArp
@@ -3448,17 +2907,12 @@ func (a NetApi) DeleteWccpServices(id string) (*APIResponse, error) {
 // Manage the Address Resolution Protocol (ARP) table.
 //
 // id is for ID of the resource.
-func (a NetApi) GetArp(id string) (*NetArp, *APIResponse, error) {
+func (a NetApi) GetArp(id string) (*NetArp, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/arp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetArp), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetArp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3466,11 +2920,9 @@ func (a NetApi) GetArp(id string) (*NetArp, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3496,20 +2948,25 @@ func (a NetApi) GetArp(id string) (*NetArp, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetArp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetArp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetArpList
 //
 //
 // Manage the Address Resolution Protocol (ARP) table..
-func (a NetApi) GetArpList() (*NetArpList, *APIResponse, error) {
+func (a NetApi) GetArpList() (*NetArpList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -3521,11 +2978,9 @@ func (a NetApi) GetArpList() (*NetArpList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3551,13 +3006,18 @@ func (a NetApi) GetArpList() (*NetArpList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetArpList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetArpList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwc
@@ -3566,17 +3026,12 @@ func (a NetApi) GetArpList() (*NetArpList, *APIResponse, error) {
 // Bandwidth related configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetBwc(id string) (*NetBwc, *APIResponse, error) {
+func (a NetApi) GetBwc(id string) (*NetBwc, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwc), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetBwc")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3584,11 +3039,9 @@ func (a NetApi) GetBwc(id string) (*NetBwc, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3614,20 +3067,25 @@ func (a NetApi) GetBwc(id string) (*NetBwc, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwc)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwc)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwcList
 //
 //
 // Bandwidth related configuration..
-func (a NetApi) GetBwcList() (*NetBwcList, *APIResponse, error) {
+func (a NetApi) GetBwcList() (*NetBwcList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -3639,11 +3097,9 @@ func (a NetApi) GetBwcList() (*NetBwcList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3669,13 +3125,18 @@ func (a NetApi) GetBwcList() (*NetBwcList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwcList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwcPolicy
@@ -3684,17 +3145,12 @@ func (a NetApi) GetBwcList() (*NetBwcList, *APIResponse, error) {
 // Bandwidth control policy for traffic flow..
 //
 // id is for ID of the resource.
-func (a NetApi) GetBwcPolicy(id string) (*NetBwcPolicy, *APIResponse, error) {
+func (a NetApi) GetBwcPolicy(id string) (*NetBwcPolicy, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/policy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetBwcPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3702,11 +3158,9 @@ func (a NetApi) GetBwcPolicy(id string) (*NetBwcPolicy, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3732,20 +3186,25 @@ func (a NetApi) GetBwcPolicy(id string) (*NetBwcPolicy, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwcPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwcPolicyList
 //
 //
 // Bandwidth control policy for traffic flow...
-func (a NetApi) GetBwcPolicyList() (*NetBwcPolicyList, *APIResponse, error) {
+func (a NetApi) GetBwcPolicyList() (*NetBwcPolicyList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -3757,11 +3216,9 @@ func (a NetApi) GetBwcPolicyList() (*NetBwcPolicyList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3787,13 +3244,18 @@ func (a NetApi) GetBwcPolicyList() (*NetBwcPolicyList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwcPolicyList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPolicyList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwcPriorityGroup
@@ -3802,17 +3264,12 @@ func (a NetApi) GetBwcPolicyList() (*NetBwcPolicyList, *APIResponse, error) {
 // Bandwidth traffic group for bandwidth policy traffic flows..
 //
 // id is for ID of the resource.
-func (a NetApi) GetBwcPriorityGroup(id string) (*NetBwcPriorityGroup, *APIResponse, error) {
+func (a NetApi) GetBwcPriorityGroup(id string) (*NetBwcPriorityGroup, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPriorityGroup), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetBwcPriorityGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3820,11 +3277,9 @@ func (a NetApi) GetBwcPriorityGroup(id string) (*NetBwcPriorityGroup, *APIRespon
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3850,20 +3305,25 @@ func (a NetApi) GetBwcPriorityGroup(id string) (*NetBwcPriorityGroup, *APIRespon
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwcPriorityGroup)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroup)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwcPriorityGroupList
 //
 //
 // Bandwidth traffic group for bandwidth policy traffic flows...
-func (a NetApi) GetBwcPriorityGroupList() (*NetBwcPriorityGroupList, *APIResponse, error) {
+func (a NetApi) GetBwcPriorityGroupList() (*NetBwcPriorityGroupList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -3875,11 +3335,9 @@ func (a NetApi) GetBwcPriorityGroupList() (*NetBwcPriorityGroupList, *APIRespons
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3905,13 +3363,18 @@ func (a NetApi) GetBwcPriorityGroupList() (*NetBwcPriorityGroupList, *APIRespons
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwcPriorityGroupList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroupList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwcPriorityGroupPriorityClasses
@@ -3920,17 +3383,12 @@ func (a NetApi) GetBwcPriorityGroupList() (*NetBwcPriorityGroupList, *APIRespons
 // Bandwidth traffic classes in the bandwidth traffic group..
 //
 // id is for ID of the resource.
-func (a NetApi) GetBwcPriorityGroupPriorityClasses(id string) (*NetBwcPriorityGroupPriorityClasses, *APIResponse, error) {
+func (a NetApi) GetBwcPriorityGroupPriorityClasses(id string) (*NetBwcPriorityGroupPriorityClasses, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/priorityClasses/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPriorityGroupPriorityClasses), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetBwcPriorityGroupPriorityClasses")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -3938,11 +3396,9 @@ func (a NetApi) GetBwcPriorityGroupPriorityClasses(id string) (*NetBwcPriorityGr
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -3968,20 +3424,25 @@ func (a NetApi) GetBwcPriorityGroupPriorityClasses(id string) (*NetBwcPriorityGr
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwcPriorityGroupPriorityClasses)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroupPriorityClasses)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwcPriorityGroupPriorityClassesList
 //
 //
 // Bandwidth traffic classes in the bandwidth traffic group...
-func (a NetApi) GetBwcPriorityGroupPriorityClassesList() (*NetBwcPriorityGroupPriorityClassesList, *APIResponse, error) {
+func (a NetApi) GetBwcPriorityGroupPriorityClassesList() (*NetBwcPriorityGroupPriorityClassesList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -3993,11 +3454,9 @@ func (a NetApi) GetBwcPriorityGroupPriorityClassesList() (*NetBwcPriorityGroupPr
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4023,13 +3482,18 @@ func (a NetApi) GetBwcPriorityGroupPriorityClassesList() (*NetBwcPriorityGroupPr
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwcPriorityGroupPriorityClassesList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroupPriorityClassesList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwcProbe
@@ -4038,17 +3502,12 @@ func (a NetApi) GetBwcPriorityGroupPriorityClassesList() (*NetBwcPriorityGroupPr
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) GetBwcProbe(id string) (*NetBwcProbe, *APIResponse, error) {
+func (a NetApi) GetBwcProbe(id string) (*NetBwcProbe, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/probe/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcProbe), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetBwcProbe")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -4056,11 +3515,9 @@ func (a NetApi) GetBwcProbe(id string) (*NetBwcProbe, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4086,20 +3543,25 @@ func (a NetApi) GetBwcProbe(id string) (*NetBwcProbe, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwcProbe)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcProbe)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetBwcProbeList
 //
 //
 // ..
-func (a NetApi) GetBwcProbeList() (*NetBwcProbeList, *APIResponse, error) {
+func (a NetApi) GetBwcProbeList() (*NetBwcProbeList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -4111,11 +3573,9 @@ func (a NetApi) GetBwcProbeList() (*NetBwcProbeList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4141,13 +3601,18 @@ func (a NetApi) GetBwcProbeList() (*NetBwcProbeList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetBwcProbeList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcProbeList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCmetrics
@@ -4156,17 +3621,12 @@ func (a NetApi) GetBwcProbeList() (*NetBwcProbeList, *APIResponse, error) {
 // Route metrics table display.
 //
 // id is for ID of the resource.
-func (a NetApi) GetCmetrics(id string) (*NetCmetrics, *APIResponse, error) {
+func (a NetApi) GetCmetrics(id string) (*NetCmetrics, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cmetrics/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCmetrics), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetCmetrics")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -4174,11 +3634,9 @@ func (a NetApi) GetCmetrics(id string) (*NetCmetrics, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4204,20 +3662,25 @@ func (a NetApi) GetCmetrics(id string) (*NetCmetrics, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCmetrics)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCmetrics)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCmetricsList
 //
 //
 // Route metrics table display..
-func (a NetApi) GetCmetricsList() (*NetCmetricsList, *APIResponse, error) {
+func (a NetApi) GetCmetricsList() (*NetCmetricsList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -4229,11 +3692,9 @@ func (a NetApi) GetCmetricsList() (*NetCmetricsList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4259,13 +3720,18 @@ func (a NetApi) GetCmetricsList() (*NetCmetricsList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCmetricsList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCmetricsList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCos
@@ -4274,17 +3740,12 @@ func (a NetApi) GetCmetricsList() (*NetCmetricsList, *APIResponse, error) {
 // Class of Service related configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetCos(id string) (*NetCos, *APIResponse, error) {
+func (a NetApi) GetCos(id string) (*NetCos, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCos), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetCos")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -4292,11 +3753,9 @@ func (a NetApi) GetCos(id string) (*NetCos, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4322,13 +3781,18 @@ func (a NetApi) GetCos(id string) (*NetCos, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCos)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCos)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCosGlobalSettings
@@ -4337,17 +3801,12 @@ func (a NetApi) GetCos(id string) (*NetCos, *APIResponse, error) {
 // Configures the global configuration for class of service..
 //
 // id is for ID of the resource.
-func (a NetApi) GetCosGlobalSettings(id string) (*NetCosGlobalSettings, *APIResponse, error) {
+func (a NetApi) GetCosGlobalSettings(id string) (*NetCosGlobalSettings, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/globalSettings/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosGlobalSettings), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetCosGlobalSettings")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -4355,11 +3814,9 @@ func (a NetApi) GetCosGlobalSettings(id string) (*NetCosGlobalSettings, *APIResp
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4385,20 +3842,25 @@ func (a NetApi) GetCosGlobalSettings(id string) (*NetCosGlobalSettings, *APIResp
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCosGlobalSettings)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosGlobalSettings)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCosGlobalSettingsList
 //
 //
 // Configures the global configuration for class of service...
-func (a NetApi) GetCosGlobalSettingsList() (*NetCosGlobalSettingsList, *APIResponse, error) {
+func (a NetApi) GetCosGlobalSettingsList() (*NetCosGlobalSettingsList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -4410,11 +3872,9 @@ func (a NetApi) GetCosGlobalSettingsList() (*NetCosGlobalSettingsList, *APIRespo
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4440,20 +3900,25 @@ func (a NetApi) GetCosGlobalSettingsList() (*NetCosGlobalSettingsList, *APIRespo
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCosGlobalSettingsList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosGlobalSettingsList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCosList
 //
 //
 // Class of Service related configuration..
-func (a NetApi) GetCosList() (*NetCosList, *APIResponse, error) {
+func (a NetApi) GetCosList() (*NetCosList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -4465,11 +3930,9 @@ func (a NetApi) GetCosList() (*NetCosList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4495,13 +3958,18 @@ func (a NetApi) GetCosList() (*NetCosList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCosList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCosMap8021p
@@ -4510,17 +3978,12 @@ func (a NetApi) GetCosList() (*NetCosList, *APIResponse, error) {
 // Configures vlan 8021.p tag to traffic priority mapping..
 //
 // id is for ID of the resource.
-func (a NetApi) GetCosMap8021p(id string) (*NetCosMap8021p, *APIResponse, error) {
+func (a NetApi) GetCosMap8021p(id string) (*NetCosMap8021p, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/map_8021p/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosMap8021p), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetCosMap8021p")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -4528,11 +3991,9 @@ func (a NetApi) GetCosMap8021p(id string) (*NetCosMap8021p, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4558,20 +4019,25 @@ func (a NetApi) GetCosMap8021p(id string) (*NetCosMap8021p, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCosMap8021p)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMap8021p)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCosMap8021pList
 //
 //
 // Configures vlan 8021.p tag to traffic priority mapping...
-func (a NetApi) GetCosMap8021pList() (*NetCosMap8021pList, *APIResponse, error) {
+func (a NetApi) GetCosMap8021pList() (*NetCosMap8021pList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -4583,11 +4049,9 @@ func (a NetApi) GetCosMap8021pList() (*NetCosMap8021pList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4613,13 +4077,18 @@ func (a NetApi) GetCosMap8021pList() (*NetCosMap8021pList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCosMap8021pList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMap8021pList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCosMapDscp
@@ -4628,17 +4097,12 @@ func (a NetApi) GetCosMap8021pList() (*NetCosMap8021pList, *APIResponse, error) 
 // Configures IP DSCP field to traffic priority mapping..
 //
 // id is for ID of the resource.
-func (a NetApi) GetCosMapDscp(id string) (*NetCosMapDscp, *APIResponse, error) {
+func (a NetApi) GetCosMapDscp(id string) (*NetCosMapDscp, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/mapDscp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosMapDscp), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetCosMapDscp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -4646,11 +4110,9 @@ func (a NetApi) GetCosMapDscp(id string) (*NetCosMapDscp, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4676,20 +4138,25 @@ func (a NetApi) GetCosMapDscp(id string) (*NetCosMapDscp, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCosMapDscp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMapDscp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCosMapDscpList
 //
 //
 // Configures IP DSCP field to traffic priority mapping...
-func (a NetApi) GetCosMapDscpList() (*NetCosMapDscpList, *APIResponse, error) {
+func (a NetApi) GetCosMapDscpList() (*NetCosMapDscpList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -4701,11 +4168,9 @@ func (a NetApi) GetCosMapDscpList() (*NetCosMapDscpList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4731,13 +4196,18 @@ func (a NetApi) GetCosMapDscpList() (*NetCosMapDscpList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCosMapDscpList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMapDscpList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCosTrafficPriority
@@ -4746,17 +4216,12 @@ func (a NetApi) GetCosMapDscpList() (*NetCosMapDscpList, *APIResponse, error) {
 // Configures a traffic priority object..
 //
 // id is for ID of the resource.
-func (a NetApi) GetCosTrafficPriority(id string) (*NetCosTrafficPriority, *APIResponse, error) {
+func (a NetApi) GetCosTrafficPriority(id string) (*NetCosTrafficPriority, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/trafficPriority/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosTrafficPriority), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetCosTrafficPriority")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -4764,11 +4229,9 @@ func (a NetApi) GetCosTrafficPriority(id string) (*NetCosTrafficPriority, *APIRe
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4794,20 +4257,25 @@ func (a NetApi) GetCosTrafficPriority(id string) (*NetCosTrafficPriority, *APIRe
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCosTrafficPriority)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosTrafficPriority)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetCosTrafficPriorityList
 //
 //
 // Configures a traffic priority object...
-func (a NetApi) GetCosTrafficPriorityList() (*NetCosTrafficPriorityList, *APIResponse, error) {
+func (a NetApi) GetCosTrafficPriorityList() (*NetCosTrafficPriorityList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -4819,11 +4287,9 @@ func (a NetApi) GetCosTrafficPriorityList() (*NetCosTrafficPriorityList, *APIRes
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4849,13 +4315,18 @@ func (a NetApi) GetCosTrafficPriorityList() (*NetCosTrafficPriorityList, *APIRes
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetCosTrafficPriorityList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosTrafficPriorityList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetDagGlobals
@@ -4864,17 +4335,12 @@ func (a NetApi) GetCosTrafficPriorityList() (*NetCosTrafficPriorityList, *APIRes
 // Global disaggregation settings.
 //
 // id is for ID of the resource.
-func (a NetApi) GetDagGlobals(id string) (*NetDagGlobals, *APIResponse, error) {
+func (a NetApi) GetDagGlobals(id string) (*NetDagGlobals, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/dagGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetDagGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetDagGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -4882,11 +4348,9 @@ func (a NetApi) GetDagGlobals(id string) (*NetDagGlobals, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4912,20 +4376,25 @@ func (a NetApi) GetDagGlobals(id string) (*NetDagGlobals, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetDagGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetDagGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetDagGlobalsList
 //
 //
 // Global disaggregation settings..
-func (a NetApi) GetDagGlobalsList() (*NetDagGlobalsList, *APIResponse, error) {
+func (a NetApi) GetDagGlobalsList() (*NetDagGlobalsList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -4937,11 +4406,9 @@ func (a NetApi) GetDagGlobalsList() (*NetDagGlobalsList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -4967,13 +4434,18 @@ func (a NetApi) GetDagGlobalsList() (*NetDagGlobalsList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetDagGlobalsList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetDagGlobalsList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetDnsResolver
@@ -4982,17 +4454,12 @@ func (a NetApi) GetDagGlobalsList() (*NetDagGlobalsList, *APIResponse, error) {
 // DNS Resolver object..
 //
 // id is for ID of the resource.
-func (a NetApi) GetDnsResolver(id string) (*NetDnsResolver, *APIResponse, error) {
+func (a NetApi) GetDnsResolver(id string) (*NetDnsResolver, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/dnsResolver/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetDnsResolver), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetDnsResolver")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -5000,11 +4467,9 @@ func (a NetApi) GetDnsResolver(id string) (*NetDnsResolver, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5030,20 +4495,25 @@ func (a NetApi) GetDnsResolver(id string) (*NetDnsResolver, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetDnsResolver)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetDnsResolver)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetDnsResolverList
 //
 //
 // DNS Resolver object...
-func (a NetApi) GetDnsResolverList() (*NetDnsResolverList, *APIResponse, error) {
+func (a NetApi) GetDnsResolverList() (*NetDnsResolverList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -5055,11 +4525,9 @@ func (a NetApi) GetDnsResolverList() (*NetDnsResolverList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5085,13 +4553,18 @@ func (a NetApi) GetDnsResolverList() (*NetDnsResolverList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetDnsResolverList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetDnsResolverList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetFdb
@@ -5100,17 +4573,12 @@ func (a NetApi) GetDnsResolverList() (*NetDnsResolverList, *APIResponse, error) 
 // VLAN/Tunnel forwarding database configuration and status.
 //
 // id is for ID of the resource.
-func (a NetApi) GetFdb(id string) (*NetFdb, *APIResponse, error) {
+func (a NetApi) GetFdb(id string) (*NetFdb, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdb), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetFdb")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -5118,11 +4586,9 @@ func (a NetApi) GetFdb(id string) (*NetFdb, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5148,20 +4614,25 @@ func (a NetApi) GetFdb(id string) (*NetFdb, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetFdb)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdb)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetFdbList
 //
 //
 // VLAN/Tunnel forwarding database configuration and status..
-func (a NetApi) GetFdbList() (*NetFdbList, *APIResponse, error) {
+func (a NetApi) GetFdbList() (*NetFdbList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -5173,11 +4644,9 @@ func (a NetApi) GetFdbList() (*NetFdbList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5203,13 +4672,18 @@ func (a NetApi) GetFdbList() (*NetFdbList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetFdbList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetFdbTunnel
@@ -5218,17 +4692,12 @@ func (a NetApi) GetFdbList() (*NetFdbList, *APIResponse, error) {
 // Tunnel forwarding database configuration and status.
 //
 // id is for ID of the resource.
-func (a NetApi) GetFdbTunnel(id string) (*NetFdbTunnel, *APIResponse, error) {
+func (a NetApi) GetFdbTunnel(id string) (*NetFdbTunnel, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/tunnel/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbTunnel), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetFdbTunnel")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -5236,11 +4705,9 @@ func (a NetApi) GetFdbTunnel(id string) (*NetFdbTunnel, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5266,20 +4733,25 @@ func (a NetApi) GetFdbTunnel(id string) (*NetFdbTunnel, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetFdbTunnel)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbTunnel)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetFdbTunnelList
 //
 //
 // Tunnel forwarding database configuration and status..
-func (a NetApi) GetFdbTunnelList() (*NetFdbTunnelList, *APIResponse, error) {
+func (a NetApi) GetFdbTunnelList() (*NetFdbTunnelList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -5291,11 +4763,9 @@ func (a NetApi) GetFdbTunnelList() (*NetFdbTunnelList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5321,13 +4791,18 @@ func (a NetApi) GetFdbTunnelList() (*NetFdbTunnelList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetFdbTunnelList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbTunnelList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetFdbTunnelRecords
@@ -5336,17 +4811,12 @@ func (a NetApi) GetFdbTunnelList() (*NetFdbTunnelList, *APIResponse, error) {
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) GetFdbTunnelRecords(id string) (*NetFdbTunnelRecords, *APIResponse, error) {
+func (a NetApi) GetFdbTunnelRecords(id string) (*NetFdbTunnelRecords, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/tunnel/records/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbTunnelRecords), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetFdbTunnelRecords")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -5354,11 +4824,9 @@ func (a NetApi) GetFdbTunnelRecords(id string) (*NetFdbTunnelRecords, *APIRespon
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5384,20 +4852,25 @@ func (a NetApi) GetFdbTunnelRecords(id string) (*NetFdbTunnelRecords, *APIRespon
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetFdbTunnelRecords)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbTunnelRecords)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetFdbTunnelRecordsList
 //
 //
 // ..
-func (a NetApi) GetFdbTunnelRecordsList() (*NetFdbTunnelRecordsList, *APIResponse, error) {
+func (a NetApi) GetFdbTunnelRecordsList() (*NetFdbTunnelRecordsList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -5409,11 +4882,9 @@ func (a NetApi) GetFdbTunnelRecordsList() (*NetFdbTunnelRecordsList, *APIRespons
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5439,13 +4910,18 @@ func (a NetApi) GetFdbTunnelRecordsList() (*NetFdbTunnelRecordsList, *APIRespons
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetFdbTunnelRecordsList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbTunnelRecordsList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetFdbVlan
@@ -5454,17 +4930,12 @@ func (a NetApi) GetFdbTunnelRecordsList() (*NetFdbTunnelRecordsList, *APIRespons
 // VLAN forwarding database configuration and status.
 //
 // id is for ID of the resource.
-func (a NetApi) GetFdbVlan(id string) (*NetFdbVlan, *APIResponse, error) {
+func (a NetApi) GetFdbVlan(id string) (*NetFdbVlan, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/vlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbVlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetFdbVlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -5472,11 +4943,9 @@ func (a NetApi) GetFdbVlan(id string) (*NetFdbVlan, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5502,20 +4971,25 @@ func (a NetApi) GetFdbVlan(id string) (*NetFdbVlan, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetFdbVlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbVlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetFdbVlanList
 //
 //
 // VLAN forwarding database configuration and status..
-func (a NetApi) GetFdbVlanList() (*NetFdbVlanList, *APIResponse, error) {
+func (a NetApi) GetFdbVlanList() (*NetFdbVlanList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -5527,11 +5001,9 @@ func (a NetApi) GetFdbVlanList() (*NetFdbVlanList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5557,13 +5029,18 @@ func (a NetApi) GetFdbVlanList() (*NetFdbVlanList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetFdbVlanList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbVlanList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIkeEvtStat
@@ -5572,17 +5049,12 @@ func (a NetApi) GetFdbVlanList() (*NetFdbVlanList, *APIResponse, error) {
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) GetIkeEvtStat(id string) (*NetIkeEvtStat, *APIResponse, error) {
+func (a NetApi) GetIkeEvtStat(id string) (*NetIkeEvtStat, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ikeEvtStat/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIkeEvtStat), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIkeEvtStat")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -5590,11 +5062,9 @@ func (a NetApi) GetIkeEvtStat(id string) (*NetIkeEvtStat, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5620,20 +5090,25 @@ func (a NetApi) GetIkeEvtStat(id string) (*NetIkeEvtStat, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIkeEvtStat)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIkeEvtStat)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIkeEvtStatList
 //
 //
 // ..
-func (a NetApi) GetIkeEvtStatList() (*NetIkeEvtStatList, *APIResponse, error) {
+func (a NetApi) GetIkeEvtStatList() (*NetIkeEvtStatList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -5645,11 +5120,9 @@ func (a NetApi) GetIkeEvtStatList() (*NetIkeEvtStatList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5675,13 +5148,18 @@ func (a NetApi) GetIkeEvtStatList() (*NetIkeEvtStatList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIkeEvtStatList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIkeEvtStatList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIkeMsgStat
@@ -5690,17 +5168,12 @@ func (a NetApi) GetIkeEvtStatList() (*NetIkeEvtStatList, *APIResponse, error) {
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) GetIkeMsgStat(id string) (*NetIkeMsgStat, *APIResponse, error) {
+func (a NetApi) GetIkeMsgStat(id string) (*NetIkeMsgStat, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ikeMsgStat/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIkeMsgStat), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIkeMsgStat")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -5708,11 +5181,9 @@ func (a NetApi) GetIkeMsgStat(id string) (*NetIkeMsgStat, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5738,20 +5209,25 @@ func (a NetApi) GetIkeMsgStat(id string) (*NetIkeMsgStat, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIkeMsgStat)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIkeMsgStat)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIkeMsgStatList
 //
 //
 // ..
-func (a NetApi) GetIkeMsgStatList() (*NetIkeMsgStatList, *APIResponse, error) {
+func (a NetApi) GetIkeMsgStatList() (*NetIkeMsgStatList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -5763,11 +5239,9 @@ func (a NetApi) GetIkeMsgStatList() (*NetIkeMsgStatList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5793,13 +5267,18 @@ func (a NetApi) GetIkeMsgStatList() (*NetIkeMsgStatList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIkeMsgStatList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIkeMsgStatList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetInterfaceCos
@@ -5808,17 +5287,12 @@ func (a NetApi) GetIkeMsgStatList() (*NetIkeMsgStatList, *APIResponse, error) {
 // Interface COS (Class of Service) related statistics.
 //
 // id is for ID of the resource.
-func (a NetApi) GetInterfaceCos(id string) (*NetInterfaceCos, *APIResponse, error) {
+func (a NetApi) GetInterfaceCos(id string) (*NetInterfaceCos, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/interfaceCos/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetInterfaceCos), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetInterfaceCos")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -5826,11 +5300,9 @@ func (a NetApi) GetInterfaceCos(id string) (*NetInterfaceCos, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5856,20 +5328,25 @@ func (a NetApi) GetInterfaceCos(id string) (*NetInterfaceCos, *APIResponse, erro
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetInterfaceCos)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetInterfaceCos)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetInterfaceCosList
 //
 //
 // Interface COS (Class of Service) related statistics..
-func (a NetApi) GetInterfaceCosList() (*NetInterfaceCosList, *APIResponse, error) {
+func (a NetApi) GetInterfaceCosList() (*NetInterfaceCosList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -5881,11 +5358,9 @@ func (a NetApi) GetInterfaceCosList() (*NetInterfaceCosList, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5911,13 +5386,18 @@ func (a NetApi) GetInterfaceCosList() (*NetInterfaceCosList, *APIResponse, error
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetInterfaceCosList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetInterfaceCosList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsec
@@ -5926,17 +5406,12 @@ func (a NetApi) GetInterfaceCosList() (*NetInterfaceCosList, *APIResponse, error
 // IPsec configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetIpsec(id string) (*NetIpsec, *APIResponse, error) {
+func (a NetApi) GetIpsec(id string) (*NetIpsec, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsec), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIpsec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -5944,11 +5419,9 @@ func (a NetApi) GetIpsec(id string) (*NetIpsec, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -5974,13 +5447,18 @@ func (a NetApi) GetIpsec(id string) (*NetIpsec, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsec)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsec)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIkeDaemon
@@ -5989,17 +5467,12 @@ func (a NetApi) GetIpsec(id string) (*NetIpsec, *APIResponse, error) {
 // Configure global setting for ike agent..
 //
 // id is for ID of the resource.
-func (a NetApi) GetIpsecIkeDaemon(id string) (*NetIpsecIkeDaemon, *APIResponse, error) {
+func (a NetApi) GetIpsecIkeDaemon(id string) (*NetIpsecIkeDaemon, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikeDaemon/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIkeDaemon), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIpsecIkeDaemon")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -6007,11 +5480,9 @@ func (a NetApi) GetIpsecIkeDaemon(id string) (*NetIpsecIkeDaemon, *APIResponse, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6037,20 +5508,25 @@ func (a NetApi) GetIpsecIkeDaemon(id string) (*NetIpsecIkeDaemon, *APIResponse, 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIkeDaemon)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkeDaemon)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIkeDaemonList
 //
 //
 // Configure global setting for ike agent...
-func (a NetApi) GetIpsecIkeDaemonList() (*NetIpsecIkeDaemonList, *APIResponse, error) {
+func (a NetApi) GetIpsecIkeDaemonList() (*NetIpsecIkeDaemonList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -6062,11 +5538,9 @@ func (a NetApi) GetIpsecIkeDaemonList() (*NetIpsecIkeDaemonList, *APIResponse, e
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6092,13 +5566,18 @@ func (a NetApi) GetIpsecIkeDaemonList() (*NetIpsecIkeDaemonList, *APIResponse, e
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIkeDaemonList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkeDaemonList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIkePeer
@@ -6107,17 +5586,12 @@ func (a NetApi) GetIpsecIkeDaemonList() (*NetIpsecIkeDaemonList, *APIResponse, e
 // Specifies IKE phase 1 parameters for remote ike peers..
 //
 // id is for ID of the resource.
-func (a NetApi) GetIpsecIkePeer(id string) (*NetIpsecIkePeer, *APIResponse, error) {
+func (a NetApi) GetIpsecIkePeer(id string) (*NetIpsecIkePeer, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikePeer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIkePeer), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIpsecIkePeer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -6125,11 +5599,9 @@ func (a NetApi) GetIpsecIkePeer(id string) (*NetIpsecIkePeer, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6155,20 +5627,25 @@ func (a NetApi) GetIpsecIkePeer(id string) (*NetIpsecIkePeer, *APIResponse, erro
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIkePeer)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkePeer)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIkePeerList
 //
 //
 // Specifies IKE phase 1 parameters for remote ike peers...
-func (a NetApi) GetIpsecIkePeerList() (*NetIpsecIkePeerList, *APIResponse, error) {
+func (a NetApi) GetIpsecIkePeerList() (*NetIpsecIkePeerList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -6180,11 +5657,9 @@ func (a NetApi) GetIpsecIkePeerList() (*NetIpsecIkePeerList, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6210,13 +5685,18 @@ func (a NetApi) GetIpsecIkePeerList() (*NetIpsecIkePeerList, *APIResponse, error
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIkePeerList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkePeerList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIkeSa
@@ -6225,17 +5705,12 @@ func (a NetApi) GetIpsecIkePeerList() (*NetIpsecIkePeerList, *APIResponse, error
 // Displays IKE security associations.
 //
 // id is for ID of the resource.
-func (a NetApi) GetIpsecIkeSa(id string) (*NetIpsecIkeSa, *APIResponse, error) {
+func (a NetApi) GetIpsecIkeSa(id string) (*NetIpsecIkeSa, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikeSa/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIkeSa), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIpsecIkeSa")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -6243,11 +5718,9 @@ func (a NetApi) GetIpsecIkeSa(id string) (*NetIpsecIkeSa, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6273,20 +5746,25 @@ func (a NetApi) GetIpsecIkeSa(id string) (*NetIpsecIkeSa, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIkeSa)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkeSa)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIkeSaList
 //
 //
 // Displays IKE security associations..
-func (a NetApi) GetIpsecIkeSaList() (*NetIpsecIkeSaList, *APIResponse, error) {
+func (a NetApi) GetIpsecIkeSaList() (*NetIpsecIkeSaList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -6298,11 +5776,9 @@ func (a NetApi) GetIpsecIkeSaList() (*NetIpsecIkeSaList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6328,13 +5804,18 @@ func (a NetApi) GetIpsecIkeSaList() (*NetIpsecIkeSaList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIkeSaList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkeSaList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIpsecPolicy
@@ -6343,17 +5824,12 @@ func (a NetApi) GetIpsecIkeSaList() (*NetIpsecIkeSaList, *APIResponse, error) {
 // Configure IPsec security policy..
 //
 // id is for ID of the resource.
-func (a NetApi) GetIpsecIpsecPolicy(id string) (*NetIpsecIpsecPolicy, *APIResponse, error) {
+func (a NetApi) GetIpsecIpsecPolicy(id string) (*NetIpsecIpsecPolicy, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ipsecPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIpsecPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIpsecIpsecPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -6361,11 +5837,9 @@ func (a NetApi) GetIpsecIpsecPolicy(id string) (*NetIpsecIpsecPolicy, *APIRespon
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6391,20 +5865,25 @@ func (a NetApi) GetIpsecIpsecPolicy(id string) (*NetIpsecIpsecPolicy, *APIRespon
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIpsecPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIpsecPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIpsecPolicyList
 //
 //
 // Configure IPsec security policy...
-func (a NetApi) GetIpsecIpsecPolicyList() (*NetIpsecIpsecPolicyList, *APIResponse, error) {
+func (a NetApi) GetIpsecIpsecPolicyList() (*NetIpsecIpsecPolicyList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -6416,11 +5895,9 @@ func (a NetApi) GetIpsecIpsecPolicyList() (*NetIpsecIpsecPolicyList, *APIRespons
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6446,13 +5923,18 @@ func (a NetApi) GetIpsecIpsecPolicyList() (*NetIpsecIpsecPolicyList, *APIRespons
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIpsecPolicyList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIpsecPolicyList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIpsecSa
@@ -6461,17 +5943,12 @@ func (a NetApi) GetIpsecIpsecPolicyList() (*NetIpsecIpsecPolicyList, *APIRespons
 // Displays IPsec security associations.
 //
 // id is for ID of the resource.
-func (a NetApi) GetIpsecIpsecSa(id string) (*NetIpsecIpsecSa, *APIResponse, error) {
+func (a NetApi) GetIpsecIpsecSa(id string) (*NetIpsecIpsecSa, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ipsecSa/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIpsecSa), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIpsecIpsecSa")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -6479,11 +5956,9 @@ func (a NetApi) GetIpsecIpsecSa(id string) (*NetIpsecIpsecSa, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6509,20 +5984,25 @@ func (a NetApi) GetIpsecIpsecSa(id string) (*NetIpsecIpsecSa, *APIResponse, erro
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIpsecSa)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIpsecSa)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecIpsecSaList
 //
 //
 // Displays IPsec security associations..
-func (a NetApi) GetIpsecIpsecSaList() (*NetIpsecIpsecSaList, *APIResponse, error) {
+func (a NetApi) GetIpsecIpsecSaList() (*NetIpsecIpsecSaList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -6534,11 +6014,9 @@ func (a NetApi) GetIpsecIpsecSaList() (*NetIpsecIpsecSaList, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6564,20 +6042,25 @@ func (a NetApi) GetIpsecIpsecSaList() (*NetIpsecIpsecSaList, *APIResponse, error
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecIpsecSaList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIpsecSaList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecList
 //
 //
 // IPsec configuration..
-func (a NetApi) GetIpsecList() (*NetIpsecList, *APIResponse, error) {
+func (a NetApi) GetIpsecList() (*NetIpsecList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -6589,11 +6072,9 @@ func (a NetApi) GetIpsecList() (*NetIpsecList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6619,13 +6100,18 @@ func (a NetApi) GetIpsecList() (*NetIpsecList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecManualSecurityAssociation
@@ -6634,17 +6120,12 @@ func (a NetApi) GetIpsecList() (*NetIpsecList, *APIResponse, error) {
 // Specifies manually configured Security Association parameters..
 //
 // id is for ID of the resource.
-func (a NetApi) GetIpsecManualSecurityAssociation(id string) (*NetIpsecManualSecurityAssociation, *APIResponse, error) {
+func (a NetApi) GetIpsecManualSecurityAssociation(id string) (*NetIpsecManualSecurityAssociation, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/manualSecurityAssociation/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecManualSecurityAssociation), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIpsecManualSecurityAssociation")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -6652,11 +6133,9 @@ func (a NetApi) GetIpsecManualSecurityAssociation(id string) (*NetIpsecManualSec
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6682,20 +6161,25 @@ func (a NetApi) GetIpsecManualSecurityAssociation(id string) (*NetIpsecManualSec
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecManualSecurityAssociation)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecManualSecurityAssociation)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecManualSecurityAssociationList
 //
 //
 // Specifies manually configured Security Association parameters...
-func (a NetApi) GetIpsecManualSecurityAssociationList() (*NetIpsecManualSecurityAssociationList, *APIResponse, error) {
+func (a NetApi) GetIpsecManualSecurityAssociationList() (*NetIpsecManualSecurityAssociationList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -6707,11 +6191,9 @@ func (a NetApi) GetIpsecManualSecurityAssociationList() (*NetIpsecManualSecurity
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6737,13 +6219,18 @@ func (a NetApi) GetIpsecManualSecurityAssociationList() (*NetIpsecManualSecurity
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecManualSecurityAssociationList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecManualSecurityAssociationList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecStat
@@ -6752,17 +6239,12 @@ func (a NetApi) GetIpsecManualSecurityAssociationList() (*NetIpsecManualSecurity
 // IPSec statistics.
 //
 // id is for ID of the resource.
-func (a NetApi) GetIpsecStat(id string) (*NetIpsecStat, *APIResponse, error) {
+func (a NetApi) GetIpsecStat(id string) (*NetIpsecStat, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsecStat/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecStat), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIpsecStat")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -6770,11 +6252,9 @@ func (a NetApi) GetIpsecStat(id string) (*NetIpsecStat, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6800,20 +6280,25 @@ func (a NetApi) GetIpsecStat(id string) (*NetIpsecStat, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecStat)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecStat)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecStatList
 //
 //
 // IPSec statistics..
-func (a NetApi) GetIpsecStatList() (*NetIpsecStatList, *APIResponse, error) {
+func (a NetApi) GetIpsecStatList() (*NetIpsecStatList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -6825,11 +6310,9 @@ func (a NetApi) GetIpsecStatList() (*NetIpsecStatList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6855,13 +6338,18 @@ func (a NetApi) GetIpsecStatList() (*NetIpsecStatList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecStatList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecStatList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecTrafficSelector
@@ -6870,17 +6358,12 @@ func (a NetApi) GetIpsecStatList() (*NetIpsecStatList, *APIResponse, error) {
 // Traffic Selector configuration..
 //
 // id is for ID of the resource.
-func (a NetApi) GetIpsecTrafficSelector(id string) (*NetIpsecTrafficSelector, *APIResponse, error) {
+func (a NetApi) GetIpsecTrafficSelector(id string) (*NetIpsecTrafficSelector, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/trafficSelector/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecTrafficSelector), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetIpsecTrafficSelector")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -6888,11 +6371,9 @@ func (a NetApi) GetIpsecTrafficSelector(id string) (*NetIpsecTrafficSelector, *A
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6918,20 +6399,25 @@ func (a NetApi) GetIpsecTrafficSelector(id string) (*NetIpsecTrafficSelector, *A
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecTrafficSelector)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecTrafficSelector)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetIpsecTrafficSelectorList
 //
 //
 // Traffic Selector configuration...
-func (a NetApi) GetIpsecTrafficSelectorList() (*NetIpsecTrafficSelectorList, *APIResponse, error) {
+func (a NetApi) GetIpsecTrafficSelectorList() (*NetIpsecTrafficSelectorList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -6943,11 +6429,9 @@ func (a NetApi) GetIpsecTrafficSelectorList() (*NetIpsecTrafficSelectorList, *AP
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -6973,13 +6457,18 @@ func (a NetApi) GetIpsecTrafficSelectorList() (*NetIpsecTrafficSelectorList, *AP
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetIpsecTrafficSelectorList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecTrafficSelectorList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetLldpGlobals
@@ -6988,17 +6477,12 @@ func (a NetApi) GetIpsecTrafficSelectorList() (*NetIpsecTrafficSelectorList, *AP
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) GetLldpGlobals(id string) (*NetLldpGlobals, *APIResponse, error) {
+func (a NetApi) GetLldpGlobals(id string) (*NetLldpGlobals, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/lldpGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetLldpGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetLldpGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -7006,11 +6490,9 @@ func (a NetApi) GetLldpGlobals(id string) (*NetLldpGlobals, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7036,20 +6518,25 @@ func (a NetApi) GetLldpGlobals(id string) (*NetLldpGlobals, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetLldpGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetLldpGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetLldpGlobalsList
 //
 //
 // ..
-func (a NetApi) GetLldpGlobalsList() (*NetLldpGlobalsList, *APIResponse, error) {
+func (a NetApi) GetLldpGlobalsList() (*NetLldpGlobalsList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -7061,11 +6548,9 @@ func (a NetApi) GetLldpGlobalsList() (*NetLldpGlobalsList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7091,13 +6576,18 @@ func (a NetApi) GetLldpGlobalsList() (*NetLldpGlobalsList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetLldpGlobalsList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetLldpGlobalsList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetLldpNeighbors
@@ -7106,17 +6596,12 @@ func (a NetApi) GetLldpGlobalsList() (*NetLldpGlobalsList, *APIResponse, error) 
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) GetLldpNeighbors(id string) (*NetLldpNeighbors, *APIResponse, error) {
+func (a NetApi) GetLldpNeighbors(id string) (*NetLldpNeighbors, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/lldpNeighbors/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetLldpNeighbors), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetLldpNeighbors")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -7124,11 +6609,9 @@ func (a NetApi) GetLldpNeighbors(id string) (*NetLldpNeighbors, *APIResponse, er
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7154,20 +6637,25 @@ func (a NetApi) GetLldpNeighbors(id string) (*NetLldpNeighbors, *APIResponse, er
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetLldpNeighbors)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetLldpNeighbors)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetLldpNeighborsList
 //
 //
 // ..
-func (a NetApi) GetLldpNeighborsList() (*NetLldpNeighborsList, *APIResponse, error) {
+func (a NetApi) GetLldpNeighborsList() (*NetLldpNeighborsList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -7179,11 +6667,9 @@ func (a NetApi) GetLldpNeighborsList() (*NetLldpNeighborsList, *APIResponse, err
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7209,13 +6695,18 @@ func (a NetApi) GetLldpNeighborsList() (*NetLldpNeighborsList, *APIResponse, err
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetLldpNeighborsList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetLldpNeighborsList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetMroute
@@ -7224,17 +6715,12 @@ func (a NetApi) GetLldpNeighborsList() (*NetLldpNeighborsList, *APIResponse, err
 // Displays multicast routes.
 //
 // id is for ID of the resource.
-func (a NetApi) GetMroute(id string) (*NetMroute, *APIResponse, error) {
+func (a NetApi) GetMroute(id string) (*NetMroute, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/mroute/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetMroute), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetMroute")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -7242,11 +6728,9 @@ func (a NetApi) GetMroute(id string) (*NetMroute, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7272,20 +6756,25 @@ func (a NetApi) GetMroute(id string) (*NetMroute, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetMroute)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetMroute)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetMrouteList
 //
 //
 // Displays multicast routes..
-func (a NetApi) GetMrouteList() (*NetMrouteList, *APIResponse, error) {
+func (a NetApi) GetMrouteList() (*NetMrouteList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -7297,11 +6786,9 @@ func (a NetApi) GetMrouteList() (*NetMrouteList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7327,13 +6814,18 @@ func (a NetApi) GetMrouteList() (*NetMrouteList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetMrouteList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetMrouteList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetMulticastGlobals
@@ -7342,17 +6834,12 @@ func (a NetApi) GetMrouteList() (*NetMrouteList, *APIResponse, error) {
 // Manage multicast traffic configuration options.
 //
 // id is for ID of the resource.
-func (a NetApi) GetMulticastGlobals(id string) (*NetMulticastGlobals, *APIResponse, error) {
+func (a NetApi) GetMulticastGlobals(id string) (*NetMulticastGlobals, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/multicastGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetMulticastGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetMulticastGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -7360,11 +6847,9 @@ func (a NetApi) GetMulticastGlobals(id string) (*NetMulticastGlobals, *APIRespon
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7390,20 +6875,25 @@ func (a NetApi) GetMulticastGlobals(id string) (*NetMulticastGlobals, *APIRespon
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetMulticastGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetMulticastGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetMulticastGlobalsList
 //
 //
 // Manage multicast traffic configuration options..
-func (a NetApi) GetMulticastGlobalsList() (*NetMulticastGlobalsList, *APIResponse, error) {
+func (a NetApi) GetMulticastGlobalsList() (*NetMulticastGlobalsList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -7415,11 +6905,9 @@ func (a NetApi) GetMulticastGlobalsList() (*NetMulticastGlobalsList, *APIRespons
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7445,13 +6933,18 @@ func (a NetApi) GetMulticastGlobalsList() (*NetMulticastGlobalsList, *APIRespons
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetMulticastGlobalsList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetMulticastGlobalsList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetNdp
@@ -7460,17 +6953,12 @@ func (a NetApi) GetMulticastGlobalsList() (*NetMulticastGlobalsList, *APIRespons
 // Manage the IPv6 Neighbor Discovery Protocol (NDP) table..
 //
 // id is for ID of the resource.
-func (a NetApi) GetNdp(id string) (*NetNdp, *APIResponse, error) {
+func (a NetApi) GetNdp(id string) (*NetNdp, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ndp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetNdp), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetNdp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -7478,11 +6966,9 @@ func (a NetApi) GetNdp(id string) (*NetNdp, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7508,20 +6994,25 @@ func (a NetApi) GetNdp(id string) (*NetNdp, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetNdp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetNdp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetNdpList
 //
 //
 // Manage the IPv6 Neighbor Discovery Protocol (NDP) table...
-func (a NetApi) GetNdpList() (*NetNdpList, *APIResponse, error) {
+func (a NetApi) GetNdpList() (*NetNdpList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -7533,11 +7024,9 @@ func (a NetApi) GetNdpList() (*NetNdpList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7563,13 +7052,18 @@ func (a NetApi) GetNdpList() (*NetNdpList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetNdpList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetNdpList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetPacketFilter
@@ -7578,17 +7072,12 @@ func (a NetApi) GetNdpList() (*NetNdpList, *APIResponse, error) {
 // Packet filter configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetPacketFilter(id string) (*NetPacketFilter, *APIResponse, error) {
+func (a NetApi) GetPacketFilter(id string) (*NetPacketFilter, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/packetFilter/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPacketFilter), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetPacketFilter")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -7596,11 +7085,9 @@ func (a NetApi) GetPacketFilter(id string) (*NetPacketFilter, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7626,20 +7113,25 @@ func (a NetApi) GetPacketFilter(id string) (*NetPacketFilter, *APIResponse, erro
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetPacketFilter)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPacketFilter)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetPacketFilterList
 //
 //
 // Packet filter configuration..
-func (a NetApi) GetPacketFilterList() (*NetPacketFilterList, *APIResponse, error) {
+func (a NetApi) GetPacketFilterList() (*NetPacketFilterList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -7651,11 +7143,9 @@ func (a NetApi) GetPacketFilterList() (*NetPacketFilterList, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7681,13 +7171,18 @@ func (a NetApi) GetPacketFilterList() (*NetPacketFilterList, *APIResponse, error
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetPacketFilterList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPacketFilterList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetPacketFilterTrusted
@@ -7696,17 +7191,12 @@ func (a NetApi) GetPacketFilterList() (*NetPacketFilterList, *APIResponse, error
 // Trusted entities that are exempt from packet filter rules.
 //
 // id is for ID of the resource.
-func (a NetApi) GetPacketFilterTrusted(id string) (*NetPacketFilterTrusted, *APIResponse, error) {
+func (a NetApi) GetPacketFilterTrusted(id string) (*NetPacketFilterTrusted, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/packetFilterTrusted/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPacketFilterTrusted), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetPacketFilterTrusted")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -7714,11 +7204,9 @@ func (a NetApi) GetPacketFilterTrusted(id string) (*NetPacketFilterTrusted, *API
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7744,20 +7232,25 @@ func (a NetApi) GetPacketFilterTrusted(id string) (*NetPacketFilterTrusted, *API
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetPacketFilterTrusted)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPacketFilterTrusted)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetPacketFilterTrustedList
 //
 //
 // Trusted entities that are exempt from packet filter rules..
-func (a NetApi) GetPacketFilterTrustedList() (*NetPacketFilterTrustedList, *APIResponse, error) {
+func (a NetApi) GetPacketFilterTrustedList() (*NetPacketFilterTrustedList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -7769,11 +7262,9 @@ func (a NetApi) GetPacketFilterTrustedList() (*NetPacketFilterTrustedList, *APIR
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7799,13 +7290,18 @@ func (a NetApi) GetPacketFilterTrustedList() (*NetPacketFilterTrustedList, *APIR
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetPacketFilterTrustedList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPacketFilterTrustedList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetPortMirror
@@ -7814,17 +7310,12 @@ func (a NetApi) GetPacketFilterTrustedList() (*NetPacketFilterTrustedList, *APIR
 // Interface port mirroring configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetPortMirror(id string) (*NetPortMirror, *APIResponse, error) {
+func (a NetApi) GetPortMirror(id string) (*NetPortMirror, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/portMirror/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPortMirror), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetPortMirror")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -7832,11 +7323,9 @@ func (a NetApi) GetPortMirror(id string) (*NetPortMirror, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7862,20 +7351,25 @@ func (a NetApi) GetPortMirror(id string) (*NetPortMirror, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetPortMirror)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPortMirror)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetPortMirrorList
 //
 //
 // Interface port mirroring configuration..
-func (a NetApi) GetPortMirrorList() (*NetPortMirrorList, *APIResponse, error) {
+func (a NetApi) GetPortMirrorList() (*NetPortMirrorList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -7887,11 +7381,9 @@ func (a NetApi) GetPortMirrorList() (*NetPortMirrorList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7917,13 +7409,18 @@ func (a NetApi) GetPortMirrorList() (*NetPortMirrorList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetPortMirrorList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPortMirrorList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShaping
@@ -7932,17 +7429,12 @@ func (a NetApi) GetPortMirrorList() (*NetPortMirrorList, *APIResponse, error) {
 // Rate shaping configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRateShaping(id string) (*NetRateShaping, *APIResponse, error) {
+func (a NetApi) GetRateShaping(id string) (*NetRateShaping, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShaping), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRateShaping")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -7950,11 +7442,9 @@ func (a NetApi) GetRateShaping(id string) (*NetRateShaping, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -7980,13 +7470,18 @@ func (a NetApi) GetRateShaping(id string) (*NetRateShaping, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShaping)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShaping)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingColorPolicer
@@ -7995,17 +7490,12 @@ func (a NetApi) GetRateShaping(id string) (*NetRateShaping, *APIResponse, error)
 // Color based policer configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRateShapingColorPolicer(id string) (*NetRateShapingColorPolicer, *APIResponse, error) {
+func (a NetApi) GetRateShapingColorPolicer(id string) (*NetRateShapingColorPolicer, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/colorPolicer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingColorPolicer), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRateShapingColorPolicer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -8013,11 +7503,9 @@ func (a NetApi) GetRateShapingColorPolicer(id string) (*NetRateShapingColorPolic
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8043,20 +7531,25 @@ func (a NetApi) GetRateShapingColorPolicer(id string) (*NetRateShapingColorPolic
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingColorPolicer)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingColorPolicer)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingColorPolicerList
 //
 //
 // Color based policer configuration..
-func (a NetApi) GetRateShapingColorPolicerList() (*NetRateShapingColorPolicerList, *APIResponse, error) {
+func (a NetApi) GetRateShapingColorPolicerList() (*NetRateShapingColorPolicerList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -8068,11 +7561,9 @@ func (a NetApi) GetRateShapingColorPolicerList() (*NetRateShapingColorPolicerLis
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8098,13 +7589,18 @@ func (a NetApi) GetRateShapingColorPolicerList() (*NetRateShapingColorPolicerLis
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingColorPolicerList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingColorPolicerList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingDropPolicy
@@ -8113,17 +7609,12 @@ func (a NetApi) GetRateShapingColorPolicerList() (*NetRateShapingColorPolicerLis
 // Drop policy configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRateShapingDropPolicy(id string) (*NetRateShapingDropPolicy, *APIResponse, error) {
+func (a NetApi) GetRateShapingDropPolicy(id string) (*NetRateShapingDropPolicy, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/dropPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingDropPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRateShapingDropPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -8131,11 +7622,9 @@ func (a NetApi) GetRateShapingDropPolicy(id string) (*NetRateShapingDropPolicy, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8161,20 +7650,25 @@ func (a NetApi) GetRateShapingDropPolicy(id string) (*NetRateShapingDropPolicy, 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingDropPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingDropPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingDropPolicyList
 //
 //
 // Drop policy configuration..
-func (a NetApi) GetRateShapingDropPolicyList() (*NetRateShapingDropPolicyList, *APIResponse, error) {
+func (a NetApi) GetRateShapingDropPolicyList() (*NetRateShapingDropPolicyList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -8186,11 +7680,9 @@ func (a NetApi) GetRateShapingDropPolicyList() (*NetRateShapingDropPolicyList, *
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8216,20 +7708,25 @@ func (a NetApi) GetRateShapingDropPolicyList() (*NetRateShapingDropPolicyList, *
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingDropPolicyList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingDropPolicyList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingList
 //
 //
 // Rate shaping configuration..
-func (a NetApi) GetRateShapingList() (*NetRateShapingList, *APIResponse, error) {
+func (a NetApi) GetRateShapingList() (*NetRateShapingList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -8241,11 +7738,9 @@ func (a NetApi) GetRateShapingList() (*NetRateShapingList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8271,13 +7766,18 @@ func (a NetApi) GetRateShapingList() (*NetRateShapingList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingQueue
@@ -8286,17 +7786,12 @@ func (a NetApi) GetRateShapingList() (*NetRateShapingList, *APIResponse, error) 
 // Queuing method configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRateShapingQueue(id string) (*NetRateShapingQueue, *APIResponse, error) {
+func (a NetApi) GetRateShapingQueue(id string) (*NetRateShapingQueue, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/queue/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingQueue), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRateShapingQueue")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -8304,11 +7799,9 @@ func (a NetApi) GetRateShapingQueue(id string) (*NetRateShapingQueue, *APIRespon
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8334,20 +7827,25 @@ func (a NetApi) GetRateShapingQueue(id string) (*NetRateShapingQueue, *APIRespon
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingQueue)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingQueue)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingQueueList
 //
 //
 // Queuing method configuration..
-func (a NetApi) GetRateShapingQueueList() (*NetRateShapingQueueList, *APIResponse, error) {
+func (a NetApi) GetRateShapingQueueList() (*NetRateShapingQueueList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -8359,11 +7857,9 @@ func (a NetApi) GetRateShapingQueueList() (*NetRateShapingQueueList, *APIRespons
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8389,13 +7885,18 @@ func (a NetApi) GetRateShapingQueueList() (*NetRateShapingQueueList, *APIRespons
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingQueueList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingQueueList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingShapingPolicy
@@ -8404,17 +7905,12 @@ func (a NetApi) GetRateShapingQueueList() (*NetRateShapingQueueList, *APIRespons
 // Shaping policy configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRateShapingShapingPolicy(id string) (*NetRateShapingShapingPolicy, *APIResponse, error) {
+func (a NetApi) GetRateShapingShapingPolicy(id string) (*NetRateShapingShapingPolicy, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/shapingPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingShapingPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRateShapingShapingPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -8422,11 +7918,9 @@ func (a NetApi) GetRateShapingShapingPolicy(id string) (*NetRateShapingShapingPo
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8452,20 +7946,25 @@ func (a NetApi) GetRateShapingShapingPolicy(id string) (*NetRateShapingShapingPo
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingShapingPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingShapingPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingShapingPolicyList
 //
 //
 // Shaping policy configuration..
-func (a NetApi) GetRateShapingShapingPolicyList() (*NetRateShapingShapingPolicyList, *APIResponse, error) {
+func (a NetApi) GetRateShapingShapingPolicyList() (*NetRateShapingShapingPolicyList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -8477,11 +7976,9 @@ func (a NetApi) GetRateShapingShapingPolicyList() (*NetRateShapingShapingPolicyL
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8507,13 +8004,18 @@ func (a NetApi) GetRateShapingShapingPolicyList() (*NetRateShapingShapingPolicyL
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingShapingPolicyList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingShapingPolicyList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingTmClass
@@ -8522,17 +8024,12 @@ func (a NetApi) GetRateShapingShapingPolicyList() (*NetRateShapingShapingPolicyL
 // Rate class configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRateShapingTmClass(id string) (*NetRateShapingTmClass, *APIResponse, error) {
+func (a NetApi) GetRateShapingTmClass(id string) (*NetRateShapingTmClass, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/tmClass/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingTmClass), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRateShapingTmClass")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -8540,11 +8037,9 @@ func (a NetApi) GetRateShapingTmClass(id string) (*NetRateShapingTmClass, *APIRe
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8570,20 +8065,25 @@ func (a NetApi) GetRateShapingTmClass(id string) (*NetRateShapingTmClass, *APIRe
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingTmClass)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingTmClass)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRateShapingTmClassList
 //
 //
 // Rate class configuration..
-func (a NetApi) GetRateShapingTmClassList() (*NetRateShapingTmClassList, *APIResponse, error) {
+func (a NetApi) GetRateShapingTmClassList() (*NetRateShapingTmClassList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -8595,11 +8095,9 @@ func (a NetApi) GetRateShapingTmClassList() (*NetRateShapingTmClassList, *APIRes
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8625,13 +8123,18 @@ func (a NetApi) GetRateShapingTmClassList() (*NetRateShapingTmClassList, *APIRes
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRateShapingTmClassList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingTmClassList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRoute
@@ -8640,17 +8143,12 @@ func (a NetApi) GetRateShapingTmClassList() (*NetRateShapingTmClassList, *APIRes
 // Routing tables and configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRoute(id string) (*NetRoute, *APIResponse, error) {
+func (a NetApi) GetRoute(id string) (*NetRoute, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/route/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRoute), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRoute")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -8658,11 +8156,9 @@ func (a NetApi) GetRoute(id string) (*NetRoute, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8688,13 +8184,18 @@ func (a NetApi) GetRoute(id string) (*NetRoute, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRoute)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRoute)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouteDomain
@@ -8703,17 +8204,12 @@ func (a NetApi) GetRoute(id string) (*NetRoute, *APIResponse, error) {
 // Route domain configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRouteDomain(id string) (*NetRouteDomain, *APIResponse, error) {
+func (a NetApi) GetRouteDomain(id string) (*NetRouteDomain, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouteDomain), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRouteDomain")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -8721,11 +8217,9 @@ func (a NetApi) GetRouteDomain(id string) (*NetRouteDomain, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8751,13 +8245,18 @@ func (a NetApi) GetRouteDomain(id string) (*NetRouteDomain, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouteDomain)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomain)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouteDomainFwActive
@@ -8766,17 +8265,12 @@ func (a NetApi) GetRouteDomain(id string) (*NetRouteDomain, *APIResponse, error)
 // Firewall policy rule entry.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRouteDomainFwActive(id string) (*NetRouteDomainFwActive, *APIResponse, error) {
+func (a NetApi) GetRouteDomainFwActive(id string) (*NetRouteDomainFwActive, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/fwActive/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouteDomainFwActive), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRouteDomainFwActive")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -8784,11 +8278,9 @@ func (a NetApi) GetRouteDomainFwActive(id string) (*NetRouteDomainFwActive, *API
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8814,20 +8306,25 @@ func (a NetApi) GetRouteDomainFwActive(id string) (*NetRouteDomainFwActive, *API
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouteDomainFwActive)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomainFwActive)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouteDomainFwActiveList
 //
 //
 // Firewall policy rule entry..
-func (a NetApi) GetRouteDomainFwActiveList() (*NetRouteDomainFwActiveList, *APIResponse, error) {
+func (a NetApi) GetRouteDomainFwActiveList() (*NetRouteDomainFwActiveList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -8839,11 +8336,9 @@ func (a NetApi) GetRouteDomainFwActiveList() (*NetRouteDomainFwActiveList, *APIR
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8869,13 +8364,18 @@ func (a NetApi) GetRouteDomainFwActiveList() (*NetRouteDomainFwActiveList, *APIR
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouteDomainFwActiveList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomainFwActiveList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouteDomainFwEnforcedPolicyRules
@@ -8884,17 +8384,12 @@ func (a NetApi) GetRouteDomainFwActiveList() (*NetRouteDomainFwActiveList, *APIR
 // Firewall policy rule entry.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRouteDomainFwEnforcedPolicyRules(id string) (*NetRouteDomainFwEnforcedPolicyRules, *APIResponse, error) {
+func (a NetApi) GetRouteDomainFwEnforcedPolicyRules(id string) (*NetRouteDomainFwEnforcedPolicyRules, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/fwEnforcedPolicyRules/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouteDomainFwEnforcedPolicyRules), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRouteDomainFwEnforcedPolicyRules")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -8902,11 +8397,9 @@ func (a NetApi) GetRouteDomainFwEnforcedPolicyRules(id string) (*NetRouteDomainF
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8932,20 +8425,25 @@ func (a NetApi) GetRouteDomainFwEnforcedPolicyRules(id string) (*NetRouteDomainF
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouteDomainFwEnforcedPolicyRules)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomainFwEnforcedPolicyRules)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouteDomainFwEnforcedPolicyRulesList
 //
 //
 // Firewall policy rule entry..
-func (a NetApi) GetRouteDomainFwEnforcedPolicyRulesList() (*NetRouteDomainFwEnforcedPolicyRulesList, *APIResponse, error) {
+func (a NetApi) GetRouteDomainFwEnforcedPolicyRulesList() (*NetRouteDomainFwEnforcedPolicyRulesList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -8957,11 +8455,9 @@ func (a NetApi) GetRouteDomainFwEnforcedPolicyRulesList() (*NetRouteDomainFwEnfo
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -8987,13 +8483,18 @@ func (a NetApi) GetRouteDomainFwEnforcedPolicyRulesList() (*NetRouteDomainFwEnfo
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouteDomainFwEnforcedPolicyRulesList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomainFwEnforcedPolicyRulesList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouteDomainFwStagedPolicyRules
@@ -9002,17 +8503,12 @@ func (a NetApi) GetRouteDomainFwEnforcedPolicyRulesList() (*NetRouteDomainFwEnfo
 // Firewall policy rule entry.
 //
 // id is for ID of the resource.
-func (a NetApi) GetRouteDomainFwStagedPolicyRules(id string) (*NetRouteDomainFwStagedPolicyRules, *APIResponse, error) {
+func (a NetApi) GetRouteDomainFwStagedPolicyRules(id string) (*NetRouteDomainFwStagedPolicyRules, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/fwStagedPolicyRules/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouteDomainFwStagedPolicyRules), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRouteDomainFwStagedPolicyRules")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -9020,11 +8516,9 @@ func (a NetApi) GetRouteDomainFwStagedPolicyRules(id string) (*NetRouteDomainFwS
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9050,20 +8544,25 @@ func (a NetApi) GetRouteDomainFwStagedPolicyRules(id string) (*NetRouteDomainFwS
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouteDomainFwStagedPolicyRules)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomainFwStagedPolicyRules)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouteDomainFwStagedPolicyRulesList
 //
 //
 // Firewall policy rule entry..
-func (a NetApi) GetRouteDomainFwStagedPolicyRulesList() (*NetRouteDomainFwStagedPolicyRulesList, *APIResponse, error) {
+func (a NetApi) GetRouteDomainFwStagedPolicyRulesList() (*NetRouteDomainFwStagedPolicyRulesList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -9075,11 +8574,9 @@ func (a NetApi) GetRouteDomainFwStagedPolicyRulesList() (*NetRouteDomainFwStaged
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9105,20 +8602,25 @@ func (a NetApi) GetRouteDomainFwStagedPolicyRulesList() (*NetRouteDomainFwStaged
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouteDomainFwStagedPolicyRulesList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomainFwStagedPolicyRulesList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouteDomainList
 //
 //
 // Route domain configuration..
-func (a NetApi) GetRouteDomainList() (*NetRouteDomainList, *APIResponse, error) {
+func (a NetApi) GetRouteDomainList() (*NetRouteDomainList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -9130,11 +8632,9 @@ func (a NetApi) GetRouteDomainList() (*NetRouteDomainList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9160,20 +8660,25 @@ func (a NetApi) GetRouteDomainList() (*NetRouteDomainList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouteDomainList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomainList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouteList
 //
 //
 // Routing tables and configuration..
-func (a NetApi) GetRouteList() (*NetRouteList, *APIResponse, error) {
+func (a NetApi) GetRouteList() (*NetRouteList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -9185,11 +8690,9 @@ func (a NetApi) GetRouteList() (*NetRouteList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9215,13 +8718,18 @@ func (a NetApi) GetRouteList() (*NetRouteList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouteList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouterAdvertisement
@@ -9230,17 +8738,12 @@ func (a NetApi) GetRouteList() (*NetRouteList, *APIResponse, error) {
 // Configures IPv6 prefixes for router advertisement on a VLAN..
 //
 // id is for ID of the resource.
-func (a NetApi) GetRouterAdvertisement(id string) (*NetRouterAdvertisement, *APIResponse, error) {
+func (a NetApi) GetRouterAdvertisement(id string) (*NetRouterAdvertisement, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouterAdvertisement), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRouterAdvertisement")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -9248,11 +8751,9 @@ func (a NetApi) GetRouterAdvertisement(id string) (*NetRouterAdvertisement, *API
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9278,20 +8779,25 @@ func (a NetApi) GetRouterAdvertisement(id string) (*NetRouterAdvertisement, *API
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouterAdvertisement)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisement)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouterAdvertisementList
 //
 //
 // Configures IPv6 prefixes for router advertisement on a VLAN...
-func (a NetApi) GetRouterAdvertisementList() (*NetRouterAdvertisementList, *APIResponse, error) {
+func (a NetApi) GetRouterAdvertisementList() (*NetRouterAdvertisementList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -9303,11 +8809,9 @@ func (a NetApi) GetRouterAdvertisementList() (*NetRouterAdvertisementList, *APIR
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9333,13 +8837,18 @@ func (a NetApi) GetRouterAdvertisementList() (*NetRouterAdvertisementList, *APIR
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouterAdvertisementList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisementList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouterAdvertisementPrefixes
@@ -9348,17 +8857,12 @@ func (a NetApi) GetRouterAdvertisementList() (*NetRouterAdvertisementList, *APIR
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) GetRouterAdvertisementPrefixes(id string) (*NetRouterAdvertisementPrefixes, *APIResponse, error) {
+func (a NetApi) GetRouterAdvertisementPrefixes(id string) (*NetRouterAdvertisementPrefixes, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/prefixes/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouterAdvertisementPrefixes), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRouterAdvertisementPrefixes")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -9366,11 +8870,9 @@ func (a NetApi) GetRouterAdvertisementPrefixes(id string) (*NetRouterAdvertiseme
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9396,20 +8898,25 @@ func (a NetApi) GetRouterAdvertisementPrefixes(id string) (*NetRouterAdvertiseme
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouterAdvertisementPrefixes)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisementPrefixes)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRouterAdvertisementPrefixesList
 //
 //
 // ..
-func (a NetApi) GetRouterAdvertisementPrefixesList() (*NetRouterAdvertisementPrefixesList, *APIResponse, error) {
+func (a NetApi) GetRouterAdvertisementPrefixesList() (*NetRouterAdvertisementPrefixesList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -9421,11 +8928,9 @@ func (a NetApi) GetRouterAdvertisementPrefixesList() (*NetRouterAdvertisementPre
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9451,13 +8956,18 @@ func (a NetApi) GetRouterAdvertisementPrefixesList() (*NetRouterAdvertisementPre
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRouterAdvertisementPrefixesList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisementPrefixesList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRstCause
@@ -9466,17 +8976,12 @@ func (a NetApi) GetRouterAdvertisementPrefixesList() (*NetRouterAdvertisementPre
 // TCP/IP Reset Cause statistics..
 //
 // id is for ID of the resource.
-func (a NetApi) GetRstCause(id string) (*NetRstCause, *APIResponse, error) {
+func (a NetApi) GetRstCause(id string) (*NetRstCause, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rstCause/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRstCause), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetRstCause")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -9484,11 +8989,9 @@ func (a NetApi) GetRstCause(id string) (*NetRstCause, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9514,20 +9017,25 @@ func (a NetApi) GetRstCause(id string) (*NetRstCause, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRstCause)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRstCause)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetRstCauseList
 //
 //
 // TCP/IP Reset Cause statistics...
-func (a NetApi) GetRstCauseList() (*NetRstCauseList, *APIResponse, error) {
+func (a NetApi) GetRstCauseList() (*NetRstCauseList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -9539,11 +9047,9 @@ func (a NetApi) GetRstCauseList() (*NetRstCauseList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9569,13 +9075,18 @@ func (a NetApi) GetRstCauseList() (*NetRstCauseList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetRstCauseList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRstCauseList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelf
@@ -9584,17 +9095,12 @@ func (a NetApi) GetRstCauseList() (*NetRstCauseList, *APIResponse, error) {
 // Self-IP address configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetSelf(id string) (*NetSelf, *APIResponse, error) {
+func (a NetApi) GetSelf(id string) (*NetSelf, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelf), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetSelf")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -9602,11 +9108,9 @@ func (a NetApi) GetSelf(id string) (*NetSelf, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9632,13 +9136,18 @@ func (a NetApi) GetSelf(id string) (*NetSelf, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelf)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelf)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelfAllow
@@ -9647,17 +9156,12 @@ func (a NetApi) GetSelf(id string) (*NetSelf, *APIResponse, error) {
 // The default set of protocol and ports allowed by a self IP.
 //
 // id is for ID of the resource.
-func (a NetApi) GetSelfAllow(id string) (*NetSelfAllow, *APIResponse, error) {
+func (a NetApi) GetSelfAllow(id string) (*NetSelfAllow, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/selfAllow/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelfAllow), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetSelfAllow")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -9665,11 +9169,9 @@ func (a NetApi) GetSelfAllow(id string) (*NetSelfAllow, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9695,20 +9197,25 @@ func (a NetApi) GetSelfAllow(id string) (*NetSelfAllow, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelfAllow)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfAllow)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelfAllowList
 //
 //
 // The default set of protocol and ports allowed by a self IP..
-func (a NetApi) GetSelfAllowList() (*NetSelfAllowList, *APIResponse, error) {
+func (a NetApi) GetSelfAllowList() (*NetSelfAllowList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -9720,11 +9227,9 @@ func (a NetApi) GetSelfAllowList() (*NetSelfAllowList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9750,13 +9255,18 @@ func (a NetApi) GetSelfAllowList() (*NetSelfAllowList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelfAllowList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfAllowList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelfFwActive
@@ -9765,17 +9275,12 @@ func (a NetApi) GetSelfAllowList() (*NetSelfAllowList, *APIResponse, error) {
 // Firewall policy rule entry.
 //
 // id is for ID of the resource.
-func (a NetApi) GetSelfFwActive(id string) (*NetSelfFwActive, *APIResponse, error) {
+func (a NetApi) GetSelfFwActive(id string) (*NetSelfFwActive, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/fwActive/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelfFwActive), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetSelfFwActive")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -9783,11 +9288,9 @@ func (a NetApi) GetSelfFwActive(id string) (*NetSelfFwActive, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9813,20 +9316,25 @@ func (a NetApi) GetSelfFwActive(id string) (*NetSelfFwActive, *APIResponse, erro
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelfFwActive)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfFwActive)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelfFwActiveList
 //
 //
 // Firewall policy rule entry..
-func (a NetApi) GetSelfFwActiveList() (*NetSelfFwActiveList, *APIResponse, error) {
+func (a NetApi) GetSelfFwActiveList() (*NetSelfFwActiveList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -9838,11 +9346,9 @@ func (a NetApi) GetSelfFwActiveList() (*NetSelfFwActiveList, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9868,13 +9374,18 @@ func (a NetApi) GetSelfFwActiveList() (*NetSelfFwActiveList, *APIResponse, error
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelfFwActiveList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfFwActiveList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelfFwEnforcedPolicyRules
@@ -9883,17 +9394,12 @@ func (a NetApi) GetSelfFwActiveList() (*NetSelfFwActiveList, *APIResponse, error
 // Firewall policy rule entry.
 //
 // id is for ID of the resource.
-func (a NetApi) GetSelfFwEnforcedPolicyRules(id string) (*NetSelfFwEnforcedPolicyRules, *APIResponse, error) {
+func (a NetApi) GetSelfFwEnforcedPolicyRules(id string) (*NetSelfFwEnforcedPolicyRules, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/fwEnforcedPolicyRules/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelfFwEnforcedPolicyRules), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetSelfFwEnforcedPolicyRules")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -9901,11 +9407,9 @@ func (a NetApi) GetSelfFwEnforcedPolicyRules(id string) (*NetSelfFwEnforcedPolic
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9931,20 +9435,25 @@ func (a NetApi) GetSelfFwEnforcedPolicyRules(id string) (*NetSelfFwEnforcedPolic
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelfFwEnforcedPolicyRules)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfFwEnforcedPolicyRules)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelfFwEnforcedPolicyRulesList
 //
 //
 // Firewall policy rule entry..
-func (a NetApi) GetSelfFwEnforcedPolicyRulesList() (*NetSelfFwEnforcedPolicyRulesList, *APIResponse, error) {
+func (a NetApi) GetSelfFwEnforcedPolicyRulesList() (*NetSelfFwEnforcedPolicyRulesList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -9956,11 +9465,9 @@ func (a NetApi) GetSelfFwEnforcedPolicyRulesList() (*NetSelfFwEnforcedPolicyRule
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -9986,13 +9493,18 @@ func (a NetApi) GetSelfFwEnforcedPolicyRulesList() (*NetSelfFwEnforcedPolicyRule
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelfFwEnforcedPolicyRulesList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfFwEnforcedPolicyRulesList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelfFwStagedPolicyRules
@@ -10001,17 +9513,12 @@ func (a NetApi) GetSelfFwEnforcedPolicyRulesList() (*NetSelfFwEnforcedPolicyRule
 // Firewall policy rule entry.
 //
 // id is for ID of the resource.
-func (a NetApi) GetSelfFwStagedPolicyRules(id string) (*NetSelfFwStagedPolicyRules, *APIResponse, error) {
+func (a NetApi) GetSelfFwStagedPolicyRules(id string) (*NetSelfFwStagedPolicyRules, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/fwStagedPolicyRules/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelfFwStagedPolicyRules), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetSelfFwStagedPolicyRules")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -10019,11 +9526,9 @@ func (a NetApi) GetSelfFwStagedPolicyRules(id string) (*NetSelfFwStagedPolicyRul
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10049,20 +9554,25 @@ func (a NetApi) GetSelfFwStagedPolicyRules(id string) (*NetSelfFwStagedPolicyRul
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelfFwStagedPolicyRules)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfFwStagedPolicyRules)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelfFwStagedPolicyRulesList
 //
 //
 // Firewall policy rule entry..
-func (a NetApi) GetSelfFwStagedPolicyRulesList() (*NetSelfFwStagedPolicyRulesList, *APIResponse, error) {
+func (a NetApi) GetSelfFwStagedPolicyRulesList() (*NetSelfFwStagedPolicyRulesList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -10074,11 +9584,9 @@ func (a NetApi) GetSelfFwStagedPolicyRulesList() (*NetSelfFwStagedPolicyRulesLis
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10104,20 +9612,25 @@ func (a NetApi) GetSelfFwStagedPolicyRulesList() (*NetSelfFwStagedPolicyRulesLis
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelfFwStagedPolicyRulesList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfFwStagedPolicyRulesList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetSelfList
 //
 //
 // Self-IP address configuration..
-func (a NetApi) GetSelfList() (*NetSelfList, *APIResponse, error) {
+func (a NetApi) GetSelfList() (*NetSelfList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -10129,11 +9642,9 @@ func (a NetApi) GetSelfList() (*NetSelfList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10159,13 +9670,18 @@ func (a NetApi) GetSelfList() (*NetSelfList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetSelfList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetServicePolicy
@@ -10174,17 +9690,12 @@ func (a NetApi) GetSelfList() (*NetSelfList, *APIResponse, error) {
 // Service Policy configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetServicePolicy(id string) (*NetServicePolicy, *APIResponse, error) {
+func (a NetApi) GetServicePolicy(id string) (*NetServicePolicy, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/servicePolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetServicePolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetServicePolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -10192,11 +9703,9 @@ func (a NetApi) GetServicePolicy(id string) (*NetServicePolicy, *APIResponse, er
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10222,20 +9731,25 @@ func (a NetApi) GetServicePolicy(id string) (*NetServicePolicy, *APIResponse, er
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetServicePolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetServicePolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetServicePolicyList
 //
 //
 // Service Policy configuration..
-func (a NetApi) GetServicePolicyList() (*NetServicePolicyList, *APIResponse, error) {
+func (a NetApi) GetServicePolicyList() (*NetServicePolicyList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -10247,11 +9761,9 @@ func (a NetApi) GetServicePolicyList() (*NetServicePolicyList, *APIResponse, err
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10277,13 +9789,18 @@ func (a NetApi) GetServicePolicyList() (*NetServicePolicyList, *APIResponse, err
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetServicePolicyList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetServicePolicyList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetStp
@@ -10292,17 +9809,12 @@ func (a NetApi) GetServicePolicyList() (*NetServicePolicyList, *APIResponse, err
 // STP configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetStp(id string) (*NetStp, *APIResponse, error) {
+func (a NetApi) GetStp(id string) (*NetStp, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/stp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetStp), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetStp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -10310,11 +9822,9 @@ func (a NetApi) GetStp(id string) (*NetStp, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10340,13 +9850,18 @@ func (a NetApi) GetStp(id string) (*NetStp, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetStp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetStp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetStpGlobals
@@ -10355,17 +9870,12 @@ func (a NetApi) GetStp(id string) (*NetStp, *APIResponse, error) {
 // Global STP configuration, applies to all STP configuration items.
 //
 // id is for ID of the resource.
-func (a NetApi) GetStpGlobals(id string) (*NetStpGlobals, *APIResponse, error) {
+func (a NetApi) GetStpGlobals(id string) (*NetStpGlobals, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/stpGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetStpGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetStpGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -10373,11 +9883,9 @@ func (a NetApi) GetStpGlobals(id string) (*NetStpGlobals, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10403,20 +9911,25 @@ func (a NetApi) GetStpGlobals(id string) (*NetStpGlobals, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetStpGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetStpGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetStpGlobalsList
 //
 //
 // Global STP configuration, applies to all STP configuration items..
-func (a NetApi) GetStpGlobalsList() (*NetStpGlobalsList, *APIResponse, error) {
+func (a NetApi) GetStpGlobalsList() (*NetStpGlobalsList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -10428,11 +9941,9 @@ func (a NetApi) GetStpGlobalsList() (*NetStpGlobalsList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10458,20 +9969,25 @@ func (a NetApi) GetStpGlobalsList() (*NetStpGlobalsList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetStpGlobalsList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetStpGlobalsList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetStpList
 //
 //
 // STP configuration..
-func (a NetApi) GetStpList() (*NetStpList, *APIResponse, error) {
+func (a NetApi) GetStpList() (*NetStpList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -10483,11 +9999,9 @@ func (a NetApi) GetStpList() (*NetStpList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10513,13 +10027,18 @@ func (a NetApi) GetStpList() (*NetStpList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetStpList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetStpList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTimerPolicy
@@ -10528,17 +10047,12 @@ func (a NetApi) GetStpList() (*NetStpList, *APIResponse, error) {
 // Timer Policy configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTimerPolicy(id string) (*NetTimerPolicy, *APIResponse, error) {
+func (a NetApi) GetTimerPolicy(id string) (*NetTimerPolicy, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/timerPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTimerPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTimerPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -10546,11 +10060,9 @@ func (a NetApi) GetTimerPolicy(id string) (*NetTimerPolicy, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10576,20 +10088,25 @@ func (a NetApi) GetTimerPolicy(id string) (*NetTimerPolicy, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTimerPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTimerPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTimerPolicyList
 //
 //
 // Timer Policy configuration..
-func (a NetApi) GetTimerPolicyList() (*NetTimerPolicyList, *APIResponse, error) {
+func (a NetApi) GetTimerPolicyList() (*NetTimerPolicyList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -10601,11 +10118,9 @@ func (a NetApi) GetTimerPolicyList() (*NetTimerPolicyList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10631,13 +10146,18 @@ func (a NetApi) GetTimerPolicyList() (*NetTimerPolicyList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTimerPolicyList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTimerPolicyList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTmInterface
@@ -10646,17 +10166,12 @@ func (a NetApi) GetTimerPolicyList() (*NetTimerPolicyList, *APIResponse, error) 
 // Interface configuration and statistics.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTmInterface(id string) (*NetTmInterface, *APIResponse, error) {
+func (a NetApi) GetTmInterface(id string) (*NetTmInterface, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tmInterface/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTmInterface), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTmInterface")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -10664,11 +10179,9 @@ func (a NetApi) GetTmInterface(id string) (*NetTmInterface, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10694,20 +10207,25 @@ func (a NetApi) GetTmInterface(id string) (*NetTmInterface, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTmInterface)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTmInterface)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTmInterfaceList
 //
 //
 // Interface configuration and statistics..
-func (a NetApi) GetTmInterfaceList() (*NetTmInterfaceList, *APIResponse, error) {
+func (a NetApi) GetTmInterfaceList() (*NetTmInterfaceList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -10719,11 +10237,9 @@ func (a NetApi) GetTmInterfaceList() (*NetTmInterfaceList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10749,13 +10265,18 @@ func (a NetApi) GetTmInterfaceList() (*NetTmInterfaceList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTmInterfaceList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTmInterfaceList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTrunk
@@ -10764,17 +10285,12 @@ func (a NetApi) GetTmInterfaceList() (*NetTmInterfaceList, *APIResponse, error) 
 // Trunk configuration and statistics.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTrunk(id string) (*NetTrunk, *APIResponse, error) {
+func (a NetApi) GetTrunk(id string) (*NetTrunk, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/trunk/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTrunk), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTrunk")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -10782,11 +10298,9 @@ func (a NetApi) GetTrunk(id string) (*NetTrunk, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10812,20 +10326,25 @@ func (a NetApi) GetTrunk(id string) (*NetTrunk, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTrunk)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTrunk)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTrunkList
 //
 //
 // Trunk configuration and statistics..
-func (a NetApi) GetTrunkList() (*NetTrunkList, *APIResponse, error) {
+func (a NetApi) GetTrunkList() (*NetTrunkList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -10837,11 +10356,9 @@ func (a NetApi) GetTrunkList() (*NetTrunkList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10867,13 +10384,18 @@ func (a NetApi) GetTrunkList() (*NetTrunkList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTrunkList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTrunkList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnels
@@ -10882,17 +10404,12 @@ func (a NetApi) GetTrunkList() (*NetTrunkList, *APIResponse, error) {
 // Tunnel configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnels(id string) (*NetTunnels, *APIResponse, error) {
+func (a NetApi) GetTunnels(id string) (*NetTunnels, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnels), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnels")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -10900,11 +10417,9 @@ func (a NetApi) GetTunnels(id string) (*NetTunnels, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10930,13 +10445,18 @@ func (a NetApi) GetTunnels(id string) (*NetTunnels, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnels)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnels)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsEtherip
@@ -10945,17 +10465,12 @@ func (a NetApi) GetTunnels(id string) (*NetTunnels, *APIResponse, error) {
 // EtherIP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsEtherip(id string) (*NetTunnelsEtherip, *APIResponse, error) {
+func (a NetApi) GetTunnelsEtherip(id string) (*NetTunnelsEtherip, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/etherip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsEtherip), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsEtherip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -10963,11 +10478,9 @@ func (a NetApi) GetTunnelsEtherip(id string) (*NetTunnelsEtherip, *APIResponse, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -10993,20 +10506,25 @@ func (a NetApi) GetTunnelsEtherip(id string) (*NetTunnelsEtherip, *APIResponse, 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsEtherip)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsEtherip)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsEtheripList
 //
 //
 // EtherIP tunnel profile configuration..
-func (a NetApi) GetTunnelsEtheripList() (*NetTunnelsEtheripList, *APIResponse, error) {
+func (a NetApi) GetTunnelsEtheripList() (*NetTunnelsEtheripList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -11018,11 +10536,9 @@ func (a NetApi) GetTunnelsEtheripList() (*NetTunnelsEtheripList, *APIResponse, e
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11048,13 +10564,18 @@ func (a NetApi) GetTunnelsEtheripList() (*NetTunnelsEtheripList, *APIResponse, e
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsEtheripList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsEtheripList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsFec
@@ -11063,17 +10584,12 @@ func (a NetApi) GetTunnelsEtheripList() (*NetTunnelsEtheripList, *APIResponse, e
 // FEC tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsFec(id string) (*NetTunnelsFec, *APIResponse, error) {
+func (a NetApi) GetTunnelsFec(id string) (*NetTunnelsFec, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/fec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsFec), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsFec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -11081,11 +10597,9 @@ func (a NetApi) GetTunnelsFec(id string) (*NetTunnelsFec, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11111,20 +10625,25 @@ func (a NetApi) GetTunnelsFec(id string) (*NetTunnelsFec, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsFec)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsFec)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsFecList
 //
 //
 // FEC tunnel profile configuration..
-func (a NetApi) GetTunnelsFecList() (*NetTunnelsFecList, *APIResponse, error) {
+func (a NetApi) GetTunnelsFecList() (*NetTunnelsFecList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -11136,11 +10655,9 @@ func (a NetApi) GetTunnelsFecList() (*NetTunnelsFecList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11166,13 +10683,18 @@ func (a NetApi) GetTunnelsFecList() (*NetTunnelsFecList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsFecList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsFecList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsFecStat
@@ -11181,17 +10703,12 @@ func (a NetApi) GetTunnelsFecList() (*NetTunnelsFecList, *APIResponse, error) {
 // FEC tunnel statistic.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsFecStat(id string) (*NetTunnelsFecStat, *APIResponse, error) {
+func (a NetApi) GetTunnelsFecStat(id string) (*NetTunnelsFecStat, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/fecStat/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsFecStat), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsFecStat")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -11199,11 +10716,9 @@ func (a NetApi) GetTunnelsFecStat(id string) (*NetTunnelsFecStat, *APIResponse, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11229,20 +10744,25 @@ func (a NetApi) GetTunnelsFecStat(id string) (*NetTunnelsFecStat, *APIResponse, 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsFecStat)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsFecStat)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsFecStatList
 //
 //
 // FEC tunnel statistic..
-func (a NetApi) GetTunnelsFecStatList() (*NetTunnelsFecStatList, *APIResponse, error) {
+func (a NetApi) GetTunnelsFecStatList() (*NetTunnelsFecStatList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -11254,11 +10774,9 @@ func (a NetApi) GetTunnelsFecStatList() (*NetTunnelsFecStatList, *APIResponse, e
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11284,13 +10802,18 @@ func (a NetApi) GetTunnelsFecStatList() (*NetTunnelsFecStatList, *APIResponse, e
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsFecStatList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsFecStatList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsGeneve
@@ -11299,17 +10822,12 @@ func (a NetApi) GetTunnelsFecStatList() (*NetTunnelsFecStatList, *APIResponse, e
 // Geneve tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsGeneve(id string) (*NetTunnelsGeneve, *APIResponse, error) {
+func (a NetApi) GetTunnelsGeneve(id string) (*NetTunnelsGeneve, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/geneve/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsGeneve), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsGeneve")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -11317,11 +10835,9 @@ func (a NetApi) GetTunnelsGeneve(id string) (*NetTunnelsGeneve, *APIResponse, er
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11347,20 +10863,25 @@ func (a NetApi) GetTunnelsGeneve(id string) (*NetTunnelsGeneve, *APIResponse, er
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsGeneve)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGeneve)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsGeneveList
 //
 //
 // Geneve tunnel profile configuration..
-func (a NetApi) GetTunnelsGeneveList() (*NetTunnelsGeneveList, *APIResponse, error) {
+func (a NetApi) GetTunnelsGeneveList() (*NetTunnelsGeneveList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -11372,11 +10893,9 @@ func (a NetApi) GetTunnelsGeneveList() (*NetTunnelsGeneveList, *APIResponse, err
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11402,13 +10921,18 @@ func (a NetApi) GetTunnelsGeneveList() (*NetTunnelsGeneveList, *APIResponse, err
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsGeneveList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGeneveList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsGre
@@ -11417,17 +10941,12 @@ func (a NetApi) GetTunnelsGeneveList() (*NetTunnelsGeneveList, *APIResponse, err
 // GRE tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsGre(id string) (*NetTunnelsGre, *APIResponse, error) {
+func (a NetApi) GetTunnelsGre(id string) (*NetTunnelsGre, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/gre/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsGre), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsGre")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -11435,11 +10954,9 @@ func (a NetApi) GetTunnelsGre(id string) (*NetTunnelsGre, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11465,20 +10982,25 @@ func (a NetApi) GetTunnelsGre(id string) (*NetTunnelsGre, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsGre)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGre)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsGreList
 //
 //
 // GRE tunnel profile configuration..
-func (a NetApi) GetTunnelsGreList() (*NetTunnelsGreList, *APIResponse, error) {
+func (a NetApi) GetTunnelsGreList() (*NetTunnelsGreList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -11490,11 +11012,9 @@ func (a NetApi) GetTunnelsGreList() (*NetTunnelsGreList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11520,13 +11040,18 @@ func (a NetApi) GetTunnelsGreList() (*NetTunnelsGreList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsGreList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGreList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsIpip
@@ -11535,17 +11060,12 @@ func (a NetApi) GetTunnelsGreList() (*NetTunnelsGreList, *APIResponse, error) {
 // IPIP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsIpip(id string) (*NetTunnelsIpip, *APIResponse, error) {
+func (a NetApi) GetTunnelsIpip(id string) (*NetTunnelsIpip, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsIpip), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsIpip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -11553,11 +11073,9 @@ func (a NetApi) GetTunnelsIpip(id string) (*NetTunnelsIpip, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11583,20 +11101,25 @@ func (a NetApi) GetTunnelsIpip(id string) (*NetTunnelsIpip, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsIpip)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpip)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsIpipList
 //
 //
 // IPIP tunnel profile configuration..
-func (a NetApi) GetTunnelsIpipList() (*NetTunnelsIpipList, *APIResponse, error) {
+func (a NetApi) GetTunnelsIpipList() (*NetTunnelsIpipList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -11608,11 +11131,9 @@ func (a NetApi) GetTunnelsIpipList() (*NetTunnelsIpipList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11638,13 +11159,18 @@ func (a NetApi) GetTunnelsIpipList() (*NetTunnelsIpipList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsIpipList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpipList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsIpsec
@@ -11653,17 +11179,12 @@ func (a NetApi) GetTunnelsIpipList() (*NetTunnelsIpipList, *APIResponse, error) 
 // IPSEC tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsIpsec(id string) (*NetTunnelsIpsec, *APIResponse, error) {
+func (a NetApi) GetTunnelsIpsec(id string) (*NetTunnelsIpsec, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipsec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsIpsec), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsIpsec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -11671,11 +11192,9 @@ func (a NetApi) GetTunnelsIpsec(id string) (*NetTunnelsIpsec, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11701,20 +11220,25 @@ func (a NetApi) GetTunnelsIpsec(id string) (*NetTunnelsIpsec, *APIResponse, erro
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsIpsec)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpsec)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsIpsecList
 //
 //
 // IPSEC tunnel profile configuration..
-func (a NetApi) GetTunnelsIpsecList() (*NetTunnelsIpsecList, *APIResponse, error) {
+func (a NetApi) GetTunnelsIpsecList() (*NetTunnelsIpsecList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -11726,11 +11250,9 @@ func (a NetApi) GetTunnelsIpsecList() (*NetTunnelsIpsecList, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11756,20 +11278,25 @@ func (a NetApi) GetTunnelsIpsecList() (*NetTunnelsIpsecList, *APIResponse, error
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsIpsecList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpsecList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsList
 //
 //
 // Tunnel configuration..
-func (a NetApi) GetTunnelsList() (*NetTunnelsList, *APIResponse, error) {
+func (a NetApi) GetTunnelsList() (*NetTunnelsList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -11781,11 +11308,9 @@ func (a NetApi) GetTunnelsList() (*NetTunnelsList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11811,13 +11336,18 @@ func (a NetApi) GetTunnelsList() (*NetTunnelsList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsMap
@@ -11826,17 +11356,12 @@ func (a NetApi) GetTunnelsList() (*NetTunnelsList, *APIResponse, error) {
 // MAP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsMap(id string) (*NetTunnelsMap, *APIResponse, error) {
+func (a NetApi) GetTunnelsMap(id string) (*NetTunnelsMap, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/map/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsMap), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsMap")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -11844,11 +11369,9 @@ func (a NetApi) GetTunnelsMap(id string) (*NetTunnelsMap, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11874,20 +11397,25 @@ func (a NetApi) GetTunnelsMap(id string) (*NetTunnelsMap, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsMap)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsMap)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsMapList
 //
 //
 // MAP tunnel profile configuration..
-func (a NetApi) GetTunnelsMapList() (*NetTunnelsMapList, *APIResponse, error) {
+func (a NetApi) GetTunnelsMapList() (*NetTunnelsMapList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -11899,11 +11427,9 @@ func (a NetApi) GetTunnelsMapList() (*NetTunnelsMapList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11929,13 +11455,18 @@ func (a NetApi) GetTunnelsMapList() (*NetTunnelsMapList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsMapList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsMapList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsPpp
@@ -11944,17 +11475,12 @@ func (a NetApi) GetTunnelsMapList() (*NetTunnelsMapList, *APIResponse, error) {
 // PPP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsPpp(id string) (*NetTunnelsPpp, *APIResponse, error) {
+func (a NetApi) GetTunnelsPpp(id string) (*NetTunnelsPpp, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ppp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsPpp), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsPpp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -11962,11 +11488,9 @@ func (a NetApi) GetTunnelsPpp(id string) (*NetTunnelsPpp, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -11992,20 +11516,25 @@ func (a NetApi) GetTunnelsPpp(id string) (*NetTunnelsPpp, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsPpp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsPpp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsPppList
 //
 //
 // PPP tunnel profile configuration..
-func (a NetApi) GetTunnelsPppList() (*NetTunnelsPppList, *APIResponse, error) {
+func (a NetApi) GetTunnelsPppList() (*NetTunnelsPppList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -12017,11 +11546,9 @@ func (a NetApi) GetTunnelsPppList() (*NetTunnelsPppList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12047,13 +11574,18 @@ func (a NetApi) GetTunnelsPppList() (*NetTunnelsPppList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsPppList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsPppList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsTcpForward
@@ -12062,17 +11594,12 @@ func (a NetApi) GetTunnelsPppList() (*NetTunnelsPppList, *APIResponse, error) {
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsTcpForward(id string) (*NetTunnelsTcpForward, *APIResponse, error) {
+func (a NetApi) GetTunnelsTcpForward(id string) (*NetTunnelsTcpForward, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tcpForward/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsTcpForward), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsTcpForward")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -12080,11 +11607,9 @@ func (a NetApi) GetTunnelsTcpForward(id string) (*NetTunnelsTcpForward, *APIResp
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12110,20 +11635,25 @@ func (a NetApi) GetTunnelsTcpForward(id string) (*NetTunnelsTcpForward, *APIResp
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsTcpForward)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTcpForward)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsTcpForwardList
 //
 //
 // ..
-func (a NetApi) GetTunnelsTcpForwardList() (*NetTunnelsTcpForwardList, *APIResponse, error) {
+func (a NetApi) GetTunnelsTcpForwardList() (*NetTunnelsTcpForwardList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -12135,11 +11665,9 @@ func (a NetApi) GetTunnelsTcpForwardList() (*NetTunnelsTcpForwardList, *APIRespo
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12165,13 +11693,18 @@ func (a NetApi) GetTunnelsTcpForwardList() (*NetTunnelsTcpForwardList, *APIRespo
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsTcpForwardList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTcpForwardList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsTunnel
@@ -12180,17 +11713,12 @@ func (a NetApi) GetTunnelsTcpForwardList() (*NetTunnelsTcpForwardList, *APIRespo
 // Tunnel configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsTunnel(id string) (*NetTunnelsTunnel, *APIResponse, error) {
+func (a NetApi) GetTunnelsTunnel(id string) (*NetTunnelsTunnel, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tunnel/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsTunnel), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsTunnel")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -12198,11 +11726,9 @@ func (a NetApi) GetTunnelsTunnel(id string) (*NetTunnelsTunnel, *APIResponse, er
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12228,20 +11754,25 @@ func (a NetApi) GetTunnelsTunnel(id string) (*NetTunnelsTunnel, *APIResponse, er
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsTunnel)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTunnel)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsTunnelList
 //
 //
 // Tunnel configuration..
-func (a NetApi) GetTunnelsTunnelList() (*NetTunnelsTunnelList, *APIResponse, error) {
+func (a NetApi) GetTunnelsTunnelList() (*NetTunnelsTunnelList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -12253,11 +11784,9 @@ func (a NetApi) GetTunnelsTunnelList() (*NetTunnelsTunnelList, *APIResponse, err
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12283,13 +11812,18 @@ func (a NetApi) GetTunnelsTunnelList() (*NetTunnelsTunnelList, *APIResponse, err
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsTunnelList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTunnelList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsV6rd
@@ -12298,17 +11832,12 @@ func (a NetApi) GetTunnelsTunnelList() (*NetTunnelsTunnelList, *APIResponse, err
 // 6RD tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsV6rd(id string) (*NetTunnelsV6rd, *APIResponse, error) {
+func (a NetApi) GetTunnelsV6rd(id string) (*NetTunnelsV6rd, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/v6rd/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsV6rd), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsV6rd")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -12316,11 +11845,9 @@ func (a NetApi) GetTunnelsV6rd(id string) (*NetTunnelsV6rd, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12346,20 +11873,25 @@ func (a NetApi) GetTunnelsV6rd(id string) (*NetTunnelsV6rd, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsV6rd)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsV6rd)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsV6rdList
 //
 //
 // 6RD tunnel profile configuration..
-func (a NetApi) GetTunnelsV6rdList() (*NetTunnelsV6rdList, *APIResponse, error) {
+func (a NetApi) GetTunnelsV6rdList() (*NetTunnelsV6rdList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -12371,11 +11903,9 @@ func (a NetApi) GetTunnelsV6rdList() (*NetTunnelsV6rdList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12401,13 +11931,18 @@ func (a NetApi) GetTunnelsV6rdList() (*NetTunnelsV6rdList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsV6rdList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsV6rdList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsVxlan
@@ -12416,17 +11951,12 @@ func (a NetApi) GetTunnelsV6rdList() (*NetTunnelsV6rdList, *APIResponse, error) 
 // VXLAN tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsVxlan(id string) (*NetTunnelsVxlan, *APIResponse, error) {
+func (a NetApi) GetTunnelsVxlan(id string) (*NetTunnelsVxlan, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/vxlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsVxlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsVxlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -12434,11 +11964,9 @@ func (a NetApi) GetTunnelsVxlan(id string) (*NetTunnelsVxlan, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12464,20 +11992,25 @@ func (a NetApi) GetTunnelsVxlan(id string) (*NetTunnelsVxlan, *APIResponse, erro
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsVxlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsVxlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsVxlanList
 //
 //
 // VXLAN tunnel profile configuration..
-func (a NetApi) GetTunnelsVxlanList() (*NetTunnelsVxlanList, *APIResponse, error) {
+func (a NetApi) GetTunnelsVxlanList() (*NetTunnelsVxlanList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -12489,11 +12022,9 @@ func (a NetApi) GetTunnelsVxlanList() (*NetTunnelsVxlanList, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12519,13 +12050,18 @@ func (a NetApi) GetTunnelsVxlanList() (*NetTunnelsVxlanList, *APIResponse, error
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsVxlanList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsVxlanList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsWccp
@@ -12534,17 +12070,12 @@ func (a NetApi) GetTunnelsVxlanList() (*NetTunnelsVxlanList, *APIResponse, error
 // WCCP tunnel profile configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetTunnelsWccp(id string) (*NetTunnelsWccp, *APIResponse, error) {
+func (a NetApi) GetTunnelsWccp(id string) (*NetTunnelsWccp, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsWccp), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetTunnelsWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -12552,11 +12083,9 @@ func (a NetApi) GetTunnelsWccp(id string) (*NetTunnelsWccp, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12582,20 +12111,25 @@ func (a NetApi) GetTunnelsWccp(id string) (*NetTunnelsWccp, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsWccp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsWccp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetTunnelsWccpList
 //
 //
 // WCCP tunnel profile configuration..
-func (a NetApi) GetTunnelsWccpList() (*NetTunnelsWccpList, *APIResponse, error) {
+func (a NetApi) GetTunnelsWccpList() (*NetTunnelsWccpList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -12607,11 +12141,9 @@ func (a NetApi) GetTunnelsWccpList() (*NetTunnelsWccpList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12637,13 +12169,18 @@ func (a NetApi) GetTunnelsWccpList() (*NetTunnelsWccpList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetTunnelsWccpList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsWccpList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetVlan
@@ -12652,17 +12189,12 @@ func (a NetApi) GetTunnelsWccpList() (*NetTunnelsWccpList, *APIResponse, error) 
 // VLAN configuration and statistics.
 //
 // id is for ID of the resource.
-func (a NetApi) GetVlan(id string) (*NetVlan, *APIResponse, error) {
+func (a NetApi) GetVlan(id string) (*NetVlan, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetVlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -12670,11 +12202,9 @@ func (a NetApi) GetVlan(id string) (*NetVlan, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12700,13 +12230,18 @@ func (a NetApi) GetVlan(id string) (*NetVlan, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetVlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetVlanAllowed
@@ -12715,17 +12250,12 @@ func (a NetApi) GetVlan(id string) (*NetVlan, *APIResponse, error) {
 // Available VLANs which can be used by the system.
 //
 // id is for ID of the resource.
-func (a NetApi) GetVlanAllowed(id string) (*NetVlanAllowed, *APIResponse, error) {
+func (a NetApi) GetVlanAllowed(id string) (*NetVlanAllowed, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlanAllowed/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlanAllowed), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetVlanAllowed")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -12733,11 +12263,9 @@ func (a NetApi) GetVlanAllowed(id string) (*NetVlanAllowed, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12763,20 +12291,25 @@ func (a NetApi) GetVlanAllowed(id string) (*NetVlanAllowed, *APIResponse, error)
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetVlanAllowed)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanAllowed)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetVlanAllowedList
 //
 //
 // Available VLANs which can be used by the system..
-func (a NetApi) GetVlanAllowedList() (*NetVlanAllowedList, *APIResponse, error) {
+func (a NetApi) GetVlanAllowedList() (*NetVlanAllowedList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -12788,11 +12321,9 @@ func (a NetApi) GetVlanAllowedList() (*NetVlanAllowedList, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12818,13 +12349,18 @@ func (a NetApi) GetVlanAllowedList() (*NetVlanAllowedList, *APIResponse, error) 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetVlanAllowedList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanAllowedList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetVlanGroup
@@ -12833,17 +12369,12 @@ func (a NetApi) GetVlanAllowedList() (*NetVlanAllowedList, *APIResponse, error) 
 // VLAN group configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetVlanGroup(id string) (*NetVlanGroup, *APIResponse, error) {
+func (a NetApi) GetVlanGroup(id string) (*NetVlanGroup, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlanGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlanGroup), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetVlanGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -12851,11 +12382,9 @@ func (a NetApi) GetVlanGroup(id string) (*NetVlanGroup, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12881,20 +12410,25 @@ func (a NetApi) GetVlanGroup(id string) (*NetVlanGroup, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetVlanGroup)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanGroup)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetVlanGroupList
 //
 //
 // VLAN group configuration..
-func (a NetApi) GetVlanGroupList() (*NetVlanGroupList, *APIResponse, error) {
+func (a NetApi) GetVlanGroupList() (*NetVlanGroupList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -12906,11 +12440,9 @@ func (a NetApi) GetVlanGroupList() (*NetVlanGroupList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12936,13 +12468,18 @@ func (a NetApi) GetVlanGroupList() (*NetVlanGroupList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetVlanGroupList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanGroupList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetVlanInterfaces
@@ -12951,17 +12488,12 @@ func (a NetApi) GetVlanGroupList() (*NetVlanGroupList, *APIResponse, error) {
 // Specifies which interfaces you want this VLAN to use for traffic management..
 //
 // id is for ID of the resource.
-func (a NetApi) GetVlanInterfaces(id string) (*NetVlanInterfaces, *APIResponse, error) {
+func (a NetApi) GetVlanInterfaces(id string) (*NetVlanInterfaces, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/interfaces/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlanInterfaces), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetVlanInterfaces")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -12969,11 +12501,9 @@ func (a NetApi) GetVlanInterfaces(id string) (*NetVlanInterfaces, *APIResponse, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -12999,20 +12529,25 @@ func (a NetApi) GetVlanInterfaces(id string) (*NetVlanInterfaces, *APIResponse, 
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetVlanInterfaces)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanInterfaces)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetVlanInterfacesList
 //
 //
 // Specifies which interfaces you want this VLAN to use for traffic management...
-func (a NetApi) GetVlanInterfacesList() (*NetVlanInterfacesList, *APIResponse, error) {
+func (a NetApi) GetVlanInterfacesList() (*NetVlanInterfacesList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -13024,11 +12559,9 @@ func (a NetApi) GetVlanInterfacesList() (*NetVlanInterfacesList, *APIResponse, e
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13054,20 +12587,25 @@ func (a NetApi) GetVlanInterfacesList() (*NetVlanInterfacesList, *APIResponse, e
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetVlanInterfacesList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanInterfacesList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetVlanList
 //
 //
 // VLAN configuration and statistics..
-func (a NetApi) GetVlanList() (*NetVlanList, *APIResponse, error) {
+func (a NetApi) GetVlanList() (*NetVlanList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -13079,11 +12617,9 @@ func (a NetApi) GetVlanList() (*NetVlanList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13109,13 +12645,18 @@ func (a NetApi) GetVlanList() (*NetVlanList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetVlanList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetWccp
@@ -13124,17 +12665,12 @@ func (a NetApi) GetVlanList() (*NetVlanList, *APIResponse, error) {
 // WCCP configuration.
 //
 // id is for ID of the resource.
-func (a NetApi) GetWccp(id string) (*NetWccp, *APIResponse, error) {
+func (a NetApi) GetWccp(id string) (*NetWccp, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetWccp), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13142,11 +12678,9 @@ func (a NetApi) GetWccp(id string) (*NetWccp, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13172,20 +12706,25 @@ func (a NetApi) GetWccp(id string) (*NetWccp, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetWccp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetWccpList
 //
 //
 // WCCP configuration..
-func (a NetApi) GetWccpList() (*NetWccpList, *APIResponse, error) {
+func (a NetApi) GetWccpList() (*NetWccpList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -13197,11 +12736,9 @@ func (a NetApi) GetWccpList() (*NetWccpList, *APIResponse, error) {
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13227,13 +12764,18 @@ func (a NetApi) GetWccpList() (*NetWccpList, *APIResponse, error) {
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetWccpList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccpList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetWccpServices
@@ -13242,17 +12784,12 @@ func (a NetApi) GetWccpList() (*NetWccpList, *APIResponse, error) {
 // .
 //
 // id is for ID of the resource.
-func (a NetApi) GetWccpServices(id string) (*NetWccpServices, *APIResponse, error) {
+func (a NetApi) GetWccpServices(id string) (*NetWccpServices, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/services/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetWccpServices), nil, errors.New("Missing required parameter 'id' when calling NetApi->GetWccpServices")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13260,11 +12797,9 @@ func (a NetApi) GetWccpServices(id string) (*NetWccpServices, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13290,20 +12825,25 @@ func (a NetApi) GetWccpServices(id string) (*NetWccpServices, *APIResponse, erro
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetWccpServices)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccpServices)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // GetWccpServicesList
 //
 //
 // ..
-func (a NetApi) GetWccpServicesList() (*NetWccpServicesList, *APIResponse, error) {
+func (a NetApi) GetWccpServicesList() (*NetWccpServicesList, error) {
 
 	var httpMethod = "Get"
 	// create path and map variables
@@ -13315,11 +12855,9 @@ func (a NetApi) GetWccpServicesList() (*NetWccpServicesList, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13345,13 +12883,18 @@ func (a NetApi) GetWccpServicesList() (*NetWccpServicesList, *APIResponse, error
 	if localVarHttpHeaderAccept != "" {
 		headerParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(NetWccpServicesList)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccpServicesList)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchArp
@@ -13362,21 +12905,12 @@ func (a NetApi) GetWccpServicesList() (*NetWccpServicesList, *APIResponse, error
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchArp(id string, object NetArp) (*NetArp, *APIResponse, error) {
+func (a NetApi) PatchArp(id string, object NetArp) (*NetArp, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/arp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetArp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchArp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetArp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchArp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13384,11 +12918,9 @@ func (a NetApi) PatchArp(id string, object NetArp) (*NetArp, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13417,13 +12949,18 @@ func (a NetApi) PatchArp(id string, object NetArp) (*NetArp, *APIResponse, error
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetArp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetArp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchBwcPolicy
@@ -13434,21 +12971,12 @@ func (a NetApi) PatchArp(id string, object NetArp) (*NetArp, *APIResponse, error
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *APIResponse, error) {
+func (a NetApi) PatchBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/policy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchBwcPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchBwcPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13456,11 +12984,9 @@ func (a NetApi) PatchBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13489,13 +13015,18 @@ func (a NetApi) PatchBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchBwcPriorityGroup
@@ -13506,21 +13037,12 @@ func (a NetApi) PatchBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*NetBwcPriorityGroup, *APIResponse, error) {
+func (a NetApi) PatchBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*NetBwcPriorityGroup, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPriorityGroup), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchBwcPriorityGroup")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcPriorityGroup), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchBwcPriorityGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13528,11 +13050,9 @@ func (a NetApi) PatchBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*N
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13561,13 +13081,18 @@ func (a NetApi) PatchBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*N
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcPriorityGroup)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroup)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchBwcPriorityGroupPriorityClasses
@@ -13578,21 +13103,12 @@ func (a NetApi) PatchBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*N
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchBwcPriorityGroupPriorityClasses(id string, object NetBwcPriorityGroupPriorityClasses) (*NetBwcPriorityGroupPriorityClasses, *APIResponse, error) {
+func (a NetApi) PatchBwcPriorityGroupPriorityClasses(id string, object NetBwcPriorityGroupPriorityClasses) (*NetBwcPriorityGroupPriorityClasses, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/priorityClasses/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPriorityGroupPriorityClasses), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchBwcPriorityGroupPriorityClasses")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcPriorityGroupPriorityClasses), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchBwcPriorityGroupPriorityClasses")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13600,11 +13116,9 @@ func (a NetApi) PatchBwcPriorityGroupPriorityClasses(id string, object NetBwcPri
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13633,13 +13147,18 @@ func (a NetApi) PatchBwcPriorityGroupPriorityClasses(id string, object NetBwcPri
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcPriorityGroupPriorityClasses)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroupPriorityClasses)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchBwcProbe
@@ -13650,21 +13169,12 @@ func (a NetApi) PatchBwcPriorityGroupPriorityClasses(id string, object NetBwcPri
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *APIResponse, error) {
+func (a NetApi) PatchBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/probe/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcProbe), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchBwcProbe")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcProbe), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchBwcProbe")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13672,11 +13182,9 @@ func (a NetApi) PatchBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *API
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13705,13 +13213,18 @@ func (a NetApi) PatchBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *API
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcProbe)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcProbe)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchCosGlobalSettings
@@ -13722,21 +13235,12 @@ func (a NetApi) PatchBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *API
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchCosGlobalSettings(id string, object NetCosGlobalSettings) (*NetCosGlobalSettings, *APIResponse, error) {
+func (a NetApi) PatchCosGlobalSettings(id string, object NetCosGlobalSettings) (*NetCosGlobalSettings, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/globalSettings/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosGlobalSettings), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchCosGlobalSettings")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosGlobalSettings), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchCosGlobalSettings")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13744,11 +13248,9 @@ func (a NetApi) PatchCosGlobalSettings(id string, object NetCosGlobalSettings) (
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13777,13 +13279,18 @@ func (a NetApi) PatchCosGlobalSettings(id string, object NetCosGlobalSettings) (
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosGlobalSettings)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosGlobalSettings)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchCosMap8021p
@@ -13794,21 +13301,12 @@ func (a NetApi) PatchCosGlobalSettings(id string, object NetCosGlobalSettings) (
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap8021p, *APIResponse, error) {
+func (a NetApi) PatchCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap8021p, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/map_8021p/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosMap8021p), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchCosMap8021p")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosMap8021p), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchCosMap8021p")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13816,11 +13314,9 @@ func (a NetApi) PatchCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap80
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13849,13 +13345,18 @@ func (a NetApi) PatchCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap80
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosMap8021p)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMap8021p)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchCosMapDscp
@@ -13866,21 +13367,12 @@ func (a NetApi) PatchCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap80
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp, *APIResponse, error) {
+func (a NetApi) PatchCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/mapDscp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosMapDscp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchCosMapDscp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosMapDscp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchCosMapDscp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13888,11 +13380,9 @@ func (a NetApi) PatchCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13921,13 +13411,18 @@ func (a NetApi) PatchCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosMapDscp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMapDscp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchCosTrafficPriority
@@ -13938,21 +13433,12 @@ func (a NetApi) PatchCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchCosTrafficPriority(id string, object NetCosTrafficPriority) (*NetCosTrafficPriority, *APIResponse, error) {
+func (a NetApi) PatchCosTrafficPriority(id string, object NetCosTrafficPriority) (*NetCosTrafficPriority, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/trafficPriority/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosTrafficPriority), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchCosTrafficPriority")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosTrafficPriority), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchCosTrafficPriority")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -13960,11 +13446,9 @@ func (a NetApi) PatchCosTrafficPriority(id string, object NetCosTrafficPriority)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -13993,13 +13477,18 @@ func (a NetApi) PatchCosTrafficPriority(id string, object NetCosTrafficPriority)
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosTrafficPriority)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosTrafficPriority)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchDagGlobals
@@ -14010,21 +13499,12 @@ func (a NetApi) PatchCosTrafficPriority(id string, object NetCosTrafficPriority)
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals, *APIResponse, error) {
+func (a NetApi) PatchDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/dagGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetDagGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchDagGlobals")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetDagGlobals), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchDagGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14032,11 +13512,9 @@ func (a NetApi) PatchDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14065,13 +13543,18 @@ func (a NetApi) PatchDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetDagGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetDagGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchDnsResolver
@@ -14082,21 +13565,12 @@ func (a NetApi) PatchDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchDnsResolver(id string, object NetDnsResolver) (*NetDnsResolver, *APIResponse, error) {
+func (a NetApi) PatchDnsResolver(id string, object NetDnsResolver) (*NetDnsResolver, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/dnsResolver/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetDnsResolver), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchDnsResolver")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetDnsResolver), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchDnsResolver")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14104,11 +13578,9 @@ func (a NetApi) PatchDnsResolver(id string, object NetDnsResolver) (*NetDnsResol
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14137,13 +13609,18 @@ func (a NetApi) PatchDnsResolver(id string, object NetDnsResolver) (*NetDnsResol
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetDnsResolver)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetDnsResolver)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchFdbTunnel
@@ -14154,21 +13631,12 @@ func (a NetApi) PatchDnsResolver(id string, object NetDnsResolver) (*NetDnsResol
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, *APIResponse, error) {
+func (a NetApi) PatchFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/tunnel/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbTunnel), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchFdbTunnel")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetFdbTunnel), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchFdbTunnel")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14176,11 +13644,9 @@ func (a NetApi) PatchFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, *
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14209,13 +13675,18 @@ func (a NetApi) PatchFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, *
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetFdbTunnel)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbTunnel)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchFdbTunnelRecords
@@ -14226,21 +13697,12 @@ func (a NetApi) PatchFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, *
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*NetFdbTunnelRecords, *APIResponse, error) {
+func (a NetApi) PatchFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*NetFdbTunnelRecords, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/tunnel/records/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbTunnelRecords), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchFdbTunnelRecords")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetFdbTunnelRecords), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchFdbTunnelRecords")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14248,11 +13710,9 @@ func (a NetApi) PatchFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*N
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14281,13 +13741,18 @@ func (a NetApi) PatchFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*N
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetFdbTunnelRecords)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbTunnelRecords)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchFdbVlan
@@ -14298,21 +13763,12 @@ func (a NetApi) PatchFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*N
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, *APIResponse, error) {
+func (a NetApi) PatchFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/vlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbVlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchFdbVlan")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetFdbVlan), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchFdbVlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14320,11 +13776,9 @@ func (a NetApi) PatchFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, *APIRes
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14353,13 +13807,18 @@ func (a NetApi) PatchFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, *APIRes
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetFdbVlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbVlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchIpsecIkeDaemon
@@ -14370,21 +13829,12 @@ func (a NetApi) PatchFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, *APIRes
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIpsecIkeDaemon, *APIResponse, error) {
+func (a NetApi) PatchIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIpsecIkeDaemon, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikeDaemon/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIkeDaemon), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchIpsecIkeDaemon")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecIkeDaemon), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchIpsecIkeDaemon")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14392,11 +13842,9 @@ func (a NetApi) PatchIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIp
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14425,13 +13873,18 @@ func (a NetApi) PatchIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIp
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecIkeDaemon)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkeDaemon)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchIpsecIkePeer
@@ -14442,21 +13895,12 @@ func (a NetApi) PatchIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIp
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIkePeer, *APIResponse, error) {
+func (a NetApi) PatchIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIkePeer, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikePeer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIkePeer), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchIpsecIkePeer")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecIkePeer), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchIpsecIkePeer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14464,11 +13908,9 @@ func (a NetApi) PatchIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecI
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14497,13 +13939,18 @@ func (a NetApi) PatchIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecI
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecIkePeer)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkePeer)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchIpsecIpsecPolicy
@@ -14514,21 +13961,12 @@ func (a NetApi) PatchIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecI
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*NetIpsecIpsecPolicy, *APIResponse, error) {
+func (a NetApi) PatchIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*NetIpsecIpsecPolicy, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ipsecPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIpsecPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchIpsecIpsecPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecIpsecPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchIpsecIpsecPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14536,11 +13974,9 @@ func (a NetApi) PatchIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*N
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14569,13 +14005,18 @@ func (a NetApi) PatchIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*N
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecIpsecPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIpsecPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchIpsecManualSecurityAssociation
@@ -14586,21 +14027,12 @@ func (a NetApi) PatchIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*N
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchIpsecManualSecurityAssociation(id string, object NetIpsecManualSecurityAssociation) (*NetIpsecManualSecurityAssociation, *APIResponse, error) {
+func (a NetApi) PatchIpsecManualSecurityAssociation(id string, object NetIpsecManualSecurityAssociation) (*NetIpsecManualSecurityAssociation, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/manualSecurityAssociation/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecManualSecurityAssociation), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchIpsecManualSecurityAssociation")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecManualSecurityAssociation), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchIpsecManualSecurityAssociation")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14608,11 +14040,9 @@ func (a NetApi) PatchIpsecManualSecurityAssociation(id string, object NetIpsecMa
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14641,13 +14071,18 @@ func (a NetApi) PatchIpsecManualSecurityAssociation(id string, object NetIpsecMa
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecManualSecurityAssociation)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecManualSecurityAssociation)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchIpsecTrafficSelector
@@ -14658,21 +14093,12 @@ func (a NetApi) PatchIpsecManualSecurityAssociation(id string, object NetIpsecMa
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchIpsecTrafficSelector(id string, object NetIpsecTrafficSelector) (*NetIpsecTrafficSelector, *APIResponse, error) {
+func (a NetApi) PatchIpsecTrafficSelector(id string, object NetIpsecTrafficSelector) (*NetIpsecTrafficSelector, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/trafficSelector/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecTrafficSelector), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchIpsecTrafficSelector")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecTrafficSelector), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchIpsecTrafficSelector")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14680,11 +14106,9 @@ func (a NetApi) PatchIpsecTrafficSelector(id string, object NetIpsecTrafficSelec
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14713,13 +14137,18 @@ func (a NetApi) PatchIpsecTrafficSelector(id string, object NetIpsecTrafficSelec
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecTrafficSelector)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecTrafficSelector)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchLldpGlobals
@@ -14730,21 +14159,12 @@ func (a NetApi) PatchIpsecTrafficSelector(id string, object NetIpsecTrafficSelec
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlobals, *APIResponse, error) {
+func (a NetApi) PatchLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlobals, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/lldpGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetLldpGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchLldpGlobals")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetLldpGlobals), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchLldpGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14752,11 +14172,9 @@ func (a NetApi) PatchLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlob
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14785,13 +14203,18 @@ func (a NetApi) PatchLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlob
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetLldpGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetLldpGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchMulticastGlobals
@@ -14802,21 +14225,12 @@ func (a NetApi) PatchLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlob
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchMulticastGlobals(id string, object NetMulticastGlobals) (*NetMulticastGlobals, *APIResponse, error) {
+func (a NetApi) PatchMulticastGlobals(id string, object NetMulticastGlobals) (*NetMulticastGlobals, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/multicastGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetMulticastGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchMulticastGlobals")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetMulticastGlobals), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchMulticastGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14824,11 +14238,9 @@ func (a NetApi) PatchMulticastGlobals(id string, object NetMulticastGlobals) (*N
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14857,13 +14269,18 @@ func (a NetApi) PatchMulticastGlobals(id string, object NetMulticastGlobals) (*N
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetMulticastGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetMulticastGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchNdp
@@ -14874,21 +14291,12 @@ func (a NetApi) PatchMulticastGlobals(id string, object NetMulticastGlobals) (*N
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error) {
+func (a NetApi) PatchNdp(id string, object NetNdp) (*NetNdp, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ndp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetNdp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchNdp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetNdp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchNdp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14896,11 +14304,9 @@ func (a NetApi) PatchNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -14929,13 +14335,18 @@ func (a NetApi) PatchNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetNdp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetNdp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchPacketFilter
@@ -14946,21 +14357,12 @@ func (a NetApi) PatchNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchPacketFilter(id string, object NetPacketFilter) (*NetPacketFilter, *APIResponse, error) {
+func (a NetApi) PatchPacketFilter(id string, object NetPacketFilter) (*NetPacketFilter, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/packetFilter/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPacketFilter), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchPacketFilter")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetPacketFilter), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchPacketFilter")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -14968,11 +14370,9 @@ func (a NetApi) PatchPacketFilter(id string, object NetPacketFilter) (*NetPacket
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15001,13 +14401,18 @@ func (a NetApi) PatchPacketFilter(id string, object NetPacketFilter) (*NetPacket
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetPacketFilter)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPacketFilter)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchPacketFilterTrusted
@@ -15018,21 +14423,12 @@ func (a NetApi) PatchPacketFilter(id string, object NetPacketFilter) (*NetPacket
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchPacketFilterTrusted(id string, object NetPacketFilterTrusted) (*NetPacketFilterTrusted, *APIResponse, error) {
+func (a NetApi) PatchPacketFilterTrusted(id string, object NetPacketFilterTrusted) (*NetPacketFilterTrusted, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/packetFilterTrusted/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPacketFilterTrusted), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchPacketFilterTrusted")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetPacketFilterTrusted), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchPacketFilterTrusted")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15040,11 +14436,9 @@ func (a NetApi) PatchPacketFilterTrusted(id string, object NetPacketFilterTruste
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15073,13 +14467,18 @@ func (a NetApi) PatchPacketFilterTrusted(id string, object NetPacketFilterTruste
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetPacketFilterTrusted)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPacketFilterTrusted)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchPortMirror
@@ -15090,21 +14489,12 @@ func (a NetApi) PatchPacketFilterTrusted(id string, object NetPacketFilterTruste
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchPortMirror(id string, object NetPortMirror) (*NetPortMirror, *APIResponse, error) {
+func (a NetApi) PatchPortMirror(id string, object NetPortMirror) (*NetPortMirror, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/portMirror/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPortMirror), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchPortMirror")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetPortMirror), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchPortMirror")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15112,11 +14502,9 @@ func (a NetApi) PatchPortMirror(id string, object NetPortMirror) (*NetPortMirror
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15145,13 +14533,18 @@ func (a NetApi) PatchPortMirror(id string, object NetPortMirror) (*NetPortMirror
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetPortMirror)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPortMirror)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchRateShapingColorPolicer
@@ -15162,21 +14555,12 @@ func (a NetApi) PatchPortMirror(id string, object NetPortMirror) (*NetPortMirror
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchRateShapingColorPolicer(id string, object NetRateShapingColorPolicer) (*NetRateShapingColorPolicer, *APIResponse, error) {
+func (a NetApi) PatchRateShapingColorPolicer(id string, object NetRateShapingColorPolicer) (*NetRateShapingColorPolicer, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/colorPolicer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingColorPolicer), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchRateShapingColorPolicer")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingColorPolicer), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchRateShapingColorPolicer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15184,11 +14568,9 @@ func (a NetApi) PatchRateShapingColorPolicer(id string, object NetRateShapingCol
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15217,13 +14599,18 @@ func (a NetApi) PatchRateShapingColorPolicer(id string, object NetRateShapingCol
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingColorPolicer)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingColorPolicer)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchRateShapingDropPolicy
@@ -15234,21 +14621,12 @@ func (a NetApi) PatchRateShapingColorPolicer(id string, object NetRateShapingCol
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchRateShapingDropPolicy(id string, object NetRateShapingDropPolicy) (*NetRateShapingDropPolicy, *APIResponse, error) {
+func (a NetApi) PatchRateShapingDropPolicy(id string, object NetRateShapingDropPolicy) (*NetRateShapingDropPolicy, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/dropPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingDropPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchRateShapingDropPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingDropPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchRateShapingDropPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15256,11 +14634,9 @@ func (a NetApi) PatchRateShapingDropPolicy(id string, object NetRateShapingDropP
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15289,13 +14665,18 @@ func (a NetApi) PatchRateShapingDropPolicy(id string, object NetRateShapingDropP
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingDropPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingDropPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchRateShapingQueue
@@ -15306,21 +14687,12 @@ func (a NetApi) PatchRateShapingDropPolicy(id string, object NetRateShapingDropP
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchRateShapingQueue(id string, object NetRateShapingQueue) (*NetRateShapingQueue, *APIResponse, error) {
+func (a NetApi) PatchRateShapingQueue(id string, object NetRateShapingQueue) (*NetRateShapingQueue, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/queue/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingQueue), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchRateShapingQueue")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingQueue), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchRateShapingQueue")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15328,11 +14700,9 @@ func (a NetApi) PatchRateShapingQueue(id string, object NetRateShapingQueue) (*N
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15361,13 +14731,18 @@ func (a NetApi) PatchRateShapingQueue(id string, object NetRateShapingQueue) (*N
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingQueue)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingQueue)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchRateShapingShapingPolicy
@@ -15378,21 +14753,12 @@ func (a NetApi) PatchRateShapingQueue(id string, object NetRateShapingQueue) (*N
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchRateShapingShapingPolicy(id string, object NetRateShapingShapingPolicy) (*NetRateShapingShapingPolicy, *APIResponse, error) {
+func (a NetApi) PatchRateShapingShapingPolicy(id string, object NetRateShapingShapingPolicy) (*NetRateShapingShapingPolicy, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/shapingPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingShapingPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchRateShapingShapingPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingShapingPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchRateShapingShapingPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15400,11 +14766,9 @@ func (a NetApi) PatchRateShapingShapingPolicy(id string, object NetRateShapingSh
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15433,13 +14797,18 @@ func (a NetApi) PatchRateShapingShapingPolicy(id string, object NetRateShapingSh
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingShapingPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingShapingPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchRateShapingTmClass
@@ -15450,21 +14819,12 @@ func (a NetApi) PatchRateShapingShapingPolicy(id string, object NetRateShapingSh
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchRateShapingTmClass(id string, object NetRateShapingTmClass) (*NetRateShapingTmClass, *APIResponse, error) {
+func (a NetApi) PatchRateShapingTmClass(id string, object NetRateShapingTmClass) (*NetRateShapingTmClass, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/tmClass/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingTmClass), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchRateShapingTmClass")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingTmClass), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchRateShapingTmClass")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15472,11 +14832,9 @@ func (a NetApi) PatchRateShapingTmClass(id string, object NetRateShapingTmClass)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15505,13 +14863,18 @@ func (a NetApi) PatchRateShapingTmClass(id string, object NetRateShapingTmClass)
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingTmClass)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingTmClass)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchRoute
@@ -15522,21 +14885,12 @@ func (a NetApi) PatchRateShapingTmClass(id string, object NetRateShapingTmClass)
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchRoute(id string, object NetRoute) (*NetRoute, *APIResponse, error) {
+func (a NetApi) PatchRoute(id string, object NetRoute) (*NetRoute, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/route/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRoute), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchRoute")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRoute), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchRoute")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15544,11 +14898,9 @@ func (a NetApi) PatchRoute(id string, object NetRoute) (*NetRoute, *APIResponse,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15577,13 +14929,18 @@ func (a NetApi) PatchRoute(id string, object NetRoute) (*NetRoute, *APIResponse,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRoute)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRoute)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchRouteDomain
@@ -15594,21 +14951,12 @@ func (a NetApi) PatchRoute(id string, object NetRoute) (*NetRoute, *APIResponse,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchRouteDomain(id string, object NetRouteDomain) (*NetRouteDomain, *APIResponse, error) {
+func (a NetApi) PatchRouteDomain(id string, object NetRouteDomain) (*NetRouteDomain, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouteDomain), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchRouteDomain")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouteDomain), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchRouteDomain")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15616,11 +14964,9 @@ func (a NetApi) PatchRouteDomain(id string, object NetRouteDomain) (*NetRouteDom
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15649,13 +14995,18 @@ func (a NetApi) PatchRouteDomain(id string, object NetRouteDomain) (*NetRouteDom
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouteDomain)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomain)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchRouterAdvertisement
@@ -15666,21 +15017,12 @@ func (a NetApi) PatchRouteDomain(id string, object NetRouteDomain) (*NetRouteDom
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchRouterAdvertisement(id string, object NetRouterAdvertisement) (*NetRouterAdvertisement, *APIResponse, error) {
+func (a NetApi) PatchRouterAdvertisement(id string, object NetRouterAdvertisement) (*NetRouterAdvertisement, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouterAdvertisement), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchRouterAdvertisement")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouterAdvertisement), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchRouterAdvertisement")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15688,11 +15030,9 @@ func (a NetApi) PatchRouterAdvertisement(id string, object NetRouterAdvertisemen
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15721,13 +15061,18 @@ func (a NetApi) PatchRouterAdvertisement(id string, object NetRouterAdvertisemen
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouterAdvertisement)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisement)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchRouterAdvertisementPrefixes
@@ -15738,21 +15083,12 @@ func (a NetApi) PatchRouterAdvertisement(id string, object NetRouterAdvertisemen
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchRouterAdvertisementPrefixes(id string, object NetRouterAdvertisementPrefixes) (*NetRouterAdvertisementPrefixes, *APIResponse, error) {
+func (a NetApi) PatchRouterAdvertisementPrefixes(id string, object NetRouterAdvertisementPrefixes) (*NetRouterAdvertisementPrefixes, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/prefixes/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouterAdvertisementPrefixes), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchRouterAdvertisementPrefixes")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouterAdvertisementPrefixes), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchRouterAdvertisementPrefixes")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15760,11 +15096,9 @@ func (a NetApi) PatchRouterAdvertisementPrefixes(id string, object NetRouterAdve
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15793,13 +15127,18 @@ func (a NetApi) PatchRouterAdvertisementPrefixes(id string, object NetRouterAdve
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouterAdvertisementPrefixes)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisementPrefixes)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchSelf
@@ -15810,21 +15149,12 @@ func (a NetApi) PatchRouterAdvertisementPrefixes(id string, object NetRouterAdve
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchSelf(id string, object NetSelf) (*NetSelf, *APIResponse, error) {
+func (a NetApi) PatchSelf(id string, object NetSelf) (*NetSelf, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelf), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchSelf")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetSelf), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchSelf")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15832,11 +15162,9 @@ func (a NetApi) PatchSelf(id string, object NetSelf) (*NetSelf, *APIResponse, er
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15865,13 +15193,18 @@ func (a NetApi) PatchSelf(id string, object NetSelf) (*NetSelf, *APIResponse, er
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetSelf)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelf)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchSelfAllow
@@ -15882,21 +15215,12 @@ func (a NetApi) PatchSelf(id string, object NetSelf) (*NetSelf, *APIResponse, er
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, *APIResponse, error) {
+func (a NetApi) PatchSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/selfAllow/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelfAllow), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchSelfAllow")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetSelfAllow), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchSelfAllow")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15904,11 +15228,9 @@ func (a NetApi) PatchSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, *
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -15937,13 +15259,18 @@ func (a NetApi) PatchSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, *
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetSelfAllow)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfAllow)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchServicePolicy
@@ -15954,21 +15281,12 @@ func (a NetApi) PatchSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, *
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchServicePolicy(id string, object NetServicePolicy) (*NetServicePolicy, *APIResponse, error) {
+func (a NetApi) PatchServicePolicy(id string, object NetServicePolicy) (*NetServicePolicy, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/servicePolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetServicePolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchServicePolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetServicePolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchServicePolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -15976,11 +15294,9 @@ func (a NetApi) PatchServicePolicy(id string, object NetServicePolicy) (*NetServ
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16009,13 +15325,18 @@ func (a NetApi) PatchServicePolicy(id string, object NetServicePolicy) (*NetServ
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetServicePolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetServicePolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchStp
@@ -16026,21 +15347,12 @@ func (a NetApi) PatchServicePolicy(id string, object NetServicePolicy) (*NetServ
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchStp(id string, object NetStp) (*NetStp, *APIResponse, error) {
+func (a NetApi) PatchStp(id string, object NetStp) (*NetStp, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/stp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetStp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchStp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetStp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchStp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16048,11 +15360,9 @@ func (a NetApi) PatchStp(id string, object NetStp) (*NetStp, *APIResponse, error
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16081,13 +15391,18 @@ func (a NetApi) PatchStp(id string, object NetStp) (*NetStp, *APIResponse, error
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetStp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetStp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchStpGlobals
@@ -16098,21 +15413,12 @@ func (a NetApi) PatchStp(id string, object NetStp) (*NetStp, *APIResponse, error
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals, *APIResponse, error) {
+func (a NetApi) PatchStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/stpGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetStpGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchStpGlobals")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetStpGlobals), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchStpGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16120,11 +15426,9 @@ func (a NetApi) PatchStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16153,13 +15457,18 @@ func (a NetApi) PatchStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetStpGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetStpGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTimerPolicy
@@ -16170,21 +15479,12 @@ func (a NetApi) PatchStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPolicy, *APIResponse, error) {
+func (a NetApi) PatchTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPolicy, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/timerPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTimerPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTimerPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTimerPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTimerPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16192,11 +15492,9 @@ func (a NetApi) PatchTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPol
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16225,13 +15523,18 @@ func (a NetApi) PatchTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPol
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTimerPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTimerPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTmInterface
@@ -16242,21 +15545,12 @@ func (a NetApi) PatchTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPol
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTmInterface(id string, object NetTmInterface) (*NetTmInterface, *APIResponse, error) {
+func (a NetApi) PatchTmInterface(id string, object NetTmInterface) (*NetTmInterface, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tmInterface/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTmInterface), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTmInterface")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTmInterface), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTmInterface")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16264,11 +15558,9 @@ func (a NetApi) PatchTmInterface(id string, object NetTmInterface) (*NetTmInterf
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16297,13 +15589,18 @@ func (a NetApi) PatchTmInterface(id string, object NetTmInterface) (*NetTmInterf
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTmInterface)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTmInterface)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTrunk
@@ -16314,21 +15611,12 @@ func (a NetApi) PatchTmInterface(id string, object NetTmInterface) (*NetTmInterf
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse, error) {
+func (a NetApi) PatchTrunk(id string, object NetTrunk) (*NetTrunk, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/trunk/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTrunk), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTrunk")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTrunk), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTrunk")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16336,11 +15624,9 @@ func (a NetApi) PatchTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16369,13 +15655,18 @@ func (a NetApi) PatchTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTrunk)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTrunk)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsEtherip
@@ -16386,21 +15677,12 @@ func (a NetApi) PatchTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTunnelsEtherip, *APIResponse, error) {
+func (a NetApi) PatchTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTunnelsEtherip, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/etherip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsEtherip), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsEtherip")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsEtherip), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsEtherip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16408,11 +15690,9 @@ func (a NetApi) PatchTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTu
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16441,13 +15721,18 @@ func (a NetApi) PatchTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTu
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsEtherip)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsEtherip)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsFec
@@ -16458,21 +15743,12 @@ func (a NetApi) PatchTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTu
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec, *APIResponse, error) {
+func (a NetApi) PatchTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/fec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsFec), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsFec")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsFec), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsFec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16480,11 +15756,9 @@ func (a NetApi) PatchTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16513,13 +15787,18 @@ func (a NetApi) PatchTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsFec)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsFec)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsGeneve
@@ -16530,21 +15809,12 @@ func (a NetApi) PatchTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunnelsGeneve, *APIResponse, error) {
+func (a NetApi) PatchTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunnelsGeneve, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/geneve/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsGeneve), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsGeneve")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsGeneve), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsGeneve")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16552,11 +15822,9 @@ func (a NetApi) PatchTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunn
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16585,13 +15853,18 @@ func (a NetApi) PatchTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunn
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsGeneve)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGeneve)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsGre
@@ -16602,21 +15875,12 @@ func (a NetApi) PatchTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunn
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre, *APIResponse, error) {
+func (a NetApi) PatchTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/gre/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsGre), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsGre")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsGre), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsGre")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16624,11 +15888,9 @@ func (a NetApi) PatchTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16657,13 +15919,18 @@ func (a NetApi) PatchTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsGre)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGre)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsIpip
@@ -16674,21 +15941,12 @@ func (a NetApi) PatchTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIpip, *APIResponse, error) {
+func (a NetApi) PatchTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIpip, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsIpip), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsIpip")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsIpip), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsIpip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16696,11 +15954,9 @@ func (a NetApi) PatchTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsI
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16729,13 +15985,18 @@ func (a NetApi) PatchTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsI
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsIpip)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpip)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsIpsec
@@ -16746,21 +16007,12 @@ func (a NetApi) PatchTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsI
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnelsIpsec, *APIResponse, error) {
+func (a NetApi) PatchTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnelsIpsec, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipsec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsIpsec), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsIpsec")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsIpsec), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsIpsec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16768,11 +16020,9 @@ func (a NetApi) PatchTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnel
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16801,13 +16051,18 @@ func (a NetApi) PatchTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnel
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsIpsec)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpsec)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsMap
@@ -16818,21 +16073,12 @@ func (a NetApi) PatchTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnel
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap, *APIResponse, error) {
+func (a NetApi) PatchTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/map/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsMap), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsMap")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsMap), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsMap")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16840,11 +16086,9 @@ func (a NetApi) PatchTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16873,13 +16117,18 @@ func (a NetApi) PatchTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsMap)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsMap)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsPpp
@@ -16890,21 +16139,12 @@ func (a NetApi) PatchTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp, *APIResponse, error) {
+func (a NetApi) PatchTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ppp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsPpp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsPpp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsPpp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsPpp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16912,11 +16152,9 @@ func (a NetApi) PatchTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -16945,13 +16183,18 @@ func (a NetApi) PatchTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsPpp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsPpp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsTcpForward
@@ -16962,21 +16205,12 @@ func (a NetApi) PatchTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*NetTunnelsTcpForward, *APIResponse, error) {
+func (a NetApi) PatchTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*NetTunnelsTcpForward, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tcpForward/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsTcpForward), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsTcpForward")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsTcpForward), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsTcpForward")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -16984,11 +16218,9 @@ func (a NetApi) PatchTunnelsTcpForward(id string, object NetTunnelsTcpForward) (
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17017,13 +16249,18 @@ func (a NetApi) PatchTunnelsTcpForward(id string, object NetTunnelsTcpForward) (
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsTcpForward)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTcpForward)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsTunnel
@@ -17034,21 +16271,12 @@ func (a NetApi) PatchTunnelsTcpForward(id string, object NetTunnelsTcpForward) (
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunnelsTunnel, *APIResponse, error) {
+func (a NetApi) PatchTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunnelsTunnel, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tunnel/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsTunnel), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsTunnel")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsTunnel), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsTunnel")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17056,11 +16284,9 @@ func (a NetApi) PatchTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunn
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17089,13 +16315,18 @@ func (a NetApi) PatchTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunn
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsTunnel)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTunnel)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsV6rd
@@ -17106,21 +16337,12 @@ func (a NetApi) PatchTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunn
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6rd, *APIResponse, error) {
+func (a NetApi) PatchTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6rd, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/v6rd/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsV6rd), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsV6rd")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsV6rd), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsV6rd")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17128,11 +16350,9 @@ func (a NetApi) PatchTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17161,13 +16381,18 @@ func (a NetApi) PatchTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsV6rd)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsV6rd)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsVxlan
@@ -17178,21 +16403,12 @@ func (a NetApi) PatchTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnelsVxlan, *APIResponse, error) {
+func (a NetApi) PatchTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnelsVxlan, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/vxlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsVxlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsVxlan")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsVxlan), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsVxlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17200,11 +16416,9 @@ func (a NetApi) PatchTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnel
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17233,13 +16447,18 @@ func (a NetApi) PatchTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnel
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsVxlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsVxlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchTunnelsWccp
@@ -17250,21 +16469,12 @@ func (a NetApi) PatchTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnel
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWccp, *APIResponse, error) {
+func (a NetApi) PatchTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWccp, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsWccp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchTunnelsWccp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsWccp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchTunnelsWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17272,11 +16482,9 @@ func (a NetApi) PatchTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsW
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17305,13 +16513,18 @@ func (a NetApi) PatchTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsW
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsWccp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsWccp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchVlan
@@ -17322,21 +16535,12 @@ func (a NetApi) PatchTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsW
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchVlan(id string, object NetVlan) (*NetVlan, *APIResponse, error) {
+func (a NetApi) PatchVlan(id string, object NetVlan) (*NetVlan, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchVlan")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetVlan), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchVlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17344,11 +16548,9 @@ func (a NetApi) PatchVlan(id string, object NetVlan) (*NetVlan, *APIResponse, er
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17377,13 +16579,18 @@ func (a NetApi) PatchVlan(id string, object NetVlan) (*NetVlan, *APIResponse, er
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetVlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchVlanGroup
@@ -17394,21 +16601,12 @@ func (a NetApi) PatchVlan(id string, object NetVlan) (*NetVlan, *APIResponse, er
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *APIResponse, error) {
+func (a NetApi) PatchVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlanGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlanGroup), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchVlanGroup")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetVlanGroup), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchVlanGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17416,11 +16614,9 @@ func (a NetApi) PatchVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17449,13 +16645,18 @@ func (a NetApi) PatchVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetVlanGroup)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanGroup)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchVlanInterfaces
@@ -17466,21 +16667,12 @@ func (a NetApi) PatchVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchVlanInterfaces(id string, object NetVlanInterfaces) (*NetVlanInterfaces, *APIResponse, error) {
+func (a NetApi) PatchVlanInterfaces(id string, object NetVlanInterfaces) (*NetVlanInterfaces, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/interfaces/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlanInterfaces), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchVlanInterfaces")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetVlanInterfaces), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchVlanInterfaces")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17488,11 +16680,9 @@ func (a NetApi) PatchVlanInterfaces(id string, object NetVlanInterfaces) (*NetVl
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17521,13 +16711,18 @@ func (a NetApi) PatchVlanInterfaces(id string, object NetVlanInterfaces) (*NetVl
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetVlanInterfaces)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanInterfaces)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchWccp
@@ -17538,21 +16733,12 @@ func (a NetApi) PatchVlanInterfaces(id string, object NetVlanInterfaces) (*NetVl
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchWccp(id string, object NetWccp) (*NetWccp, *APIResponse, error) {
+func (a NetApi) PatchWccp(id string, object NetWccp) (*NetWccp, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetWccp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchWccp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetWccp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17560,11 +16746,9 @@ func (a NetApi) PatchWccp(id string, object NetWccp) (*NetWccp, *APIResponse, er
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17593,13 +16777,18 @@ func (a NetApi) PatchWccp(id string, object NetWccp) (*NetWccp, *APIResponse, er
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetWccp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PatchWccpServices
@@ -17610,21 +16799,12 @@ func (a NetApi) PatchWccp(id string, object NetWccp) (*NetWccp, *APIResponse, er
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PatchWccpServices(id string, object NetWccpServices) (*NetWccpServices, *APIResponse, error) {
+func (a NetApi) PatchWccpServices(id string, object NetWccpServices) (*NetWccpServices, error) {
 
 	var httpMethod = "Patch"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/services/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetWccpServices), nil, errors.New("Missing required parameter 'id' when calling NetApi->PatchWccpServices")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetWccpServices), nil, errors.New("Missing required parameter 'object' when calling NetApi->PatchWccpServices")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17632,11 +16812,9 @@ func (a NetApi) PatchWccpServices(id string, object NetWccpServices) (*NetWccpSe
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17665,13 +16843,18 @@ func (a NetApi) PatchWccpServices(id string, object NetWccpServices) (*NetWccpSe
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetWccpServices)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccpServices)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostArp
@@ -17682,21 +16865,12 @@ func (a NetApi) PatchWccpServices(id string, object NetWccpServices) (*NetWccpSe
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostArp(id string, object NetArp) (*NetArp, *APIResponse, error) {
+func (a NetApi) PostArp(id string, object NetArp) (*NetArp, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/arp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetArp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostArp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetArp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostArp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17704,11 +16878,9 @@ func (a NetApi) PostArp(id string, object NetArp) (*NetArp, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17737,13 +16909,18 @@ func (a NetApi) PostArp(id string, object NetArp) (*NetArp, *APIResponse, error)
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetArp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetArp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostBwcPolicy
@@ -17754,21 +16931,12 @@ func (a NetApi) PostArp(id string, object NetArp) (*NetArp, *APIResponse, error)
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *APIResponse, error) {
+func (a NetApi) PostBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/policy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostBwcPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostBwcPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17776,11 +16944,9 @@ func (a NetApi) PostBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *A
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17809,13 +16975,18 @@ func (a NetApi) PostBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *A
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostBwcPriorityGroup
@@ -17826,21 +16997,12 @@ func (a NetApi) PostBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *A
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*NetBwcPriorityGroup, *APIResponse, error) {
+func (a NetApi) PostBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*NetBwcPriorityGroup, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPriorityGroup), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostBwcPriorityGroup")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcPriorityGroup), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostBwcPriorityGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17848,11 +17010,9 @@ func (a NetApi) PostBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*Ne
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17881,13 +17041,18 @@ func (a NetApi) PostBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*Ne
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcPriorityGroup)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroup)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostBwcPriorityGroupPriorityClasses
@@ -17898,21 +17063,12 @@ func (a NetApi) PostBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*Ne
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostBwcPriorityGroupPriorityClasses(id string, object NetBwcPriorityGroupPriorityClasses) (*NetBwcPriorityGroupPriorityClasses, *APIResponse, error) {
+func (a NetApi) PostBwcPriorityGroupPriorityClasses(id string, object NetBwcPriorityGroupPriorityClasses) (*NetBwcPriorityGroupPriorityClasses, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/priorityClasses/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPriorityGroupPriorityClasses), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostBwcPriorityGroupPriorityClasses")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcPriorityGroupPriorityClasses), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostBwcPriorityGroupPriorityClasses")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17920,11 +17076,9 @@ func (a NetApi) PostBwcPriorityGroupPriorityClasses(id string, object NetBwcPrio
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -17953,13 +17107,18 @@ func (a NetApi) PostBwcPriorityGroupPriorityClasses(id string, object NetBwcPrio
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcPriorityGroupPriorityClasses)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroupPriorityClasses)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostBwcProbe
@@ -17970,21 +17129,12 @@ func (a NetApi) PostBwcPriorityGroupPriorityClasses(id string, object NetBwcPrio
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *APIResponse, error) {
+func (a NetApi) PostBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/probe/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcProbe), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostBwcProbe")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcProbe), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostBwcProbe")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -17992,11 +17142,9 @@ func (a NetApi) PostBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *APIR
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18025,13 +17173,18 @@ func (a NetApi) PostBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *APIR
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcProbe)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcProbe)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostCosMap8021p
@@ -18042,21 +17195,12 @@ func (a NetApi) PostBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *APIR
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap8021p, *APIResponse, error) {
+func (a NetApi) PostCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap8021p, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/map_8021p/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosMap8021p), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostCosMap8021p")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosMap8021p), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostCosMap8021p")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18064,11 +17208,9 @@ func (a NetApi) PostCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap802
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18097,13 +17239,18 @@ func (a NetApi) PostCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap802
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosMap8021p)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMap8021p)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostCosMapDscp
@@ -18114,21 +17261,12 @@ func (a NetApi) PostCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap802
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp, *APIResponse, error) {
+func (a NetApi) PostCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/mapDscp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosMapDscp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostCosMapDscp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosMapDscp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostCosMapDscp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18136,11 +17274,9 @@ func (a NetApi) PostCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18169,13 +17305,18 @@ func (a NetApi) PostCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosMapDscp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMapDscp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostCosTrafficPriority
@@ -18186,21 +17327,12 @@ func (a NetApi) PostCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostCosTrafficPriority(id string, object NetCosTrafficPriority) (*NetCosTrafficPriority, *APIResponse, error) {
+func (a NetApi) PostCosTrafficPriority(id string, object NetCosTrafficPriority) (*NetCosTrafficPriority, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/trafficPriority/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosTrafficPriority), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostCosTrafficPriority")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosTrafficPriority), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostCosTrafficPriority")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18208,11 +17340,9 @@ func (a NetApi) PostCosTrafficPriority(id string, object NetCosTrafficPriority) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18241,13 +17371,18 @@ func (a NetApi) PostCosTrafficPriority(id string, object NetCosTrafficPriority) 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosTrafficPriority)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosTrafficPriority)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostDnsResolver
@@ -18258,21 +17393,12 @@ func (a NetApi) PostCosTrafficPriority(id string, object NetCosTrafficPriority) 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostDnsResolver(id string, object NetDnsResolver) (*NetDnsResolver, *APIResponse, error) {
+func (a NetApi) PostDnsResolver(id string, object NetDnsResolver) (*NetDnsResolver, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/dnsResolver/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetDnsResolver), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostDnsResolver")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetDnsResolver), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostDnsResolver")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18280,11 +17406,9 @@ func (a NetApi) PostDnsResolver(id string, object NetDnsResolver) (*NetDnsResolv
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18313,13 +17437,18 @@ func (a NetApi) PostDnsResolver(id string, object NetDnsResolver) (*NetDnsResolv
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetDnsResolver)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetDnsResolver)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostFdbTunnelRecords
@@ -18330,21 +17459,12 @@ func (a NetApi) PostDnsResolver(id string, object NetDnsResolver) (*NetDnsResolv
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*NetFdbTunnelRecords, *APIResponse, error) {
+func (a NetApi) PostFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*NetFdbTunnelRecords, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/tunnel/records/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbTunnelRecords), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostFdbTunnelRecords")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetFdbTunnelRecords), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostFdbTunnelRecords")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18352,11 +17472,9 @@ func (a NetApi) PostFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*Ne
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18385,13 +17503,18 @@ func (a NetApi) PostFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*Ne
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetFdbTunnelRecords)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbTunnelRecords)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostIkeEvtStat
@@ -18402,21 +17525,12 @@ func (a NetApi) PostFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*Ne
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostIkeEvtStat(id string, object NetIkeEvtStat) (*NetIkeEvtStat, *APIResponse, error) {
+func (a NetApi) PostIkeEvtStat(id string, object NetIkeEvtStat) (*NetIkeEvtStat, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ikeEvtStat/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIkeEvtStat), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostIkeEvtStat")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIkeEvtStat), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostIkeEvtStat")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18424,11 +17538,9 @@ func (a NetApi) PostIkeEvtStat(id string, object NetIkeEvtStat) (*NetIkeEvtStat,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18457,13 +17569,18 @@ func (a NetApi) PostIkeEvtStat(id string, object NetIkeEvtStat) (*NetIkeEvtStat,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIkeEvtStat)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIkeEvtStat)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostIkeMsgStat
@@ -18474,21 +17591,12 @@ func (a NetApi) PostIkeEvtStat(id string, object NetIkeEvtStat) (*NetIkeEvtStat,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostIkeMsgStat(id string, object NetIkeMsgStat) (*NetIkeMsgStat, *APIResponse, error) {
+func (a NetApi) PostIkeMsgStat(id string, object NetIkeMsgStat) (*NetIkeMsgStat, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ikeMsgStat/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIkeMsgStat), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostIkeMsgStat")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIkeMsgStat), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostIkeMsgStat")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18496,11 +17604,9 @@ func (a NetApi) PostIkeMsgStat(id string, object NetIkeMsgStat) (*NetIkeMsgStat,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18529,13 +17635,18 @@ func (a NetApi) PostIkeMsgStat(id string, object NetIkeMsgStat) (*NetIkeMsgStat,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIkeMsgStat)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIkeMsgStat)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostInterfaceCos
@@ -18546,21 +17657,12 @@ func (a NetApi) PostIkeMsgStat(id string, object NetIkeMsgStat) (*NetIkeMsgStat,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostInterfaceCos(id string, object NetInterfaceCos) (*NetInterfaceCos, *APIResponse, error) {
+func (a NetApi) PostInterfaceCos(id string, object NetInterfaceCos) (*NetInterfaceCos, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/interfaceCos/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetInterfaceCos), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostInterfaceCos")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetInterfaceCos), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostInterfaceCos")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18568,11 +17670,9 @@ func (a NetApi) PostInterfaceCos(id string, object NetInterfaceCos) (*NetInterfa
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18601,13 +17701,18 @@ func (a NetApi) PostInterfaceCos(id string, object NetInterfaceCos) (*NetInterfa
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetInterfaceCos)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetInterfaceCos)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostIpsecIkePeer
@@ -18618,21 +17723,12 @@ func (a NetApi) PostInterfaceCos(id string, object NetInterfaceCos) (*NetInterfa
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIkePeer, *APIResponse, error) {
+func (a NetApi) PostIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIkePeer, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikePeer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIkePeer), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostIpsecIkePeer")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecIkePeer), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostIpsecIkePeer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18640,11 +17736,9 @@ func (a NetApi) PostIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIk
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18673,13 +17767,18 @@ func (a NetApi) PostIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIk
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecIkePeer)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkePeer)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostIpsecIpsecPolicy
@@ -18690,21 +17789,12 @@ func (a NetApi) PostIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIk
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*NetIpsecIpsecPolicy, *APIResponse, error) {
+func (a NetApi) PostIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*NetIpsecIpsecPolicy, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ipsecPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIpsecPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostIpsecIpsecPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecIpsecPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostIpsecIpsecPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18712,11 +17802,9 @@ func (a NetApi) PostIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*Ne
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18745,13 +17833,18 @@ func (a NetApi) PostIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*Ne
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecIpsecPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIpsecPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostIpsecManualSecurityAssociation
@@ -18762,21 +17855,12 @@ func (a NetApi) PostIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*Ne
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostIpsecManualSecurityAssociation(id string, object NetIpsecManualSecurityAssociation) (*NetIpsecManualSecurityAssociation, *APIResponse, error) {
+func (a NetApi) PostIpsecManualSecurityAssociation(id string, object NetIpsecManualSecurityAssociation) (*NetIpsecManualSecurityAssociation, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/manualSecurityAssociation/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecManualSecurityAssociation), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostIpsecManualSecurityAssociation")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecManualSecurityAssociation), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostIpsecManualSecurityAssociation")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18784,11 +17868,9 @@ func (a NetApi) PostIpsecManualSecurityAssociation(id string, object NetIpsecMan
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18817,13 +17899,18 @@ func (a NetApi) PostIpsecManualSecurityAssociation(id string, object NetIpsecMan
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecManualSecurityAssociation)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecManualSecurityAssociation)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostIpsecStat
@@ -18834,21 +17921,12 @@ func (a NetApi) PostIpsecManualSecurityAssociation(id string, object NetIpsecMan
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostIpsecStat(id string, object NetIpsecStat) (*NetIpsecStat, *APIResponse, error) {
+func (a NetApi) PostIpsecStat(id string, object NetIpsecStat) (*NetIpsecStat, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsecStat/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecStat), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostIpsecStat")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecStat), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostIpsecStat")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18856,11 +17934,9 @@ func (a NetApi) PostIpsecStat(id string, object NetIpsecStat) (*NetIpsecStat, *A
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18889,13 +17965,18 @@ func (a NetApi) PostIpsecStat(id string, object NetIpsecStat) (*NetIpsecStat, *A
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecStat)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecStat)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostIpsecTrafficSelector
@@ -18906,21 +17987,12 @@ func (a NetApi) PostIpsecStat(id string, object NetIpsecStat) (*NetIpsecStat, *A
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostIpsecTrafficSelector(id string, object NetIpsecTrafficSelector) (*NetIpsecTrafficSelector, *APIResponse, error) {
+func (a NetApi) PostIpsecTrafficSelector(id string, object NetIpsecTrafficSelector) (*NetIpsecTrafficSelector, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/trafficSelector/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecTrafficSelector), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostIpsecTrafficSelector")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecTrafficSelector), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostIpsecTrafficSelector")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -18928,11 +18000,9 @@ func (a NetApi) PostIpsecTrafficSelector(id string, object NetIpsecTrafficSelect
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -18961,13 +18031,18 @@ func (a NetApi) PostIpsecTrafficSelector(id string, object NetIpsecTrafficSelect
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecTrafficSelector)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecTrafficSelector)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostNdp
@@ -18978,21 +18053,12 @@ func (a NetApi) PostIpsecTrafficSelector(id string, object NetIpsecTrafficSelect
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error) {
+func (a NetApi) PostNdp(id string, object NetNdp) (*NetNdp, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ndp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetNdp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostNdp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetNdp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostNdp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19000,11 +18066,9 @@ func (a NetApi) PostNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19033,13 +18097,18 @@ func (a NetApi) PostNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error)
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetNdp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetNdp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostPacketFilter
@@ -19050,21 +18119,12 @@ func (a NetApi) PostNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error)
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostPacketFilter(id string, object NetPacketFilter) (*NetPacketFilter, *APIResponse, error) {
+func (a NetApi) PostPacketFilter(id string, object NetPacketFilter) (*NetPacketFilter, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/packetFilter/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPacketFilter), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostPacketFilter")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetPacketFilter), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostPacketFilter")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19072,11 +18132,9 @@ func (a NetApi) PostPacketFilter(id string, object NetPacketFilter) (*NetPacketF
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19105,13 +18163,18 @@ func (a NetApi) PostPacketFilter(id string, object NetPacketFilter) (*NetPacketF
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetPacketFilter)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPacketFilter)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostPortMirror
@@ -19122,21 +18185,12 @@ func (a NetApi) PostPacketFilter(id string, object NetPacketFilter) (*NetPacketF
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostPortMirror(id string, object NetPortMirror) (*NetPortMirror, *APIResponse, error) {
+func (a NetApi) PostPortMirror(id string, object NetPortMirror) (*NetPortMirror, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/portMirror/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPortMirror), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostPortMirror")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetPortMirror), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostPortMirror")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19144,11 +18198,9 @@ func (a NetApi) PostPortMirror(id string, object NetPortMirror) (*NetPortMirror,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19177,13 +18229,18 @@ func (a NetApi) PostPortMirror(id string, object NetPortMirror) (*NetPortMirror,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetPortMirror)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPortMirror)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRateShapingColorPolicer
@@ -19194,21 +18251,12 @@ func (a NetApi) PostPortMirror(id string, object NetPortMirror) (*NetPortMirror,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRateShapingColorPolicer(id string, object NetRateShapingColorPolicer) (*NetRateShapingColorPolicer, *APIResponse, error) {
+func (a NetApi) PostRateShapingColorPolicer(id string, object NetRateShapingColorPolicer) (*NetRateShapingColorPolicer, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/colorPolicer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingColorPolicer), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRateShapingColorPolicer")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingColorPolicer), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRateShapingColorPolicer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19216,11 +18264,9 @@ func (a NetApi) PostRateShapingColorPolicer(id string, object NetRateShapingColo
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19249,13 +18295,18 @@ func (a NetApi) PostRateShapingColorPolicer(id string, object NetRateShapingColo
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingColorPolicer)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingColorPolicer)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRateShapingDropPolicy
@@ -19266,21 +18317,12 @@ func (a NetApi) PostRateShapingColorPolicer(id string, object NetRateShapingColo
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRateShapingDropPolicy(id string, object NetRateShapingDropPolicy) (*NetRateShapingDropPolicy, *APIResponse, error) {
+func (a NetApi) PostRateShapingDropPolicy(id string, object NetRateShapingDropPolicy) (*NetRateShapingDropPolicy, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/dropPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingDropPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRateShapingDropPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingDropPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRateShapingDropPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19288,11 +18330,9 @@ func (a NetApi) PostRateShapingDropPolicy(id string, object NetRateShapingDropPo
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19321,13 +18361,18 @@ func (a NetApi) PostRateShapingDropPolicy(id string, object NetRateShapingDropPo
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingDropPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingDropPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRateShapingQueue
@@ -19338,21 +18383,12 @@ func (a NetApi) PostRateShapingDropPolicy(id string, object NetRateShapingDropPo
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRateShapingQueue(id string, object NetRateShapingQueue) (*NetRateShapingQueue, *APIResponse, error) {
+func (a NetApi) PostRateShapingQueue(id string, object NetRateShapingQueue) (*NetRateShapingQueue, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/queue/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingQueue), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRateShapingQueue")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingQueue), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRateShapingQueue")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19360,11 +18396,9 @@ func (a NetApi) PostRateShapingQueue(id string, object NetRateShapingQueue) (*Ne
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19393,13 +18427,18 @@ func (a NetApi) PostRateShapingQueue(id string, object NetRateShapingQueue) (*Ne
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingQueue)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingQueue)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRateShapingShapingPolicy
@@ -19410,21 +18449,12 @@ func (a NetApi) PostRateShapingQueue(id string, object NetRateShapingQueue) (*Ne
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRateShapingShapingPolicy(id string, object NetRateShapingShapingPolicy) (*NetRateShapingShapingPolicy, *APIResponse, error) {
+func (a NetApi) PostRateShapingShapingPolicy(id string, object NetRateShapingShapingPolicy) (*NetRateShapingShapingPolicy, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/shapingPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingShapingPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRateShapingShapingPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingShapingPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRateShapingShapingPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19432,11 +18462,9 @@ func (a NetApi) PostRateShapingShapingPolicy(id string, object NetRateShapingSha
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19465,13 +18493,18 @@ func (a NetApi) PostRateShapingShapingPolicy(id string, object NetRateShapingSha
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingShapingPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingShapingPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRateShapingTmClass
@@ -19482,21 +18515,12 @@ func (a NetApi) PostRateShapingShapingPolicy(id string, object NetRateShapingSha
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRateShapingTmClass(id string, object NetRateShapingTmClass) (*NetRateShapingTmClass, *APIResponse, error) {
+func (a NetApi) PostRateShapingTmClass(id string, object NetRateShapingTmClass) (*NetRateShapingTmClass, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/tmClass/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingTmClass), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRateShapingTmClass")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingTmClass), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRateShapingTmClass")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19504,11 +18528,9 @@ func (a NetApi) PostRateShapingTmClass(id string, object NetRateShapingTmClass) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19537,13 +18559,18 @@ func (a NetApi) PostRateShapingTmClass(id string, object NetRateShapingTmClass) 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingTmClass)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingTmClass)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRoute
@@ -19554,21 +18581,12 @@ func (a NetApi) PostRateShapingTmClass(id string, object NetRateShapingTmClass) 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRoute(id string, object NetRoute) (*NetRoute, *APIResponse, error) {
+func (a NetApi) PostRoute(id string, object NetRoute) (*NetRoute, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/route/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRoute), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRoute")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRoute), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRoute")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19576,11 +18594,9 @@ func (a NetApi) PostRoute(id string, object NetRoute) (*NetRoute, *APIResponse, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19609,13 +18625,18 @@ func (a NetApi) PostRoute(id string, object NetRoute) (*NetRoute, *APIResponse, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRoute)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRoute)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRouteDomain
@@ -19626,21 +18647,12 @@ func (a NetApi) PostRoute(id string, object NetRoute) (*NetRoute, *APIResponse, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRouteDomain(id string, object NetRouteDomain) (*NetRouteDomain, *APIResponse, error) {
+func (a NetApi) PostRouteDomain(id string, object NetRouteDomain) (*NetRouteDomain, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouteDomain), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRouteDomain")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouteDomain), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRouteDomain")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19648,11 +18660,9 @@ func (a NetApi) PostRouteDomain(id string, object NetRouteDomain) (*NetRouteDoma
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19681,13 +18691,18 @@ func (a NetApi) PostRouteDomain(id string, object NetRouteDomain) (*NetRouteDoma
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouteDomain)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomain)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRouteDomainFwEnforcedPolicyRules
@@ -19698,21 +18713,12 @@ func (a NetApi) PostRouteDomain(id string, object NetRouteDomain) (*NetRouteDoma
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRouteDomainFwEnforcedPolicyRules(id string, object NetRouteDomainFwEnforcedPolicyRules) (*NetRouteDomainFwEnforcedPolicyRules, *APIResponse, error) {
+func (a NetApi) PostRouteDomainFwEnforcedPolicyRules(id string, object NetRouteDomainFwEnforcedPolicyRules) (*NetRouteDomainFwEnforcedPolicyRules, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/fwEnforcedPolicyRules/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouteDomainFwEnforcedPolicyRules), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRouteDomainFwEnforcedPolicyRules")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouteDomainFwEnforcedPolicyRules), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRouteDomainFwEnforcedPolicyRules")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19720,11 +18726,9 @@ func (a NetApi) PostRouteDomainFwEnforcedPolicyRules(id string, object NetRouteD
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19753,13 +18757,18 @@ func (a NetApi) PostRouteDomainFwEnforcedPolicyRules(id string, object NetRouteD
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouteDomainFwEnforcedPolicyRules)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomainFwEnforcedPolicyRules)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRouteDomainFwStagedPolicyRules
@@ -19770,21 +18779,12 @@ func (a NetApi) PostRouteDomainFwEnforcedPolicyRules(id string, object NetRouteD
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRouteDomainFwStagedPolicyRules(id string, object NetRouteDomainFwStagedPolicyRules) (*NetRouteDomainFwStagedPolicyRules, *APIResponse, error) {
+func (a NetApi) PostRouteDomainFwStagedPolicyRules(id string, object NetRouteDomainFwStagedPolicyRules) (*NetRouteDomainFwStagedPolicyRules, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/fwStagedPolicyRules/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouteDomainFwStagedPolicyRules), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRouteDomainFwStagedPolicyRules")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouteDomainFwStagedPolicyRules), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRouteDomainFwStagedPolicyRules")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19792,11 +18792,9 @@ func (a NetApi) PostRouteDomainFwStagedPolicyRules(id string, object NetRouteDom
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19825,13 +18823,18 @@ func (a NetApi) PostRouteDomainFwStagedPolicyRules(id string, object NetRouteDom
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouteDomainFwStagedPolicyRules)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomainFwStagedPolicyRules)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRouterAdvertisement
@@ -19842,21 +18845,12 @@ func (a NetApi) PostRouteDomainFwStagedPolicyRules(id string, object NetRouteDom
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRouterAdvertisement(id string, object NetRouterAdvertisement) (*NetRouterAdvertisement, *APIResponse, error) {
+func (a NetApi) PostRouterAdvertisement(id string, object NetRouterAdvertisement) (*NetRouterAdvertisement, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouterAdvertisement), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRouterAdvertisement")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouterAdvertisement), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRouterAdvertisement")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19864,11 +18858,9 @@ func (a NetApi) PostRouterAdvertisement(id string, object NetRouterAdvertisement
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19897,13 +18889,18 @@ func (a NetApi) PostRouterAdvertisement(id string, object NetRouterAdvertisement
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouterAdvertisement)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisement)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRouterAdvertisementPrefixes
@@ -19914,21 +18911,12 @@ func (a NetApi) PostRouterAdvertisement(id string, object NetRouterAdvertisement
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRouterAdvertisementPrefixes(id string, object NetRouterAdvertisementPrefixes) (*NetRouterAdvertisementPrefixes, *APIResponse, error) {
+func (a NetApi) PostRouterAdvertisementPrefixes(id string, object NetRouterAdvertisementPrefixes) (*NetRouterAdvertisementPrefixes, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/prefixes/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouterAdvertisementPrefixes), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRouterAdvertisementPrefixes")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouterAdvertisementPrefixes), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRouterAdvertisementPrefixes")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -19936,11 +18924,9 @@ func (a NetApi) PostRouterAdvertisementPrefixes(id string, object NetRouterAdver
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -19969,13 +18955,18 @@ func (a NetApi) PostRouterAdvertisementPrefixes(id string, object NetRouterAdver
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouterAdvertisementPrefixes)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisementPrefixes)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostRstCause
@@ -19986,21 +18977,12 @@ func (a NetApi) PostRouterAdvertisementPrefixes(id string, object NetRouterAdver
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostRstCause(id string, object NetRstCause) (*NetRstCause, *APIResponse, error) {
+func (a NetApi) PostRstCause(id string, object NetRstCause) (*NetRstCause, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rstCause/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRstCause), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostRstCause")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRstCause), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostRstCause")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20008,11 +18990,9 @@ func (a NetApi) PostRstCause(id string, object NetRstCause) (*NetRstCause, *APIR
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20041,13 +19021,18 @@ func (a NetApi) PostRstCause(id string, object NetRstCause) (*NetRstCause, *APIR
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRstCause)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRstCause)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostSelf
@@ -20058,21 +19043,12 @@ func (a NetApi) PostRstCause(id string, object NetRstCause) (*NetRstCause, *APIR
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostSelf(id string, object NetSelf) (*NetSelf, *APIResponse, error) {
+func (a NetApi) PostSelf(id string, object NetSelf) (*NetSelf, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelf), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostSelf")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetSelf), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostSelf")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20080,11 +19056,9 @@ func (a NetApi) PostSelf(id string, object NetSelf) (*NetSelf, *APIResponse, err
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20113,13 +19087,18 @@ func (a NetApi) PostSelf(id string, object NetSelf) (*NetSelf, *APIResponse, err
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetSelf)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelf)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostSelfFwEnforcedPolicyRules
@@ -20130,21 +19109,12 @@ func (a NetApi) PostSelf(id string, object NetSelf) (*NetSelf, *APIResponse, err
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostSelfFwEnforcedPolicyRules(id string, object NetSelfFwEnforcedPolicyRules) (*NetSelfFwEnforcedPolicyRules, *APIResponse, error) {
+func (a NetApi) PostSelfFwEnforcedPolicyRules(id string, object NetSelfFwEnforcedPolicyRules) (*NetSelfFwEnforcedPolicyRules, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/fwEnforcedPolicyRules/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelfFwEnforcedPolicyRules), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostSelfFwEnforcedPolicyRules")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetSelfFwEnforcedPolicyRules), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostSelfFwEnforcedPolicyRules")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20152,11 +19122,9 @@ func (a NetApi) PostSelfFwEnforcedPolicyRules(id string, object NetSelfFwEnforce
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20185,13 +19153,18 @@ func (a NetApi) PostSelfFwEnforcedPolicyRules(id string, object NetSelfFwEnforce
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetSelfFwEnforcedPolicyRules)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfFwEnforcedPolicyRules)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostSelfFwStagedPolicyRules
@@ -20202,21 +19175,12 @@ func (a NetApi) PostSelfFwEnforcedPolicyRules(id string, object NetSelfFwEnforce
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostSelfFwStagedPolicyRules(id string, object NetSelfFwStagedPolicyRules) (*NetSelfFwStagedPolicyRules, *APIResponse, error) {
+func (a NetApi) PostSelfFwStagedPolicyRules(id string, object NetSelfFwStagedPolicyRules) (*NetSelfFwStagedPolicyRules, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/fwStagedPolicyRules/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelfFwStagedPolicyRules), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostSelfFwStagedPolicyRules")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetSelfFwStagedPolicyRules), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostSelfFwStagedPolicyRules")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20224,11 +19188,9 @@ func (a NetApi) PostSelfFwStagedPolicyRules(id string, object NetSelfFwStagedPol
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20257,13 +19219,18 @@ func (a NetApi) PostSelfFwStagedPolicyRules(id string, object NetSelfFwStagedPol
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetSelfFwStagedPolicyRules)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfFwStagedPolicyRules)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostServicePolicy
@@ -20274,21 +19241,12 @@ func (a NetApi) PostSelfFwStagedPolicyRules(id string, object NetSelfFwStagedPol
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostServicePolicy(id string, object NetServicePolicy) (*NetServicePolicy, *APIResponse, error) {
+func (a NetApi) PostServicePolicy(id string, object NetServicePolicy) (*NetServicePolicy, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/servicePolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetServicePolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostServicePolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetServicePolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostServicePolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20296,11 +19254,9 @@ func (a NetApi) PostServicePolicy(id string, object NetServicePolicy) (*NetServi
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20329,13 +19285,18 @@ func (a NetApi) PostServicePolicy(id string, object NetServicePolicy) (*NetServi
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetServicePolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetServicePolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostStp
@@ -20346,21 +19307,12 @@ func (a NetApi) PostServicePolicy(id string, object NetServicePolicy) (*NetServi
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostStp(id string, object NetStp) (*NetStp, *APIResponse, error) {
+func (a NetApi) PostStp(id string, object NetStp) (*NetStp, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/stp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetStp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostStp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetStp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostStp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20368,11 +19320,9 @@ func (a NetApi) PostStp(id string, object NetStp) (*NetStp, *APIResponse, error)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20401,13 +19351,18 @@ func (a NetApi) PostStp(id string, object NetStp) (*NetStp, *APIResponse, error)
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetStp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetStp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTimerPolicy
@@ -20418,21 +19373,12 @@ func (a NetApi) PostStp(id string, object NetStp) (*NetStp, *APIResponse, error)
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPolicy, *APIResponse, error) {
+func (a NetApi) PostTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPolicy, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/timerPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTimerPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTimerPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTimerPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTimerPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20440,11 +19386,9 @@ func (a NetApi) PostTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPoli
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20473,13 +19417,18 @@ func (a NetApi) PostTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPoli
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTimerPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTimerPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTmInterface
@@ -20490,21 +19439,12 @@ func (a NetApi) PostTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPoli
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTmInterface(id string, object NetTmInterface) (*NetTmInterface, *APIResponse, error) {
+func (a NetApi) PostTmInterface(id string, object NetTmInterface) (*NetTmInterface, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tmInterface/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTmInterface), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTmInterface")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTmInterface), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTmInterface")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20512,11 +19452,9 @@ func (a NetApi) PostTmInterface(id string, object NetTmInterface) (*NetTmInterfa
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20545,13 +19483,18 @@ func (a NetApi) PostTmInterface(id string, object NetTmInterface) (*NetTmInterfa
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTmInterface)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTmInterface)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTrunk
@@ -20562,21 +19505,12 @@ func (a NetApi) PostTmInterface(id string, object NetTmInterface) (*NetTmInterfa
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse, error) {
+func (a NetApi) PostTrunk(id string, object NetTrunk) (*NetTrunk, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/trunk/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTrunk), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTrunk")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTrunk), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTrunk")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20584,11 +19518,9 @@ func (a NetApi) PostTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20617,13 +19549,18 @@ func (a NetApi) PostTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTrunk)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTrunk)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsEtherip
@@ -20634,21 +19571,12 @@ func (a NetApi) PostTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTunnelsEtherip, *APIResponse, error) {
+func (a NetApi) PostTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTunnelsEtherip, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/etherip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsEtherip), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsEtherip")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsEtherip), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsEtherip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20656,11 +19584,9 @@ func (a NetApi) PostTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTun
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20689,13 +19615,18 @@ func (a NetApi) PostTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTun
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsEtherip)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsEtherip)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsFec
@@ -20706,21 +19637,12 @@ func (a NetApi) PostTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTun
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec, *APIResponse, error) {
+func (a NetApi) PostTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/fec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsFec), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsFec")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsFec), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsFec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20728,11 +19650,9 @@ func (a NetApi) PostTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20761,13 +19681,18 @@ func (a NetApi) PostTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsFec)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsFec)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsGeneve
@@ -20778,21 +19703,12 @@ func (a NetApi) PostTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunnelsGeneve, *APIResponse, error) {
+func (a NetApi) PostTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunnelsGeneve, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/geneve/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsGeneve), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsGeneve")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsGeneve), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsGeneve")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20800,11 +19716,9 @@ func (a NetApi) PostTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunne
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20833,13 +19747,18 @@ func (a NetApi) PostTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunne
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsGeneve)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGeneve)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsGre
@@ -20850,21 +19769,12 @@ func (a NetApi) PostTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunne
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre, *APIResponse, error) {
+func (a NetApi) PostTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/gre/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsGre), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsGre")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsGre), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsGre")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20872,11 +19782,9 @@ func (a NetApi) PostTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20905,13 +19813,18 @@ func (a NetApi) PostTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsGre)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGre)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsIpip
@@ -20922,21 +19835,12 @@ func (a NetApi) PostTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIpip, *APIResponse, error) {
+func (a NetApi) PostTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIpip, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsIpip), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsIpip")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsIpip), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsIpip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -20944,11 +19848,9 @@ func (a NetApi) PostTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIp
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -20977,13 +19879,18 @@ func (a NetApi) PostTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIp
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsIpip)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpip)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsIpsec
@@ -20994,21 +19901,12 @@ func (a NetApi) PostTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIp
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnelsIpsec, *APIResponse, error) {
+func (a NetApi) PostTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnelsIpsec, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipsec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsIpsec), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsIpsec")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsIpsec), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsIpsec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21016,11 +19914,9 @@ func (a NetApi) PostTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnels
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21049,13 +19945,18 @@ func (a NetApi) PostTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnels
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsIpsec)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpsec)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsMap
@@ -21066,21 +19967,12 @@ func (a NetApi) PostTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnels
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap, *APIResponse, error) {
+func (a NetApi) PostTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/map/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsMap), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsMap")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsMap), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsMap")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21088,11 +19980,9 @@ func (a NetApi) PostTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21121,13 +20011,18 @@ func (a NetApi) PostTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsMap)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsMap)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsPpp
@@ -21138,21 +20033,12 @@ func (a NetApi) PostTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp, *APIResponse, error) {
+func (a NetApi) PostTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ppp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsPpp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsPpp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsPpp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsPpp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21160,11 +20046,9 @@ func (a NetApi) PostTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp,
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21193,13 +20077,18 @@ func (a NetApi) PostTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp,
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsPpp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsPpp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsTcpForward
@@ -21210,21 +20099,12 @@ func (a NetApi) PostTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp,
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*NetTunnelsTcpForward, *APIResponse, error) {
+func (a NetApi) PostTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*NetTunnelsTcpForward, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tcpForward/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsTcpForward), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsTcpForward")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsTcpForward), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsTcpForward")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21232,11 +20112,9 @@ func (a NetApi) PostTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21265,13 +20143,18 @@ func (a NetApi) PostTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsTcpForward)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTcpForward)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsTunnel
@@ -21282,21 +20165,12 @@ func (a NetApi) PostTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunnelsTunnel, *APIResponse, error) {
+func (a NetApi) PostTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunnelsTunnel, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tunnel/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsTunnel), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsTunnel")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsTunnel), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsTunnel")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21304,11 +20178,9 @@ func (a NetApi) PostTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunne
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21337,13 +20209,18 @@ func (a NetApi) PostTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunne
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsTunnel)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTunnel)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsV6rd
@@ -21354,21 +20231,12 @@ func (a NetApi) PostTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunne
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6rd, *APIResponse, error) {
+func (a NetApi) PostTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6rd, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/v6rd/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsV6rd), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsV6rd")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsV6rd), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsV6rd")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21376,11 +20244,9 @@ func (a NetApi) PostTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21409,13 +20275,18 @@ func (a NetApi) PostTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsV6rd)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsV6rd)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsVxlan
@@ -21426,21 +20297,12 @@ func (a NetApi) PostTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnelsVxlan, *APIResponse, error) {
+func (a NetApi) PostTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnelsVxlan, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/vxlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsVxlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsVxlan")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsVxlan), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsVxlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21448,11 +20310,9 @@ func (a NetApi) PostTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnels
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21481,13 +20341,18 @@ func (a NetApi) PostTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnels
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsVxlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsVxlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostTunnelsWccp
@@ -21498,21 +20363,12 @@ func (a NetApi) PostTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnels
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWccp, *APIResponse, error) {
+func (a NetApi) PostTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWccp, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsWccp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostTunnelsWccp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsWccp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostTunnelsWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21520,11 +20376,9 @@ func (a NetApi) PostTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWc
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21553,13 +20407,18 @@ func (a NetApi) PostTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWc
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsWccp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsWccp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostVlan
@@ -21570,21 +20429,12 @@ func (a NetApi) PostTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWc
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostVlan(id string, object NetVlan) (*NetVlan, *APIResponse, error) {
+func (a NetApi) PostVlan(id string, object NetVlan) (*NetVlan, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostVlan")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetVlan), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostVlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21592,11 +20442,9 @@ func (a NetApi) PostVlan(id string, object NetVlan) (*NetVlan, *APIResponse, err
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21625,13 +20473,18 @@ func (a NetApi) PostVlan(id string, object NetVlan) (*NetVlan, *APIResponse, err
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetVlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostVlanGroup
@@ -21642,21 +20495,12 @@ func (a NetApi) PostVlan(id string, object NetVlan) (*NetVlan, *APIResponse, err
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *APIResponse, error) {
+func (a NetApi) PostVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlanGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlanGroup), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostVlanGroup")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetVlanGroup), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostVlanGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21664,11 +20508,9 @@ func (a NetApi) PostVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *A
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21697,13 +20539,18 @@ func (a NetApi) PostVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *A
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetVlanGroup)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanGroup)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostVlanInterfaces
@@ -21714,21 +20561,12 @@ func (a NetApi) PostVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *A
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostVlanInterfaces(id string, object NetVlanInterfaces) (*NetVlanInterfaces, *APIResponse, error) {
+func (a NetApi) PostVlanInterfaces(id string, object NetVlanInterfaces) (*NetVlanInterfaces, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/interfaces/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlanInterfaces), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostVlanInterfaces")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetVlanInterfaces), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostVlanInterfaces")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21736,11 +20574,9 @@ func (a NetApi) PostVlanInterfaces(id string, object NetVlanInterfaces) (*NetVla
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21769,13 +20605,18 @@ func (a NetApi) PostVlanInterfaces(id string, object NetVlanInterfaces) (*NetVla
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetVlanInterfaces)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanInterfaces)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostWccp
@@ -21786,21 +20627,12 @@ func (a NetApi) PostVlanInterfaces(id string, object NetVlanInterfaces) (*NetVla
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostWccp(id string, object NetWccp) (*NetWccp, *APIResponse, error) {
+func (a NetApi) PostWccp(id string, object NetWccp) (*NetWccp, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetWccp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostWccp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetWccp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21808,11 +20640,9 @@ func (a NetApi) PostWccp(id string, object NetWccp) (*NetWccp, *APIResponse, err
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21841,13 +20671,18 @@ func (a NetApi) PostWccp(id string, object NetWccp) (*NetWccp, *APIResponse, err
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetWccp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PostWccpServices
@@ -21858,21 +20693,12 @@ func (a NetApi) PostWccp(id string, object NetWccp) (*NetWccp, *APIResponse, err
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PostWccpServices(id string, object NetWccpServices) (*NetWccpServices, *APIResponse, error) {
+func (a NetApi) PostWccpServices(id string, object NetWccpServices) (*NetWccpServices, error) {
 
 	var httpMethod = "Post"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/services/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetWccpServices), nil, errors.New("Missing required parameter 'id' when calling NetApi->PostWccpServices")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetWccpServices), nil, errors.New("Missing required parameter 'object' when calling NetApi->PostWccpServices")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21880,11 +20706,9 @@ func (a NetApi) PostWccpServices(id string, object NetWccpServices) (*NetWccpSer
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21913,13 +20737,18 @@ func (a NetApi) PostWccpServices(id string, object NetWccpServices) (*NetWccpSer
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetWccpServices)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccpServices)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutArp
@@ -21930,21 +20759,12 @@ func (a NetApi) PostWccpServices(id string, object NetWccpServices) (*NetWccpSer
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutArp(id string, object NetArp) (*NetArp, *APIResponse, error) {
+func (a NetApi) PutArp(id string, object NetArp) (*NetArp, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/arp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetArp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutArp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetArp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutArp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -21952,11 +20772,9 @@ func (a NetApi) PutArp(id string, object NetArp) (*NetArp, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -21985,13 +20803,18 @@ func (a NetApi) PutArp(id string, object NetArp) (*NetArp, *APIResponse, error) 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetArp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetArp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutBwcPolicy
@@ -22002,21 +20825,12 @@ func (a NetApi) PutArp(id string, object NetArp) (*NetArp, *APIResponse, error) 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *APIResponse, error) {
+func (a NetApi) PutBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/policy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutBwcPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutBwcPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22024,11 +20838,9 @@ func (a NetApi) PutBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *AP
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22057,13 +20869,18 @@ func (a NetApi) PutBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *AP
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutBwcPriorityGroup
@@ -22074,21 +20891,12 @@ func (a NetApi) PutBwcPolicy(id string, object NetBwcPolicy) (*NetBwcPolicy, *AP
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*NetBwcPriorityGroup, *APIResponse, error) {
+func (a NetApi) PutBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*NetBwcPriorityGroup, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPriorityGroup), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutBwcPriorityGroup")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcPriorityGroup), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutBwcPriorityGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22096,11 +20904,9 @@ func (a NetApi) PutBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*Net
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22129,13 +20935,18 @@ func (a NetApi) PutBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*Net
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcPriorityGroup)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroup)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutBwcPriorityGroupPriorityClasses
@@ -22146,21 +20957,12 @@ func (a NetApi) PutBwcPriorityGroup(id string, object NetBwcPriorityGroup) (*Net
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutBwcPriorityGroupPriorityClasses(id string, object NetBwcPriorityGroupPriorityClasses) (*NetBwcPriorityGroupPriorityClasses, *APIResponse, error) {
+func (a NetApi) PutBwcPriorityGroupPriorityClasses(id string, object NetBwcPriorityGroupPriorityClasses) (*NetBwcPriorityGroupPriorityClasses, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/priorityGroup/priorityClasses/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcPriorityGroupPriorityClasses), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutBwcPriorityGroupPriorityClasses")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcPriorityGroupPriorityClasses), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutBwcPriorityGroupPriorityClasses")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22168,11 +20970,9 @@ func (a NetApi) PutBwcPriorityGroupPriorityClasses(id string, object NetBwcPrior
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22201,13 +21001,18 @@ func (a NetApi) PutBwcPriorityGroupPriorityClasses(id string, object NetBwcPrior
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcPriorityGroupPriorityClasses)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcPriorityGroupPriorityClasses)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutBwcProbe
@@ -22218,21 +21023,12 @@ func (a NetApi) PutBwcPriorityGroupPriorityClasses(id string, object NetBwcPrior
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *APIResponse, error) {
+func (a NetApi) PutBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/bwc/probe/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetBwcProbe), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutBwcProbe")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetBwcProbe), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutBwcProbe")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22240,11 +21036,9 @@ func (a NetApi) PutBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *APIRe
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22273,13 +21067,18 @@ func (a NetApi) PutBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *APIRe
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetBwcProbe)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetBwcProbe)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutCosGlobalSettings
@@ -22290,21 +21089,12 @@ func (a NetApi) PutBwcProbe(id string, object NetBwcProbe) (*NetBwcProbe, *APIRe
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutCosGlobalSettings(id string, object NetCosGlobalSettings) (*NetCosGlobalSettings, *APIResponse, error) {
+func (a NetApi) PutCosGlobalSettings(id string, object NetCosGlobalSettings) (*NetCosGlobalSettings, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/globalSettings/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosGlobalSettings), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutCosGlobalSettings")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosGlobalSettings), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutCosGlobalSettings")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22312,11 +21102,9 @@ func (a NetApi) PutCosGlobalSettings(id string, object NetCosGlobalSettings) (*N
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22345,13 +21133,18 @@ func (a NetApi) PutCosGlobalSettings(id string, object NetCosGlobalSettings) (*N
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosGlobalSettings)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosGlobalSettings)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutCosMap8021p
@@ -22362,21 +21155,12 @@ func (a NetApi) PutCosGlobalSettings(id string, object NetCosGlobalSettings) (*N
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap8021p, *APIResponse, error) {
+func (a NetApi) PutCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap8021p, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/map_8021p/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosMap8021p), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutCosMap8021p")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosMap8021p), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutCosMap8021p")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22384,11 +21168,9 @@ func (a NetApi) PutCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap8021
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22417,13 +21199,18 @@ func (a NetApi) PutCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap8021
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosMap8021p)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMap8021p)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutCosMapDscp
@@ -22434,21 +21221,12 @@ func (a NetApi) PutCosMap8021p(id string, object NetCosMap8021p) (*NetCosMap8021
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp, *APIResponse, error) {
+func (a NetApi) PutCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/mapDscp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosMapDscp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutCosMapDscp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosMapDscp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutCosMapDscp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22456,11 +21234,9 @@ func (a NetApi) PutCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22489,13 +21265,18 @@ func (a NetApi) PutCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosMapDscp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosMapDscp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutCosTrafficPriority
@@ -22506,21 +21287,12 @@ func (a NetApi) PutCosMapDscp(id string, object NetCosMapDscp) (*NetCosMapDscp, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutCosTrafficPriority(id string, object NetCosTrafficPriority) (*NetCosTrafficPriority, *APIResponse, error) {
+func (a NetApi) PutCosTrafficPriority(id string, object NetCosTrafficPriority) (*NetCosTrafficPriority, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/cos/trafficPriority/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetCosTrafficPriority), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutCosTrafficPriority")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetCosTrafficPriority), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutCosTrafficPriority")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22528,11 +21300,9 @@ func (a NetApi) PutCosTrafficPriority(id string, object NetCosTrafficPriority) (
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22561,13 +21331,18 @@ func (a NetApi) PutCosTrafficPriority(id string, object NetCosTrafficPriority) (
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetCosTrafficPriority)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetCosTrafficPriority)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutDagGlobals
@@ -22578,21 +21353,12 @@ func (a NetApi) PutCosTrafficPriority(id string, object NetCosTrafficPriority) (
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals, *APIResponse, error) {
+func (a NetApi) PutDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/dagGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetDagGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutDagGlobals")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetDagGlobals), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutDagGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22600,11 +21366,9 @@ func (a NetApi) PutDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22633,13 +21397,18 @@ func (a NetApi) PutDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetDagGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetDagGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutDnsResolver
@@ -22650,21 +21419,12 @@ func (a NetApi) PutDagGlobals(id string, object NetDagGlobals) (*NetDagGlobals, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutDnsResolver(id string, object NetDnsResolver) (*NetDnsResolver, *APIResponse, error) {
+func (a NetApi) PutDnsResolver(id string, object NetDnsResolver) (*NetDnsResolver, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/dnsResolver/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetDnsResolver), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutDnsResolver")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetDnsResolver), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutDnsResolver")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22672,11 +21432,9 @@ func (a NetApi) PutDnsResolver(id string, object NetDnsResolver) (*NetDnsResolve
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22705,13 +21463,18 @@ func (a NetApi) PutDnsResolver(id string, object NetDnsResolver) (*NetDnsResolve
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetDnsResolver)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetDnsResolver)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutFdbTunnel
@@ -22722,21 +21485,12 @@ func (a NetApi) PutDnsResolver(id string, object NetDnsResolver) (*NetDnsResolve
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, *APIResponse, error) {
+func (a NetApi) PutFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/tunnel/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbTunnel), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutFdbTunnel")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetFdbTunnel), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutFdbTunnel")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22744,11 +21498,9 @@ func (a NetApi) PutFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, *AP
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22777,13 +21529,18 @@ func (a NetApi) PutFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, *AP
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetFdbTunnel)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbTunnel)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutFdbTunnelRecords
@@ -22794,21 +21551,12 @@ func (a NetApi) PutFdbTunnel(id string, object NetFdbTunnel) (*NetFdbTunnel, *AP
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*NetFdbTunnelRecords, *APIResponse, error) {
+func (a NetApi) PutFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*NetFdbTunnelRecords, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/tunnel/records/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbTunnelRecords), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutFdbTunnelRecords")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetFdbTunnelRecords), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutFdbTunnelRecords")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22816,11 +21564,9 @@ func (a NetApi) PutFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*Net
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22849,13 +21595,18 @@ func (a NetApi) PutFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*Net
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetFdbTunnelRecords)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbTunnelRecords)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutFdbVlan
@@ -22866,21 +21617,12 @@ func (a NetApi) PutFdbTunnelRecords(id string, object NetFdbTunnelRecords) (*Net
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, *APIResponse, error) {
+func (a NetApi) PutFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/fdb/vlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetFdbVlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutFdbVlan")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetFdbVlan), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutFdbVlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22888,11 +21630,9 @@ func (a NetApi) PutFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, *APIRespo
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22921,13 +21661,18 @@ func (a NetApi) PutFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, *APIRespo
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetFdbVlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetFdbVlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutIpsecIkeDaemon
@@ -22938,21 +21683,12 @@ func (a NetApi) PutFdbVlan(id string, object NetFdbVlan) (*NetFdbVlan, *APIRespo
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIpsecIkeDaemon, *APIResponse, error) {
+func (a NetApi) PutIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIpsecIkeDaemon, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikeDaemon/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIkeDaemon), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutIpsecIkeDaemon")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecIkeDaemon), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutIpsecIkeDaemon")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -22960,11 +21696,9 @@ func (a NetApi) PutIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIpse
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -22993,13 +21727,18 @@ func (a NetApi) PutIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIpse
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecIkeDaemon)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkeDaemon)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutIpsecIkePeer
@@ -23010,21 +21749,12 @@ func (a NetApi) PutIpsecIkeDaemon(id string, object NetIpsecIkeDaemon) (*NetIpse
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIkePeer, *APIResponse, error) {
+func (a NetApi) PutIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIkePeer, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ikePeer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIkePeer), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutIpsecIkePeer")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecIkePeer), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutIpsecIkePeer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23032,11 +21762,9 @@ func (a NetApi) PutIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIke
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23065,13 +21793,18 @@ func (a NetApi) PutIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIke
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecIkePeer)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIkePeer)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutIpsecIpsecPolicy
@@ -23082,21 +21815,12 @@ func (a NetApi) PutIpsecIkePeer(id string, object NetIpsecIkePeer) (*NetIpsecIke
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*NetIpsecIpsecPolicy, *APIResponse, error) {
+func (a NetApi) PutIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*NetIpsecIpsecPolicy, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/ipsecPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecIpsecPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutIpsecIpsecPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecIpsecPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutIpsecIpsecPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23104,11 +21828,9 @@ func (a NetApi) PutIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*Net
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23137,13 +21859,18 @@ func (a NetApi) PutIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*Net
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecIpsecPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecIpsecPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutIpsecManualSecurityAssociation
@@ -23154,21 +21881,12 @@ func (a NetApi) PutIpsecIpsecPolicy(id string, object NetIpsecIpsecPolicy) (*Net
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutIpsecManualSecurityAssociation(id string, object NetIpsecManualSecurityAssociation) (*NetIpsecManualSecurityAssociation, *APIResponse, error) {
+func (a NetApi) PutIpsecManualSecurityAssociation(id string, object NetIpsecManualSecurityAssociation) (*NetIpsecManualSecurityAssociation, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/manualSecurityAssociation/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecManualSecurityAssociation), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutIpsecManualSecurityAssociation")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecManualSecurityAssociation), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutIpsecManualSecurityAssociation")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23176,11 +21894,9 @@ func (a NetApi) PutIpsecManualSecurityAssociation(id string, object NetIpsecManu
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23209,13 +21925,18 @@ func (a NetApi) PutIpsecManualSecurityAssociation(id string, object NetIpsecManu
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecManualSecurityAssociation)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecManualSecurityAssociation)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutIpsecTrafficSelector
@@ -23226,21 +21947,12 @@ func (a NetApi) PutIpsecManualSecurityAssociation(id string, object NetIpsecManu
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutIpsecTrafficSelector(id string, object NetIpsecTrafficSelector) (*NetIpsecTrafficSelector, *APIResponse, error) {
+func (a NetApi) PutIpsecTrafficSelector(id string, object NetIpsecTrafficSelector) (*NetIpsecTrafficSelector, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ipsec/trafficSelector/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetIpsecTrafficSelector), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutIpsecTrafficSelector")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetIpsecTrafficSelector), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutIpsecTrafficSelector")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23248,11 +21960,9 @@ func (a NetApi) PutIpsecTrafficSelector(id string, object NetIpsecTrafficSelecto
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23281,13 +21991,18 @@ func (a NetApi) PutIpsecTrafficSelector(id string, object NetIpsecTrafficSelecto
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetIpsecTrafficSelector)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetIpsecTrafficSelector)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutLldpGlobals
@@ -23298,21 +22013,12 @@ func (a NetApi) PutIpsecTrafficSelector(id string, object NetIpsecTrafficSelecto
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlobals, *APIResponse, error) {
+func (a NetApi) PutLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlobals, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/lldpGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetLldpGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutLldpGlobals")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetLldpGlobals), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutLldpGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23320,11 +22026,9 @@ func (a NetApi) PutLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlobal
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23353,13 +22057,18 @@ func (a NetApi) PutLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlobal
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetLldpGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetLldpGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutMulticastGlobals
@@ -23370,21 +22079,12 @@ func (a NetApi) PutLldpGlobals(id string, object NetLldpGlobals) (*NetLldpGlobal
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutMulticastGlobals(id string, object NetMulticastGlobals) (*NetMulticastGlobals, *APIResponse, error) {
+func (a NetApi) PutMulticastGlobals(id string, object NetMulticastGlobals) (*NetMulticastGlobals, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/multicastGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetMulticastGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutMulticastGlobals")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetMulticastGlobals), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutMulticastGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23392,11 +22092,9 @@ func (a NetApi) PutMulticastGlobals(id string, object NetMulticastGlobals) (*Net
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23425,13 +22123,18 @@ func (a NetApi) PutMulticastGlobals(id string, object NetMulticastGlobals) (*Net
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetMulticastGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetMulticastGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutNdp
@@ -23442,21 +22145,12 @@ func (a NetApi) PutMulticastGlobals(id string, object NetMulticastGlobals) (*Net
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error) {
+func (a NetApi) PutNdp(id string, object NetNdp) (*NetNdp, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/ndp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetNdp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutNdp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetNdp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutNdp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23464,11 +22158,9 @@ func (a NetApi) PutNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23497,13 +22189,18 @@ func (a NetApi) PutNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error) 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetNdp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetNdp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutPacketFilter
@@ -23514,21 +22211,12 @@ func (a NetApi) PutNdp(id string, object NetNdp) (*NetNdp, *APIResponse, error) 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutPacketFilter(id string, object NetPacketFilter) (*NetPacketFilter, *APIResponse, error) {
+func (a NetApi) PutPacketFilter(id string, object NetPacketFilter) (*NetPacketFilter, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/packetFilter/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPacketFilter), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutPacketFilter")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetPacketFilter), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutPacketFilter")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23536,11 +22224,9 @@ func (a NetApi) PutPacketFilter(id string, object NetPacketFilter) (*NetPacketFi
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23569,13 +22255,18 @@ func (a NetApi) PutPacketFilter(id string, object NetPacketFilter) (*NetPacketFi
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetPacketFilter)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPacketFilter)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutPacketFilterTrusted
@@ -23586,21 +22277,12 @@ func (a NetApi) PutPacketFilter(id string, object NetPacketFilter) (*NetPacketFi
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutPacketFilterTrusted(id string, object NetPacketFilterTrusted) (*NetPacketFilterTrusted, *APIResponse, error) {
+func (a NetApi) PutPacketFilterTrusted(id string, object NetPacketFilterTrusted) (*NetPacketFilterTrusted, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/packetFilterTrusted/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPacketFilterTrusted), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutPacketFilterTrusted")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetPacketFilterTrusted), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutPacketFilterTrusted")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23608,11 +22290,9 @@ func (a NetApi) PutPacketFilterTrusted(id string, object NetPacketFilterTrusted)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23641,13 +22321,18 @@ func (a NetApi) PutPacketFilterTrusted(id string, object NetPacketFilterTrusted)
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetPacketFilterTrusted)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPacketFilterTrusted)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutPortMirror
@@ -23658,21 +22343,12 @@ func (a NetApi) PutPacketFilterTrusted(id string, object NetPacketFilterTrusted)
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutPortMirror(id string, object NetPortMirror) (*NetPortMirror, *APIResponse, error) {
+func (a NetApi) PutPortMirror(id string, object NetPortMirror) (*NetPortMirror, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/portMirror/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetPortMirror), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutPortMirror")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetPortMirror), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutPortMirror")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23680,11 +22356,9 @@ func (a NetApi) PutPortMirror(id string, object NetPortMirror) (*NetPortMirror, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23713,13 +22387,18 @@ func (a NetApi) PutPortMirror(id string, object NetPortMirror) (*NetPortMirror, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetPortMirror)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetPortMirror)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutRateShapingColorPolicer
@@ -23730,21 +22409,12 @@ func (a NetApi) PutPortMirror(id string, object NetPortMirror) (*NetPortMirror, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutRateShapingColorPolicer(id string, object NetRateShapingColorPolicer) (*NetRateShapingColorPolicer, *APIResponse, error) {
+func (a NetApi) PutRateShapingColorPolicer(id string, object NetRateShapingColorPolicer) (*NetRateShapingColorPolicer, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/colorPolicer/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingColorPolicer), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutRateShapingColorPolicer")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingColorPolicer), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutRateShapingColorPolicer")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23752,11 +22422,9 @@ func (a NetApi) PutRateShapingColorPolicer(id string, object NetRateShapingColor
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23785,13 +22453,18 @@ func (a NetApi) PutRateShapingColorPolicer(id string, object NetRateShapingColor
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingColorPolicer)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingColorPolicer)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutRateShapingDropPolicy
@@ -23802,21 +22475,12 @@ func (a NetApi) PutRateShapingColorPolicer(id string, object NetRateShapingColor
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutRateShapingDropPolicy(id string, object NetRateShapingDropPolicy) (*NetRateShapingDropPolicy, *APIResponse, error) {
+func (a NetApi) PutRateShapingDropPolicy(id string, object NetRateShapingDropPolicy) (*NetRateShapingDropPolicy, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/dropPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingDropPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutRateShapingDropPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingDropPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutRateShapingDropPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23824,11 +22488,9 @@ func (a NetApi) PutRateShapingDropPolicy(id string, object NetRateShapingDropPol
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23857,13 +22519,18 @@ func (a NetApi) PutRateShapingDropPolicy(id string, object NetRateShapingDropPol
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingDropPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingDropPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutRateShapingQueue
@@ -23874,21 +22541,12 @@ func (a NetApi) PutRateShapingDropPolicy(id string, object NetRateShapingDropPol
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutRateShapingQueue(id string, object NetRateShapingQueue) (*NetRateShapingQueue, *APIResponse, error) {
+func (a NetApi) PutRateShapingQueue(id string, object NetRateShapingQueue) (*NetRateShapingQueue, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/queue/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingQueue), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutRateShapingQueue")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingQueue), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutRateShapingQueue")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23896,11 +22554,9 @@ func (a NetApi) PutRateShapingQueue(id string, object NetRateShapingQueue) (*Net
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -23929,13 +22585,18 @@ func (a NetApi) PutRateShapingQueue(id string, object NetRateShapingQueue) (*Net
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingQueue)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingQueue)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutRateShapingShapingPolicy
@@ -23946,21 +22607,12 @@ func (a NetApi) PutRateShapingQueue(id string, object NetRateShapingQueue) (*Net
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutRateShapingShapingPolicy(id string, object NetRateShapingShapingPolicy) (*NetRateShapingShapingPolicy, *APIResponse, error) {
+func (a NetApi) PutRateShapingShapingPolicy(id string, object NetRateShapingShapingPolicy) (*NetRateShapingShapingPolicy, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/shapingPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingShapingPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutRateShapingShapingPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingShapingPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutRateShapingShapingPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -23968,11 +22620,9 @@ func (a NetApi) PutRateShapingShapingPolicy(id string, object NetRateShapingShap
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24001,13 +22651,18 @@ func (a NetApi) PutRateShapingShapingPolicy(id string, object NetRateShapingShap
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingShapingPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingShapingPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutRateShapingTmClass
@@ -24018,21 +22673,12 @@ func (a NetApi) PutRateShapingShapingPolicy(id string, object NetRateShapingShap
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutRateShapingTmClass(id string, object NetRateShapingTmClass) (*NetRateShapingTmClass, *APIResponse, error) {
+func (a NetApi) PutRateShapingTmClass(id string, object NetRateShapingTmClass) (*NetRateShapingTmClass, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/rateShaping/tmClass/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRateShapingTmClass), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutRateShapingTmClass")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRateShapingTmClass), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutRateShapingTmClass")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24040,11 +22686,9 @@ func (a NetApi) PutRateShapingTmClass(id string, object NetRateShapingTmClass) (
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24073,13 +22717,18 @@ func (a NetApi) PutRateShapingTmClass(id string, object NetRateShapingTmClass) (
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRateShapingTmClass)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRateShapingTmClass)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutRoute
@@ -24090,21 +22739,12 @@ func (a NetApi) PutRateShapingTmClass(id string, object NetRateShapingTmClass) (
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutRoute(id string, object NetRoute) (*NetRoute, *APIResponse, error) {
+func (a NetApi) PutRoute(id string, object NetRoute) (*NetRoute, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/route/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRoute), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutRoute")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRoute), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutRoute")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24112,11 +22752,9 @@ func (a NetApi) PutRoute(id string, object NetRoute) (*NetRoute, *APIResponse, e
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24145,13 +22783,18 @@ func (a NetApi) PutRoute(id string, object NetRoute) (*NetRoute, *APIResponse, e
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRoute)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRoute)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutRouteDomain
@@ -24162,21 +22805,12 @@ func (a NetApi) PutRoute(id string, object NetRoute) (*NetRoute, *APIResponse, e
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutRouteDomain(id string, object NetRouteDomain) (*NetRouteDomain, *APIResponse, error) {
+func (a NetApi) PutRouteDomain(id string, object NetRouteDomain) (*NetRouteDomain, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routeDomain/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouteDomain), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutRouteDomain")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouteDomain), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutRouteDomain")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24184,11 +22818,9 @@ func (a NetApi) PutRouteDomain(id string, object NetRouteDomain) (*NetRouteDomai
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24217,13 +22849,18 @@ func (a NetApi) PutRouteDomain(id string, object NetRouteDomain) (*NetRouteDomai
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouteDomain)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouteDomain)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutRouterAdvertisement
@@ -24234,21 +22871,12 @@ func (a NetApi) PutRouteDomain(id string, object NetRouteDomain) (*NetRouteDomai
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutRouterAdvertisement(id string, object NetRouterAdvertisement) (*NetRouterAdvertisement, *APIResponse, error) {
+func (a NetApi) PutRouterAdvertisement(id string, object NetRouterAdvertisement) (*NetRouterAdvertisement, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouterAdvertisement), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutRouterAdvertisement")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouterAdvertisement), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutRouterAdvertisement")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24256,11 +22884,9 @@ func (a NetApi) PutRouterAdvertisement(id string, object NetRouterAdvertisement)
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24289,13 +22915,18 @@ func (a NetApi) PutRouterAdvertisement(id string, object NetRouterAdvertisement)
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouterAdvertisement)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisement)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutRouterAdvertisementPrefixes
@@ -24306,21 +22937,12 @@ func (a NetApi) PutRouterAdvertisement(id string, object NetRouterAdvertisement)
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutRouterAdvertisementPrefixes(id string, object NetRouterAdvertisementPrefixes) (*NetRouterAdvertisementPrefixes, *APIResponse, error) {
+func (a NetApi) PutRouterAdvertisementPrefixes(id string, object NetRouterAdvertisementPrefixes) (*NetRouterAdvertisementPrefixes, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/routerAdvertisement/prefixes/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetRouterAdvertisementPrefixes), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutRouterAdvertisementPrefixes")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetRouterAdvertisementPrefixes), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutRouterAdvertisementPrefixes")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24328,11 +22950,9 @@ func (a NetApi) PutRouterAdvertisementPrefixes(id string, object NetRouterAdvert
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24361,13 +22981,18 @@ func (a NetApi) PutRouterAdvertisementPrefixes(id string, object NetRouterAdvert
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetRouterAdvertisementPrefixes)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetRouterAdvertisementPrefixes)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutSelf
@@ -24378,21 +23003,12 @@ func (a NetApi) PutRouterAdvertisementPrefixes(id string, object NetRouterAdvert
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutSelf(id string, object NetSelf) (*NetSelf, *APIResponse, error) {
+func (a NetApi) PutSelf(id string, object NetSelf) (*NetSelf, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/self/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelf), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutSelf")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetSelf), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutSelf")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24400,11 +23016,9 @@ func (a NetApi) PutSelf(id string, object NetSelf) (*NetSelf, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24433,13 +23047,18 @@ func (a NetApi) PutSelf(id string, object NetSelf) (*NetSelf, *APIResponse, erro
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetSelf)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelf)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutSelfAllow
@@ -24450,21 +23069,12 @@ func (a NetApi) PutSelf(id string, object NetSelf) (*NetSelf, *APIResponse, erro
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, *APIResponse, error) {
+func (a NetApi) PutSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/selfAllow/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetSelfAllow), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutSelfAllow")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetSelfAllow), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutSelfAllow")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24472,11 +23082,9 @@ func (a NetApi) PutSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, *AP
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24505,13 +23113,18 @@ func (a NetApi) PutSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, *AP
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetSelfAllow)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetSelfAllow)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutServicePolicy
@@ -24522,21 +23135,12 @@ func (a NetApi) PutSelfAllow(id string, object NetSelfAllow) (*NetSelfAllow, *AP
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutServicePolicy(id string, object NetServicePolicy) (*NetServicePolicy, *APIResponse, error) {
+func (a NetApi) PutServicePolicy(id string, object NetServicePolicy) (*NetServicePolicy, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/servicePolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetServicePolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutServicePolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetServicePolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutServicePolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24544,11 +23148,9 @@ func (a NetApi) PutServicePolicy(id string, object NetServicePolicy) (*NetServic
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24577,13 +23179,18 @@ func (a NetApi) PutServicePolicy(id string, object NetServicePolicy) (*NetServic
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetServicePolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetServicePolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutStp
@@ -24594,21 +23201,12 @@ func (a NetApi) PutServicePolicy(id string, object NetServicePolicy) (*NetServic
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutStp(id string, object NetStp) (*NetStp, *APIResponse, error) {
+func (a NetApi) PutStp(id string, object NetStp) (*NetStp, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/stp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetStp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutStp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetStp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutStp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24616,11 +23214,9 @@ func (a NetApi) PutStp(id string, object NetStp) (*NetStp, *APIResponse, error) 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24649,13 +23245,18 @@ func (a NetApi) PutStp(id string, object NetStp) (*NetStp, *APIResponse, error) 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetStp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetStp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutStpGlobals
@@ -24666,21 +23267,12 @@ func (a NetApi) PutStp(id string, object NetStp) (*NetStp, *APIResponse, error) 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals, *APIResponse, error) {
+func (a NetApi) PutStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/stpGlobals/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetStpGlobals), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutStpGlobals")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetStpGlobals), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutStpGlobals")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24688,11 +23280,9 @@ func (a NetApi) PutStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24721,13 +23311,18 @@ func (a NetApi) PutStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetStpGlobals)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetStpGlobals)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTimerPolicy
@@ -24738,21 +23333,12 @@ func (a NetApi) PutStpGlobals(id string, object NetStpGlobals) (*NetStpGlobals, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPolicy, *APIResponse, error) {
+func (a NetApi) PutTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPolicy, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/timerPolicy/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTimerPolicy), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTimerPolicy")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTimerPolicy), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTimerPolicy")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24760,11 +23346,9 @@ func (a NetApi) PutTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPolic
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24793,13 +23377,18 @@ func (a NetApi) PutTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPolic
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTimerPolicy)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTimerPolicy)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTmInterface
@@ -24810,21 +23399,12 @@ func (a NetApi) PutTimerPolicy(id string, object NetTimerPolicy) (*NetTimerPolic
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTmInterface(id string, object NetTmInterface) (*NetTmInterface, *APIResponse, error) {
+func (a NetApi) PutTmInterface(id string, object NetTmInterface) (*NetTmInterface, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tmInterface/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTmInterface), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTmInterface")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTmInterface), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTmInterface")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24832,11 +23412,9 @@ func (a NetApi) PutTmInterface(id string, object NetTmInterface) (*NetTmInterfac
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24865,13 +23443,18 @@ func (a NetApi) PutTmInterface(id string, object NetTmInterface) (*NetTmInterfac
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTmInterface)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTmInterface)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTrunk
@@ -24882,21 +23465,12 @@ func (a NetApi) PutTmInterface(id string, object NetTmInterface) (*NetTmInterfac
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse, error) {
+func (a NetApi) PutTrunk(id string, object NetTrunk) (*NetTrunk, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/trunk/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTrunk), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTrunk")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTrunk), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTrunk")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24904,11 +23478,9 @@ func (a NetApi) PutTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse, e
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -24937,13 +23509,18 @@ func (a NetApi) PutTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse, e
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTrunk)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTrunk)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsEtherip
@@ -24954,21 +23531,12 @@ func (a NetApi) PutTrunk(id string, object NetTrunk) (*NetTrunk, *APIResponse, e
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTunnelsEtherip, *APIResponse, error) {
+func (a NetApi) PutTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTunnelsEtherip, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/etherip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsEtherip), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsEtherip")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsEtherip), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsEtherip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -24976,11 +23544,9 @@ func (a NetApi) PutTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTunn
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25009,13 +23575,18 @@ func (a NetApi) PutTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTunn
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsEtherip)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsEtherip)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsFec
@@ -25026,21 +23597,12 @@ func (a NetApi) PutTunnelsEtherip(id string, object NetTunnelsEtherip) (*NetTunn
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec, *APIResponse, error) {
+func (a NetApi) PutTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/fec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsFec), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsFec")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsFec), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsFec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25048,11 +23610,9 @@ func (a NetApi) PutTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25081,13 +23641,18 @@ func (a NetApi) PutTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsFec)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsFec)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsGeneve
@@ -25098,21 +23663,12 @@ func (a NetApi) PutTunnelsFec(id string, object NetTunnelsFec) (*NetTunnelsFec, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunnelsGeneve, *APIResponse, error) {
+func (a NetApi) PutTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunnelsGeneve, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/geneve/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsGeneve), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsGeneve")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsGeneve), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsGeneve")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25120,11 +23676,9 @@ func (a NetApi) PutTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunnel
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25153,13 +23707,18 @@ func (a NetApi) PutTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunnel
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsGeneve)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGeneve)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsGre
@@ -25170,21 +23729,12 @@ func (a NetApi) PutTunnelsGeneve(id string, object NetTunnelsGeneve) (*NetTunnel
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre, *APIResponse, error) {
+func (a NetApi) PutTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/gre/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsGre), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsGre")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsGre), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsGre")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25192,11 +23742,9 @@ func (a NetApi) PutTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25225,13 +23773,18 @@ func (a NetApi) PutTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsGre)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsGre)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsIpip
@@ -25242,21 +23795,12 @@ func (a NetApi) PutTunnelsGre(id string, object NetTunnelsGre) (*NetTunnelsGre, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIpip, *APIResponse, error) {
+func (a NetApi) PutTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIpip, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipip/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsIpip), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsIpip")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsIpip), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsIpip")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25264,11 +23808,9 @@ func (a NetApi) PutTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIpi
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25297,13 +23839,18 @@ func (a NetApi) PutTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIpi
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsIpip)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpip)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsIpsec
@@ -25314,21 +23861,12 @@ func (a NetApi) PutTunnelsIpip(id string, object NetTunnelsIpip) (*NetTunnelsIpi
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnelsIpsec, *APIResponse, error) {
+func (a NetApi) PutTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnelsIpsec, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ipsec/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsIpsec), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsIpsec")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsIpsec), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsIpsec")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25336,11 +23874,9 @@ func (a NetApi) PutTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnelsI
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25369,13 +23905,18 @@ func (a NetApi) PutTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnelsI
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsIpsec)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsIpsec)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsMap
@@ -25386,21 +23927,12 @@ func (a NetApi) PutTunnelsIpsec(id string, object NetTunnelsIpsec) (*NetTunnelsI
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap, *APIResponse, error) {
+func (a NetApi) PutTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/map/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsMap), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsMap")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsMap), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsMap")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25408,11 +23940,9 @@ func (a NetApi) PutTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25441,13 +23971,18 @@ func (a NetApi) PutTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsMap)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsMap)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsPpp
@@ -25458,21 +23993,12 @@ func (a NetApi) PutTunnelsMap(id string, object NetTunnelsMap) (*NetTunnelsMap, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp, *APIResponse, error) {
+func (a NetApi) PutTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/ppp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsPpp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsPpp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsPpp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsPpp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25480,11 +24006,9 @@ func (a NetApi) PutTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp, 
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25513,13 +24037,18 @@ func (a NetApi) PutTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp, 
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsPpp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsPpp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsTcpForward
@@ -25530,21 +24059,12 @@ func (a NetApi) PutTunnelsPpp(id string, object NetTunnelsPpp) (*NetTunnelsPpp, 
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*NetTunnelsTcpForward, *APIResponse, error) {
+func (a NetApi) PutTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*NetTunnelsTcpForward, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tcpForward/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsTcpForward), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsTcpForward")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsTcpForward), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsTcpForward")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25552,11 +24072,9 @@ func (a NetApi) PutTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*N
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25585,13 +24103,18 @@ func (a NetApi) PutTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*N
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsTcpForward)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTcpForward)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsTunnel
@@ -25602,21 +24125,12 @@ func (a NetApi) PutTunnelsTcpForward(id string, object NetTunnelsTcpForward) (*N
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunnelsTunnel, *APIResponse, error) {
+func (a NetApi) PutTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunnelsTunnel, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/tunnel/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsTunnel), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsTunnel")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsTunnel), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsTunnel")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25624,11 +24138,9 @@ func (a NetApi) PutTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunnel
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25657,13 +24169,18 @@ func (a NetApi) PutTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunnel
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsTunnel)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsTunnel)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsV6rd
@@ -25674,21 +24191,12 @@ func (a NetApi) PutTunnelsTunnel(id string, object NetTunnelsTunnel) (*NetTunnel
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6rd, *APIResponse, error) {
+func (a NetApi) PutTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6rd, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/v6rd/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsV6rd), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsV6rd")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsV6rd), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsV6rd")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25696,11 +24204,9 @@ func (a NetApi) PutTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6r
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25729,13 +24235,18 @@ func (a NetApi) PutTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6r
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsV6rd)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsV6rd)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsVxlan
@@ -25746,21 +24257,12 @@ func (a NetApi) PutTunnelsV6rd(id string, object NetTunnelsV6rd) (*NetTunnelsV6r
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnelsVxlan, *APIResponse, error) {
+func (a NetApi) PutTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnelsVxlan, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/vxlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsVxlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsVxlan")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsVxlan), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsVxlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25768,11 +24270,9 @@ func (a NetApi) PutTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnelsV
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25801,13 +24301,18 @@ func (a NetApi) PutTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnelsV
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsVxlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsVxlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutTunnelsWccp
@@ -25818,21 +24323,12 @@ func (a NetApi) PutTunnelsVxlan(id string, object NetTunnelsVxlan) (*NetTunnelsV
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWccp, *APIResponse, error) {
+func (a NetApi) PutTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWccp, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/tunnels/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetTunnelsWccp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutTunnelsWccp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetTunnelsWccp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutTunnelsWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25840,11 +24336,9 @@ func (a NetApi) PutTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWcc
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25873,13 +24367,18 @@ func (a NetApi) PutTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWcc
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetTunnelsWccp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetTunnelsWccp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutVlan
@@ -25890,21 +24389,12 @@ func (a NetApi) PutTunnelsWccp(id string, object NetTunnelsWccp) (*NetTunnelsWcc
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutVlan(id string, object NetVlan) (*NetVlan, *APIResponse, error) {
+func (a NetApi) PutVlan(id string, object NetVlan) (*NetVlan, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlan), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutVlan")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetVlan), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutVlan")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25912,11 +24402,9 @@ func (a NetApi) PutVlan(id string, object NetVlan) (*NetVlan, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -25945,13 +24433,18 @@ func (a NetApi) PutVlan(id string, object NetVlan) (*NetVlan, *APIResponse, erro
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetVlan)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlan)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutVlanGroup
@@ -25962,21 +24455,12 @@ func (a NetApi) PutVlan(id string, object NetVlan) (*NetVlan, *APIResponse, erro
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *APIResponse, error) {
+func (a NetApi) PutVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlanGroup/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlanGroup), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutVlanGroup")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetVlanGroup), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutVlanGroup")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -25984,11 +24468,9 @@ func (a NetApi) PutVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *AP
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -26017,13 +24499,18 @@ func (a NetApi) PutVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *AP
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetVlanGroup)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanGroup)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutVlanInterfaces
@@ -26034,21 +24521,12 @@ func (a NetApi) PutVlanGroup(id string, object NetVlanGroup) (*NetVlanGroup, *AP
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutVlanInterfaces(id string, object NetVlanInterfaces) (*NetVlanInterfaces, *APIResponse, error) {
+func (a NetApi) PutVlanInterfaces(id string, object NetVlanInterfaces) (*NetVlanInterfaces, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/vlan/interfaces/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetVlanInterfaces), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutVlanInterfaces")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetVlanInterfaces), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutVlanInterfaces")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -26056,11 +24534,9 @@ func (a NetApi) PutVlanInterfaces(id string, object NetVlanInterfaces) (*NetVlan
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -26089,13 +24565,18 @@ func (a NetApi) PutVlanInterfaces(id string, object NetVlanInterfaces) (*NetVlan
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetVlanInterfaces)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetVlanInterfaces)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutWccp
@@ -26106,21 +24587,12 @@ func (a NetApi) PutVlanInterfaces(id string, object NetVlanInterfaces) (*NetVlan
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutWccp(id string, object NetWccp) (*NetWccp, *APIResponse, error) {
+func (a NetApi) PutWccp(id string, object NetWccp) (*NetWccp, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetWccp), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutWccp")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetWccp), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutWccp")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -26128,11 +24600,9 @@ func (a NetApi) PutWccp(id string, object NetWccp) (*NetWccp, *APIResponse, erro
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -26161,13 +24631,18 @@ func (a NetApi) PutWccp(id string, object NetWccp) (*NetWccp, *APIResponse, erro
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetWccp)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccp)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }
 
 // PutWccpServices
@@ -26178,21 +24653,12 @@ func (a NetApi) PutWccp(id string, object NetWccp) (*NetWccp, *APIResponse, erro
 // id is for ID of the resource
 //
 // object is for .
-func (a NetApi) PutWccpServices(id string, object NetWccpServices) (*NetWccpServices, *APIResponse, error) {
+func (a NetApi) PutWccpServices(id string, object NetWccpServices) (*NetWccpServices, error) {
 
 	var httpMethod = "Put"
 	// create path and map variables
 	path := a.configuration.BasePath + "/tm/net/wccp/services/{id}"
 	path = strings.Replace(path, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
-
-	// verify the required parameter 'id' is set
-	if &id == nil {
-		return new(NetWccpServices), nil, errors.New("Missing required parameter 'id' when calling NetApi->PutWccpServices")
-	}
-	// verify the required parameter 'object' is set
-	if &object == nil {
-		return new(NetWccpServices), nil, errors.New("Missing required parameter 'object' when calling NetApi->PutWccpServices")
-	}
 
 	headerParams := make(map[string]string)
 	queryParams := url.Values{}
@@ -26200,11 +24666,9 @@ func (a NetApi) PutWccpServices(id string, object NetWccpServices) (*NetWccpServ
 	var postBody interface{}
 	var fileName string
 	var fileBytes []byte
-	// authentication (token) required
-
+	// authentication '(token)' required
 	// set key with prefix in header
 	headerParams["X-F5-Auth-Token"] = a.configuration.getAPIKeyWithPrefix("X-F5-Auth-Token")
-
 	// add default headers if any
 	for key := range a.configuration.DefaultHeader {
 		headerParams[key] = a.configuration.DefaultHeader[key]
@@ -26233,11 +24697,16 @@ func (a NetApi) PutWccpServices(id string, object NetWccpServices) (*NetWccpServ
 	// body params
 	postBody = &object
 
-	var successPayload = new(NetWccpServices)
 	httpResponse, err := a.configuration.restClient.callAPI(path, httpMethod, postBody, headerParams, queryParams, formParams, fileName, fileBytes)
-	if err != nil {
-		return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	var successPayload = new(NetWccpServices)
+	if err == nil && httpResponse.StatusCode() == 200 {
+		err = json.Unmarshal(httpResponse.Body(), &successPayload)
 	}
-	err = json.Unmarshal(httpResponse.Body(), &successPayload)
-	return successPayload, NewAPIResponse(httpResponse.RawResponse), err
+	err = NewAPIResponse(httpResponse, err)
+	if err != nil {
+		return nil, err
+	} else {
+		return successPayload, err
+	}
+
 }

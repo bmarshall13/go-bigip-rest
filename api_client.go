@@ -25,7 +25,7 @@
 // REST API for F5 BigIP. List of operations is not complete, nor known to be accurate.
 //
 // API version: 12.0
-// Package version: v0.0.1
+// Package version: v0.0.1-3-g67a31cb
 //
 // Use NewClient to create a new client handle
 //
@@ -91,14 +91,11 @@ func NewClient(hostName string, username string, password string, skipTlsVerify 
 
 // DoLogin performs the remote operations to obtain an auth token from the API server
 func (self *Client) DoLogin() error {
-	res, apires, err := self.Shared.Login(LoginBody{
+	res, err := self.Shared.Login(LoginBody{
 		LoginProviderName: "tmos",
 		Password:          self.configuration.Password,
 		Username:          self.configuration.UserName,
 	})
-	if err == nil && apires.StatusCode != 200 {
-		err = fmt.Errorf("REST call failed: %v", apires.Status)
-	}
 	if err != nil {
 		return err
 	}
@@ -193,7 +190,7 @@ func (c *restClient) parameterToString(obj interface{}, collectionFormat string)
 		}
 	}
 
-	return obj.(string)
+	return fmt.Sprintf("%v", obj)
 }
 
 func prepareRequest(request *resty.Request,
